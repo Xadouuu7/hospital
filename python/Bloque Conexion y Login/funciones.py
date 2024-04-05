@@ -4,11 +4,12 @@ import csv
 import os
 import random
 import string
-
+### MENU
 def tituloMenu(texto):
     print('-' * 40)
     print(texto)
     print('-' * 40, end='\n\n\n')
+
 def menuInicial():
     os.system('cls')
     tituloMenu('Menu Login')
