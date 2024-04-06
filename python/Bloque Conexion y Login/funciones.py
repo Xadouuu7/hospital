@@ -88,10 +88,11 @@ def crearUsuario(usuario, contraseña):
 
 def comprobarUsuario(usuario):
     conn, cursor = conectarBaseDatos()
-    query = "SELECT * FROM pg_catalog.pg_user WHERE usename = %s"
+    query = "SELECT usename FROM pg_catalog.pg_user WHERE usename = %s"
     cursor.execute(query, (usuario,))
     if cursor.fetchone():
         print("\nEl usuario ya existe.")
+        input("Enter para continuar")
         return True
     
 def readUsuario():
