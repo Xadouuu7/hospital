@@ -48,7 +48,6 @@ def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
             'host': '192.168.1.45',
             'user': usuario,
             'password': contraseña,
-            'dbname': 'hospital'
         }
         conn = psycopg2.connect(**db_config)
         cursor = conn.cursor()  
