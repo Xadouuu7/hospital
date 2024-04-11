@@ -45,16 +45,17 @@ def menuRegistrarse():
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
         db_config = {
-            'host': '192.168.1.45',
+            'host': '192.168.56.102',
             'user': usuario,
-            'password': contraseña
+            'password': contraseña,
+            'dbname':'postgres'
         }
         conn = psycopg2.connect(**db_config)
         cursor = conn.cursor()  
         conn.autocommit = True
         return conn,cursor
-    except psycopg2.OperationalError:
-       print('Error en el usuario o la contraseña')
+    except Exception as error:
+       print('Error en el usuario o la contraseña', error)
 
 def crearUsuario(usuario, contraseña):
     try:
