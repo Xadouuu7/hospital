@@ -1,11 +1,16 @@
+CREATE TABLE IF NOT EXISTS especialidad (
+    id_especialidad SERIAL PRIMARY KEY,
+    nombre VARCHAR(30) UNIQUE NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS ciudad (
     id_ciudad SERIAL PRIMARY KEY,
     nombre VARCHAR(30) UNIQUE NOT NULL 
 );
 
 CREATE TABLE IF NOT EXISTS planta (
-    núm_planta SMALLINT PRIMARY KEY,
-    nombre VARCHAR(50) NOT NULL,
+    num_planta SMALLINT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS quirofano (
@@ -16,18 +21,21 @@ CREATE TABLE IF NOT EXISTS quirofano (
 );
 
 CREATE TABLE IF NOT EXISTS sala_urgencia (
-    num_sala_urgencia SERIAL PRIMARY KEY,
-    num_planta SMALLINT,
-    FOREIGN KEY (num_planta) REFERENCES planta(num_planta)
+    num_sala_urgencia SERIAL UNIQUE,
+    num_planta SMALLINT UNIQUE,
+    FOREIGN KEY (num_planta) REFERENCES planta(num_planta),
+    PRIMARY KEY (num_sala_urgencia, num_planta)
 );
 
 CREATE TABLE IF NOT EXISTS triaje (
-    num_sala_triaje SERIAL PRIMARY KEY,
+    num_sala_triaje SERIAL,
     num_sala_urgencia INTEGER NOT NULL,
     num_planta SMALLINT NOT NULL,
     motivo_visita TEXT,
+    PRIMARY KEY (num_sala_triaje, num_sala_urgencia, num_planta),
     FOREIGN KEY (num_sala_urgencia, num_planta) REFERENCES sala_urgencia(num_sala_urgencia, num_planta)
 );
+
 
 CREATE TABLE IF NOT EXISTS habitacion (
     num_habitacion SERIAL PRIMARY KEY,
@@ -65,8 +73,15 @@ CREATE TABLE IF NOT EXISTS inv_laboratorio (
 );
 
 CREATE TABLE IF NOT EXISTS material_quirofano (
-    id_material_quirófano SERIAL PRIMARY KEY,
+    id_material_quirofano SERIAL PRIMARY KEY,
     nombre VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS almacen (
+    num_almacen SERIAL,
+    num_planta SMALLINT NOT NULL,
+    FOREIGN KEY (num_planta) REFERENCES planta(num_planta),
+    PRIMARY KEY (num_almacen, num_planta)
 );
 
 CREATE TABLE IF NOT EXISTS inv_material_quirofano (
@@ -81,12 +96,7 @@ CREATE TABLE IF NOT EXISTS inv_material_quirofano (
     FOREIGN KEY (id_material_quirofano) REFERENCES material_quirofano(id_material_quirofano)
 );
 
-CREATE TABLE IF NOT EXISTS almacen (
-    num_almacen SERIAL,
-    num_planta SMALLINT NOT NULL,
-    FOREIGN KEY (num_planta) REFERENCES planta(num_planta),
-    PRIMARY KEY (num_almacen, num_planta)
-);
+
 
 CREATE TABLE IF NOT EXISTS material_general (
     id_material_general SERIAL PRIMARY KEY,
@@ -102,23 +112,13 @@ CREATE TABLE IF NOT EXISTS inv_material_general (
     FOREIGN KEY (id_material_general) REFERENCES material_general(id_material_general)
 );
 
-CREATE TABLE IF NOT EXISTS paciente (
-    tarjeta_sanitaria CHAR(14) PRIMARY KEY CHECK (LENGTH(tarjeta_sanitaria) = 14),
-    altura NUMERIC(4,1) NOT NULL,
-    peso NUMERIC(5,2) NOT NULL,
-    grupo_sanguíneo VARCHAR(2) CHECK (grupo_sanguíneo IN ('A','B','AB','0')) NOT NULL,
-    rh CHAR(1) CHECK (rh IN ('+','-')) NOT NULL,
-    dni_nie CHAR(9) NOT NULL,
-    FOREIGN KEY (dni_nie) REFERENCES persona (dni_nie)
-);
-
-CREATE TABLE IF NOT EXISTS dirección (
-    id_dirección SERIAL PRIMARY KEY,
-    dirección VARCHAR(40) NOT NULL,
-    número VARCHAR(5) NOT NULL,
+CREATE TABLE IF NOT EXISTS direccion (
+    id_direccion SERIAL PRIMARY KEY,
+    direccion VARCHAR(40) NOT NULL,
+    numero VARCHAR(5) NOT NULL,
     piso VARCHAR(7),
     puerta CHAR(1),
-    código_postal CHAR(5) NOT NULL,
+    codigo_postal CHAR(5) NOT NULL,
     id_ciudad INTEGER NOT NULL,
     FOREIGN KEY (id_ciudad) REFERENCES ciudad (id_ciudad)
 );
@@ -134,8 +134,18 @@ CREATE TABLE IF NOT EXISTS persona (
     correo_electrónico VARCHAR(40) CHECK (correo_electrónico ~ '^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'),
     usuario VARCHAR(20),
     contraseña VARCHAR(30),
-    id_dirección INTEGER NOT NULL,
-    FOREIGN KEY (id_dirección) REFERENCES dirección (id_dirección)
+    id_direccion INTEGER NOT NULL,
+    FOREIGN KEY (id_direccion) REFERENCES direccion (id_direccion)
+);
+
+CREATE TABLE IF NOT EXISTS paciente (
+    tarjeta_sanitaria CHAR(14) PRIMARY KEY CHECK (LENGTH(tarjeta_sanitaria) = 14),
+    altura NUMERIC(4,1) NOT NULL,
+    peso NUMERIC(5,2) NOT NULL,
+    grupo_sanguíneo VARCHAR(2) CHECK (grupo_sanguíneo IN ('A','B','AB','0')) NOT NULL,
+    rh CHAR(1) CHECK (rh IN ('+','-')) NOT NULL,
+    dni_nie CHAR(9) NOT NULL,
+    FOREIGN KEY (dni_nie) REFERENCES persona (dni_nie)
 );
 
 CREATE TABLE IF NOT EXISTS empleado (
@@ -148,7 +158,7 @@ CREATE TABLE IF NOT EXISTS empleado (
     FOREIGN KEY (dni_nie) REFERENCES persona (dni_nie)
 );
 
-CREATE TABLE IF NOT EXISTS médico (
+CREATE TABLE IF NOT EXISTS medico (
     id_empleado INTEGER PRIMARY KEY,
     estudio TEXT,
     experiencia_previa TEXT,
@@ -157,7 +167,7 @@ CREATE TABLE IF NOT EXISTS médico (
     FOREIGN KEY (id_especialidad) REFERENCES especialidad(id_especialidad)
 );
 
-CREATE TABLE IF NOT EXISTS científico (
+CREATE TABLE IF NOT EXISTS cientifico (
     id_empleado INTEGER PRIMARY KEY,
     estudio TEXT,
     experiencia_previa TEXT,
@@ -175,14 +185,14 @@ CREATE TABLE IF NOT EXISTS enfermero (
     experiencia_previa TEXT,
     id_especialidad INTEGER NOT NULL,
     num_planta SMALLINT,
-    id_medico INTEGER
-    FOREIGN KEY (id_empleado) REFERENCES empleado (id_empleado),
+    id_medico INTEGER,
+    FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado),
     FOREIGN KEY (id_especialidad) REFERENCES especialidad (id_especialidad),
-    FOREIGN KEY (num_planta) REFERENCES planta(núm_planta),
-    FOREIGN KEY (id_medico) REFERENCES médico(id_empleado)
+    FOREIGN KEY (num_planta) REFERENCES planta(num_planta),
+    FOREIGN KEY (id_medico) REFERENCES medico(id_empleado)
 );
 
-CREATE TABLE IF NOT EXISTS farmacéutico (
+CREATE TABLE IF NOT EXISTS farmaceutico (
     id_empleado INTEGER PRIMARY KEY,
     estudio TEXT,
     experiencia_previa TEXT,
@@ -205,16 +215,13 @@ CREATE TABLE IF NOT EXISTS reserva_quirofano (
     id_medico INTEGER NOT NULL,
     tarjeta_sanitaria CHAR(14) NOT NULL,
     id_administrativo INTEGER NOT NULL,
+    fecha_entrada TIMESTAMP NOT NULL,
     FOREIGN KEY (num_quirofano, num_planta) REFERENCES quirofano(num_quirofano, num_planta),
     FOREIGN KEY (id_medico) REFERENCES medico(id_empleado),
     FOREIGN KEY (tarjeta_sanitaria) REFERENCES paciente(tarjeta_sanitaria),
     FOREIGN KEY (id_administrativo) REFERENCES administrativo(id_empleado)
 );
 
-CREATE TABLE IF NOT EXISTS especialidad (
-    id_especialidad SERIAL PRIMARY KEY,
-    nombre VARCHAR(30) UNIQUE NOT NULL,
-);
 
 CREATE TABLE IF NOT EXISTS varios (
     id_empleado INTEGER PRIMARY KEY,
@@ -224,12 +231,12 @@ CREATE TABLE IF NOT EXISTS varios (
 
 CREATE TABLE IF NOT EXISTS patologia (
     id_patologia CHAR(4) PRIMARY KEY,
-    nombre VARCHAR(60) NOT NULL,
+    nombre VARCHAR(60) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS diagnostico (
     id_diagnostico SERIAL PRIMARY KEY,
-    id_patologia INTEGER NOT NULL,
+    id_patologia CHAR(4) NOT NULL,
     descripción TEXT NOT NULL,
     FOREIGN KEY (id_patologia) REFERENCES patologia(id_patologia)
 );
@@ -243,20 +250,10 @@ CREATE TABLE IF NOT EXISTS prueba (
     FOREIGN KEY (id_diagnostico) REFERENCES diagnostico(id_diagnostico)
 );
 
-CREATE TABLE IF NOT EXISTS receta (
-    id_receta SERIAL PRIMARY KEY,
-    id_diagnostico INTEGER,
-    id_inv_medicamento INTEGER,
-    fecha_hora TIMESTAMP,
-    dosis NUMERIC(6,2),
-    FOREIGN KEY (id_diagnostico) REFERENCES diagnostico(id_diagnostico),
-    FOREIGN KEY (id_inv_medicamento) REFERENCES inv_medicamento(id_inv_medicamento)
-);
-
 CREATE TABLE IF NOT EXISTS medicamento (
     id_medicamento INTEGER PRIMARY KEY,
     nombre_medicamento VARCHAR(30)
-)
+);
 
 CREATE TABLE IF NOT EXISTS inv_medicamento (
     id_inv_medicamento SERIAL PRIMARY KEY,
@@ -267,4 +264,40 @@ CREATE TABLE IF NOT EXISTS inv_medicamento (
     FOREIGN KEY (num_almacen, num_planta) REFERENCES almacen(num_almacen, num_planta),
     FOREIGN KEY (id_farmaceutico) REFERENCES farmaceutico(id_empleado),
     FOREIGN KEY (id_medicamento) REFERENCES medicamento(id_medicamento)
+);
+
+CREATE TABLE IF NOT EXISTS receta (
+    id_receta SERIAL PRIMARY KEY,
+    id_diagnostico INTEGER,
+    id_inv_medicamento INTEGER,
+    fecha_hora TIMESTAMP,
+    dosis NUMERIC(6,2),
+    FOREIGN KEY (id_diagnostico) REFERENCES diagnostico(id_diagnostico),
+    FOREIGN KEY (id_inv_medicamento) REFERENCES inv_medicamento(id_inv_medicamento)
+);
+
+CREATE TABLE IF NOT EXISTS visita (
+    id_visita SERIAL PRIMARY KEY,
+    id_medico INTEGER,
+    tarjeta_sanitaria VARCHAR(14),
+    id_diagnostico INTEGER,
+    id_triaje INTEGER,
+    fecha_hora DATE NOT NULL,
+    motivo_visita TEXT NOT NULL,
+    FOREIGN KEY (id_medico) REFERENCES medico(id_empleado),
+    FOREIGN KEY (tarjeta_sanitaria) REFERENCES paciente(tarjeta_sanitaria),
+    FOREIGN KEY (id_diagnostico) REFERENCES diagnostico(id_diagnostico),
+    FOREIGN KEY (id_triaje) REFERENCES triaje(num_sala_triaje)
+);
+
+CREATE TABLE IF NOR EXISTS reserva_habitacion (
+    id_reserva  SERIAL PRIMARY KEY,
+    tarjeta_sanitaria CHAR(14),
+    num_habitacion INTEGER,
+    num_planta INTEGER,
+    id_administrativo INTEGER,
+    fecha_entrada_salida TSRANGE,
+    FOREIGN KEY (tarjeta_sanitaria) REFERENCES paciente(tarjeta_sanitaria),
+    FOREIGN KEY (num_habitacion, num_planta) REFERENCES habitacion(num_habitacion, num_planta),
+    FOREIGN KEY (id_administrativo) REFERENCES administrativo(id_administrativo)
 );
