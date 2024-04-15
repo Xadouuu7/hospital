@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS persona (
     dni_nie CHAR(9) PRIMARY KEY CHECK (dni_nie ~ '^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$' OR dni_nie ~ '^[XYZ][0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKE]$'),
     nombre VARCHAR(30) NOT NULL CHECK (INITCAP(nombre) = nombre),
     apellido1 VARCHAR(30) NOT NULL CHECK (INITCAP(apellido1) = apellido1),
-    apellido2 VARCHAR(30) NOT NULL CHECK (INITCAP(apellido2) = apellido2),
+    apellido2 VARCHAR(30) CHECK (INITCAP(apellido2) = apellido2),
     fecha_nacimiento DATE NOT NULL,
     sexo CHAR(1) CHECK (sexo IN ('H','M','O')),
     teléfono CHAR(9) NOT NULL,
