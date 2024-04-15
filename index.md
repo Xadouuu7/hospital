@@ -4,9 +4,12 @@ layout: home
 ---
 
 # Projecte Base de Dades i Programació: Hospital de Blanes
-Fet per: Anderson Pérez Brazoban, Isaac Ruiz García i  María del Mar Manzano Baena
+Fet per: Anderson Pérez Brazoban, Isaac Ruiz García i  M. del Mar Manzano Baena
 
-# Documentació: Disseny ER - Model Relacional
+# Documentació de l'esquema de la Base de Dades
+
+## Esquema ER - Relacional
+
 A l’hora de fer el disseny de l’Entitat-Relació vam començar per llegir els requisits que ens demanen per portar la gestió de l’hospital de Blanes. 
 
 Primer ens parlen del personal de l’hospital, per tant, vam prendre la decisió de fer un model Entitat-Relació Estès amb les persones. Aquesta decisió es pren perquè hi ha informació que volem guardar tant dels empleats com dels pacients que és la mateixa, exceptuant algunes coses específiques. Al principi vam crear diferents subclasses segons si era pacient, metge, infermer… Però al final ens vam adonar que tornem a repetir massa informació que són comuns a tots els empleats, per tant, vam prendre la decisió de fer una superclasse dins de “persona” que és “empleat”.
@@ -22,6 +25,17 @@ L’historial mèdic del pacient nosaltres l’hem plasmat en l’entitat “vis
 A l’hora de fer els medicaments, patologies i els diferents tipus de materials ens hem basat en l’exemple de la base de dades Pagila. A Pagila hi ha una taula de “pel·lícules” on estan emmagatzemades tots els títols de les pel·lícules que tenen disponibles i després tenen una taula nova amb l’inventari de les còpies de les pel·lícules que tenen. Ho hem fet de la mateixa manera amb els medicaments, les patologies i el material de l’hospital, creant un inventari per a cada.
 
 Per concloure, la majoria de decisions les hem pres pensant fonamentalment en els permisos a l’hora d’accedir a la base de dades. També hem basat varies decisions en altres bases de dades a les que tenim accés de prova (com Pagila o Adventureworks).
+
+## SQL
+
+Les coses a mencionar del codi SQL que hem fet per crear les taules són les següents:
+Al DNI de les persones l’hem afegit un “check” que corrobori si té 9 caràcters, dels quals 8 són números i l’últim és una lletra dins d’aquestes: TRWAGMYFPDXBNJZSQVHLCKE. 
+Al nom i als cognoms hem utilitzat un “check” perquè comprovi si fa que la primera lletra sigui majúscula i la resta minúscula (“initcap”).
+Al correu electrònic hem afegit un “check” amb això:
+'^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'. Això indica que hi ha lletres de l’alfabet, números o guions abans i després de l’arroba i abans i després del punt.
+A la tarjeta sanitaria hem corroborat que el que s’introdueix siguin 14 caràcters; de la mateixa forma que a “grup_sanguini” i “rh” només es pot posar “A”, “B”, “AB” o “0”  i “+” i “-” respectivament.
+Al número de la Seguretat Social hem posat que comprovi si té 12 digits.
+
 
 ----
 
