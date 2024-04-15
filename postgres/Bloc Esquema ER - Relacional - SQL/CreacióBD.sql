@@ -222,7 +222,7 @@ CREATE TABLE IF NOT EXISTS reserva_quirofano (
     id_medico INTEGER NOT NULL,
     tarjeta_sanitaria CHAR(14) NOT NULL,
     id_administrativo INTEGER NOT NULL,
-    fecha_entrada TIMESTAMP NOT NULL,
+    fecha_hora_entrada TIMESTAMP NOT NULL,
     FOREIGN KEY (num_quirofano, num_planta) REFERENCES quirofano(num_quirofano, num_planta),
     FOREIGN KEY (id_medico) REFERENCES medico(id_empleado),
     FOREIGN KEY (tarjeta_sanitaria) REFERENCES paciente(tarjeta_sanitaria),
@@ -252,6 +252,7 @@ CREATE TABLE IF NOT EXISTS prueba (
     id_laboratorio INTEGER NOT NULL,
     num_planta SMALLINT NOT NULL,
     id_diagnostico INTEGER NOT NULL,
+    tipo VARCHAR(40),
     FOREIGN KEY (id_laboratorio, num_planta) REFERENCES laboratorio(id_laboratorio,num_planta),
     FOREIGN KEY (id_diagnostico) REFERENCES diagnostico(id_diagnostico)
 );
@@ -277,7 +278,7 @@ CREATE TABLE IF NOT EXISTS receta (
     id_diagnostico INTEGER,
     id_inv_medicamento INTEGER,
     fecha_hora TIMESTAMP,
-    dosis NUMERIC(6,2),
+    dosis VARCHAR(8),
     FOREIGN KEY (id_diagnostico) REFERENCES diagnostico(id_diagnostico),
     FOREIGN KEY (id_inv_medicamento) REFERENCES inv_medicamento(id_inv_medicamento)
 );
@@ -290,7 +291,7 @@ CREATE TABLE IF NOT EXISTS visita (
     id_triaje INTEGER,
 	id_sala_urgencia INTEGER,
 	num_planta SMALLINT,
-    fecha_hora DATE NOT NULL,
+    fecha_hora TIMESTAMP NOT NULL,
     motivo_visita TEXT NOT NULL,
     FOREIGN KEY (id_medico) REFERENCES medico(id_empleado),
     FOREIGN KEY (tarjeta_sanitaria) REFERENCES paciente(tarjeta_sanitaria),
