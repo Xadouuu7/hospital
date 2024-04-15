@@ -3,6 +3,7 @@ from faker import Faker
 import random
 import string
 from datetime import *
+from ficheros import *
 
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
@@ -19,12 +20,16 @@ def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     except Exception as error:
        print('Error en el usuario o la contraseña', error)
 
+def fake_ciudad():
+    fichero = leer_ciudad()
+    
 
 def fake_direccion():
     fake = Faker('es_ES')
     num_registros = 10
     for _ in range(num_registros):
         id_ciudad = _
+
 
 def fake_persona():
     fake = Faker('es_ES')
