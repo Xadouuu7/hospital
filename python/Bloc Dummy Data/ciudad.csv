@@ -1,17 +1,9 @@
-﻿codigo_postal;nombre
+codigo_postal;nombre
 01001;Vitoria-Gasteiz
-01002;Vitoria-Gasteiz
-01003;Vitoria-Gasteiz
-01004;Vitoria-Gasteiz
-01005;Vitoria-Gasteiz
-01006;Vitoria-Gasteiz
 01007;Armentia
-01008;Vitoria-Gasteiz
-01009;Vitoria-Gasteiz
 01010;Ehari/Ali
 01012;Salinillas de Buradon/Gat
 01013;Abetxuko
-01015;Vitoria-Gasteiz
 01110;Santa Cruz de Campezo
 01117;Orbiso
 01118;Angostina
@@ -78,15 +70,7 @@
 01510;Betolaza
 01520;Arroiabe
 02001;Albacete
-02002;Albacete
-02003;Albacete
-02004;Albacete
-02005;Albacete
-02006;Albacete
-02008;Albacete
 02049;Aguas Nuevas
-02071;Albacete
-02099;Aguas Nuevas
 02100;Tarazona de la Mancha
 02110;Gineta (La)
 02120;Peñas de San Pedro
@@ -179,7 +163,6 @@
 02484;Arguellite
 02485;Moropeche
 02486;Jartos
-02487;Jartos
 02488;Sege
 02489;Alcantarilla
 02490;Agramon
@@ -194,7 +177,6 @@
 02520;Casa Blanca de Los Rioter
 02529;Estacion de Chinchilla
 02530;Nerpio
-02534;Dehesa (La)
 02535;Casa de la Cabeza
 02536;Beg
 02537;Cañadas
@@ -227,29 +209,12 @@
 02696;Hoya-Gonzalo
 02999;Pozuelo (El)
 03001;Alicante/Alacant
-03002;Alicante/Alacant
-03003;Alicante/Alacant
-03004;Alicante/Alacant
-03005;Alicante/Alacant
-03006;Alicante/Alacant
-03007;Alicante/Alacant
-03008;Alicante/Alacant
-03009;Alicante/Alacant
-03010;Alicante/Alacant
-03011;Alicante/Alacant
-03012;Alicante/Alacant
-03013;Alicante/Alacant
-03014;Alicante/Alacant
-03015;Alicante/Alacant
-03016;Alicante/Alacant
 03100;Xixona
 03108;Torremanzanas/Torre de Le
 03109;Tibi
 03110;Mutxamel
 03111;Busot
-03112;Alicante/Alacant
 03113;Font-Calent
-03114;Alicante/Alacant
 03115;Monnegre - Cabeço D'Or
 03130;Santa Pola
 03138;Isla Plana-Nueva Tabarca
@@ -263,33 +228,18 @@
 03170;Rojales
 03177;Daya Vieja
 03178;Benijofar
-03179;Almoradi
 03180;Torrevieja
-03181;Torrevieja
-03182;Torrevieja
-03183;Torrevieja
-03184;Torrevieja
-03185;Torrevieja
-03186;Torrevieja
 03187;Montesinos (Los)
 03188;Mata (La)
 03189;Orihuela Costa
 03190;Pilar de la Horadada
-03191;Orihuela Costa
 03192;Desamparados (Los)
 03193;San Miguel de Salinas
 03194;Marina (La)
-03195;Altet (El)
 03201;Elche/Elx
-03202;Elche/Elx
-03203;Elche/Elx
-03204;Elche/Elx
 03205;Carrus
-03206;Elche/Elx
 03207;Altabix
-03208;Elche/Elx
 03290;Atsavares
-03291;Altabix
 03292;Asprella
 03293;Algoros
 03294;Daimes
@@ -306,7 +256,6 @@
 03317;Callosilla
 03320;Torrellano
 03330;Crevillent
-03339;Crevillent
 03340;Albatera
 03348;Granja de Rocamora
 03349;San Isidro
@@ -328,8 +277,6 @@
 03460;Beneixama
 03469;Salse (El)
 03501;Benidorm
-03502;Benidorm
-03503;Benidorm
 03509;Finestrat
 03510;Callosa D'En Sarria
 03516;Benimantell
@@ -337,16 +284,13 @@
 03518;Bolulla
 03520;Chirles
 03530;Nucia (La)
-03540;Alicante/Alacant
 03550;Sant Joan D'Alacant
-03559;Alicante/Alacant
 03560;Ballestera
 03569;Aigües
 03570;Ermita (La)
 03578;Relleu
 03579;Orcheta
 03580;Alfas del Pi (L')
-03581;Alfas del Pi (L')
 03590;Altea
 03599;Altea la Vella
 03600;Elda
@@ -355,19 +299,15 @@
 03638;Salinas
 03639;Santa Eulalia
 03640;Cases del Senyor
-03649;Cases del Senyor
 03650;Caballusa (La)
 03657;Casas de Ibañez
 03658;Culebron
-03659;Caballusa (La)
 03660;Estacion (La)
 03668;Algueña
 03669;Romana (La)
 03670;Monforte del Cid
-03679;Monforte del Cid
 03680;Aspe
 03688;Canalosa (La)
-03689;Canalosa (La)
 03690;Boqueres
 03698;Agost
 03699;Alcoraya (La)
@@ -377,40 +317,28 @@
 03720;Benissa
 03723;Llosa de Camacho
 03724;Teulada
-03725;Teulada
 03726;Benitachell
 03727;Xaló
 03728;Alcalali
 03729;Lliber
 03730;Jávea/Xàbia
-03737;Jávea/Xàbia
-03738;Jávea/Xàbia
-03739;Jávea/Xàbia
 03740;Gata de Gorgos
 03749;Jesus Pobre
 03750;Pedreguer
 03759;Benidoleig
 03760;Ondara
 03769;Benimeli
-03770;Denia
 03778;Beniarbeig
 03779;Miraflor
-03780;Denia
 03786;Adsubia
 03787;Beniali
 03788;Alcala de la Jovada
 03789;Vall de Ebo
 03790;Orba
-03791;Orba
 03792;Murla
 03793;Castell de Castells
 03794;Benigembla
-03795;Orba
 03800;Alcoy/Alcoi
-03801;Alcoy/Alcoi
-03802;Alcoy/Alcoi
-03803;Alcoy/Alcoi
-03804;Alcoy/Alcoi
 03810;Benilloba
 03811;Quatretondeta
 03812;Balones
@@ -418,7 +346,6 @@
 03814;Alcoleja
 03815;Penaguila
 03816;Benifallim
-03818;Alcoy/Alcoi
 03820;Alcudia
 03827;Almudaina
 03828;Benialfaqui
@@ -432,14 +359,6 @@
 03850;Beniarres
 03860;Lorcha/Orxa (L')
 04001;Almeria
-04002;Almeria
-04003;Almeria
-04004;Almeria
-04005;Almeria
-04006;Almeria
-04007;Almeria
-04008;Almeria
-04009;Almeria
 04100;Nijar
 04110;Campohermoso
 04113;Atochares
@@ -447,17 +366,13 @@
 04115;Agua Amarga
 04116;Albaricoques
 04117;Barranquete (El)
-04118;Barranquete (El)
 04119;Huebro
-04120;Almeria
 04130;Alquian (El)
 04131;Retamar
 04140;Cañada de Don Rodrigo
-04147;Nijar
 04149;Argamason (El)
 04150;Cabo de Gata
 04151;Pujaire
-04160;Alquian (El)
 04188;San Jose
 04200;Cartero
 04210;Lucainena de Las Torres
@@ -469,14 +384,12 @@
 04240;Juaida (La)
 04248;Andreses (Los)
 04250;Pechina
-04259;Pechina
 04260;Abriojal
 04270;Cinta Blanca
 04271;Breña (La)
 04274;Fuente de la Higuera (La)
 04275;Arroyos (Los)
 04276;Alcudia de Monteagud
-04277;Andreses (Los)
 04278;Alias (Los)
 04279;Barranco Los Lobos (El)
 04280;Gallardos (Los)
@@ -496,14 +409,12 @@
 04470;Laujar de Andarax
 04479;Bayarcal
 04480;Alcolea
-04500;Estacion (La)
 04510;Abla
 04520;Abrucena
 04530;Doña Maria
 04531;Alboloduy
 04532;Cortijo Real (El)
 04533;Monjos (Los)
-04540;Estacion (La)
 04549;Aulago
 04550;Alcubillas (Las)
 04558;Alcubillas Altas (Las)
@@ -527,30 +438,25 @@
 04640;Margen (El)
 04647;Guiraos (Los)
 04648;Pozo del Esparto (El)
-04649;Estacion (La)
 04650;Fuente del Pino
 04659;Terque
 04660;Arboleas
 04661;Llanos (Los)
 04662;Santa Barbara
 04690;Goñar
-04691;Abejuela
 04692;Labores (Las)
 04693;Menas (Los)
 04694;Almajalejo
 04700;Ensenada San Miguel
 04710;Ejido (El)
-04711;Ensenada San Miguel
 04712;Balerma
 04713;Balanegra
-04715;Ejido (El)
 04716;Norias (Las)
 04720;Aguadulce
 04727;Gangosa (La)
 04728;Felix
 04729;Enix
 04738;Barrio de Archilla
-04740;Aguadulce
 04741;Cortijos de Marin
 04743;Marinas (Las)
 04745;Cantinas (Las)
@@ -558,16 +464,12 @@
 04750;Celin
 04760;Berja
 04768;Darrical
-04769;Berja
 04770;Adra
 04778;Alcazaba (La)
-04779;Adra
-04800;Albox
 04810;Oria
 04811;Cerricos (Los)
 04812;Llano de Los Olleres
 04813;Saliente Alto
-04814;Albox
 04815;Almanzora
 04820;Velez-Rubio
 04825;Aspilla
@@ -578,7 +480,6 @@
 04830;Velez-Blanco
 04838;Alfahuara
 04839;Cañada Grande
-04850;Almanzora
 04857;Albanchez
 04858;Barranco Infierno (El)
 04859;Cobdar
@@ -589,7 +490,6 @@
 04870;Campillo (El)
 04877;Lucar
 04878;Sierro
-04879;Agua Amarga
 04880;Porteros (Los)
 04887;Cela
 04888;Armuña de Almanzora
@@ -600,10 +500,6 @@
 04899;Negro (El)
 04964;Saltador (El)
 05001;Avila
-05002;Avila
-05003;Avila
-05004;Avila
-05005;Avila
 05100;Navaluenga
 05110;Barraco (El)
 05111;San Juan de la Nava
@@ -643,7 +539,6 @@
 05191;Mironcillo
 05192;Colilla (La)
 05193;Ojos Albos
-05194;Avila
 05195;Bernuy-Salinero
 05196;Navalgrande O Canto Pico
 05197;Aldea del Rey Niño
@@ -659,14 +554,12 @@
 05220;Madrigal Altas Torres
 05229;Barroman
 05230;Ciudad Ducal
-05239;Ciudad Ducal
 05240;Navalperal de Pinares
 05250;Hoyo de Pinares (El)
 05260;Cebreros
 05267;San Bartolome de Pinares
 05268;El Herradon
 05270;Poblado del Burguillo
-05278;Barraco (El)
 05279;Atalaya (La)
 05280;Mingorria
 05289;San Esteban de Los Patos
@@ -683,7 +576,6 @@
 05320;Cardeñosa
 05340;Aveinte
 05350;Morañuela
-05357;Aveinte
 05358;Albornos
 05364;Hoyos del Espino
 05370;Ajo (El)
@@ -700,7 +592,6 @@
 05420;Fuente de la Salud
 05427;Fresnedilla
 05428;Casillas
-05429;Casillas
 05430;Adrada (La)
 05440;Piedralaves
 05450;Casavieja
@@ -708,14 +599,11 @@
 05461;Mijares
 05470;Pedro Bernardo
 05480;Candeleda
-05489;Candeleda
 05490;Lanzahita
-05491;Higuera (La)
 05492;Poyales del Hoyo
 05500;Cañada (La)
 05510;Navahermosa de Corneja
 05511;Valdemolinos
-05513;Burgohondo
 05514;Bonilla de la Sierra
 05515;Almohalla (La)
 05516;Alameda (La)
@@ -751,21 +639,11 @@
 05696;Encinares
 05697;Nava del Barco
 06001;Badajoz
-06002;Badajoz
-06003;Badajoz
-06004;Badajoz
-06005;Badajoz
-06006;Badajoz
-06007;Badajoz
-06008;Badajoz
-06009;Badajoz
 06010;Albala
-06011;Albala
 06100;Olivenza
 06105;Cheles
 06106;San Benito Contienda
 06107;Villarreal
-06108;Olivenza
 06109;San Francisco de Olivenza
 06110;Villanueva del Fresno
 06120;Oliva Frontera
@@ -789,8 +667,6 @@
 06178;Valle de Santa Ana
 06180;Gevora
 06181;Alcazaba
-06182;Alcazaba
-06183;Alcazaba
 06184;Pueblonuevo del Guadiana
 06185;Valdelacalzada
 06186;Guadiana del Caudillo
@@ -799,7 +675,6 @@
 06191;Puebla de Obando
 06192;Villar del Rey
 06193;Botoa
-06194;Botoa
 06195;Balboa
 06196;Corte de Peleas
 06197;Entrin Alto
@@ -837,14 +712,11 @@
 06370;Burguillos del Cerro
 06378;Valverde de Burguillos
 06380;Bazana (La)
-06389;Bazana (La)
 06390;Feria
 06391;Lapa (La)
-06392;Puebla de Sancho Perez
 06393;Alconera
 06394;Bodonal de la Sierra
 06400;Don Benito
-06410;Aceuchal
 06411;Medellin
 06412;Hernan Cortes
 06413;Mengabril
@@ -878,7 +750,6 @@
 06486;Nava de Santiago (La)
 06487;Cordobilla de Lacara
 06488;Carmonita
-06489;Lacara
 06490;Puebla de la Calzada
 06498;Lobon
 06499;Barbaño
@@ -891,7 +762,6 @@
 06611;Zarza-Capilla
 06612;Capilla
 06613;Helechal
-06614;Almorchon
 06615;Nava (La)
 06620;Esparragosa de Lares
 06630;Puebla de Alcocer
@@ -913,14 +783,11 @@
 06700;Villanueva de la Serena
 06710;Entrerrios
 06711;Gargaligas
-06712;Villanueva de la Serena
 06713;Los Guadalperales
-06714;Haba (La)
 06715;Rena
 06716;Puebla de Alcollarin
 06717;Torviscal (El)
 06718;Casas Castillo Encomienda
-06720;Casas Castillo Encomienda
 06730;Acedera
 06731;Vegas Altas
 06740;Orellana la Vieja
@@ -951,7 +818,6 @@
 06920;Azuaga
 06927;Valverde de Llerena
 06928;Malcocinado
-06929;Azuaga
 06930;Berlanga
 06939;Maguilla
 06940;Ahillones
@@ -960,20 +826,10 @@
 06970;Reina
 06980;Estacion
 07001;Palma
-07002;Palma
-07003;Palma
-07004;Palma
-07005;Palma
-07006;Palma
 07007;Coll De'N Rabassa (Es)
-07008;Palma
 07009;Indioteria (Sa)
 07010;Bunyola
-07011;Palma
-07012;Palma
-07013;Palma
 07014;Genova
-07015;Genova
 07071;Son Sant Joan
 07100;Horta (L')
 07101;Biniaraix
@@ -999,7 +855,6 @@
 07190;Port Des Canonge (Es)
 07191;Banyalbufar
 07192;Estellencs
-07193;Bunyola
 07194;Puigpunyent
 07195;Galilea
 07196;Capdella (Es)
@@ -1030,7 +885,6 @@
 07350;Biniagual
 07360;Lloseta
 07369;Biniamar
-07400;Alcudia
 07420;Pobla (Sa)
 07430;Llubi
 07440;Muro
@@ -1047,7 +901,6 @@
 07518;Lloret de Vistalegre
 07519;Maria de la Salut
 07520;Petra
-07529;Ariany
 07530;Sant Llorenç Des Cardassa
 07540;Son Carrio
 07550;Son Servera
@@ -1081,13 +934,10 @@
 07691;Alqueria Blanca
 07700;Grau (Es)
 07701;Mao
-07702;Mao
-07703;Mao
 07710;Sant Lluis
 07711;Binibeca Vell
 07712;Binixiquer
 07713;Alcaufar
-07714;Mao
 07720;Trebaluger
 07730;Alaior
 07740;Mercadal (Es)
@@ -1095,7 +945,6 @@
 07749;Migjorn Gran (Es)
 07750;Barranch
 07760;Ciutadella de Menorca
-07769;Almudaina
 07800;Eivissa
 07810;Sant Joan de Labritja
 07811;Sant Vicent de Sa Cala
@@ -1109,57 +958,13 @@
 07820;Buscastell
 07828;Santa Agnes de Corona
 07829;Sant Agusti Des Vedra
-07830;Sant Agusti Des Vedra
 07839;Cubells (Es)
-07840;Santa Eulalia
 07849;San Carlos
-07850;San Carlos
 07860;Cap de Barbaria (Es)
 07870;Savina, la
 07871;Pujols
 07872;Calo (Es)
 08001;Barcelona
-08002;Barcelona
-08003;Barcelona
-08004;Barcelona
-08005;Barcelona
-08006;Barcelona
-08007;Barcelona
-08008;Barcelona
-08009;Barcelona
-08010;Barcelona
-08011;Barcelona
-08012;Barcelona
-08013;Barcelona
-08014;Barcelona
-08015;Barcelona
-08016;Barcelona
-08017;Barcelona
-08018;Barcelona
-08019;Barcelona
-08020;Barcelona
-08021;Barcelona
-08022;Barcelona
-08023;Barcelona
-08024;Barcelona
-08025;Barcelona
-08026;Barcelona
-08027;Barcelona
-08028;Barcelona
-08029;Barcelona
-08030;Barcelona
-08031;Barcelona
-08032;Barcelona
-08033;Barcelona
-08034;Barcelona
-08035;Barcelona
-08036;Barcelona
-08037;Barcelona
-08038;Barcelona
-08039;Barcelona
-08040;Barcelona
-08041;Barcelona
-08042;Barcelona
 08100;Mollet del Valles
 08104;Gallecs
 08105;Colonia Bosc Montealegre
@@ -1177,49 +982,27 @@
 08170;Montornes Centre
 08172;Sant Cugat del Valles
 08173;Mira-Sol
-08174;Sant Cugat del Valles
-08175;Sant Cugat del Valles
 08178;Casetes (Les)
 08180;Moià
 08181;Sentmenat
 08182;Sant Feliu de Codines
 08183;Castellcir
-08184;Estany (L')
 08185;Pla (El)
-08186;Pla (El)
 08187;Bonaire (El)
 08188;Vallromanes
 08189;Sant Quirze Safaja
-08190;Sant Cugat del Valles
-08191;Rubi
 08192;Fonts (Les)
 08193;Cerdanyola del Valles
-08194;Fonts (Les)
-08195;Mira-Sol
 08196;Floresta (La)
-08197;Floresta (La)
-08198;Floresta (La)
 08201;Berard
 08202;Salut (La)
 08203;Sabadell
-08204;Sabadell
-08205;Berard
-08206;Berard
-08207;Sabadell
-08208;Sabadell
 08210;Barberà del Vallès
 08211;Airesol
 08212;Sant Llorenç Savall
 08213;Polinyà
 08214;Badia del Valles
 08221;Terrassa
-08222;Terrassa
-08223;Terrassa
-08224;Terrassa
-08225;Terrassa
-08226;Terrassa
-08227;Terrassa
-08228;Fonts (Les)
 08230;Matadepera
 08231;Ullastrell
 08232;Viladecavalls
@@ -1252,7 +1035,6 @@
 08281;Aleny
 08282;Conill
 08289;Copons
-08290;Cerdanyola del Valles
 08291;Ripollet
 08292;Can Rial
 08293;Collbató
@@ -1263,13 +1045,9 @@
 08298;Colonia Puig (La)
 08299;Codines (Les)
 08301;Mataro
-08302;Mataro
-08303;Mataro
-08304;Mataro
 08310;Argentona
 08317;Òrrius
 08318;Dosrius
-08319;Dosrius
 08320;Masnou (El)
 08328;Alella
 08329;Teia Centre
@@ -1285,7 +1063,6 @@
 08360;Canet de Mar
 08370;Calella
 08380;Malgrat de Mar
-08384;Cabrils
 08389;Palafolls
 08390;Montgat
 08391;Tiana
@@ -1297,25 +1074,19 @@
 08397;Pineda de Mar
 08398;Casc Urbà-Santa Susanna
 08401;Granollers
-08402;Granollers
-08403;Granollers
 08410;Vilanova del Valles
 08415;Vallrroja I El Pla
 08416;Riells del Fai
 08420;Serra (La)
 08430;Roca del Vallès (La)
 08440;Cànoves
-08445;Cànoves
 08450;Llinars del Vallès
 08455;Vilalba Sasserra
-08458;Sant Llorenç Savall
 08459;Alfou
 08460;Montseny
 08461;Sant Esteve Palautordera
-08469;Montseny
 08470;Campins
 08471;Vallgorguina
-08472;Campins
 08474;Gualba
 08476;Batlloria (La)
 08479;Costa del Montseny (La)
@@ -1342,8 +1113,6 @@
 08519;Folgueroles
 08520;Corro D'Amunt
 08521;Bellavista
-08529;Muntanyola
-08530;Cànoves
 08540;Centelles
 08550;Hostalets Balenyà (Els)
 08551;Tona
@@ -1352,7 +1121,6 @@
 08554;Sant Miquel de Balenyà
 08559;Brull (El)
 08560;Manlleu
-08569;Cantonigros
 08570;Torelló
 08571;Borgonya
 08572;Sant Pere de Torelló
@@ -1381,7 +1149,6 @@
 08640;Olesa de Montserrat
 08650;Botjosa (La)
 08660;Balsareny
-08670;Castelladral
 08672;Galera
 08673;Sant Joan de Montdarn
 08680;Bassacs
@@ -1421,7 +1188,6 @@
 08756;Can Iglèsies
 08757;Amunt (L')
 08758;Cervelló
-08759;Casetes (Les)
 08760;Can Bros
 08769;Àngels (Els)
 08770;Sant Celoni
@@ -1441,9 +1207,7 @@
 08788;Vilanova del Camí
 08789;Torre Baixa (La)
 08790;Gelida
-08791;Beguda Alta (La)
 08792;Granada (La)
-08793;Arboçar (L')
 08794;Cabanyes (Les)
 08795;Olesa de Bonesvalls
 08796;Pacs del Penedès
@@ -1451,7 +1215,6 @@
 08798;Sant Sebastia Dels Gorgs
 08799;Sant Pere Molanta
 08800;Vilanova I la Geltru
-08801;Terrassa
 08810;Can Macia
 08811;Canyelles
 08812;Puigmolto
@@ -1464,28 +1227,10 @@
 08859;Begues
 08860;Castelldefels
 08870;Botigues (Les)
-08871;Botigues (Les)
 08880;Cubelles
 08901;Hospitalet Llobregat (L')
-08902;Hospitalet Llobregat (L')
-08903;Hospitalet Llobregat (L')
-08904;Hospitalet Llobregat (L')
-08905;Hospitalet Llobregat (L')
-08906;Hospitalet Llobregat (L')
-08907;Hospitalet Llobregat (L')
-08908;Hospitalet Llobregat (L')
 08911;Badalona
-08912;Badalona
-08913;Badalona
-08914;Badalona
-08915;Badalona
-08916;Badalona
-08917;Badalona
-08918;Badalona
 08921;Santa Coloma de Gramenet
-08922;Santa Coloma de Gramenet
-08923;Santa Coloma de Gramenet
-08924;Santa Coloma de Gramenet
 08930;Sant Adria de Besos
 08940;Almeda Mercader
 08950;Esplugues de Llobregat
@@ -1493,12 +1238,6 @@
 08970;Sant Joan Despi
 08980;Sant Feliu de Llobregat
 09001;Burgos
-09002;Burgos
-09003;Burgos
-09004;Burgos
-09005;Burgos
-09006;Burgos
-09007;Burgos
 09100;Melgar de Fernamental
 09107;Arenillas de Riopisuerga
 09108;Castrillo de Riopisuerga
@@ -1609,7 +1348,6 @@
 09353;Santa Maria de Mercadillo
 09354;Pinilla Trasmonte
 09370;Aguilera (La)
-09390;Madrigalejo del Monte
 09391;Castrillo de la Vega
 09400;Aranda de Duero
 09410;Arandilla
@@ -1626,7 +1364,6 @@
 09460;Milagros
 09461;Fuentenebro
 09462;Adrada de Haza
-09463;Haza
 09471;Fuentelcesped
 09490;Brazacorta
 09491;Fresnillo de Las Dueñas
@@ -1647,7 +1384,6 @@
 09553;Barriosuso
 09554;Barcina de Los Montes
 09555;Campo
-09556;Casillas
 09557;Cogullos
 09558;Arges
 09559;Escobados de Abajo
@@ -1662,10 +1398,8 @@
 09573;Busnela
 09574;Cidad
 09580;Villasana de Mena
-09585;Ayega
 09586;Angulo
 09587;Arceo
-09588;Angulo
 09589;Santiuste
 09591;Celada de la Torre
 09592;Barcena de Bureba
@@ -1680,7 +1414,6 @@
 09615;Barbadillo de Herreros
 09616;Tejada
 09617;Santibañez del Val
-09618;Barriosuso
 09619;Navas del Pinar
 09620;Cojobar
 09631;Doña Santos
@@ -1705,13 +1438,7 @@
 09692;Canicosa de la Sierra
 09693;Regumiel de la Sierra
 10000;Caceres
-10001;Caceres
-10002;Caceres
-10003;Caceres
-10004;Caceres
-10005;Caceres
 10100;Alonso de Ojeda
-10109;Alonso de Ojeda
 10110;Losar de la Vera
 10120;Logrosan
 10129;Berzocana
@@ -1738,17 +1465,13 @@
 10184;Torremocha
 10185;Benquerencia
 10186;Torre de Santa Maria
-10187;Albala
 10189;Ruanes
 10190;Casar de Caceres
 10191;Santiago del Campo
 10192;Hinojal
 10193;Talavan
 10194;Monroy
-10195;Caceres
-10197;Albala
 10198;Santa Marta de Magasca
-10199;Caceres
 10200;Belen
 10210;Madroñera
 10220;Pago de San Clemente
@@ -1767,7 +1490,6 @@
 10280;Ibahernando
 10290;Trujillo
 10291;Aldea del Obispo
-10292;Belen
 10300;Navalmoral de la Mata
 10310;Palancoso
 10317;Vega de Mesillas
@@ -1810,7 +1532,6 @@
 10440;Aldeanueva de la Vera
 10450;Jarandilla de la Vera
 10459;Guijo de Santa Barbara
-10460;Losar de la Vera
 10470;Villanueva de la Vera
 10480;Madrigal de la Vera
 10484;Vegaviana
@@ -1826,7 +1547,6 @@
 10513;Cedillo
 10514;Huertas de Cansa (Las)
 10515;Alcorneo
-10516;Aceña de la Borrega(La)
 10519;Lanchuelas (Las)
 10520;Baldio
 10528;Serrejon
@@ -1838,7 +1558,6 @@
 10570;Salorino
 10580;Membrio
 10590;Malpartida de Plasencia
-10591;Herguijuela
 10592;Casas de Millan
 10593;Perala (La)
 10600;Plasencia
@@ -1862,28 +1581,23 @@
 10638;Aldehuela
 10639;Ovejuela
 10640;Azabal
-10649;Azabal
 10650;Ahigal
-10660;Almendral
 10661;Santa Cruz de Paniagua
 10662;Marchagaz
 10663;Cerezo
 10664;Mohedas de Granadilla
 10665;Guijo de Granadilla
 10666;Aceituna
-10667;Almendral
 10670;Carcaboso
 10671;Aldehuela del Jerte
 10672;Valdeobispo
 10680;Haza de la Concepcion
 10690;Avarientos
-10691;Avarientos
 10692;Batan (El)
 10693;Pajares de la Rivera
 10694;Salto de Torrejon
 10695;Villarreal de San Carlos
 10696;Barrado
-10697;Haza de la Concepcion
 10700;Hervas
 10701;Dos Hermanas
 10710;Zarza de Granadilla
@@ -1900,7 +1614,6 @@
 10750;Baños
 10759;Garganta  (La)
 10800;Coria
-10810;Atalaya
 10811;Puebla de Argeme
 10812;Villanueva de la Sierra
 10813;Pozuelo de Zarzon
@@ -1908,7 +1621,6 @@
 10815;Guijo de Coria
 10816;Casas de Don Gomez
 10817;Calzadilla
-10818;Casas de Don Gomez
 10820;Cañaveral
 10824;Holguera
 10828;Portezuelo
@@ -1916,7 +1628,6 @@
 10830;Torrejoncillo
 10839;Valdencin
 10840;Moraleja
-10848;Vegaviana
 10849;Moheda de Gata (La)
 10850;Hoyos
 10857;Acebo
@@ -1939,10 +1650,8 @@
 10891;Eljas
 10892;San Martin de Trevejo
 10893;Trevejo
-10894;Trevejo
 10895;Cilleros
 10896;Perales del Puerto
-10897;Estacion (La)
 10900;Arroyo de la Luz
 10910;Malpartida de Caceres
 10920;Estacion de Arroyo-Malpar
@@ -1956,22 +1665,9 @@
 10990;Estorninos
 10991;Piedras Albas
 11001;Cadiz
-11002;Cadiz
-11003;Cadiz
-11004;Cadiz
-11005;Cadiz
-11006;Cadiz
-11007;Cadiz
-11008;Cadiz
-11009;Cadiz
-11010;Cadiz
-11011;Cadiz
-11012;Cadiz
 11100;Arsenal de la Carraca
 11130;Chiclana de la Frontera
-11139;Chiclana de la Frontera
 11140;Barrio Nuevo
-11149;Barrio Nuevo
 11150;Manzanete
 11158;Barca la
 11159;Caños de Meca (Los)
@@ -1982,12 +1678,6 @@
 11180;Alcala de Los Gazules
 11190;Benalup
 11201;Algeciras
-11202;Algeciras
-11203;Algeciras
-11204;Algeciras
-11205;Algeciras
-11206;Algeciras
-11207;Algeciras
 11300;Linea la Concepcion (La)
 11310;Guadiaro
 11311;Pastrana
@@ -1996,35 +1686,25 @@
 11314;Campamento
 11320;San Pablo de Buceite
 11330;Angeles (Los)
-11339;Angeles (Los)
 11340;San Martin del Tesorillo
 11350;Almoraima
 11360;Puente Mayorga
 11368;Estacion Ferrea
 11369;Miraflores
 11370;Barrios (Los)
-11379;Barrios (Los)
 11380;Bujeo (El)
 11390;Pelayo (El)
-11391;Algeciras
 11392;Tahivilla
 11393;Zahara de Los Atunes
 11400;Alcornocalejos
 11401;Jerez de la Frontera
-11402;Jerez de la Frontera
-11403;Jerez de la Frontera
-11404;Jerez de la Frontera
-11405;Jerez de la Frontera
 11406;Estella del Marques
-11407;Jerez de la Frontera
-11408;Jerez de la Frontera
 11500;Puerto de Sta Maria (El)
 11510;Puerto Real
 11518;Jarana
 11519;Rio San Pedro
 11520;Bercial (El)
 11540;Algaida (La)
-11549;Algaida (La)
 11550;Chipiona
 11560;Trebujena
 11570;Barca de la Florida (La)
@@ -2053,9 +1733,7 @@
 11659;Pozo Amargo
 11660;Prado del Rey
 11670;Bosque (El)
-11679;Benamahoma
 11680;Algodonales
-11687;Arroyomolinos
 11688;Arroyo Molinos
 11689;Muela (La)
 11690;Olvera
@@ -2063,17 +1741,10 @@
 11692;Setenil
 11693;Alcala del Valle
 12001;Castellon de la Plana
-12002;Castellon de la Plana
-12003;Castellon de la Plana
-12004;Castellon de la Plana
-12005;Castellon de la Plana
-12006;Castellon de la Plana
-12100;Castellon de la Plana
 12110;Alcora
 12118;Las Crevadas
 12119;Araya
 12120;Lucena del Cid
-12121;Alcora
 12122;Figueroles
 12123;Benachera
 12124;Bibioj
@@ -2081,7 +1752,6 @@
 12126;San Vicente
 12127;Cortes de Arenoso
 12130;Masia Pla de Lluch
-12131;Las Crevadas
 12132;Atzeneta del Maestrat
 12133;Meanes
 12134;Benafigos
@@ -2095,7 +1765,6 @@
 12163;Culla
 12164;Brusalet (El)
 12165;Ares del Maestre
-12166;Marina (La)
 12170;Sant Mateu
 12179;Tirig
 12180;Cabanes
@@ -2134,7 +1803,6 @@
 12340;Jana (La)
 12350;Canet Lo Roig
 12360;Anroig
-12370;Anroig
 12400;Esperanza (La)
 12410;Altura
 12412;Geldo
@@ -2159,7 +1827,6 @@
 12490;Azuebar
 12499;Chovar
 12500;Vinaros
-12510;San Rafael del Rio
 12511;Rosell
 12512;Bel
 12513;Avella (La)
@@ -2177,10 +1844,8 @@
 12570;Alcala de Xivert
 12578;Cervera del Maestre
 12579;Alcossebre
-12580;Benicarlo
 12589;Calig
 12590;Almenara
-12591;Casablanca
 12592;Chilches
 12593;Grao
 12594;Amplaries (Les)
@@ -2191,12 +1856,7 @@
 12599;Ballestar
 12600;Vall D'Uixo (La)
 12609;Alfondeguilla
-12952;Chilches
 13001;Ciudad Real
-13002;Ciudad Real
-13003;Ciudad Real
-13004;Ciudad Real
-13005;Ciudad Real
 13100;Alcornocal (El)
 13107;Alcolea de Calatrava
 13108;Luciana
@@ -2208,7 +1868,6 @@
 13117;Anchuras
 13118;Huertas Sauceral (Las)
 13120;Porzuna
-13129;Porzuna
 13130;Fuencaliente
 13140;Fernan Caballero
 13150;Carrion de Calatrava
@@ -2222,9 +1881,7 @@
 13192;Tirteafuera
 13193;Arroba de Los Montes
 13194;Piedrala
-13195;Ciudad Real
 13196;Casas (Las)
-13197;Ciudad Real
 13200;Herrera de la Mancha
 13210;Villarta de San Juan
 13220;Llanos del Caudillo
@@ -2235,7 +1892,6 @@
 13249;Ruidera
 13250;Daimiel
 13260;Almagro
-13270;Almagro
 13279;Valenzuela de Calatrava
 13300;Alcazar de San Juan
 13310;Valdepeñas
@@ -2257,7 +1913,6 @@
 13350;Moral de Calatrava
 13360;Granatula de Calatrava
 13370;Calzada de Calatrava
-13379;Alameda (La)
 13380;Aldea del Rey
 13390;Pozo de la Serna
 13391;Alcubillas
@@ -2282,62 +1937,35 @@
 13460;Viñuela
 13470;Valdeazogues
 13473;Navalmedio de Morales
-13480;Almadenejos
 13490;Guadalmez
-13499;Guadalmez
 13500;Puertollano
-13580;Almodovar del Campo
 13590;Hinojosas de Calatrava
 13591;Cabezarrubias del Puerto
 13592;Hoyo (El)
 13593;Solana del Pino
-13594;Hoyo (El)
 13595;Villamayor de Calatrava
-13596;Bienvenida
 13597;Villar (El)
-13598;Retamar
 13600;Alameda de Cervera
 13610;Campo de Criptana
 13619;Arenales de San Gregorio
 13620;Pedro Muñoz
 13629;Estacion Rio Zancara
 13630;Socuellamos
-13640;Viñuela
 13650;Puerto Lapice
-13660;Labores (Las)
 13670;Villarrubia de Los Ojos
 13679;Arenas de San Juan
-13680;Ballesteros
-13690;Alameda de Cervera
 13700;Tomelloso
 13710;Argamasilla de Alba
 13720;Cinco Casas
 13730;Santa Cruz de Mudela
 13738;Viso del Marques
-13739;Calzada de Calatrava
 13740;Torrenueva
 13750;Castellar de Santiago
 13760;Almuradiel
 13768;Venta de Cardenas
-13770;Viso del Marques
-13779;Calzada de Calatrava
 14001;Cordoba
-14002;Cordoba
-14003;Cordoba
 14004;Alameda del Obispo
-14005;Alameda del Obispo
-14006;Cordoba
-14007;Cordoba
-14008;Cordoba
-14009;Cordoba
-14010;Cordoba
 14011;Castillo de la Albaida
-14012;Cordoba
-14013;Cordoba
-14014;Alcolea
-14015;Alcolea
-14016;Cordoba
-14029;Alameda del Obispo
 14045;Cardeña
 14071;Villafranca de Cordoba
 14100;Algarbes (Los)
@@ -2353,14 +1981,11 @@
 14150;San Sebastian de Los Ball
 14190;Puente Viejo
 14191;Arrecife (El)
-14192;Castillo de la Albaida
-14193;Arrecife (El)
 14199;Lucena
 14200;Peñarroya-Pueblonuevo
 14206;Valsequillo
 14207;Granjuela (La)
 14208;Blazquez (Los)
-14209;Hoyo (El)
 14210;Fuente Agria
 14220;Ballesta (La)
 14230;Villanueva del Rey
@@ -2373,23 +1998,16 @@
 14280;Belalcazar
 14290;Argallon
 14297;Cuenca
-14298;Argallon
 14299;Cañada del Gamo
 14300;Vacar (El)
 14310;Cerro Muriano
-14320;Vacar (El)
-14340;Cerro Muriano
-14350;Cerro Muriano
 14400;Pozoblanco
 14410;Torrecampo
 14412;Pedroche
 14413;Guijo (El)
-14420;Villafranca de Cordoba
 14430;Adamuz
 14439;Algallarin
 14440;Venta del Charco
-14445;Doña Rama
-14446;Venta del Charco
 14447;Azuel
 14448;Conquista
 14449;Horcajo (Minas Del)
@@ -2407,12 +2025,9 @@
 14530;Montemayor
 14540;Rambla (La)
 14546;Fontanar (El)
-14547;Fontanar (El)
 14548;Montalban de Cordoba
 14549;Huertas Bocas del Salado
-14550;Añora
 14600;Campiña
-14610;Adamuz
 14620;Carpio (El)
 14630;Pedro Abad
 14640;Villa del Rio
@@ -2424,7 +2039,6 @@
 14700;Arriel
 14709;Bembezar del Caudillo
 14710;Encinarejo de Cordoba
-14711;Encinarejo de Cordoba
 14719;Majaneque
 14720;Almodovar del Rio
 14729;Mochos (Los)
@@ -2433,7 +2047,6 @@
 14740;Aguila (El)
 14749;Carrascal (El)
 14800;Luque
-14810;Algar
 14811;Gaena-Casas Gallegas
 14812;Almedinilla
 14813;Bracana
@@ -2451,35 +2064,21 @@
 14859;Albendin
 14860;Doña Mencia
 14870;Zuheros
-14880;Luque
-14889;Estacion (La)
 14900;Anjaron
 14910;Benameji
-14911;Dehesa del Cañaveral
 14913;Encinas Reales
 14914;Palenciana
 14915;Tejar (El)
 14920;Aguilar de la Frontera
 14930;Benita (La)
 14940;Alcaidia (La)
-14941;Santa Eufemia
-14949;Alcaidia (La)
 14950;Baena
 14960;Hoz (La)
 14970;Cierzos Y Cabreras
 14978;Adelantado (El)
 14979;Arroyo de Priego
 15001;Coruña (A)
-15002;Coruña (A)
-15003;Coruña (A)
-15004;Coruña (A)
-15005;Coruña (A)
-15006;Coruña (A)
-15007;Coruña (A)
 15008;Borroa
-15009;Coruña (A)
-15010;Coruña (A)
-15011;Coruña (A)
 15100;Carballo
 15102;Barreira (A)
 15105;Miron
@@ -2530,7 +2129,6 @@
 15166;Armuño
 15167;Cangas
 15168;Cimas
-15169;Agra
 15170;Fontaiña
 15171;Campamento (O)
 15172;Pazo Do Rio
@@ -2546,7 +2144,6 @@
 15182;Calle
 15183;Cabancas
 15184;Belvis de Sumio
-15185;Acebedo
 15186;Abeleira
 15187;Arroio
 15188;Meirama
@@ -2560,7 +2157,6 @@
 15201;Guadalupe de Maciascoque
 15210;Augalevada
 15211;Agrelo
-15212;Aguieira
 15213;Balbargos
 15214;Berrimes
 15215;Aldaris
@@ -2599,7 +2195,6 @@
 15310;Abelar
 15313;Airoa (A)
 15314;Areas
-15315;Abeleira
 15316;Armea
 15317;Apeadeiro (O)
 15318;Atrio
@@ -2615,13 +2210,11 @@
 15332;Regueiro (O)
 15337;Faro Da Estaca de Bares
 15338;Ameixeiras (As)
-15339;Aguieira
 15340;Ponte Mera
 15347;Arrasa
 15349;Cal (O)
 15350;Cedeira
 15357;Acea
-15358;Atrio
 15359;Aneiros
 15360;Cariño
 15365;Airado (O)
@@ -2638,12 +2231,6 @@
 15390;Amilladoiro (O)
 15391;Cabanas
 15401;Ferrol
-15402;Ferrol
-15403;Ferrol
-15404;Ferrol
-15405;Ferrol
-15406;Ferrol
-15407;Ferrol
 15489;Granada
 15500;Cadavo
 15509;Basante
@@ -2654,9 +2241,7 @@
 15540;Barcia
 15541;Abelleiro (O)
 15542;Calvario (O)
-15543;Augalevada
 15550;Barral (O)
-15551;Barreiro (O)
 15552;Aldarete
 15553;Amoreira
 15554;Arnela
@@ -2665,14 +2250,10 @@
 15561;Ardariz
 15562;Bañoca
 15563;Canosa
-15564;Abelleira
-15565;Abeledo
-15566;Areas
 15567;Abeleiral
 15568;Bacelar
 15569;Abelleira de Abaixo
 15570;Naron
-15572;Naron
 15573;Rio Do Pozo
 15576;Abelleira (A)
 15577;Animas
@@ -2685,25 +2266,20 @@
 15591;Cabana (A)
 15592;Vila Da Area
 15593;Barca de Arriba (A)
-15594;Ferrol
 15595;Bustelo
 15596;Barreiros
 15598;Borreiros
 15600;Pontedeume
 15607;Allon
 15608;Costa Miño
-15609;Aspera
 15611;Balbis
 15612;Barreiras
 15613;Ameneiro (O)
-15614;Barreiro (O)
 15615;Abeledo (O)
 15616;Agra (A)
 15617;Cabana
 15619;Abeal
 15620;Pedreira (A)
-15621;Cabanas
-15622;Batan
 15623;Curma
 15624;Ares
 15625;Agarrios
@@ -2723,7 +2299,6 @@
 15669;Brille
 15670;Acea de Ama
 15679;Graxal (O)
-15680;Casillas
 15683;Bedrobe
 15684;Agromayor
 15685;Ar
@@ -2733,24 +2308,14 @@
 15689;Busto
 15690;Allan
 15701;Santiago de Compostela
-15702;Santiago de Compostela
-15703;Santiago de Compostela
-15704;Santiago de Compostela
-15705;Santiago de Compostela
-15706;Santiago de Compostela
-15707;Santiago de Compostela
 15800;Melide
 15805;Cepelos
 15806;Acibadoiro
-15807;Castro
 15808;Agro Do Chao
 15809;Eirexe
 15810;Arzua
-15813;Acea
 15814;Campelos
 15815;Aldea Do Medio
-15816;Areas
-15817;Casanova
 15818;Leira Longa
 15819;Bosende
 15820;Castiñeira Pequena (A)
@@ -2758,14 +2323,10 @@
 15822;Bendaña
 15823;Angumil
 15824;Castro (O)
-15825;Barral (O)
 15826;Boente de Abaixo
 15828;Calvos
 15830;Negreira
 15837;Almozara
-15838;Alvite
-15839;Cabanas
-15840;Aldea (A)
 15841;Arosa (A)
 15845;Antes (As)
 15846;Albarin
@@ -2787,28 +2348,17 @@
 15866;Adran
 15870;Ameixenda
 15871;Bascuas
-15872;Carreira
 15873;Bembibre
 15874;Albaxeira
 15880;Angustin
-15881;Casanova
 15882;Ledesma
-15883;Barcia
 15884;Barcavella
-15885;Castro
 15886;Agromaior
 15887;Amarelle
 15888;Sigueiro
-15890;Santiago de Compostela
-15891;Santiago de Compostela
-15892;Santiago de Compostela
-15893;Santiago de Compostela
 15894;San Sadurniño
 15895;Ventin
 15896;Carballal (O)
-15897;Santiago de Compostela
-15898;Santiago de Compostela
-15899;Santiago de Compostela
 15900;Padron
 15910;Agronovo
 15911;Antequeira
@@ -2823,7 +2373,6 @@
 15930;Boiro
 15937;Acuncheira
 15938;Abanqueiro
-15939;Aldea de Arriba
 15940;Pobra Do Caramiñal (Capit
 15948;Aldeavella
 15949;Areos
@@ -2831,13 +2380,11 @@
 15959;Carballa
 15960;Martin
 15965;Aguiño
-15966;Aldea
 15967;Casalnovo
 15968;Cruxeiras
 15969;Arribas
 15970;Porto Do Son
 15978;Belga (A)
-15979;Abuin
 15980;Angueira de Suso
 15981;Dodriño
 15982;Bexo
@@ -2851,12 +2398,8 @@
 15994;Alboreda
 15995;Abelendo
 15996;Caamaño
-15998;Devesa (A)
 15999;Valcunqueiro
-16001;Cuenca
 16002;Colliga
-16003;Cuenca
-16004;Cuenca
 16100;Valverde de Jucar
 16111;Albaladejo del Cuende
 16113;Parra de Las Vegas (La)
@@ -2872,7 +2415,6 @@
 16144;Frontera (La)
 16145;Pajares
 16146;Valdecabras
-16147;Mariana
 16150;Tragacete
 16152;Beamud
 16160;Palomares del Campo
@@ -2882,7 +2424,6 @@
 16191;Arcos de la Cantera
 16192;Buenache de la Sierra
 16193;Melgosa (La)
-16194;Chillaron de Cuenca
 16195;Abia de la Obispalia
 16196;Barbalimpia
 16200;Motilla del Palancar
@@ -2930,7 +2471,6 @@
 16372;Enguidanos
 16373;Cardenete
 16390;Pajaron
-16393;Cañada (La)
 16400;Tarancon
 16410;Horcajo de Santiago
 16411;Fuente de Pedro Naharro
@@ -2953,7 +2493,6 @@
 16441;Hito (El)
 16442;Villares del Saz
 16444;Cervera del Llano
-16452;Rozalen del Monte
 16460;Barajas de Melo
 16461;Leganiel
 16463;Saceda-Trasierra
@@ -2998,7 +2537,6 @@
 16708;Casas de Guijarro
 16709;Simarro (El)
 16710;Atalaya del Cañavate
-16720;Cañada Juncosa
 16730;Honrubia
 16738;Cañavate (El)
 16739;Torrubia del Castillo
@@ -3008,7 +2546,6 @@
 16771;Villarejo-Periesteban
 16779;Belmontejo
 16780;Altarejos
-16781;Fresneda de Altarejos
 16800;Priego
 16812;Albendea
 16813;Salmeroncillos de Abajo
@@ -3028,16 +2565,11 @@
 16870;Beteta
 16878;Lagunaseca
 16879;Tobar (El)
-16890;Cañamares
 16891;Cañizares
 16892;Puente de Vadillos
 16893;Solan de Cabras
 17001;Girona
-17002;Girona
 17003;La Creu de Palau
-17004;Girona
-17005;Girona
-17006;Girona
 17007;Domeny
 17100;Bisbal D'Emporda (La)
 17110;Fonteta
@@ -3052,7 +2584,6 @@
 17123;Torrent
 17124;Llofriu
 17130;Empuries
-17131;Atalaia
 17132;Cuells
 17133;Sala (La)
 17134;Canet de la Tallada
@@ -3064,7 +2595,6 @@
 17142;Verges
 17143;Jafre
 17144;Colomers
-17150;Domeny
 17151;Ginestar
 17152;Llora
 17153;Granollers de Rocacorba
@@ -3075,13 +2605,11 @@
 17163;Vilanna
 17164;Constantins
 17165;Pasteral (El)
-17166;Pasteral (El)
 17170;Amer
 17171;La Barroca
 17172;Encies (Les)
 17173;Cogolls
 17174;Bastons
-17176;Bas
 17177;Dreta del Fluvia
 17178;Bellaire
 17179;Bac D'En Deu
@@ -3090,12 +2618,9 @@
 17182;Estanyol
 17183;Sant Dalmai
 17184;Salitja
-17185;Sant Dalmai
 17190;Salt
 17199;Adri
 17200;Bruguerol
-17210;Calella
-17211;Calella
 17212;Tamariu
 17213;Esclanya
 17214;Regencos
@@ -3113,7 +2638,6 @@
 17250;Platja D'Aro
 17251;Cabanyes
 17252;Sant Antoni de Calonge
-17253;Canyelles
 17255;Begur
 17256;Fontclara
 17257;Fontanilles
@@ -3140,7 +2664,6 @@
 17452;Massanes
 17454;Sant Andreu Salou
 17455;Caldes de Malavella
-17456;Caldes de Malavella
 17457;Riudellots de la Selva
 17458;Fornells de la Selva
 17459;Campllong
@@ -3162,12 +2685,10 @@
 17476;Arenys D'Emporda
 17480;Canyelles-Almadrava-P.rom
 17481;Medinya
-17482;Medinya
 17483;Bascara
 17484;Palol
 17485;Vila-Sacra
 17486;Empuriabrava
-17487;Empuriabrava
 17488;Cadaques
 17489;Erola
 17490;Valleta (La)
@@ -3203,7 +2724,6 @@
 17709;Canadal
 17720;Arnera
 17721;Les Creus
-17722;Arnera
 17723;Boadella
 17730;Hostalets
 17731;Guardia (La)
@@ -3217,7 +2737,6 @@
 17744;Canelles - Caseriu
 17745;Llado
 17746;Cabanelles
-17747;Cabanelles
 17750;Buscaros
 17751;Base Militar
 17752;Casaloca
@@ -3227,15 +2746,12 @@
 17760;Vilabertran
 17761;Aigueta
 17762;Masarac
-17763;Masarac
-17770;Borrassa
 17771;Santa Llogaia D'Alguema
 17772;Ordis
 17773;Pontos Poblacio
 17780;Garriguella
 17781;Vilamaniscle
 17800;Olot
-17810;Olot
 17811;Arcs (Els)
 17812;Batet
 17813;Sant Marti del Clot
@@ -3247,13 +2763,11 @@
 17834;Sant Vicenç de Camos
 17840;Sarria de Ter
 17843;Sant Marti de la Mota
-17844;Borgonya
 17846;Mata
 17850;Besalu
 17851;Seguero
 17852;Serinya
 17853;Argelaguer
-17854;Sant Vicenç de Camos
 17855;Montagut
 17856;Castellfollit de la Roca
 17857;Beguda
@@ -3266,21 +2780,9 @@
 17867;Bolos
 17868;Can Sola
 17869;Espinalba
-18001;Granada
 18002;Bobadilla
-18003;Granada
-18004;Granada
-18005;Granada
-18006;Granada
-18007;Granada
-18008;Granada
-18009;Granada
 18010;Alqueria del Fargue
-18011;Granada
-18012;Granada
-18013;Granada
 18014;Cerrillo de Maracena
-18015;Bobadilla
 18100;Armilla
 18101;Belicena
 18102;Ambroz
@@ -3289,7 +2791,6 @@
 18126;Arenas del Rey
 18127;Fornes
 18128;Pilas de Algaida
-18129;Arenas del Rey
 18130;Escuzar
 18131;Acula
 18132;Agron
@@ -3302,12 +2803,10 @@
 18179;Fuente Grande
 18180;Diezma
 18181;Darro
-18182;Alqueria del Fargue
 18183;Huetor-Santillan
 18184;Beas de Granada
 18185;Molinillo (El)
 18190;Cenes de la Vega
-18191;Canales
 18192;Dudar
 18193;Barrio de la Vega
 18194;Churriana de la Vega
@@ -3336,7 +2835,6 @@
 18291;Anzola
 18292;Pedro Ruiz
 18293;Escoznar
-18294;Escoznar
 18295;Fuentes de Cesna
 18300;Arenales (Los)
 18310;Salar
@@ -3356,7 +2854,6 @@
 18369;Villanueva Mesia
 18370;Loreto
 18380;Tocon
-18381;Bracana
 18400;Cerro Negro
 18410;Cañadillas (Las)
 18411;Pampaneira
@@ -3410,17 +2907,14 @@
 18565;Campotejar
 18566;Benalua de Las Villas
 18567;Cotilfar
-18568;Bogarre
 18569;Montillana
 18570;Deifontes
 18600;Garnatilla (La)
 18610;Lobres
 18611;Molvizar
 18612;Itrabo
-18613;Garnatilla (La)
 18614;Castell de Ferro
 18615;Gorgoracha (La)
-18616;Gorgoracha (La)
 18620;Alhendin
 18630;Otura
 18640;Padul
@@ -3430,7 +2924,6 @@
 18658;Melegis
 18659;Albuñuelas
 18660;Beznar
-18670;Gorgoracha (La)
 18680;Caleta-Guardia (La)
 18690;Almuñecar
 18697;Herradura (La)
@@ -3441,12 +2934,10 @@
 18710;Alcazar
 18711;Barranco Ferrer
 18713;Melicena
-18720;Torrenueva
 18730;Calahonda
 18740;Romeral (El)
 18750;Castillo de Baños
 18760;Rabita (La)
-18770;Pozuelo (El)
 18800;Baza
 18810;Caniles
 18811;Carramaiza
@@ -3459,11 +2950,8 @@
 18818;Carriones (Los)
 18819;Balax
 18820;Almaciles
-18830;Barrio Nuevo
 18840;Buenavista
-18849;Alqueria (La)
 18850;Cullar
-18857;Margen (El)
 18858;Fuente Nueva
 18859;Pulpite
 18860;Baul
@@ -3472,12 +2960,6 @@
 18890;Gorafe
 18891;Pozo Iglesias
 19001;Guadalajara
-19002;Guadalajara
-19003;Guadalajara
-19004;Guadalajara
-19005;Guadalajara
-19080;Guadalajara
-19100;Pastrana
 19110;Mondejar
 19111;Yebra
 19112;Albares
@@ -3525,7 +3007,6 @@
 19186;Cubillo de Uceda (El)
 19187;Caraquiz
 19190;Casasola
-19191;Pozo de Guadalajara
 19192;Gajanejos
 19193;Taracena
 19194;Valdenoches
@@ -3572,7 +3053,6 @@
 19273;Pradena de Atienza
 19274;Alpedroches
 19275;Albendiego
-19276;Atienza
 19277;Alcolea de Las Peñas
 19278;Bodera (La)
 19280;Maranchon
@@ -3619,7 +3099,6 @@
 19351;Tordelpalo
 19352;Prados Redondos
 19353;Chera
-19354;Aldehuela
 19355;Otilla
 19357;Anquela del Pedregal
 19360;Campillo de Dueñas
@@ -3634,7 +3113,6 @@
 19411;Archilla
 19412;Fuentes de la Alcarria
 19413;Castilmimbre
-19414;Hontanares
 19420;Cifuentes
 19428;Moranchel
 19429;Huetos
@@ -3659,23 +3137,9 @@
 19495;Zaorejas
 19680;Salobreña
 20001;Donostia-San Sebastian
-20002;Donostia-San Sebastian
-20003;Donostia-San Sebastian
-20004;Donostia-San Sebastian
-20005;Donostia-San Sebastian
-20006;Donostia-San Sebastian
-20007;Donostia-San Sebastian
 20008;Igeldo
 20009;Añorga
-20010;Donostia-San Sebastian
-20011;Donostia-San Sebastian
-20012;Donostia-San Sebastian
-20013;Donostia-San Sebastian
 20014;Landarbaso
-20015;Donostia-San Sebastian
-20016;Donostia-San Sebastian
-20017;Donostia-San Sebastian
-20018;Añorga
 20100;Lezo
 20110;Pasai Antxo
 20115;Astigarraga
@@ -3706,7 +3170,6 @@
 20249;Itsasondo
 20250;Legorreta
 20259;Baliarrain
-20260;Alegia
 20267;Ikaztegieta
 20268;Altzo
 20269;Abaltzisketa
@@ -3715,11 +3178,7 @@
 20280;Akartegi
 20300;Jaitzubia
 20301;Irun
-20302;Irun
-20303;Irun
-20304;Irun
 20305;Bidasoa
-20400;Ibarra
 20490;Lizartza
 20491;Belauntza
 20492;Berastegi
@@ -3741,7 +3200,6 @@
 20578;Angiozar
 20580;Osintxu
 20590;Soraluze/Placencia de Las
-20600;Aginaga
 20690;Elgeta
 20700;Urretxu
 20709;Itsaso-Alegia
@@ -3763,30 +3221,18 @@
 20860;Alzola
 20870;Elgoibar
 21000;Huelva
-21001;Huelva
-21002;Huelva
-21003;Huelva
-21004;Huelva
-21005;Huelva
-21006;Huelva
-21007;Huelva
 21009;Isla de Canela
 21100;Aljaraque
-21110;Aljaraque
 21120;Corrales
-21122;Bellavista
 21130;Mazagon
 21193;Navatejera
 21200;Aracena
 21207;Umbria (La)
-21208;Aracena
 21209;Jabuguillo
 21210;Zufre
 21220;Higuera de la Sierra
 21230;Corte (La)
-21239;Andreses (Los)
 21240;Aroche
-21248;Aroche
 21250;Rosal de la Frontera
 21260;Santa Olalla del Cala
 21270;Cala
@@ -3796,7 +3242,6 @@
 21292;Castaño del Robledo
 21300;Calañas
 21309;Sotiel Coronada
-21310;Zarza (La)
 21319;Perrunal
 21320;Cerro de Andevalo (El)
 21330;Cueva de la Mora
@@ -3811,21 +3256,14 @@
 21388;Cañaveral de Leon
 21390;Encinasola
 21400;Ayamonte
-21409;Ayamonte
 21410;Isla-Cristina
 21420;Fotea
-21430;Isla-Cristina
-21440;Isla de Canela
 21449;Antilla (La)
 21450;Cartaya
-21459;Cartaya
 21500;Gibraleon
 21510;San Bartolome de la Torre
 21520;Alosno
-21530;Alosno
-21540;Cartaya
 21550;Herrerias (Las)
-21559;Herrerias (Las)
 21560;Paymogo
 21570;Santa Barbara de Casa
 21580;Mustio (El)
@@ -3838,26 +3276,22 @@
 21600;Valverde del Camino
 21609;Fuente de la Corcha
 21610;Bermejal
-21620;Santa Olalla del Cala
 21630;Beas
 21639;Candon
 21640;Delgadas (Las)
 21646;Concepcion
 21647;Berrocal
 21649;Traslasierra
-21650;Campillo (El)
 21660;Minas de Riotinto
 21667;Alto de la Mesa
 21668;Campofrio
 21669;Dehesa
 21670;Nerva
 21700;Palma del Condado (La)
-21710;Bollullos Par del Condado
 21720;Rociana del Condado
 21730;Almonte
 21739;Bodegones (Los)
 21740;Hinojos
-21750;Almonte
 21760;Torre Higuera O Matalasca
 21800;Madres del Avitor (Las)
 21810;Palos de la Frontera
@@ -3869,21 +3303,9 @@
 21860;Villalba del Alcor
 21870;Aldea de Tejada
 21880;Paterna del Campo
-21888;Paterna del Campo
 21890;Manzanilla
 21891;Chucena
 22000;Huesca
-22001;Huesca
-22002;Huesca
-22003;Huesca
-22004;Huesca
-22005;Huesca
-22006;Huesca
-22080;Huesca
-22090;Huesca
-22092;Huesca
-22094;Huesca
-22097;Huesca
 22100;Sangarren
 22110;Salillas
 22111;Monflorite
@@ -3996,10 +3418,8 @@
 22390;Artasona
 22391;Torreciudad
 22392;Abizanda
-22393;Abizanda
 22394;Mediano
 22395;Camporrotuno
-22400;Ayamonte
 22410;Alcolea de Cinca
 22411;Santalecina
 22412;Estiche de Cinca
@@ -4021,7 +3441,6 @@
 22439;Olvena
 22440;Benasque
 22449;Cerler
-22450;Campo
 22451;Beleder
 22452;Colladas (Las)
 22460;Besians
@@ -4036,9 +3455,7 @@
 22469;Anciles
 22470;Bisaurri
 22471;Abella
-22472;Abella
 22473;Alins
-22474;Abella
 22480;Capella
 22481;Guel
 22482;Esdolomada
@@ -4052,7 +3469,6 @@
 22511;Valcarca
 22512;San Esteban de Litera
 22513;Calasanz
-22514;Calasanz
 22520;Fraga
 22528;Velilla de Cinca
 22529;Miralsot
@@ -4064,10 +3480,8 @@
 22535;Esplus
 22536;Monte Julia
 22540;Altorricon
-22549;San Miguel
 22550;Algayon
 22558;Albelda
-22559;Algayon
 22560;Alcampell
 22569;Baells
 22570;Camporrells
@@ -4100,7 +3514,6 @@
 22636;Escuer
 22637;Barbenuta
 22638;Aso de Sobremonte
-22639;Biescas
 22640;Formigal
 22650;Baños de Panticosa
 22660;Escarrilla
@@ -4114,12 +3527,10 @@
 22710;Castiello de Jaca
 22711;Bernues
 22712;Abay
-22713;Abay
 22714;Baraguas
 22715;Ascara
 22720;Hecho
 22725;Anso
-22728;Anso
 22729;Fago
 22730;Aragues del Puerto
 22731;Jasa
@@ -4136,13 +3547,11 @@
 22772;Martes
 22773;Binies
 22790;Siresa
-22791;Santa Cilia
 22792;Santa Cruz de la Seros
 22800;Ayerbe
 22807;Losanglis
 22808;Aguero
 22809;Fontellas
-22810;Anies
 22811;Lupiñen
 22820;Peña Estacion (La)
 22821;Rasal
@@ -4156,13 +3565,7 @@
 22889;Candanchu
 23001;Jaen
 23002;Caño Quebrado
-23003;Jaen
-23004;Caño Quebrado
-23005;Jaen
 23006;Imora (La)
-23007;Jaen
-23008;Jaen
-23009;Almenara
 23100;Mancha Real
 23110;Pegalajar
 23120;Cambil
@@ -4175,7 +3578,6 @@
 23180;Fuerte del Rey
 23190;Cerradura (La)
 23191;Carchel
-23192;Carchel
 23193;Arbuniel
 23194;Jabalcuz
 23196;Otiñar O Santa Cristina
@@ -4184,7 +3586,6 @@
 23211;Acebuchar (El)
 23212;Navas de Tolosa
 23213;Santa Elena
-23214;Centenillo (El)
 23215;Aldeaquemada
 23220;Encinares (Los)
 23230;Arquillos
@@ -4197,7 +3598,6 @@
 23266;Montizon
 23267;Aldeahermosa
 23268;Mochuelos (Los)
-23269;Campillo (El)
 23270;Sorihuela del Guadalimar
 23280;Beas de Segura
 23289;Cañada Catena
@@ -4226,8 +3626,6 @@
 23359;Peñolite
 23360;Puerta de Segura (La)
 23369;Pascuales (Los)
-23370;Arroyos (Los)
-23379;Batan (El)
 23380;Siles
 23390;Benatae
 23391;Fuente Carrasca
@@ -4237,13 +3635,11 @@
 23410;Sabiote
 23411;Alamos Blancos
 23412;Marmol (El)
-23413;Santa Eulalia
 23420;Canena
 23430;Rus
 23440;Baeza
 23450;Ibros
 23460;Peal de Becerro
-23468;Hornos
 23469;Puente de la Cerrada
 23470;Casas de Estepa
 23476;Iruela (La)
@@ -4252,8 +3648,6 @@
 23479;Vadillo Castril
 23480;Bruñel Alto
 23485;Almiceran (El)
-23486;Cuenca
-23487;Arroyo Molinos
 23488;Rosales (Los)
 23489;Belerda
 23490;Barriada del Puente
@@ -4277,7 +3671,6 @@
 23590;Estacion de Cabra
 23591;Estacion de Huesa
 23600;Baños de Agua Hedionda
-23610;Encinares (Los)
 23611;Higuera de Calatrava
 23612;Santiago de Calatrava
 23614;Carrasca (La)
@@ -4298,7 +3691,6 @@
 23669;Bobadilla (La)
 23670;Alfavila (La)
 23680;Alcala la Real
-23684;Rabita (La)
 23685;Grageras (Las)
 23686;Ermita Nueva
 23687;Charilla
@@ -4311,30 +3703,19 @@
 23700;Arrayanes-La Cruz-La Lagu
 23710;Bailen
 23711;Baños de la Encina
-23712;Jabalquinto
-23713;Arrayanes-La Cruz-La Lagu
 23720;Estacion de Espeluy
 23730;Condesa (La)
 23740;Andujar
 23746;Lahiguera
 23747;Llanos del Sotillo
 23748;Virgen de la Cabeza
-23749;Villares (Los)
 23750;Arjonilla
 23760;Albaida
 23770;Marmolejo
 23780;Lopera
 23790;Alharilla
 24001;Leon
-24002;Leon
-24003;Leon
-24004;Leon
 24005;Armunia
-24006;Leon
-24007;Leon
-24008;Leon
-24009;Armunia
-24010;Leon
 24100;Villablino
 24110;Caboalles de Abajo
 24111;Caboalles de Arriba
@@ -4387,18 +3768,13 @@
 24172;Bustillo de Cea
 24174;Cea
 24175;Villamol
-24190;Armunia
 24191;San Andres del Rabanedo
-24192;Armunia
-24193;Navatejera
 24194;Santovenia de la Valdonci
 24195;Carbajosa
 24196;Carbajal de la Legua
-24197;Canaleja
 24198;Virgen del Camino (La)
 24199;Alija de la Ribera
 24200;Valencia de Don Juan
-24205;Cabañas
 24206;Castilfale
 24207;Matanza de Los Oteros
 24208;Quintanilla de Los Oteros
@@ -4457,7 +3833,6 @@
 24292;Valverde Enrique
 24293;Albires
 24294;Gordoncillo
-24300;Bembibre
 24310;Ribera de Folgoso (La)
 24311;Folgoso de la Ribera
 24312;Boeza
@@ -4505,7 +3880,6 @@
 24380;Puente de Domingo Florez
 24384;Salas de la Ribera
 24385;San Pedro de Trones
-24386;Puente de Domingo Florez
 24387;Robledo de Sobrecastro
 24388;Lomba
 24389;Benuza
@@ -4519,19 +3893,14 @@
 24397;Porqueros
 24398;Calamocos
 24400;Ponferrada
-24401;Ponferrada
-24402;Ponferrada
 24403;Dehesas
 24404;Compostilla
 24410;Magaz de Arriba
 24411;Fuentes Nuevas
-24412;Cortiguera
-24413;Acebo
 24414;Bouzas
 24415;Manzanedo de Valdueza
 24416;Santo Tomas de Las Ollas
 24420;Fabero
-24424;Dehesas
 24428;Lillo del Bierzo
 24429;Barcena de la Abadia
 24430;Vega de Espinareda
@@ -4572,7 +3941,6 @@
 24497;Tejedo del Sil
 24498;Villarino del Sil
 24500;Villafranca del Bierzo
-24510;Cela
 24511;Campo del Agua
 24512;Paradiña
 24513;Landoiro
@@ -4585,8 +3953,6 @@
 24522;Pereje
 24523;Moral de Valcarce
 24524;Ambasmestas
-24525;Balboa
-24526;Herrerias (Las)
 24530;Peon
 24540;Cacabelos
 24544;Carracedelo
@@ -4594,7 +3960,6 @@
 24546;Arganza
 24547;Arborbuena
 24548;Quilos
-24549;Carracedelo
 24550;Villamartin de la Abadia
 24560;Toral de Los Vados
 24565;Villadepalos
@@ -4645,7 +4010,6 @@
 24735;Castrocontrigo
 24736;Morla de la Valderia
 24738;Cunas
-24739;Santa Cruz de Montes
 24740;Corporales
 24741;Iruela
 24742;Castrillo de Cabrera
@@ -4675,8 +4039,6 @@
 24800;Cistierna
 24810;Sabero
 24811;Olleros de Sabero
-24812;Sabero
-24813;Cistierna
 24814;Sotillos de Sabero
 24815;Modino
 24816;Quintana de la Peña
@@ -4725,7 +4087,6 @@
 24900;Riaño
 24911;Barniedo de la Reina
 24912;Llanaves de la Reina
-24913;Barniedo de la Reina
 24914;Caldevilla de Valdeon
 24915;Cain de Valdeon
 24916;Oseja de Sajambre
@@ -4743,15 +4104,8 @@
 24991;Ciguera
 24994;Liegos
 24995;Lario
-24996;Acebedo
 25001;Lleida
-25002;Lleida
-25003;Lleida
-25004;Lleida
 25005;Gualda
-25006;Lleida
-25007;Lleida
-25008;Lleida
 25100;Almacelles
 25110;Alpicat
 25111;Raimat
@@ -4809,16 +4163,8 @@
 25185;Granja D'Escarp (La)
 25186;Llardecans
 25187;Almatret
-25190;Lleida
 25191;Butsenit
-25192;Butsenit
-25193;Montagut
-25194;Butsenit
 25195;Basses D'Alpicat (Les)
-25196;Butsenit
-25197;Lleida
-25198;Basses D'Alpicat (Les)
-25199;Basses D'Alpicat (Les)
 25200;Cervera
 25210;Guissona
 25211;Massoteres
@@ -4861,11 +4207,9 @@
 25286;Isil
 25287;Brics
 25288;Llena (La)
-25289;Aguilar
 25290;Clariana de Cardener
 25300;Talladell (El)
 25310;Agramunt
-25315;Butsenit
 25316;Pradell
 25317;Donzell D'Urgell
 25318;Puelles (Les)
@@ -4888,12 +4232,10 @@
 25352;Riudovelles
 25353;Claravalls
 25354;Sta M de Montmagastrell
-25360;Talladell (El)
 25400;Borges Blanques (Les)
 25410;Espluga Calba (L')
 25411;Fulleda
 25412;Omellons (Els)
-25413;Floresta (La)
 25420;Puiggros
 25430;Juneda
 25440;Vinaixa
@@ -4931,29 +4273,23 @@
 25554;Bordes (Les)
 25555;Erta
 25556;Abella D'Adons
-25557;Vilosell (El)
 25560;Alcoletge
 25566;Embonui
 25567;Altron
 25568;Bressui
 25569;Llagunes (Les)
 25570;Ribera de Cardos
-25571;Arros
 25572;Anas
 25573;Ainet de Besan
-25574;Alins
 25575;Areu
 25576;Lladorre
-25577;Aineto
 25580;Esterri D'Aneu
 25583;Aulas
 25584;Escarla
 25586;Alos D'Isil
-25587;Alos D'Isil
 25588;Burgo
 25589;Son
 25590;Ancs
-25591;Ancs
 25592;Baen
 25593;Arcalis
 25594;Montenartro
@@ -4978,10 +4314,8 @@
 25633;Palau de Noguera
 25634;Claramunt
 25635;Castissent
-25636;Escarla
 25637;Sant Adria
 25638;Aransis
-25639;Aransis
 25640;Academia Gral. Basica
 25650;Isona
 25651;Abella de la Conca
@@ -4992,7 +4326,6 @@
 25656;Conques
 25657;Biscarri
 25658;Benavent de la Conca
-25660;Alcoletge
 25670;Termens
 25680;Vallfogona de Balaguer
 25689;Sant Serni
@@ -5026,34 +4359,22 @@
 25738;Anya
 25739;Sero
 25740;Ponts
-25746;Torreblanca
 25747;Torra (La)
 25748;Cabanabona
 25749;Claret
-25750;Cellers
 25751;Sant Serni de Llanera
 25752;Biosca
-25753;Biosca
-25772;Biosca
 25790;Gavarra
 25791;Tiurana
 25792;Castellnou de Bassella
 25793;Coll de Nargo
-25794;Cabo
 25795;Saulet
 25796;Pla de Sant Tirs (El)
 25797;Adrall
 25798;Anserall
 25799;Ardaix
 26001;Logroño
-26002;Logroño
-26003;Logroño
-26004;Logroño
 26005;Cortijo (El)
-26006;Cortijo (El)
-26007;Cortijo (El)
-26008;Logroño
-26009;Logroño
 26100;Ribabellosa
 26110;Nestares
 26111;Almarza de Cameros
@@ -5063,7 +4384,6 @@
 26123;Aldeanueva de Cameros
 26124;Montemediano
 26125;Villoslada de Cameros
-26126;Horcajo (El)
 26130;Alberite
 26131;Lagunilla del Jubera
 26132;Leza de Rio Leza
@@ -5071,7 +4391,6 @@
 26134;Jalon de Cameros
 26135;Cabezon de Cameros
 26140;Lardero
-26141;Alberite
 26142;Puente Madre
 26143;Murillo de Rio Leza
 26144;Corera
@@ -5103,7 +4422,6 @@
 26256;Villalobar de Rioja
 26257;Bañares
 26258;Ciriñuela
-26259;Corporales
 26260;Santurde
 26261;Pazuengos
 26270;Amunartia
@@ -5121,7 +4439,6 @@
 26314;Huercanos
 26315;Aleson
 26320;Baños de Rio Tobia
-26321;Bobadilla
 26322;Anguiano
 26323;Azofra
 26324;Alesanco
@@ -5136,7 +4453,6 @@
 26340;San Asensio
 26350;Cenicero
 26359;Torremontalbo
-26360;Estacion (La)
 26370;Navarrete
 26371;Sotes
 26372;Hornos de Moncalvillo
@@ -5173,9 +4489,6 @@
 26588;Bergasa
 26589;Arnedillo
 27001;Lugo
-27002;Lugo
-27003;Lugo
-27004;Lugo
 27100;Fonsagrada (A)
 27110;Burela (A)
 27111;Castañoso
@@ -5188,8 +4501,6 @@
 27118;Fornos Da Cal (Os)
 27120;Castroverde
 27122;Bolaño
-27123;Abelleira (A)
-27124;Barreiros
 27125;Covelas
 27126;Seres
 27127;Barredo
@@ -5198,7 +4509,6 @@
 27130;Cadavo (O)
 27131;Albaredo
 27132;Airexe
-27133;Castro (O)
 27134;Airexa (A)
 27135;Bruicedo
 27136;Brañas
@@ -5213,29 +4523,22 @@
 27151;Casanova (A)
 27152;Alvarin
 27153;Balsa (A)
-27154;Buxan
 27155;Francos
 27156;Campo (O)
 27157;Aspai
 27160;Cardoso
 27161;Burneiros
 27162;Adai
-27163;Castro
 27164;Abragan
 27166;Arrubial
 27168;Arxemil
 27170;Portomarin
 27177;Cabanas Do Monte
 27178;Acevedo
-27179;Barco (O)
 27180;Campa Da Barra (A)
-27181;Agra (A)
 27182;Abol
-27183;Castro (O)
 27184;Barrio (O)
 27185;Cancela de Sixaos
-27186;Francos
-27187;Cabanas
 27188;Fixos
 27190;San Xoan
 27191;Airexe (A)
@@ -5243,7 +4546,6 @@
 27200;Curuxas
 27203;Eirexe (A)
 27204;Ambreixo
-27205;Alvite
 27206;Camouco
 27207;Alba
 27208;Campelo (O)
@@ -5251,7 +4553,6 @@
 27210;Bustelo Pequeno
 27211;Cal (A)
 27212;Alto Do Hospital (O)
-27213;Castro (O)
 27214;Cruz (A)
 27215;Casas Do Monte
 27216;Brea (A)
@@ -5266,12 +4567,9 @@
 27232;Bacurin
 27233;Borreiques
 27234;Bertamil
-27235;Abeledo
-27240;Cabana
 27241;Azoreira (A)
 27243;Acevo
 27244;Esqueira
-27245;Acevedo
 27246;Anllo
 27247;Vilar de Mouros
 27248;Cadavosa (A)
@@ -5284,13 +4582,10 @@
 27266;Bouzaboa
 27267;Amorin
 27268;Beloi
-27269;Abelleira (A)
 27270;Caraño
-27271;Abelleira (A)
 27272;Outeiro (O)
 27273;Cirio
 27274;Albar (O)
-27275;Aldea
 27276;Casal (O)
 27277;Abrairas
 27278;Andoriña (A)
@@ -5300,27 +4595,21 @@
 27286;Afoz (A)
 27287;Cadavedo
 27289;Acea (A)
-27290;Barcia
 27293;Corneas
-27294;Lugo
 27296;Bocamaos
-27297;Lugo
 27298;Mazoi
 27299;Agruña
 27300;Guitiriz
 27305;Abelendro (O)
 27306;Abeleira (A)
 27307;Aboares (Os)
-27308;Abelleira (A)
 27309;Acevedo (O)
 27310;Aceña
-27317;Barreiro (O)
 27318;Casares (Os)
 27320;Arxubin
 27324;Campelo
 27325;Folgoso Do Courel
 27326;Eiriz
-27327;Santa Eufemia
 27328;Ferramulin
 27329;Bendillo
 27330;Pobra Do Brollon (A)
@@ -5328,49 +4617,27 @@
 27332;Castrosante
 27333;Piño
 27334;Castroncelos
-27335;Aldea de Arriba
 27336;Forgas
 27338;Beiran
-27339;Carballal
 27340;Boveda
 27341;Bardaos
-27342;Abeledo
 27343;Barxa
 27344;Covelo
 27345;Cortellas (As)
 27346;Cabude
 27347;Carralcova
 27348;Codesido
-27349;Bustelo
 27350;Eimer
 27359;Fontaiña (A)
-27360;Eirexe (A)
 27362;Cruces (As)
-27363;Adai
-27364;Albaredo (O)
-27366;Eirexe (A)
 27367;Agrolazas (As)
 27368;Casal de Vito
-27369;Barrio (O)
 27370;Baamonde
-27372;Aldea (A)
-27373;Aldea (A)
-27374;Astariz
 27375;Baltar
 27376;Vao (O)
-27377;Aldea
 27378;Arneiro
-27379;Calvario (O)
-27380;Carballal (O)
 27388;Alfonsares
-27389;Abeledo (O)
-27390;Aldea de Arriba
-27391;Barxa
-27392;Airexe
-27400;Guitiriz
 27410;Camporrio
-27411;Barxa
-27412;Campo (O)
 27413;San Pedro de Baños
 27414;Bacorelle
 27415;Vao
@@ -5380,20 +4647,14 @@
 27419;Babela
 27420;Barxela (A)
 27421;Barantes de Abaixo
-27422;Campo (O)
-27423;Aldea de Arriba
-27424;Castro
 27425;Bolmente
 27430;Capa (A)
 27437;Abelaira (A)
 27438;Vargo (O)
-27439;Barrio (O)
 27440;Canaval
 27450;Barreal
-27460;San Martiño
 27466;Arroxo (O)
 27468;Castroseiros
-27469;Campo Verde
 27470;Amandi
 27500;Chantada
 27510;Mouricios
@@ -5403,24 +4664,18 @@
 27514;Belesar
 27515;Arriba
 27516;Amedo
-27517;Eirexe (A)
-27518;Arcos
 27519;Corneas (As)
 27520;Barrela (A)
-27527;Anllo
 27528;Besteiriños
 27529;Agrexan
 27530;Bañal (O)
 27531;Acilleiros
-27532;Arxemil
 27533;Folgar (O)
 27540;Escairon
 27543;Bidueiros (Os)
 27544;Amedo (O)
 27545;Abadia (A)
-27546;Carballo
 27547;Gudin
-27548;Belesar
 27549;Viris
 27550;Carude
 27554;Bouzal (O)
@@ -5439,19 +4694,15 @@
 27579;Alvidron
 27590;Almacen (O)
 27591;Carrouba
-27592;Amedo
 27593;Toiriz
-27594;Abadia (A)
 27595;Enviande
 27596;Cargas (As)
 27600;Sarria
 27610;Castelo
 27611;Aldosende
 27612;Baran
-27613;Airexe
 27614;Larin
 27615;Cima de Vila
-27616;Abeledo
 27617;Betote de Abaixo
 27618;Arxevide
 27619;Alban
@@ -5461,11 +4712,9 @@
 27625;Airapadron
 27626;Bustofrio
 27627;Castro de Lourido
-27628;Brea (A)
 27630;Triacastela
 27631;San Xil
 27632;Biduedo (O)
-27633;Cal (A)
 27634;Cancelo
 27635;Castroncan
 27636;Formigueiros
@@ -5473,17 +4722,12 @@
 27638;Frollais
 27639;Arxileiro
 27640;Becerrea
-27646;Casares
 27647;Ferrañol
 27648;Cadoalla
 27649;Armesto
-27650;Becerrea
-27651;Busto
 27652;Cernada (A)
 27653;Arcon
-27654;Balsa (A)
 27655;Coruxedo
-27656;Barcia
 27657;Cociña (A)
 27658;Castañedo
 27659;Chao de Vilarin
@@ -5492,7 +4736,6 @@
 27662;Santo Estevo
 27663;Pando
 27664;Barreiro
-27665;Barreiro
 27666;Airoa
 27667;Cabana Xaraz
 27668;Borqueria (A)
@@ -5500,7 +4743,6 @@
 27671;Barxamaior
 27672;Louzarela
 27673;Chan de Pena
-27675;Brañas
 27676;Doncos
 27677;Torallo
 27678;Agueira
@@ -5509,31 +4751,22 @@
 27685;Costantin
 27686;Berselos
 27687;Arroxo
-27688;Castro
 27689;Aranza
-27690;Agra (A)
 27691;Reboleira (A)
-27692;Eirexe (A)
 27693;Armea de Arriba
 27694;Vilouta de Abaixo
 27695;Areal (O)
-27696;Eirexe (A)
-27697;Barrosa (A)
 27698;Cabanas (As)
 27699;Dradas
 27700;Ribadeo
-27710;Barreiro
-27711;Barreiros
 27712;Lourido
 27713;Aceñas (As)
 27714;Barredal (O)
 27715;Rinlo
 27720;Castelo (O)
 27721;Aldeguer
-27722;Barreiros
 27723;Beche
 27724;Navallo (O)
-27725;Cabana
 27726;Acevro (O)
 27727;Vilaouruz
 27728;Boulloso (O)
@@ -5545,153 +4778,68 @@
 27742;Barral de Cima
 27743;Augaxosa (A)
 27744;Franco (O)
-27745;Abelleira (A)
 27747;Carroceiras (As)
-27748;Barral (O)
 27749;Campa (A)
 27750;Batan (O)
 27751;Adellao
 27752;Barbeitas
-27760;Arroxo
 27765;Abaira (A)
 27766;Biduedo
 27767;Carreira Cha (A)
 27768;Fornea (A)
 27770;Cabezan
-27773;Abeledo
 27774;Abelairas (As)
-27775;Barral (O)
 27776;Canaledo
-27777;Abelleira (A)
 27778;Penido (O)
 27779;Amarela (A)
 27780;Marzan
 27785;Chao (O)
 27786;Abidueiras (As)
-27787;Vao
 27788;Espiñeira (A)
 27789;Fazouro
 27790;Anea (A)
-27791;Aldea (A)
-27792;Abadia (A)
-27793;Aspera (A)
-27794;Barreiro (O)
 27796;Cinxe
 27797;Campo de San Lourenzo (O)
 27798;Couto (O)
 27800;Vilalba
-27810;Barral (O)
 27811;Aguiar
 27812;Escourido
-27813;Abadin
-27814;Curro (O)
 27815;Augarrio
 27816;Adro (O)
 27817;Bargañas (As)
-27818;Barreiro (O)
 27820;Caivancas
 27821;Alto (O)
 27822;Curras (Os)
-27823;Cal (O)
 27824;Aruxo (O)
 27825;Buxiban
 27826;Bidueiro (O)
-27830;Airado (O)
 27832;Agro Vello (O)
 27833;Vesura (A)
 27834;Cabreiros
-27835;Abelleira (A)
-27836;Ameixeiras (As)
 27837;Acivreiros (Os)
 27840;Aciveiro
-27841;Abelaira (A)
 27842;Bidueiro
-27843;Campo (O)
-27845;Abelleira (A)
 27849;Carballas
 27850;Viveiro
-27860;Casal (O)
 27861;Castro Bo
 27863;Celeiro
-27864;Abuin
 27865;Muruas
 27866;Agro (O)
 27867;Barcia (A)
 27868;Amoa (A)
-27869;Areal (O)
 27870;Carballas (Os)
 27876;Aldea de Abaixo (A)
 27877;Canelas
 27878;Alto de Lago (O)
 27879;Cancelas (As)
 27880;Burela
-27888;Castelo
 27889;Abrigo (O)
 27890;San Cibrao
 27891;Casas Novas (As)
-27892;Cangas
 27893;Trasmonte Das Chousas
 28000;Madrid
-28001;Madrid
-28002;Madrid
-28003;Madrid
-28004;Madrid
-28005;Madrid
-28006;Madrid
-28007;Madrid
-28008;Madrid
-28009;Madrid
-28010;Madrid
-28011;Madrid
-28012;Madrid
-28013;Madrid
-28014;Madrid
-28015;Madrid
-28016;Madrid
-28017;Madrid
-28018;Madrid
-28019;Madrid
-28020;Madrid
-28021;Madrid
-28022;Madrid
-28023;Madrid
-28024;Madrid
-28025;Madrid
-28026;Madrid
-28027;Madrid
-28028;Madrid
-28029;Madrid
-28030;Madrid
-28031;Madrid
-28032;Madrid
-28033;Madrid
-28034;Madrid
-28035;Madrid
-28036;Madrid
-28037;Madrid
-28038;Madrid
-28039;Madrid
-28040;Madrid
-28041;Madrid
-28042;Madrid
-28043;Madrid
-28044;Madrid
-28045;Madrid
-28046;Madrid
-28047;Madrid
-28048;Madrid
-28049;Madrid
-28050;Madrid
-28051;Madrid
-28052;Madrid
-28053;Madrid
-28054;Madrid
-28055;Madrid
 28100;Alcobendas
-28108;Alcobendas
-28109;Alcobendas
 28110;Algete
-28120;Algete
 28130;Alalpardo
 28140;Fuente El Saz de Jarama
 28150;Silillos
@@ -5714,30 +4862,20 @@
 28214;Fresnedillas de la Oliva
 28219;Alcor (El)
 28220;Majadahonda
-28221;Majadahonda
-28222;Majadahonda
-28223;Angeles (Los)
 28224;Pozuelo de Alarcon
 28229;Villanueva del Pardillo
 28231;Rozas de Madrid (Las)
 28232;Chopera (La)
 28240;Berzalejo
-28248;Berzalejo
 28250;Fuente la Teja
-28260;Bellavista
 28270;Colmenarejo
-28279;Colmenarejo
-28280;Alcor (El)
 28290;Garzo (El)
-28292;Escorial (El)
 28293;Estacion Y Pajares (La)
 28294;Robledo de Chavela
 28295;Valdemaqueda
-28296;Estacion (La)
 28297;Hoya (La)
 28300;Algodor
 28320;Pinto
-28330;Angeles (Los)
 28340;Valdemoro
 28350;Ciempozuelos
 28359;Titulcia
@@ -5760,7 +4898,6 @@
 28470;Camorritos
 28480;Tablada
 28490;Becerril de la Sierra
-28491;Navacerrada
 28492;Mataelpino
 28500;Arganda
 28510;Campo Real
@@ -5770,7 +4907,6 @@
 28515;Olmeda de Las Fuentes
 28521;Casa Eulogio
 28522;Partija-Santa Monica (La)
-28523;Partija-Santa Monica (La)
 28529;Rivas-Vaciamadrid
 28530;Morata de Tajuña
 28540;Perales de Tajuña
@@ -5792,7 +4928,6 @@
 28630;Alamin
 28635;Mostoles
 28640;Cadalso de Los Vidrios
-28648;Cadalso de Los Vidrios
 28649;Entrepinos
 28650;Cenicientos
 28660;Boadilla del Monte
@@ -5800,15 +4935,11 @@
 28680;San Ramon
 28690;Brunete
 28691;Villanueva de la Cañada
-28692;Villanueva de la Cañada
 28693;Perales de Milla
 28694;Chapineria
 28695;Morro (El)
 28696;Pelayos de la Presa
 28700;S Sebastian de Los Reyes
-28701;S Sebastian de Los Reyes
-28702;S Sebastian de Los Reyes
-28703;S Sebastian de Los Reyes
 28706;Club de Campo
 28707;Pueblas (Las)
 28708;Fuente del Fresno
@@ -5826,26 +4957,16 @@
 28742;Alameda del Valle
 28743;Canencia
 28749;Pinilla del Valle
-28750;Pueblas (Las)
-28751;Cabrera (La)
 28752;Sieteiglesias
-28753;Sieteiglesias
 28754;Navas de Buitrago
 28755;Acebeda (La)
 28756;Somosierra
 28760;Tres Cantos
-28761;Tres Cantos
 28770;Colmenar Viejo
 28791;Soto del Real
 28792;Endrinales (Los)
 28794;Guadalix de la Sierra
 28801;Alcala de Henares
-28802;Alcala de Henares
-28803;Alcala de Henares
-28804;Alcala de Henares
-28805;Alcala de Henares
-28806;Alcala de Henares
-28807;Alamo (El)
 28810;Gurugu (El)
 28811;Corpa
 28812;Pezuela de Las Torres
@@ -5856,9 +4977,6 @@
 28817;Santos de la Humosa (Los)
 28818;Anchuelo
 28820;Coslada
-28821;Coslada
-28822;Coslada
-28823;Coslada
 28830;San Fernando de Henares
 28840;Mejorada del Campo
 28850;Torrejon de Ardoz
@@ -5871,111 +4989,52 @@
 28890;Loeches
 28891;Velilla de San Antonio
 28901;Getafe
-28902;Getafe
-28903;Getafe
-28904;Getafe
-28905;Getafe
 28906;Cerro de Los Angeles
-28907;Getafe
 28909;Aldehuela Y la Torrecilla
 28911;Leganes
-28912;Leganes
-28913;Leganes
 28914;Fortuna
-28915;Leganes
-28916;Leganes
-28917;Fortuna
-28918;Fortuna
-28919;Leganes
 28921;Alcorcon
-28922;Alcorcon
-28923;Alcorcon
-28924;Alcorcon
-28925;Alcorcon
-28931;Mostoles
-28932;Mostoles
-28933;Mostoles
-28934;Mostoles
-28935;Mostoles
-28936;Mostoles
-28937;Mostoles
-28938;Mostoles
-28939;Arroyomolinos
 28941;Fuenlabrada
-28942;Fuenlabrada
-28943;Fuenlabrada
-28944;Fuenlabrada
-28945;Fuenlabrada
-28946;Fuenlabrada
-28947;Fuenlabrada
 28950;Colinas (Las)
 28970;Humanes de Madrid
 28971;Griñon
 28976;Batres
 28977;Casarrubuelos
-28978;Canencia
 28979;Serranillos del Valle
 28980;Parla
-28981;Parla
-28982;Parla
-28983;Parla
-28984;Parla
 28990;Torrejon de Velasco
 28991;Torrejon de la Calzada
 29001;Malaga
-29002;Malaga
-29003;Malaga
 29004;Churriana
-29005;Malaga
-29006;Malaga
-29007;Malaga
-29008;Malaga
-29009;Malaga
 29010;Yeseras
-29011;Malaga
-29012;Malaga
-29013;Malaga
-29014;Malaga
-29015;Malaga
-29016;Malaga
-29017;Malaga
-29018;Malaga
 29100;Coin
 29108;Guaro
 29109;Ardite
 29110;Monda
 29120;Alhaurin El Grande
 29130;Alhaurin de la Torre
-29140;Churriana
 29150;Almogia
 29160;Arroyo Coche
 29170;Caravaca
 29180;Riogordo
 29190;Campanillas
-29191;Malaga
 29194;Alfarnate
 29195;Alqueria
-29196;Campanillas
-29197;Malaga
 29200;Antequera
 29210;Cuevas de San Marcos
 29220;Cuevas Bajas
-29230;Antequera
 29240;Valle de Abdalajis
 29250;Cartaojal
 29260;Villanueva de Cauche
 29300;Archidona
 29309;Estacion de Archidona
 29310;Albaicin (El)
-29311;Atalaya (La)
 29312;Villanueva del Rosario
 29313;Villanueva del Trabuco
-29314;Antequera
 29315;Estacion de Salinas
 29320;Campillos
 29327;Huertas Y Montes
 29328;Sierra de Yeguas
-29329;Navahermosa
 29330;Almargen
 29340;Cañete la Real
 29350;Arriate
@@ -5988,7 +5047,6 @@
 29400;Montecorto
 29410;Yunquera
 29420;Burgo (El)
-29430;Montecorto
 29440;Igualeja
 29450;Pujerra
 29451;Parauta
@@ -6010,8 +5068,6 @@
 29530;Alameda
 29531;Carvajales (Los)
 29532;Mollina
-29533;Carvajales (Los)
-29540;Antequera
 29550;Ardales
 29551;Carratraca
 29552;Chorro (El)
@@ -6021,26 +5077,13 @@
 29568;Zalea
 29569;Gibralgalia
 29570;Cartama
-29580;Cartama
-29590;Campanillas
-29591;Campanillas
-29592;Estacion
-29593;Chorro (El)
 29601;Marbella
-29602;Marbella
-29603;Marbella
-29604;Marbella
 29610;Ojen
 29611;Istan
-29620;Churriana
 29630;Arroyo de la Miel-Benalma
-29631;Arroyo de la Miel-Benalma
 29639;Benalmadena
 29640;Fuengirola
 29647;Calahonda-Chaparral
-29648;Calahonda-Chaparral
-29649;Entrerrios
-29650;Entrerrios
 29651;Lagunas (Las)
 29660;Nueva Andalucia
 29670;San Pedro de Alcantara
@@ -6048,7 +5091,6 @@
 29680;Estepona
 29688;Atalaya-Isdabe
 29689;Loma del Monte
-29690;Casares
 29691;Manilva
 29692;Secadero
 29693;Bahia Dorada
@@ -6064,7 +5106,6 @@
 29717;Arenas
 29718;Almachar
 29719;Benamocarra
-29720;Malaga
 29730;Rincon de la Victoria
 29738;Moclinejo
 29740;Torre del Mar
@@ -6080,7 +5121,6 @@
 29780;Nerja
 29787;Maro
 29788;Frigiliana
-29789;Frigiliana
 29790;Benajarafe
 29791;Benaque
 29792;Iznate
@@ -6088,19 +5128,7 @@
 29796;Torrox-Costa
 30000;Casas del Camino Churra
 30001;Murcia
-30002;Murcia
-30003;Murcia
-30004;Murcia
-30005;Murcia
-30006;Murcia
-30007;Murcia
-30008;Murcia
-30009;Murcia
-30010;Murcia
-30011;Murcia
-30012;Murcia
 30017;Cementerio (El)
-30100;Murcia
 30107;Agridulce
 30108;Rincon de Beniscornia
 30110;Cabezo de Torres
@@ -6111,7 +5139,6 @@
 30148;Matanzas
 30149;Siscar
 30150;Alberca de Las Torres
-30151;Alberca de Las Torres
 30152;Aljucer
 30153;Carrascoy
 30154;Corvera
@@ -6121,7 +5148,6 @@
 30158;Garres (Los)
 30160;Era Alta
 30161;Huerta de Llano de Brujas
-30162;Huerta de Llano de Brujas
 30163;Cobatillas
 30164;Cabezo de la Plata
 30165;Huerta del Rincon de Seca
@@ -6133,27 +5159,18 @@
 30176;Pliego
 30178;Alquibla
 30179;Barqueros
-30180;Bullas
 30189;Cabezo (El)
 30190;Albudeite
 30191;Campos del Rio
 30192;Rodeo Primero O Huatazale
-30193;Baños (Los)
 30194;Ardal
 30195;Archivel
-30196;Pliego
 30201;Cartagena
-30202;Cartagena
-30203;Cartagena
-30204;Cartagena
-30205;Cartagena
 30300;Lomas (Las)
-30310;Baña (La)
 30319;Medicos (Los)
 30320;Balsapintada
 30330;Albujon
 30331;Lobosillo
-30332;Balsapintada
 30333;Cuevas de Reyllo
 30334;Loma (La)
 30335;Campillo de Abajo
@@ -6166,7 +5183,6 @@
 30365;Urrutias (Los)
 30366;Algar (El)
 30367;Beatos (Los)
-30368;Urrutias (Los)
 30369;Camachos (Los)
 30370;Cabo de Palos
 30379;Mirador (El)
@@ -6177,16 +5193,12 @@
 30384;Islas Menores
 30385;Atamaria
 30387;Sabinar (El)
-30389;Atamaria
 30390;Aljorra (La)
 30391;Pozo Los Palos
 30392;Porche (El)
 30393;Patojos (Los)
 30394;Algameca
 30395;Puebla (La)
-30396;Arroyos (Los)
-30397;Carriones (Los)
-30398;Arroyos (Los)
 30399;Vista Alegre
 30400;Caravaca de la Cruz
 30410;Almudema (La)
@@ -6196,23 +5208,18 @@
 30420;Calasparra
 30430;Agua Salada
 30438;Burete
-30439;Agua Salada
 30440;Moratalla
 30500;Molina de Segura
 30506;Romeral
-30507;Romeral
 30508;Ribera de Molina
 30509;Albarda
 30510;Campo Abajo
 30520;Alberquilla (La)
-30528;Alqueria (La)
 30529;Cañada del Trigo
 30530;Almadenes
 30540;Alto Palomo
 30550;Abaran
-30559;Abaran
 30560;Alguazas
-30561;Alguazas
 30562;Ceuti
 30563;Torraos (Los)
 30564;Lorqui
@@ -6222,27 +5229,19 @@
 30580;Alquerias
 30588;Tabala
 30589;Huerta Y Campo Los Ramos
-30590;Lomas (Las)
 30591;Balsicas
 30592;Jeronimos Y Avileses
-30593;Medicos (Los)
 30594;Pozo Estrecho
 30600;Archena
-30609;Algaida
 30610;Ainas
 30611;Alquibla (La)
 30612;Cuesta Blanca
-30613;Agua Amarga
-30620;Fortuna
-30626;Baños (Los)
 30628;Ajauque
 30629;Carrillos (Los)
 30640;Abanilla
 30648;Algarrobo (El)
-30649;Carrillos (Los)
 30700;Hortichuela
 30708;Jimenado
-30709;Hortichuela
 30710;Santa Rosalia
 30720;Calavera (La)
 30729;Santiago de la Ribera
@@ -6261,16 +5260,12 @@
 30816;Hinojar
 30817;Fontanares
 30818;Cañarejo
-30820;Alcantarilla
 30826;Puebla de Soto
 30830;Molino de Los Casianos
 30831;Fabrica de la Polvora
 30832;Javali Nuevo
 30833;Casillas (Lugar De) O Erm
 30834;Alquerias Y Cermeño
-30835;Atamaria
-30836;Puebla de Soto
-30837;Barqueros
 30840;Alhama de Murcia
 30850;Torre Guil
 30858;Cañadas del Romero
@@ -6291,21 +5286,7 @@
 30892;Alamillo (El)
 30893;Almendricos
 31001;Pamplona/Iruña
-31002;Pamplona/Iruña
-31003;Pamplona/Iruña
-31004;Pamplona/Iruña
-31005;Pamplona/Iruña
-31006;Pamplona/Iruña
-31007;Pamplona/Iruña
-31008;Pamplona/Iruña
-31009;Pamplona/Iruña
-31010;Pamplona/Iruña
-31011;Pamplona/Iruña
-31012;Pamplona/Iruña
 31013;Ansoain
-31014;Pamplona/Iruña
-31015;Pamplona/Iruña
-31016;Pamplona/Iruña
 31100;Puente la Reina/Gares
 31109;Artazu
 31110;Noain
@@ -6387,7 +5368,6 @@
 31360;Funes
 31370;Falces
 31380;Caparroso
-31381;Estacion (La)
 31382;Melida
 31383;Rada
 31390;Olite
@@ -6446,7 +5426,6 @@
 31496;Ujue
 31500;Tudela
 31510;Fustiñana
-31511;Cabanillas
 31512;Bocal (El)
 31513;Arguedas
 31514;Valtierra
@@ -6455,7 +5434,6 @@
 31521;Murchante
 31522;Monteagudo
 31523;Ablitas
-31530;Cortes
 31540;Buñuel
 31550;Ribaforada
 31560;Azagra
@@ -6465,7 +5443,6 @@
 31587;Imaz
 31588;Lazagurria
 31589;Sartaguda
-31590;Castejon
 31591;Corella
 31592;Cintruenigo
 31593;Fitero
@@ -6555,34 +5532,25 @@
 31892;Aldaba
 32001;Ourense
 32002;Finca Fierro
-32003;Ourense
-32004;Ourense
 32005;Fonsillon (O)
 32100;Penas Albas
 32101;Agro Maior
 32102;Boimorto
-32103;Ourense
 32110;Figueiredo
 32111;Neboeiro
 32120;Codesedo
-32130;Cea
 32131;Zarcilla de Ramos
-32133;Anllo
 32134;Ardesende
 32135;Casfigueiro
-32136;Aspera
 32137;Arenteiriño
 32138;Canices
 32139;Fondo de Cea
 32140;Arbor
-32141;Agra
 32150;Diarada
 32151;Andelo
-32152;Lavandeira
 32153;Bergaza
 32160;Requeixo
 32161;Cimadevila
-32162;Acevedo
 32163;Sobrado
 32164;Cerreda
 32170;Amoeiro
@@ -6597,16 +5565,13 @@
 32227;Entrosrrios
 32228;San Roque de Crespos
 32229;Azoreira
-32235;Abelleira
 32236;Condado (O)
-32300;Barco (O)
 32310;Trambasaugas
 32311;Barrio de Cascalla (O)
 32312;Oulego
 32313;Entoma
 32314;Alixo
 32315;Cesures
-32316;Arcos
 32317;Xagoaza
 32318;Reporicelo
 32320;Quereño
@@ -6622,24 +5587,19 @@
 32348;Cernego
 32349;Correxais
 32350;Rua de Valdeorras (A)
-32356;Casasola
 32357;Seixo (O)
 32358;Larouco
 32359;Roblido
 32360;Veiga (A)
 32365;Xares
 32366;Curra
-32367;Candeda
 32368;Carracedo
-32369;Baños
 32370;Caseta (A)
 32371;Portela (A)
 32372;Outardepregos
 32373;Bolo (O)
-32374;Buxan
 32375;Ermidas (As)
 32400;Ribadavia
-32410;Cima de Vila
 32411;Melon
 32412;Carballeda de Avia (Capit
 32413;Fermosas (As)
@@ -6648,18 +5608,13 @@
 32416;Costeira (A)
 32417;Bacelo
 32418;Francelos
-32420;Agra (A)
 32425;Beran
 32426;Cortes (As)
 32427;Eira de Mouros
-32428;Valboa
 32429;Cubilledo
-32430;Astariz
 32431;Beade
 32432;Regadas (As)
-32433;Abelenda
 32434;Balde
-32440;Baldomar
 32448;Almorfe
 32449;Airoa de Beacan
 32450;Barca de Barbantes (A)
@@ -6671,7 +5626,6 @@
 32457;Barbantes
 32459;Laias
 32499;Esculqueira (A)
-32500;Arcos
 32510;Saa
 32511;Granxa (A)
 32512;Batallas
@@ -6679,9 +5633,7 @@
 32514;Salon
 32515;Aguisar
 32516;Banga
-32520;Abelenda
 32521;Riande
-32522;Balboa
 32523;Cardelle
 32524;Fonte Moreiras
 32525;Xendive
@@ -6690,11 +5642,9 @@
 32534;Barro
 32535;Cangues
 32536;Bugalleira
-32537;Casares (Os)
 32538;Xirei
 32539;Carballeda
 32540;Gudiña (A)
-32545;Barxa
 32546;Parada Da Serra
 32547;Canizo (O)
 32548;Cadavos
@@ -6702,12 +5652,9 @@
 32550;Viana Do Bolo
 32554;Caldesiños
 32555;Ermida (A)
-32556;Covelo
 32557;Ardexarxe
 32558;Cepedelo
 32560;Pradocabalos
-32562;Bembibre
-32563;Bouza
 32570;Maside
 32572;Agro de Quinta
 32574;Groba
@@ -6740,7 +5687,6 @@
 32626;Pepin
 32630;Xinzo de Limia
 32631;Boado
-32632;Baltar
 32633;Quinta (A)
 32634;Aguis
 32635;Damil
@@ -6749,7 +5695,6 @@
 32640;Cima de Ribeira
 32641;Telladas
 32643;Reboreda
-32644;Calvos
 32645;Castelaus
 32646;Meaus
 32647;Golpellas
@@ -6762,21 +5707,16 @@
 32655;Azureiros
 32660;Allariz
 32664;Outeiro de Orraca
-32665;Campelo
 32666;Guimaras
 32667;Aira Vella
-32668;Armea
 32669;Frieira (A)
 32670;Xunqueira de Ambia
-32678;Areas
 32679;Abeleda (A)
 32680;Atas
 32688;Xironda
 32689;Carzoa
 32690;Venta Do Rio
-32691;Casanova
 32692;Cerredelo
-32693;Arcos
 32694;Abavides
 32695;Casas
 32696;Lodoselo
@@ -6793,7 +5733,6 @@
 32707;Vascos
 32708;Veigacha
 32710;Cachamuiña
-32711;Agra
 32720;Alto Do Couso
 32730;Paradela
 32740;Fondo de Vila
@@ -6802,26 +5741,21 @@
 32748;Espiñas
 32749;Caxide
 32750;Ferreria (A)
-32751;Acevedo (O)
 32760;Castro de Caldelas (O) (C
-32764;Casanova
 32765;Boazo
 32766;Casbeado
 32767;Drados
 32768;Montemiao
 32769;Burgo (O)
 32770;Alenza (A)
-32774;Campo (O)
 32779;Acevido
 32780;Pena Petada
 32781;Mata (A)
-32782;Escourido
 32783;Placin
 32784;Manzaneda
 32785;Cernado
 32786;Celeiros
 32787;Casteligo
-32788;Barrio
 32789;Cotaros
 32790;Currelo (O)
 32791;Armariz
@@ -6831,11 +5765,8 @@
 32800;Celanova
 32810;Freas de Eiras
 32811;Casardeita
-32812;Cabanas
 32813;Albos
 32814;Xacebans
-32815;Casal (O)
-32816;Barrio
 32817;Amorociña
 32820;Bouza (A)
 32821;Baldariz
@@ -6844,15 +5775,10 @@
 32824;Couxil
 32825;Gueral de Abaixo
 32826;Pazo (O)
-32827;Amedo
 32828;Buzacos
 32829;Carfaxiño
 32830;Manchica (A)
-32838;Arcas
-32839;Campelo
 32840;Bande
-32845;Baños
-32846;Buxan
 32847;Lueda
 32848;Carpazas
 32849;Martiñan
@@ -6860,7 +5786,6 @@
 32857;Canle (A)
 32858;Fraga (A)
 32859;Forcadas (As)
-32860;Casal (O)
 32867;Queguas
 32868;Asperelo E Olin
 32869;Illa (A)
@@ -6875,10 +5800,6 @@
 32895;Baños (Os)
 32896;Parada de Ventosa
 32897;Cabaleiros
-32898;Barrio
-32899;Abelleira (A)
-32900;Granxa (A)
-32901;Aspera
 32910;Curras
 32911;Piñeiral (O)
 32920;Lamas (As)
@@ -6886,24 +5807,12 @@
 32940;Santa Uxia
 32941;Castiñeiras
 32950;Tras Do Rio de Alban
-32960;Ourense
 32970;Bemposta
 32971;Santa Mariña Do Monte
-32980;Boveda
 32981;Beiro
 33001;Oviedo
-33002;Oviedo
-33003;Oviedo
-33004;Oviedo
-33005;Oviedo
-33006;Oviedo
-33007;Oviedo
-33008;Arenales (Los)
-33009;Oviedo
 33010;Caravia
-33011;Oviedo
 33012;Peña El Fuelle
-33013;Oviedo
 33060;Sotiello
 33069;Escobadielles
 33110;Favorita (La)
@@ -6938,7 +5847,6 @@
 33172;Fuexos
 33173;Candama (La)
 33174;Caces
-33180;Braña (La)
 33186;Berrón (El)
 33187;Xixún
 33188;Belga Baxo (La)
@@ -6950,22 +5858,8 @@
 33194;Ajuyan
 33195;Bendones
 33196;Barreros
-33199;Caravia
 33201;Gijón/Xixón
-33202;Gijón/Xixón
 33203;Cimavilla
-33204;Cimavilla
-33205;Gijón/Xixón
-33206;Gijón/Xixón
-33207;Gijón/Xixón
-33208;Gijón/Xixón
-33209;Gijón/Xixón
-33210;Gijón/Xixón
-33211;Gijón/Xixón
-33212;Gijón/Xixón
-33213;Gijón/Xixón
-33290;Gijón/Xixón
-33299;Gijón/Xixón
 33300;Villaviciosa
 33310;Arriondu
 33311;Algara (L')
@@ -6982,41 +5876,29 @@
 33326;Pivierda
 33327;Llera (La)
 33328;Lluces
-33329;Carrandi
 33330;Llastres
 33340;Castiellu
 33341;Isla (La)
 33342;Coceña
 33343;Duesos
 33344;Prado
-33345;Barredo
 33346;Berbes
 33347;Abeo
 33350;Llinares
-33390;Gijón/Xixón
-33391;Mata (La)
 33392;Aguda
 33393;Batiao
 33394;Castiello Bernueces
 33401;Aviles
-33402;Aviles
-33403;Aviles
 33404;Campos (Los)
 33405;Raices Nuevo
-33410;Aviles
 33411;Barrera (La)
 33412;Laguna (La)
-33414;Faedo
 33416;L'Acebo
-33417;Aviles
 33418;San Juan de Nieva
-33419;Barredo
 33420;Lugones/Llugones
-33423;Santa Eulalia
 33424;Ables
 33425;Aguera
 33426;Bonielles
-33427;Barredo
 33428;Arroyo
 33429;Belga (La)
 33430;Candás
@@ -7028,12 +5910,9 @@
 33450;Piedras Blancas
 33456;Pulide
 33457;Infiesta
-33458;Arenas
 33459;Banda (La)
-33460;Aviles
 33468;Cuetu (El)
 33469;Alredor de la Ilesia
-33470;Aviles
 33476;Campos Y Salave
 33480;Alvares
 33490;Cabian (La)
@@ -7069,8 +5948,6 @@
 33558;Amieva
 33559;Cabielles
 33560;San Pedro
-33566;Pando
-33567;Carmen (El)
 33568;Camango
 33569;Junco
 33576;Caraves
@@ -7082,26 +5959,22 @@
 33582;Carancos
 33583;Borines/Boriñes
 33584;Canal (La)
-33585;Castiellu
 33586;H.uentes
 33587;Torañu
 33588;Cuevas
 33589;Celoriu
 33590;Bustio
 33592;Carriles (Los)
-33593;Cardoso
 33594;Bricia
 33595;Balmori
 33596;San Roque del Acebal
 33598;Borbolla (La)
 33600;Mieres del Camín
-33610;Ablaneo
 33611;Brañanoceo
 33612;L'Alamea
 33614;L'Acibíu
 33615;Canga Fondera
 33616;Curión (El)
-33617;Arniella
 33618;Barrio Gonzalín (El)
 33619;Brañanoveles
 33620;Campumanes
@@ -7115,7 +5988,6 @@
 33640;Barreo
 33650;Ablaña Riba
 33660;Anieves
-33669;Manzaneda
 33670;Quentu la Silla (El)
 33675;Bo
 33676;Cabanaquinta/Cabañaquinta
@@ -7127,21 +5999,16 @@
 33682;Baíña
 33683;Felguerúa
 33684;Buciel.lo
-33685;Cortina (La)
 33686;Beyo
 33687;Pino (El)
-33688;Cuevas
 33690;Bervola (La)
 33691;Montiana
 33692;Cabezón
 33693;Floracebos
 33694;Casorvía
-33695;Cabo
 33696;Lusiella
 33697;Vega (La)
 33700;Venta (La)
-33707;Arnizo
-33708;Ablaneo
 33709;Aldin
 33710;Navia
 33716;Astas
@@ -7164,30 +6031,22 @@
 33736;Sanzo
 33740;Tapia de Casariego
 33746;Franco (El)
-33747;Acevedo
 33749;Acebreiral
 33750;Arboces
 33757;Andia
 33758;Castello
 33759;Boimouro
-33760;Barreiras
 33768;Becharro
 33769;Bruiteira
 33770;Veiga (A)/Vegadeo
-33774;Antigua (La)
-33775;Arrojo
-33776;Barcia
 33777;San Pedro D Agüeira
 33778;Aguillon
 33779;Busqueimado
-33780;Aguera
 33781;Ablanedo
 33782;Alienes
 33783;Bustiello de Ayones
 33784;Arcallana
 33785;Anguileiro
-33787;Barcia
-33788;Cadavedo
 33789;Busmarzo
 33790;Puerto de Vega
 33791;Albarde
@@ -7198,9 +6057,7 @@
 33796;Porto
 33797;Pumarin
 33798;Miñagon
-33799;Armal
 33800;Cangas del Narcea
-33810;Boiro
 33811;Xedré
 33812;Zarréu
 33813;L'Altu Santarvás
@@ -7233,9 +6090,7 @@
 33850;Candanonegro
 33857;Bulse
 33858;Barrudo
-33859;Ballota
 33860;Mallecin
-33866;Acevedo
 33867;Peña (La)
 33868;Otero
 33869;Vega de Los Peredos
@@ -7258,20 +6113,15 @@
 33909;Campa (La)
 33910;Abedul
 33919;Molino (El)
-33920;Langreo/Llangréu
 33929;Faeo
-33930;Langreo/Llangréu
-33934;Langreo/Llangréu
 33935;Antuña
 33936;Cuto (El)
 33937;Bendición
-33938;Bendición
 33939;Talaya (La)
 33940;Entregu (L')/Entrego (El)
 33945;Carrocera
 33946;Argustin (L')
 33947;Abonion (L')
-33948;Barreo
 33950;Biomba
 33957;Argayaes (Les)
 33958;Varaosa
@@ -7281,20 +6131,13 @@
 33979;Iguanzo
 33980;Lloreo
 33986;Bárgana (La)
-33987;L'Acebal
 33989;Brañueta (La)
 33990;Barru (El)
 33991;Llorío
 33992;L'Aldea
 33993;Llaíñes/Ladines
 33995;Bueres
-33996;Belerda
 34001;Palencia
-34002;Palencia
-34003;Palencia
-34004;Palencia
-34005;Palencia
-34006;Palencia
 34100;Saldaña
 34110;Pino del Rio
 34111;Celadilla del Rio
@@ -7313,7 +6156,6 @@
 34131;Torre de Los Molinos
 34132;Villasarracino
 34159;Monte la Torre
-34160;Dehesilla
 34170;Mazariegos
 34190;Calabazanos
 34191;Ampudia
@@ -7374,7 +6216,6 @@
 34467;Melgar de Yuso
 34468;Boadilla del Camino
 34469;Marcilla de Campos
-34470;Barriosuso
 34473;Ayuela
 34475;Villabasta de Valdavia
 34477;Barcena de Campos
@@ -7389,7 +6230,6 @@
 34492;Albacastro
 34570;San Nicolas de Tolentino
 34800;Aguilar de Campoo
-34810;Aguilar de Campoo
 34811;Cabria
 34813;Puentetoma
 34814;Cuillas del Valle
@@ -7421,24 +6261,8 @@
 34889;Fresno del Rio
 35000;Arucas
 35001;Palmas Gran Canaria (Las)
-35002;Palmas Gran Canaria (Las)
-35003;Palmas Gran Canaria (Las)
-35004;Palmas Gran Canaria (Las)
-35005;Palmas Gran Canaria (Las)
-35006;Palmas Gran Canaria (Las)
-35007;Palmas Gran Canaria (Las)
-35008;Palmas Gran Canaria (Las)
-35009;Palmas Gran Canaria (Las)
-35010;Giles (Los)
-35011;Palmas Gran Canaria (Las)
-35012;Palmas Gran Canaria (Las)
-35013;Palmas Gran Canaria (Las)
-35014;Palmas Gran Canaria (Las)
-35015;Palmas Gran Canaria (Las)
 35016;Marzagan
 35017;Almatriche
-35018;Almatriche
-35019;Palmas Gran Canaria (Las)
 35100;Castillo del Romeral
 35106;Maspalomas
 35107;Aldea Blanca
@@ -7450,65 +6274,42 @@
 35120;Arguineguin
 35128;Cercados de Espinos
 35130;Aquamarina
-35138;Arguineguin
 35139;Playa del Cura (La)
 35140;Almacigos (Los)
-35149;Almacigos (Los)
 35188;Hoya de Pineda
 35200;Calero (El)
 35210;Lomo de la Herradura
-35211;Breña (La)
-35212;Calero (El)
 35213;Pardilla (La)
-35214;Casas Nuevas
-35215;Calero (El)
 35216;Casillas (Las)
 35217;Helechal (El)
 35218;Caserones (Los)
-35220;Marzagan
-35229;Marzagan
 35240;Carrizal
 35250;Ingenio
-35259;Carrizal
 35260;Aguimes
-35269;Banda (La)
 35270;Temisas
-35280;Casas Blancas
 35290;Hoya Garcia
 35299;Agualatente
 35300;Angostura (La)
-35307;Atalaya (La)
-35308;Atalaya (La)
-35309;Angostura (La)
-35310;Atalaya (La)
 35320;Lagunetas (Las)
 35328;Ariñez
 35329;Bodeguilla (La)
-35330;Alamo (El)
 35333;Arbejales
-35338;Alamo (El)
-35339;Alamo (El)
 35340;Lanzarote
-35349;Barranco
 35350;Acusa Verde
 35360;Culata (La)
 35368;Carrizal (El)
 35369;Triquivijate
-35400;Arucas
-35404;Arucas
 35411;Juan XXIII
 35412;Castillos (Los)
 35413;Trapiche
 35414;Bañaderos
 35415;Cardones
-35418;Trapiche
 35420;Quintanas Y Piso Firme
 35421;Barranco del Laurel
 35422;Cabo Verde
 35423;Carreteria
 35430;Barranco de Las Madres
 35431;Buenlugar
-35432;Barranco de Las Madres
 35435;Caldera (La)
 35450;Santa Maria de Guia
 35457;Barranco del Pinar
@@ -7518,10 +6319,7 @@
 35469;Puerto de Sardina
 35470;Albercon
 35478;Artejevez
-35479;Albercon
 35480;Agaete
-35488;Puerto de Sardina
-35489;Agaete
 35500;Arrecife
 35507;Cabreras (Las)
 35508;Costa Teguise
@@ -7530,107 +6328,64 @@
 35520;Haria
 35530;Caleta de Famara
 35539;Mojon (El)
-35540;Santa Maria de Guia
 35541;Guinate
 35542;Arrieta
 35543;Charco del Palo
 35544;Guatiza
 35550;Islote (El)
-35558;Caleta de Famara
 35560;Cuchillo (El)
 35561;Mozaga
 35570;Breñas (Las)
 35571;Asomada (La)
-35572;Asomada (La)
-35579;Albercon
 35580;Playa Blanca
 35600;Ampuyenta (La)
 35610;Castillo (El)
 35611;Casillas del Angel
 35612;Guisguey
-35613;Asomada (La)
 35620;Giniginamar
 35625;Morro Jable
 35626;Esquinzo
 35627;Cardon
 35628;Pajara
-35629;Giniginamar
 35630;Antigua
 35637;Betancuria
 35638;Agua de Bueyes
-35639;Triquivijate
-35640;Caideros
 35649;Caldereta
 35650;Cotillo El
 35660;Corralejo
 36001;Pontevedra
-36002;Pontevedra
-36003;Pontevedra
-36004;Pontevedra
-36005;Pontevedra
 36110;Alagoa
 36116;Castro Docabo
 36117;Fornelos
 36118;Cerdeiras
 36119;Chacente
-36120;Barro
 36121;Barbeitos
 36130;Cerdedo
 36139;Abelaindo
 36140;Amproa
 36141;Areeiros
 36142;Cardiña
-36143;Pontevedra
 36150;Couso (O)
-36151;Abelleira (A)
 36152;Castrado (O)
-36153;Pontevedra
 36154;Cara
 36155;Casaldarado E As Cernadas
 36156;Arco (O)
-36157;Devesa (A)
-36158;Pontevedra
-36160;Pontevedra
-36161;Pontevedra
-36162;Pontevedra
 36163;Encoirados
 36164;Carabelos
 36190;Casas (Os)
-36191;Barro
 36192;Busto (O)
-36193;Castro (O)
 36194;Balixe
 36201;Vigo
-36202;Vigo
-36203;Vigo
-36204;Vigo
-36205;Vigo
-36206;Vigo
-36207;Vigo
-36208;Vigo
-36209;Vigo
-36210;Vigo
-36211;Vigo
 36212;Cies
-36213;Vigo
 36214;Coutada
-36215;Vigo
-36216;Vigo
 36300;Covaterreña
 36307;Estivada
-36308;Burgo (O)
 36309;Agro
-36310;Gandara
 36311;Arufe
 36312;Babio
-36313;Balde
-36314;Gandara
-36315;Casas
 36316;Arcos (Os)
-36317;Vigo
 36318;Mosteiro
 36320;Angoren
-36330;Casas
 36331;Breadouro
 36340;Area-Alta
 36350;Angustia
@@ -7638,7 +6393,6 @@
 36370;Ramallosa (A)
 36378;Aciquelo
 36379;Carrasca (A)
-36380;Abelar
 36388;Abrollido
 36389;Bastida
 36390;Cotarelo
@@ -7649,7 +6403,6 @@
 36410;Casal de Vello
 36411;Adroza
 36412;Abelenda (A)
-36413;Barbeito
 36414;Abas (As)
 36415;Arrufana
 36416;Balteiro
@@ -7657,33 +6410,19 @@
 36418;Agueiro
 36419;Campo de Eiro
 36420;Abelan
-36428;Carreira
 36429;Boavista
-36430;Aduana
-36435;Aldea
-36436;Adega
 36437;Abelenda del Cuarto
 36438;Cequelinos
 36439;Souto
 36440;Bruñeiras
 36446;Alburiño
-36447;Aldea
-36448;Abelleira
 36449;Cruz
 36450;Alto Da Fonte (O)
-36455;Abelan
 36456;Chan Da Iglesia
 36457;Burguete
-36458;Aldea
-36459;Alcazar
-36460;Agro
-36470;Altamira
 36471;Aldegode
-36472;Agro
 36473;Bouzavedra
 36474;Arrotea
-36475;Arrotea
-36490;Agro
 36491;Cotado
 36492;Borbote
 36493;Alboredos
@@ -7694,10 +6433,7 @@
 36512;Agrazan
 36514;Esperante
 36515;Antuin
-36516;Amedo
 36517;Bermes
-36518;Carballo
-36519;Alen
 36520;Costa
 36524;Casal
 36525;Cacharenzo
@@ -7706,13 +6442,11 @@
 36528;Artoño
 36529;Gurgueiro
 36530;Cavada
-36537;Barrio
 36538;Arean
 36539;Aboldron
 36540;Barravaite
 36543;Aldea de Abaixo
 36544;Forcas
-36545;Barral
 36546;Ansemil
 36547;Balantiga
 36548;Costela
@@ -7720,7 +6454,6 @@
 36550;Forcarei
 36555;Fontenla
 36556;Andon
-36557;Barrio
 36558;Cachofes
 36559;Bouzas (As)
 36560;Soutelo
@@ -7729,44 +6462,30 @@
 36570;Cornado
 36579;Alfonsiños
 36580;Aldea E Fondevila
-36581;Barral
 36582;Abealla
 36583;Porto Do Carrio
-36584;Valboa
 36585;Añobre
 36586;Amosa
-36587;Altamira
-36588;Carballas (As)
 36589;Abades
 36590;Vila de Cruces
 36596;Camposancos
-36597;Barrio
 36598;Alle
-36599;Barrio
 36600;Pena (A)
 36610;Anxeles (Os)
 36611;Feal (O)
-36612;Busto
 36613;Bocas (As)
-36614;Abelleira (A)
 36615;Calcote
 36616;Carregal
-36617;Aldea de Arriba (A)
 36618;Amproa (A)
 36619;Cornazo de Abaixo
 36620;Vilamaior
-36626;Aceñas (As)
 36627;Cardalda
-36628;Casas (Os)
 36629;Praga
 36630;Cambados
 36633;Bouciña (A)
-36634;Cabana (A)
 36635;Abelleira, A
 36636;Caponiñas
 36637;Arosa
-36638;Aldea de Abaixo (A)
-36639;Adro (O)
 36640;Portarraxoi
 36645;Balleas
 36646;Bronllo
@@ -7779,7 +6498,6 @@
 36656;Arreten
 36657;Aldeanova
 36658;Aldea Grande (A)
-36659;Campo
 36660;Corrigatos
 36668;Cosoirado
 36669;Apedrado, O
@@ -7788,115 +6506,80 @@
 36676;Calvelo
 36677;Anllada (A)
 36678;Agro Do Monte
-36679;Calvos
 36680;Estrada (A)
 36681;Figueroa de Abaixo
 36682;Cerdeiral (O)
 36683;Bumio
-36684;Abeleira (A)
 36685;Gonxar
 36686;Barro (O)
 36687;Constenla
 36688;Berres
-36689;Brea (A)
 36690;Cacheiro
 36691;Alxan
 36692;Bretoña
 36693;Carballiño
 36700;Tui
-36710;Barreiro
 36711;Anta
-36712;Arroyo
-36713;Abelleira
-36714;Cruz
 36715;Angel
 36720;Albelos
-36729;Campos
-36730;Arrotea
 36739;Bouzada
-36740;Arrotea
-36746;Carballal (O)
-36747;Arrotea
 36748;Bouzafria
 36749;Cristelos
 36750;Avenida Brasil
 36760;Carril
 36770;Cachada
 36778;Parada
-36779;Campo
 36780;Guarda (A)
 36788;Bouza Da Fonte
 36789;Aloqueiro
-36790;Aldea
-36791;Barral
 36792;Centinela
 36794;Abellariza
 36800;Redondela
 36810;Nogueira (A)
-36811;Cabanas
 36812;Cruceiro (O)
 36813;Igrexa (A)
 36814;Fixon
-36815;Igrexa (A)
-36816;Casal Do Monte
-36817;Alen
-36818;Aldea (A)
 36820;Pontecaldelas
 36826;Barbudo
 36827;Aluncia
 36828;Cuñas
 36829;Anceu
-36830;Arcos
 36835;Cabalar
 36836;Aredo
-36837;Barcia
 36838;Barbeira
 36839;Cambeses
 36840;Cabalo (O)
-36841;Ermida (A)
 36842;Cuartos de Borben
 36843;Fraga Do Rei
 36844;Cabo Da Raña (O)
-36845;Alen
 36846;Oitaven
 36847;Fondo Da Vila
 36848;Ventin A Berducido
 36849;Pardalongas
 36850;Cabadiña
 36851;Bustelos
-36852;Airoa
 36853;Abelaido
 36854;Agualta
 36855;Boliñas
 36856;Berberote
 36857;Lourenzos (Os)
 36858;Cachopeiras
-36859;Arrotea
 36860;Ponteareas
 36861;Agualevada
 36862;Capela (A)-Alcazar (O)
-36863;Outeiro (O)
 36864;Camba (A)
 36865;Veasque
 36866;Borraxeiros
-36867;Abelleira (A)
 36868;Carballede
 36869;Camondes
 36870;Merouces
-36872;Barreiras
-36873;Barcia
 36874;Aboal
 36875;Freaza
 36876;Vilanova
 36877;Condes
-36878;Alen
 36879;Escobeiro
 36880;Cañiza (A)
-36883;Abelan
-36884;Abelenda
 36885;Arans
-36886;Aldea
-36887;Abelleira
 36888;Achas
 36889;Cebreiro
 36890;Mondariz-Balneario
@@ -7905,52 +6588,33 @@
 36893;Areal de Fontes (O)
 36895;Costeliña (A)
 36900;Arealonga
-36910;Pontevedra
 36911;Baguin
 36912;Cabodevila
 36913;Aguete
 36914;Pastoriza
 36915;Grela (A)
-36920;Marin
 36930;Canceliña (A)
 36937;Bon de Abaixo
 36938;Meiro
 36939;Achadiza (A)
-36940;Cangas
-36945;Espiñeira (A)
 36946;Gandon
-36947;Agualevada
 36948;Donon
 36950;Praia (A)
-36954;Abelendo
 36955;Couso
 36957;Calvar (O)
 36958;Igrexario (O)
 36959;Broullon
 36960;Sanxenxo
-36966;Areas
-36967;Abuin
-36968;Agros (Os)
 36969;Freixeiro
 36970;Portonovo
-36979;Baltar
 36980;Cantodorxo
 36988;Balea
 36989;Ardia
-36990;Bouza (A)
 36991;Toxa (Illa Da)
 36992;Serpe
-36993;Armada
 36995;Albar
 37001;Salamanca
-37002;Salamanca
-37003;Salamanca
-37004;Salamanca
-37005;Salamanca
-37006;Salamanca
-37007;Salamanca
 37008;Montalvo (El)
-37100;Casar (El)
 37110;Aldearrodrigo
 37111;Añover de Tormes
 37114;Encina de San Silvestre
@@ -7968,7 +6632,6 @@
 37150;Gejo de Los Reyes
 37159;Cerezal de Puertas
 37160;Villarino de Los Aires
-37169;Villarino de Los Aires
 37170;Porteros
 37171;Manzano (El)
 37172;Sardon de Los Frailes
@@ -7992,14 +6655,12 @@
 37197;Ariseos
 37198;Carpihuelo
 37200;Fuente de S Esteban (La)
-37207;Fuente de S Esteban (La)
 37208;Boadilla
 37209;Buenamadre
 37210;Vitigudino
 37214;Cabeza del Caballo
 37216;Castillejo de Evans
 37217;Barceino
-37219;Casablanca
 37220;Fregeneda (La)
 37230;Hinojosa de Duero
 37240;Lumbrales
@@ -8038,7 +6699,6 @@
 37320;Pedrezuela de San Bricio
 37329;Alconada
 37330;Babilafuente
-37337;Cordovilla
 37338;Huerta
 37339;Villoria
 37340;Aldearrubia
@@ -8053,9 +6713,7 @@
 37419;Espino de la Orbada
 37420;Gomecello
 37427;Orbada (La)
-37428;Orbada (La)
 37429;Aldeanueva de Figueroa
-37430;Estacion (La)
 37439;Castellanos de Moriscos
 37440;Barbadillo
 37447;Rollan
@@ -8063,7 +6721,6 @@
 37449;Rodillo
 37450;Campo del Hospicio
 37451;Cubito
-37452;Castroverde
 37453;Carrascal Sanchiricones
 37454;Huerta (La)
 37458;Dueña de Abajo (La)
@@ -8072,12 +6729,10 @@
 37466;Cuarto del Pilar
 37467;Villagarcia
 37468;Ciperez
-37470;Sancti-Spiritus
 37478;Alba de Yeltes
 37479;Paradinas de Abajo
 37480;Colonia de la Estacion
 37481;Fuentes de Oñoro
-37488;Aldea del Obispo
 37490;Cabezabellosa la Calzada
 37491;Navas de Quejigal
 37492;San Fernando
@@ -8088,7 +6743,6 @@
 37497;Alameda de Gardon (La)
 37500;Ciudad Rodrigo
 37510;Agallas
-37515;Encina (La)
 37516;Herguijuela Ciudad-Rodrig
 37520;Aldealba de Hortaces
 37521;Robleda
@@ -8107,7 +6761,6 @@
 37553;Puebla de Azaba
 37554;Alamedilla (La)
 37555;Albergueria de Argañan (L
-37590;Ciudad Rodrigo
 37591;Soto (El)
 37592;Aldeanueva de Portanovis
 37593;Bocacara
@@ -8124,7 +6777,6 @@
 37619;Herguijuela de la Sierra
 37621;Aldeanueva de la Sierra
 37624;Alberca (La)
-37630;Cabrillas
 37638;Valverde de Gonzaliañez
 37639;Aldehuela de Yeltes
 37640;Abusejo
@@ -8137,11 +6789,9 @@
 37670;Casillas de Las Erias
 37671;San Esteban de la Sierra
 37680;Valdefuentes de Sangusin
-37682;Santa Maria de Los Llanos
 37683;Molinillo
 37684;Cristobal
 37690;Santa Olalla de Yeltes
-37694;San Miguel del Robledo
 37700;Bejar
 37710;Candelario
 37711;Colmenar de Montemayor
@@ -8153,7 +6803,6 @@
 37718;Aldeacipreste
 37720;Cerro (El)
 37724;Valdelamatanza
-37726;Cerro (El)
 37727;Montemayor del Rio
 37729;Puerto de Bejar
 37730;Ledrada
@@ -8165,7 +6814,6 @@
 37752;Tala (La)
 37753;Navahombela
 37754;Armenteros
-37755;Armenteros
 37756;Revalvos
 37760;Linares de Riofrio
 37762;Escurial de la Sierra
@@ -8206,7 +6854,6 @@
 37850;Arauzo
 37860;Horcajo-Medianero
 37861;Chagarcia-Medianero
-37862;Valverde de Gonzaliañez
 37863;Anaya de Alba
 37864;Herrezuelo
 37865;Carabias
@@ -8221,21 +6868,10 @@
 37891;Ejeme
 37892;Torrejon de Alba
 37893;Palomares de Alba
-37900;Santa Marta de Tormes
 38001;Santa Cruz de Tenerife
-38002;Santa Cruz de Tenerife
-38003;Santa Cruz de Tenerife
-38004;Santa Cruz de Tenerife
-38005;Santa Cruz de Tenerife
-38006;Santa Cruz de Tenerife
-38007;Santa Cruz de Tenerife
-38008;Santa Cruz de Tenerife
-38009;Santa Cruz de Tenerife
-38010;Santa Cruz de Tenerife
 38107;Barranco Grande
 38108;Andenes, Los
 38109;Radazul
-38110;Santa Cruz de Tenerife
 38111;Santa Maria del Mar
 38120;San Andres
 38129;Almaciga
@@ -8243,18 +6879,12 @@
 38139;Afur
 38140;Igueste de San Andres
 38150;Valleseco
-38160;Santa Cruz de Tenerife
 38170;Campitos (Los)
 38180;Cueva Bermeja
 38190;Machado
 38201;San Cristobal
-38202;San Cristobal
-38203;San Cristobal
-38204;San Cristobal
 38205;Finca España
 38206;Rodeos, Los
-38207;San Cristobal
-38208;San Cristobal
 38240;Punta del Hidalgo
 38250;Bajamar
 38260;Tejina
@@ -8286,7 +6916,6 @@
 38359;Ravelo
 38360;Sauzal
 38370;Matanza de Acentejo (La)
-38379;Matanza de Acentejo (La)
 38380;Bajos Y Tagoro
 38389;Altos - Arroyos (Los)
 38390;Cuesta de la Villa
@@ -8294,13 +6923,10 @@
 38399;El Cantillo
 38400;Puerto de la Cruz
 38410;Realejos (Los)
-38412;Realejos (Los)
 38413;Cruz Santa
 38414;Icod El Alto
 38415;Palo Blanco-Llanadas
-38416;Realejos (Los)
 38417;Longuera-Toscal
-38418;Longuera-Toscal
 38419;Montaña-Zamora
 38420;San Juan de la Rambla
 38428;Rosas (Las)
@@ -8318,16 +6944,13 @@
 38459;Genoves
 38460;Caleta de Interian (La)
 38470;Casco (El)
-38479;Canteras (Las)
 38480;Buenavista del Norte
 38489;Carrizales (Los)
 38500;Güimar
 38508;Puertito de Güimar
 38509;Hidalga (La)
-38510;Barranco Hondo
 38520;Igueste
 38530;Caletillas (Las)
-38540;Araya
 38550;Arafo
 38560;Medida (La)
 38570;Cruz del Roque
@@ -8338,53 +6961,40 @@
 38590;Lomo de Mena
 38591;Aguerche
 38592;Icor
-38593;Rio (El)
 38594;Chimiche
 38595;Charco del Pino
 38600;Granadilla de Abona
-38611;San Isidro
 38612;Medano (El)
 38613;Vilaflor
 38614;Escalona (La)
 38615;Ifonche Y Benitez
 38616;Blanquitos (Los)
-38617;Charco del Pino
 38618;Abrigos (Los)
-38620;San Miguel
 38626;Cabo Blanco
 38627;Buzanada
-38628;Aldea Blanca
 38629;Fronton (El)
 38630;Costa del Silencio
 38631;Galletas(Las)
 38632;Cho
 38639;Fraile (El)
 38640;Arona
-38649;Arona
 38650;Cristianos(Los)
 38652;Chayofa
-38660;Caldera (La)
 38670;Adeje
-38677;Adeje
 38678;Armeñime
 38679;Fañabe
 38680;Guia de Isora
 38683;Puerto de Santiago
 38684;Tamaimo
-38685;Guia de Isora
 38686;Alcala
-38687;Alcala
 38688;Chio
-38689;Chio
 38690;Arguayo
-38700;Morro (El)
 38710;Breña
 38711;Polvacera (La)
 38712;Ledas (Las)
 38713;Botazo
 38714;Galga (La)
 38715;Granel (El)
-38720;San Pedro
 38726;Barlovento
 38727;Cabezadas (Las)
 38728;Roque del Faro
@@ -8402,7 +7012,6 @@
 38768;Barros (Los)
 38769;Puerto Naos
 38770;Tazacorte
-38779;Cardon
 38780;Aguatavar
 38787;Don Pedro
 38788;Cueva del Agua
@@ -8414,7 +7023,6 @@
 38812;Alajero
 38813;Antoncojo
 38820;Callejon de Ordaiz
-38829;Cabezadas (Las)
 38830;Agulo
 38840;Vallehermoso
 38849;Banda de Las Rosas
@@ -8427,25 +7035,13 @@
 38890;Palmita (La)
 38891;Tamargada
 38892;Arure
-38900;Valverde
 38910;Caleta
 38911;Golfo (El)
 38912;Sabinosa
-38913;Golfo (El)
 38914;Pinar (El)
 38915;Isora
 38916;Echedo
-38917;Pinar (El)
 39001;Santander
-39002;Santander
-39003;Santander
-39004;Santander
-39005;Santander
-39006;Santander
-39007;Santander
-39008;Santander
-39009;Santander
-39010;Santander
 39011;Peñacastillo
 39012;Cueto
 39100;Santa Cruz de Bezana
@@ -8495,15 +7091,11 @@
 39329;Toñanes
 39330;Santillana
 39340;Suances
-39350;Cortiguera
-39360;Arroyo
 39390;Camplengo
 39400;Corrales (Los)
-39407;Collado
 39408;Barros
 39409;Barcena (La)
 39410;Mataporquera
-39416;Aguilera (La)
 39417;Bustasur
 39418;Barriopalacio
 39419;Aldea de Ebro
@@ -8512,7 +7104,6 @@
 39438;San Martin de Quevedo
 39439;Helguera
 39450;Arenas de Iguña
-39451;Barriopalacio
 39460;Corral
 39470;Renedo
 39477;Barcenilla
@@ -8525,17 +7116,13 @@
 39507;Bustablado
 39509;Cabrojo
 39510;Sopeña
-39511;Renedo
 39513;Ruente
 39517;Saja
 39518;Fresneda
 39520;Comillas
 39525;Oreña
 39526;Cigüenza
-39527;Casasola
-39528;Comillas
 39530;Puente San Miguel
-39538;Helguera
 39539;Rudagüera
 39540;S Vicente de la Barquera
 39547;Llaos (Los)
@@ -8543,11 +7130,8 @@
 39549;Puente del Arrudo
 39550;Bielva
 39551;Cabanzon
-39553;Arenas
-39554;Cabrojo
 39555;Lastra (La)
 39556;Puente Pumar
-39557;Belmonte
 39558;Carmona
 39559;Cosio
 39560;Unquera
@@ -8558,10 +7142,7 @@
 39573;Buyezo
 39574;Frama
 39575;Barago
-39577;Barrio
 39580;Bejes
-39582;Areños
-39583;Castro
 39584;Armaño
 39585;Ojedo
 39586;Arguebanes
@@ -8579,10 +7160,8 @@
 39610;Astillero
 39611;Guarnizo
 39612;Parbayon
-39613;Guarnizo
 39618;Pontejos
 39619;San Salvador
-39620;Encina (La)
 39626;Abadilla (La)
 39627;Arenal
 39630;Penilla
@@ -8590,7 +7169,6 @@
 39639;Llerana
 39640;Villacarriedo
 39649;Aloños
-39650;Cueva (La)
 39660;Pomaluengo
 39670;Aes
 39679;Presillas (Las)
@@ -8600,14 +7178,11 @@
 39685;Candolias
 39686;Bustaleguin
 39687;Bollacin
-39688;Bustasur
 39689;Barcena
 39690;Concha (La)
 39691;Iruz
 39692;Liaño
-39694;Abadilla (La)
 39696;Bustantegua
-39697;Corvera
 39698;Acereda
 39699;Borleña
 39700;Castro Urdiales
@@ -8617,8 +7192,6 @@
 39709;Samano
 39710;Solares
 39715;Entrambasaguas
-39716;Bosque (El)
-39717;Collada (La)
 39718;Pamanes
 39719;Puente Aguero
 39720;Barrio de Arriba
@@ -8627,7 +7200,6 @@
 39724;Ceceñas
 39725;Cantolla (La)
 39726;Merilla
-39727;Lierganes
 39728;Ajanedo
 39730;Beranga
 39738;Hazas de Cesto
@@ -8636,7 +7208,6 @@
 39749;Dueso
 39750;Colindres
 39760;Adal
-39761;Adal
 39762;Carasa
 39764;Badames
 39766;Bueras
@@ -8646,7 +7217,6 @@
 39778;Rioseco
 39780;Oriñon
 39786;Balbacienta
-39787;Balbacienta
 39788;Adino
 39790;Barcena de Cicero
 39791;Ambrosero
@@ -8657,27 +7227,17 @@
 39796;Cicero
 39798;Allendelagua
 39800;Ramales de la Victoria
-39805;Ramales de la Victoria
 39806;Aja
 39807;Regules
 39808;Incedo
 39809;Gibaja
-39811;Ramales de la Victoria
 39812;Matienzo
 39813;Alisas
-39815;Gibaja
 39820;Limpias
 39840;Ampuero
 39849;Ahedo
 39850;Bulco
-39860;Casavieja
-39880;Agüera
 40001;Segovia
-40002;Segovia
-40003;Segovia
-40004;Segovia
-40005;Segovia
-40006;Segovia
 40100;San Ildefonso O la Granja
 40109;Valsain
 40120;Garcillan
@@ -8692,7 +7252,6 @@
 40135;Jemenuño
 40136;Hoyuelos
 40140;Valverde del Majano
-40141;Abades
 40142;Lastras del Pozo
 40144;Bercial
 40145;Moñibas
@@ -8703,19 +7262,15 @@
 40153;Fuentemilanos
 40154;Madrona
 40156;Fresno de Cantespino
-40160;Aldehuela
-40161;Navafria
 40162;Ceguilla
 40163;Cañicosa
 40164;Arconcillos
 40165;Pradena
 40170;Collado Hermoso
 40171;Chavida
-40172;Pedraza
 40173;Arahuetes
 40174;Berzal
 40175;Matilla (La)
-40176;Arenal (El)
 40180;Basardilla
 40181;Aldeasaz
 40182;Caballar
@@ -8741,7 +7296,6 @@
 40218;Fuente El Olmo de Iscar
 40219;Villaverde de Iscar
 40220;Olombrada
-40230;Dehesa
 40231;Lovingos
 40232;Fuentes de Cuellar
 40233;Moraleja de Cuellar
@@ -8786,7 +7340,6 @@
 40351;Sauquillo de Cabezas
 40352;Lastras de Cuellar
 40353;Hontalbilla
-40354;Adrados
 40355;Fuentesauco Fuentidueña
 40356;Calabazas de Fuentidueña
 40357;Fuentidueña
@@ -8810,7 +7363,6 @@
 40419;Gudillos
 40420;Losa (La)
 40421;Ortigosa del Monte
-40422;Estacion (La)
 40423;Guijasalbas
 40424;Angeles de S Rafael (Los)
 40430;Bernardos
@@ -8837,10 +7389,7 @@
 40469;Donhierro
 40470;Navas de Oro
 40480;Coca
-40490;Estacion (La)
-40491;Carbonero de Ahusin
 40492;Añe
-40493;San Pedro
 40494;Armuña
 40495;Domingo Garcia
 40496;Ciruelos de Coca
@@ -8851,10 +7400,7 @@
 40513;Ribota
 40514;Estebanvela
 40515;Riofrio de Riaza
-40516;Fresno de Cantespino
 40517;Aldeanueva del Monte
-40518;Cascajares
-40520;Ayllon
 40529;Alconada de Maderuelo
 40530;Olmillo (El)
 40531;Aldeonte
@@ -8872,7 +7418,6 @@
 40556;Languilla
 40560;Boceguillas
 40561;Navares de Ayuso
-40567;Pajarejos
 40568;Aldeanueva del Campanario
 40569;Grajera
 40590;Casla
@@ -8881,40 +7426,15 @@
 40593;Castillejo de Mesleon
 40594;Santa Maria de Riaza
 41001;Sevilla
-41002;Sevilla
-41003;Sevilla
-41004;Sevilla
-41005;Sevilla
-41006;Sevilla
-41007;Sevilla
-41008;Sevilla
-41009;Sevilla
-41010;Sevilla
-41011;Sevilla
-41012;Sevilla
-41013;Sevilla
-41014;Sevilla
-41015;Sevilla
-41016;Sevilla
-41017;Sevilla
-41018;Sevilla
-41019;Sevilla
-41020;Sevilla
-41073;Dos Hermanas
-41089;Dos Hermanas
-41092;Sevilla
-41100;Carchena
 41110;Bollullos de la Mitacion
 41111;Almensilla
 41120;Gelves
 41130;Puebla del Rio (La)
 41140;Isla Mayor
-41150;Isla Mayor
 41200;Alcala del Rio
 41209;Esquivel
 41210;Guillena
 41218;Torre de la Reina
-41219;Guillena
 41220;Burguillos
 41230;Castilblanco Arroyos
 41240;Almaden de la Plata
@@ -8925,12 +7445,9 @@
 41318;Villaverde del Rio
 41319;Viar (El)
 41320;Cantillana
-41330;Rosales (Los)
 41339;Guadajoz
-41340;Rosales (Los)
 41350;Villanueva Rio Y Minas
 41359;Villanueva del Rio
-41360;Cañadas del Romero
 41370;Cazalla de la Sierra
 41380;Alanis
 41388;San Nicolas del Puerto
@@ -8938,13 +7455,10 @@
 41390;Guadalcanal
 41400;Aceñuela (La)
 41409;Cerro Perea
-41410;Carmona
 41420;Fuentes de Andalucia
 41429;Campana (La)
 41430;Luisiana (La)
-41439;Fuentes de Andalucia
 41440;Alcolea del Rio
-41449;Alcolea del Rio
 41450;Baltrotas (Las)
 41460;Navas de la Concepcion
 41470;Peñaflor
@@ -8956,13 +7470,10 @@
 41520;Trujillo - Cabeza Sordo
 41530;Moron de la Frontera
 41540;Puebla de Cazalla (La)
-41550;Aguadulce
-41560;Alamedilla
 41563;Isla Redonda la Aceñuela
 41564;Lora de Estepa
 41565;Gilena
 41566;Pedrera
-41567;Aceñuela (La)
 41568;Rubio (El)
 41569;Marinaleda
 41570;Badolatosa
@@ -8971,23 +7482,14 @@
 41599;Corcoya
 41600;Arahal
 41610;Calvario (El)
-41620;Marchena
 41630;Lantejuela (La)
 41640;Osuna
 41650;Navarredonda
-41657;Corrales (Los)
-41658;Cañuelo (El)
 41659;Mezquitilla (La)
 41660;Villanueva de San Juan
 41661;Algamitas
 41670;Pruna
-41700;Dos Hermanas
-41701;Dos Hermanas
-41702;Dos Hermanas
-41703;Dos Hermanas
-41704;Dos Hermanas
 41710;Guadalema de Los Quintero
-41719;Guadalema de Los Quintero
 41720;Chapatales (Los)
 41727;Maribañez
 41728;Marisma Puntales Adriano
@@ -9000,7 +7502,6 @@
 41770;Montellano
 41780;Coripe
 41800;Estacion de Benacazon
-41804;Olivares
 41805;Benacazon
 41806;Umbrete
 41807;Espartinas
@@ -9010,7 +7511,6 @@
 41820;Carrion de Los Cespedes
 41830;Huevar
 41840;Pilas
-41849;Aznalcazar
 41850;Villamanrique de Condesa
 41860;Gerena
 41870;Aznalcollar
@@ -9021,16 +7521,12 @@
 41897;Madroño (El)
 41898;Arroyo de la Plata
 41899;Alcornocosa (La)
-41900;Camas
 41907;Valencina Concepcion
 41908;Castilleja de Guzman
 41909;Centro de Comarca Norte
-41910;Camas
 41920;San Juan de Aznalfarache
 41926;Mairena del Aljarafe
-41927;Mairena del Aljarafe
 41928;Palomares del Rio
-41929;Mairena del Aljarafe
 41930;Bormujos
 41940;Tomares
 41950;Castilleja de la Cuesta
@@ -9039,13 +7535,8 @@
 41980;Algaba (La)
 41989;Aral (El)
 42001;Soria
-42002;Soria
-42003;Soria
-42004;Soria
-42005;Soria
 42100;Agreda
 42107;Aldehuela de Agreda
-42108;Valverde
 42109;Vozmediano
 42110;Olvega
 42111;Aldealpozo
@@ -9068,7 +7559,6 @@
 42136;Portillo de Soria
 42137;Carabantes
 42138;Cardejon
-42140;Arganza
 42141;Guijosa
 42142;Espeja de San Marcelino
 42143;Fuencaliente del Burgo
@@ -9083,19 +7573,15 @@
 42152;Oteruelos
 42153;Derroñadas
 42155;Molinos de Duero
-42156;Molinos de Duero
 42157;Covaleda
 42158;Duruelo de la Sierra
 42159;Langosto
 42160;Almarza
 42161;Gallinero
-42162;Buitrago
 42163;Canredondo de la Sierra
 42164;Espejo de Tera
-42165;Rebollar
 42166;Aldehuela del Rincon
 42167;Cubo de la Sierra
-42169;Almarza
 42170;Fuentelsaz de Soria
 42171;Aldealices
 42172;Collado (El)
@@ -9113,10 +7599,8 @@
 42192;Cuenca (La)
 42193;Blacos
 42194;Rioseco de Soria
-42195;Santiuste
 42196;Lodares de Osma
 42200;Almantiga
-42210;Barca
 42211;Centenera de Andaluz
 42212;Cobertelada
 42213;Alpanseque
@@ -9145,14 +7629,12 @@
 42291;Barbolla (La)
 42292;Cuevas de Soria (Las)
 42293;Fuentepinilla
-42294;Fuentepinilla
 42295;Alcubilla de Las Peñas
 42296;Conquezuela
 42300;Burgo de Osma (El)
 42310;Rasa (La)
 42311;Navapalos
 42312;Vilde
-42313;Olmeda (La)
 42314;Nograles
 42315;Montejo de Tiermes
 42316;Cañicera
@@ -9179,14 +7661,8 @@
 42391;Alcubilla del Marques
 42392;Fuente Tovar
 43001;Tarragona
-43002;Tarragona
-43003;Tarragona
-43004;Tarragona
-43005;Tarragona
 43006;Campsa
 43007;Ferran
-43008;Ferran
-43100;Bonavista
 43110;Canonja (La)
 43120;Constanti
 43130;Sant Salvador
@@ -9196,17 +7672,11 @@
 43143;Maso (La)
 43144;Vallmoll
 43150;Medol (El)
-43151;Hostalets
 43152;Perafort
 43153;Garidells (Els)
-43154;Gunyoles (Les)
 43155;Puigdelfi
 43201;Reus
-43202;Reus
-43203;Reus
-43204;Reus
 43205;Urb Atalaya Mediterranea
-43206;Reus
 43300;Miami Platja
 43310;Colldejou
 43311;Vilanova D'Escornalbou
@@ -9251,13 +7721,10 @@
 43425;Fores
 43426;Rocafort de Queralt
 43427;Conesa
-43428;Conesa
 43429;Ollers
 43430;Vimbodí I Poblet
 43439;Vallclara
 43440;Balneari Les Masies
-43442;Barbera de la Conca
-43448;Vimbodí I Poblet
 43449;Senan
 43450;Riba (La)
 43459;Pinatell
@@ -9281,7 +7748,6 @@
 43520;Raval de Cristo
 43527;Reguers (Els)
 43528;Alfara de Carles
-43529;Raval de Cristo
 43530;Alcanar
 43539;Creixell-Mar
 43540;Sant Carles de la Rapita
@@ -9292,7 +7758,6 @@
 43559;Castell (El)
 43560;Senia (La)
 43569;Cases D'Alcanar (Les)
-43570;Santa Barbara
 43580;Deltebre
 43590;Jesus
 43591;Aldover
@@ -9308,7 +7773,6 @@
 43712;Llorenç del Penedes
 43713;Carronya (La)
 43714;Pla de Manlleu
-43715;Banyeres del Penedes
 43716;Albinyana
 43717;Bisbal del Penedes (La)
 43718;Peces (Les)
@@ -9322,7 +7786,6 @@
 43740;Mora D'Ebre
 43746;Darmos
 43747;Benissanet
-43748;Ginestar
 43749;Garcia
 43750;Colonia Fabrica
 43760;Morell (El)
@@ -9335,7 +7798,6 @@
 43771;Riudecanyes
 43772;Botarell
 43773;Argentera (L')
-43774;Estacion (La)
 43775;Comes (Les)
 43776;Capçanes
 43777;Guiamets (Els)
@@ -9350,7 +7812,6 @@
 43790;Riba-Roja D'Ebre
 43791;Asco
 43792;Torre de L'Espanyol (La)
-43800;Picamoixons
 43810;Pla de Santa Maria (El)
 43811;Cabra del Camp
 43812;Brafim
@@ -9376,18 +7837,13 @@
 43884;Bonastre
 43885;Salomo
 43886;Renau
-43887;Bellavista
 43890;Hospitalet de L'Infant
 43891;Planas del Rey
-43892;Miami Platja
 43893;Altafulla
 43894;Camarles
 43895;Ampolla (L')
 43896;Aldea (L')
-43897;Campredo
 44001;Teruel
-44002;Teruel
-44003;Teruel
 44100;Albarracin
 44110;Gea de Albarracin
 44111;Torres de Albarracin
@@ -9403,7 +7859,6 @@
 44125;Royuela
 44126;Calomarde
 44130;Villastar
-44131;Campo (El)
 44132;Libros
 44133;Riodeva
 44134;Alobras
@@ -9418,8 +7873,6 @@
 44150;Aliaga
 44155;Ababuj
 44156;Aguilar del Alfambra
-44157;Santa Barbara
-44158;Aldehuela
 44159;Miravete de la Sierra
 44160;Alfambra
 44161;Escorihuela
@@ -9433,7 +7886,6 @@
 44169;Cuevas de Almuden
 44190;Villaspesa
 44191;Mas de Navarrete
-44192;Aldehuela
 44193;Corbalan
 44194;Celadas
 44195;San Blas
@@ -9464,7 +7916,6 @@
 44357;Bañon
 44358;Cosa
 44359;Villalba de Los Morales
-44360;Santa Eulalia
 44366;Orihuela del Tremedal
 44367;Bronchales
 44368;Monterde de Albarracin
@@ -9478,7 +7929,6 @@
 44392;Poyo del Cid (El)
 44393;Torrijo del Campo
 44394;Bueña
-44395;Alba
 44396;Caude
 44397;Concud
 44400;Mora de Rubielos
@@ -9491,7 +7941,6 @@
 44415;Fuentes de Rubielos
 44420;Manzanera
 44421;Arcos de Las Salinas
-44422;Abejuela
 44423;Alhambras (Las)
 44424;Estacion Mora de Rubielos
 44430;Valbona
@@ -9518,7 +7967,6 @@
 44500;Andorra
 44509;Alloza
 44510;Puebla de Hijar (La)
-44511;Estacion (La)
 44520;Samper de Calanda
 44530;Hijar
 44540;Albalate del Arzobispo
@@ -9597,13 +8045,6 @@
 44792;Alcaine
 44793;Salcedillo
 45001;Toledo
-45002;Toledo
-45003;Toledo
-45004;Toledo
-45005;Toledo
-45006;Toledo
-45007;Toledo
-45008;Toledo
 45100;Casalgordo
 45109;Arisgotas
 45110;Ajofrin
@@ -9613,18 +8054,14 @@
 45114;Castañar (El)
 45120;Menasalbas
 45121;Navillas (Las)
-45122;Arges
 45123;Layos
 45124;Casasbuenas
 45125;Pulgar
 45126;Cuerva
 45127;Ventas Con Peña Aguilera
-45128;Menasalbas
 45130;Alares (Los)
-45138;Alares (Los)
 45139;Valdeazores
 45140;Navalmorales (Los)
-45150;Navahermosa
 45159;Hontanar
 45160;Guadamur
 45161;Polan
@@ -9653,7 +8090,6 @@
 45221;Esquivias
 45222;Borox
 45223;Seseña
-45224;Estacion (La)
 45225;Barcience
 45230;Numancia de la Sagra
 45240;Alameda de la Sagra
@@ -9680,7 +8116,6 @@
 45420;Almonacid de Toledo
 45430;Mascaraque
 45440;Villaminaya
-45450;Arisgotas
 45460;Manzaneque
 45470;Estacion Emperador
 45479;Marjaliza
@@ -9701,31 +8136,26 @@
 45522;Albarreal de Tajo
 45523;Alcabon
 45524;Rielves
-45525;Barcience
 45526;Santo Domingo-Caudilla
 45529;Yuncler
 45530;Miguel Esteban
 45531;Carmena
 45532;Carriches
 45533;Carpio de Tajo (El)
-45534;Mata (La)
 45540;Erustes
 45541;Mesegar de Tajo
 45542;Casar de Escalona (El)
-45543;Otero
 45544;Domingo Perez
 45551;Illan de Vacas
 45560;Corchuela
 45567;Lagartera
 45568;Ventas de S Julian (Las)
-45569;Corchuela
 45570;Puente del Arzobispo (El)
 45571;Alcolea de Tajo
 45572;Torrico
 45573;Navalmoralejo
 45574;Estrella (La)
 45575;Aldeanueva de S Bartolome
-45576;Mohedas de la Jara
 45577;Puerto de San Vicente
 45578;Campillo de la Jara (El)
 45580;Calzada de Oropesa (La)
@@ -9736,7 +8166,6 @@
 45592;Cabañas de la Sagra
 45593;Bargas
 45594;Villamiel de Toledo
-45600;Corchuela
 45610;Navalcan
 45611;Parrillas
 45612;Velada
@@ -9762,7 +8191,6 @@
 45645;Hinojosa de San Vicente
 45646;San Roman de Los Montes
 45650;Espinoso del Rey
-45651;Fresneda (La)
 45652;Retamoso
 45653;Santa Ana de Pusa
 45654;S Bartolome Las Abiertas
@@ -9772,14 +8200,12 @@
 45663;Membrillo (El)
 45664;Herencias (Las)
 45670;Nava de Ricomalillo (La)
-45671;Gargantilla
 45672;Minas de Santa Quiteria
 45673;Buenasbodas
 45674;Piedraescrita
 45675;Hunfrias (Las)
 45676;Robledillo
 45677;Navaltoril
-45678;Piedraescrita
 45680;Cebolla
 45682;Cerralbos (Los)
 45683;Cazalegas
@@ -9788,9 +8214,7 @@
 45686;Calera Y Chozas
 45687;Alcañizo
 45690;Pueblanueva (La)
-45691;Pueblanueva (La)
 45692;Bernuy
-45693;Bernuy
 45694;Talavera la Nueva
 45695;Alberche del Caudillo
 45700;Consuegra
@@ -9799,16 +8223,12 @@
 45730;Villafranca Caballeros
 45740;Villasequilla
 45749;Villamuelas
-45750;Cabañas de Yepes
-45760;Guardia (La)
-45770;Romeral (El)
 45780;Tembleque
 45789;Turleque
 45790;Quero
 45800;Quintanar de la Orden
 45810;Villanueva de Alcardete
 45820;Toboso (El)
-45830;Miguel Esteban
 45840;Puebla de Almoradiel (La)
 45850;Villa de D Fadrique (La)
 45860;Villacañas
@@ -9828,32 +8248,13 @@
 45950;Casarrubios del Monte
 45960;Chozas de Canales
 46001;Valencia
-46002;Valencia
-46003;Valencia
-46004;Valencia
-46005;Valencia
-46006;Valencia
-46007;Valencia
-46008;Valencia
-46009;Valencia
-46010;Valencia
-46011;Valencia
 46012;Castellar-Oliveral
-46013;Castellar-Oliveral
 46014;Luz (Barrio de La)
 46015;Benimamet-Beniferri
 46016;Tavernes Blanques
-46017;Valencia
-46018;Valencia
 46019;Pueblo Nuevo
-46020;Valencia
-46021;Valencia
-46022;Valencia
-46023;Valencia
-46024;Valencia
 46025;Carpesa
 46026;Casas de Barcena
-46035;Benimamet-Beniferri
 46100;Burjassot
 46109;Cheste
 46110;Godella
@@ -9866,8 +8267,6 @@
 46118;Porta Coeli
 46119;Naquera
 46120;Alboraya
-46128;Alboraya
-46129;Alboraya
 46130;Massamagrell
 46131;Bonrepos Y Mirambell
 46132;Almassera
@@ -9907,7 +8306,6 @@
 46179;Aras de Los Olmos
 46180;Benaguasil
 46181;Benisano
-46182;Cañada (La)
 46183;Eliana (L')
 46184;San Antonio de Benageber
 46185;Pobla de Vallbona (La)
@@ -9933,7 +8331,6 @@
 46268;Garrofera (La)
 46269;Tous
 46270;Villanueva de Castellón
-46290;Alcasser
 46291;Benimodo
 46292;Masalaves
 46293;Alcantera de Xuquer
@@ -9943,7 +8340,6 @@
 46310;Casas de Moya
 46311;Jaraguas
 46312;Utiel
-46313;Casas (Las)
 46314;Fuenterrobles
 46315;Caudete de Las Fuentes
 46317;Villargordo del Cabriel
@@ -9952,7 +8348,6 @@
 46321;Torre (La)
 46330;Camporrobles
 46340;Casas de Cuadra
-46350;Chera
 46351;Villar de Tejas
 46352;Campo Arcis
 46353;Los Ruices
@@ -9965,7 +8360,6 @@
 46368;Macastre
 46369;Alborache
 46370;Chiva
-46380;Cheste
 46388;Godelleta
 46389;Turis
 46390;Barrio Arroyo
@@ -9974,11 +8368,9 @@
 46393;Loriguilla
 46400;Brosquil (El)
 46408;Mareny Sant Lloren
-46409;Brosquil (El)
 46410;Bega de Mar
 46417;Riola
 46418;Fortaleny
-46419;Bega de Mar
 46420;Palmeres (Les)
 46430;Sollana
 46439;Romani (El)
@@ -9995,7 +8387,6 @@
 46512;Faura
 46514;Benavites
 46515;Quart de Les Valls
-46520;Almarda
 46529;Canet D'En Berenguer
 46530;Monasterios (Los)
 46540;Puig
@@ -10023,7 +8414,6 @@
 46635;Fontanars Dels Alforins
 46640;Mogente/Moixent
 46650;Ayacor
-46659;Ayacor
 46660;Manuel
 46661;L'Enova
 46666;Berfull
@@ -10039,7 +8429,6 @@
 46691;Vallada
 46692;Montesa
 46701;Gandia
-46702;Gandia
 46703;Benirredra
 46710;Daimus
 46711;Guardamar de la Safor
@@ -10048,7 +8437,6 @@
 46714;Palmera
 46715;Alqueria la Comtessa (L')
 46716;Rafelcofer
-46717;Casinos
 46720;Villalonga
 46721;Potries
 46722;Beniarjo
@@ -10057,14 +8445,12 @@
 46725;Alfauir
 46726;Almisera
 46727;Real de Gandia
-46728;Gandia
 46729;Ador
 46730;Grau I Platja
 46740;Carcaixent
 46749;Cogullada
 46750;Pla de Corrals
 46758;Barx
-46760;Grau I Platja
 46770;Xeraco
 46780;Oliva
 46790;Xeresa
@@ -10097,7 +8483,6 @@
 46843;Rafol de Salem
 46844;Beniatjar
 46850;Olleria (L')
-46860;Albaida
 46868;Belgida
 46869;Atzeneta D'Albaida
 46870;Ontinyent
@@ -10116,27 +8501,11 @@
 46950;Xirivella
 46960;Aldaia
 46970;Alaquas
-46980;Coma (La)
 46988;Paterna
 46989;Terramelar
 47001;Valladolid
-47002;Valladolid
-47003;Valladolid
-47004;Valladolid
-47005;Valladolid
-47006;Valladolid
-47007;Valladolid
 47008;Navabuena
 47009;Overuela (La)
-47010;Overuela (La)
-47011;Valladolid
-47012;Valladolid
-47013;Valladolid
-47014;Navabuena
-47015;Valladolid
-47016;Valladolid
-47017;Valladolid
-47018;Valladolid
 47100;Tordesillas
 47110;Casasola de Arion
 47111;Villalar de Los Comuneros
@@ -10156,20 +8525,16 @@
 47150;Viana de Cega
 47151;Boecillo
 47152;Pinar de Antequera
-47153;Pinar de Antequera
 47155;Santovenia de Pisuerga
 47160;Aldea de San Miguel
 47161;Herrera de Duero
 47162;Aldeamayor de San Martin
 47164;San Miguel del Arroyo
-47165;Camporredondo
 47166;Viloria
-47169;Aldeamayor de San Martin
 47170;Renedo de Esgueva
 47171;Castronuevo de Esgueva
 47172;Villarmentero de Esgueva
 47173;Olmos de Esgueva
-47174;Villanueva Los Infantes
 47175;Piña de Esgueva
 47176;Esguevillas de Esgueva
 47177;Amusquillo
@@ -10187,15 +8552,12 @@
 47194;Fuensaldaña
 47195;Arroyo de la Encomienda
 47196;Cardiel (El)
-47197;Valladolid
-47198;Overuela (La)
 47200;Granja Muedra
 47209;San Martin de Valveni
 47210;Ataquines
 47219;Muriel de Zapardiel
 47220;Pozaldez
 47230;Matapozuelos
-47238;Alcazaren
 47239;Serrada
 47240;Valdestillas
 47250;Mojados
@@ -10221,7 +8583,6 @@
 47328;Parrilla (La)
 47329;Castrillo-Tejeriego
 47330;Santibañez de Valcorba
-47331;Santibañez de Valcorba
 47340;Retuerta
 47350;Quintanilla de Onesimo
 47359;Olivares de Duero
@@ -10235,10 +8596,8 @@
 47440;Cogeces de Iscar
 47450;Pozal de Gallinas
 47451;Calabazas
-47452;Zarza (La)
 47453;Ramiro
 47454;Moraleja de Las Panaderas
-47460;Campillo (El)
 47461;Brahojos de Medina
 47462;Bobadilla del Campo
 47463;Velascalvaro
@@ -10249,7 +8608,6 @@
 47490;Rueda
 47491;Seca (La)
 47492;Gomeznarro
-47493;Gomeznarro
 47494;Cervillego de la Cruz
 47500;Nava del Rey
 47509;Torrecilla del Valle
@@ -10266,7 +8624,6 @@
 47608;Bustillo de Chaves
 47609;Fontihoyuelo
 47610;Zaratan
-47620;Navabuena
 47630;Mudarra (La)
 47639;Villalba de Los Alcores
 47640;Peñaflor de Hornija
@@ -10289,7 +8646,6 @@
 47691;Moral de la Reina
 47692;Ceinos de Campos
 47800;Medina de Rioseco
-47801;Navabuena
 47810;Villafrechos
 47811;Morales de Campos
 47812;Palazuelo de Vedija
@@ -10311,20 +8667,6 @@
 47882;Castromembibre
 47883;Villavellid
 48001;Bilbao
-48002;Bilbao
-48003;Peña (La)
-48004;Bilbao
-48005;Bilbao
-48006;Bilbao
-48007;Bilbao
-48008;Bilbao
-48009;Bilbao
-48010;Bilbao
-48011;Bilbao
-48012;Bilbao
-48013;Bilbao
-48014;Bilbao
-48015;Bilbao
 48100;Emerando
 48110;Butron
 48111;Jose Antonio Agirre
@@ -10372,7 +8714,6 @@
 48288;Barainka
 48289;Eleizalde
 48291;Apatamonasterio
-48292;Apatamonasterio
 48300;Arana
 48309;Atxika-Errekalde
 48310;Elantxobe
@@ -10387,7 +8728,6 @@
 48348;Aldanas
 48350;Altamira-San Kristobal
 48360;Arketas-Aranburu
-48370;Agirre
 48380;Aulesti
 48381;Munitibar
 48382;Albiz
@@ -10399,7 +8739,6 @@
 48394;Murueta
 48395;Kanala
 48410;Arbaiza
-48419;Ibarra
 48450;Kukullaga
 48460;Belandia
 48480;Aguirre
@@ -10416,9 +8755,7 @@
 48600;Moreaga
 48610;Landa
 48620;Agirre-Areantza-Guzurmend
-48630;Elexalde
 48640;Baserri-Santa Ana
-48650;Elejalde
 48700;Ondarroa
 48710;Asterrika
 48800;Balmaseda
@@ -10426,17 +8763,11 @@
 48820;La Quadra
 48830;Sodupe
 48840;Gueñes
-48850;Aranguren
-48860;Aranguren
 48869;Avellaneda
-48870;Alen
 48879;Gorgolas
-48880;Cueto
 48890;Biañez
-48891;Ahedo
 48895;Lanestosa
 48901;San Vicente de Barakaldo
-48902;San Vicente de Barakaldo
 48903;El Regato
 48910;Sestao
 48920;Portugalete
@@ -10447,41 +8778,7 @@
 48970;Arizgoiti
 48980;Balparda
 48990;Algorta
-48991;Algorta
-48992;Algorta
-48993;Algorta
 49001;Zamora
-49002;Zamora
-49003;Zamora
-49004;Zamora
-49005;Zamora
-49006;Zamora
-49007;Zamora
-49008;Zamora
-49009;Zamora
-49010;Zamora
-49011;Zamora
-49012;Zamora
-49013;Zamora
-49014;Zamora
-49015;Zamora
-49016;Zamora
-49017;Zamora
-49018;Zamora
-49019;Zamora
-49020;Zamora
-49021;Zamora
-49022;Zamora
-49023;Zamora
-49024;Zamora
-49025;Zamora
-49026;Zamora
-49027;Zamora
-49028;Zamora
-49029;Zamora
-49030;Zamora
-49031;Zamora
-49032;Zamora
 49100;Villanueva del Campo
 49110;Castroverde de Campos
 49120;Molacillos
@@ -10528,7 +8825,6 @@
 49163;Manzanal del Barco
 49164;Cerezal de Aliste
 49165;Ricobayo de Alba
-49166;Carbajosa
 49167;Muelas del Pan
 49170;Tardobispo
 49171;Pueblica de Campean
@@ -10541,7 +8837,6 @@
 49180;Almaraz de Duero
 49181;Villaseco del Pan
 49182;Valdeperdices
-49183;Almendra
 49190;Morales del Vino
 49191;Cazurra
 49192;Hiniesta (La)
@@ -10572,7 +8867,6 @@
 49280;Pereruela
 49281;San Roman de Los Infantes
 49300;Puebla de Sanabria
-49310;Mombuey
 49317;Valdemerilla
 49318;Fresno de la Carballeda
 49319;Donadillo
@@ -10613,7 +8907,6 @@
 49390;Castellanos
 49391;Rihonor de Castilla
 49392;Calabor
-49393;Robledo
 49394;San Martin del Terroso
 49395;Limianos de Sanabria
 49396;Avedillo de Sanabria
@@ -10633,7 +8926,6 @@
 49515;Rabano de Aliste
 49516;Latedo
 49517;Alcorcillo
-49518;Santa Ana
 49519;Fradellos
 49520;Figueruela de Abajo
 49521;Gallegos del Campo
@@ -10660,13 +8952,11 @@
 49574;Aciberos
 49580;Pias
 49582;Barjacoba
-49583;Porto
 49590;Fresno de la Ribera
 49591;Abejera
 49592;Cabañas de Aliste
 49593;Linarejos
 49594;Codesal
-49600;Benavente
 49610;Congosta
 49618;Fuente Encalada
 49619;Ayoo de Vidriales
@@ -10681,7 +8971,6 @@
 49628;San Pedro de Ceque
 49629;Brime de Sog
 49630;Villalpando
-49638;Prado
 49639;Cotanes del Monte
 49640;Cerecinos de Campos
 49650;San Esteban del Molar
@@ -10746,28 +9035,9 @@
 49881;Monte la Reina
 49882;Valdefinjas
 50001;Zaragoza
-50002;Zaragoza
-50003;Zaragoza
-50004;Zaragoza
-50005;Zaragoza
-50006;Zaragoza
-50007;Zaragoza
-50008;Zaragoza
-50009;Zaragoza
-50010;Zaragoza
 50011;Venta del Olivar
-50012;Zaragoza
 50013;Cartuja Baja
-50014;Zaragoza
 50015;Juslibol
-50016;Zaragoza
-50017;Zaragoza
-50018;Zaragoza
-50019;Zaragoza
-50020;Zaragoza
-50021;Zaragoza
-50057;Zaragoza
-50059;Montañana
 50100;Almunia Doña Godina (La)
 50108;Almonacid de la Sierra
 50109;Alpartir
@@ -10809,12 +9079,9 @@
 50178;Almolda (La)
 50180;Utebo
 50190;Garrapinillos
-50191;Juslibol
-50193;Peñaflor
 50194;Movera
 50195;Alfranca (La)
 50196;Alto de la Muela
-50197;Garrapinillos
 50200;Ateca
 50210;Monasterio de Piedra
 50211;Castejon de Las Armas
@@ -10834,11 +9101,9 @@
 50237;Jaraba
 50238;Calmarza
 50239;Bubierca
-50240;Colinas (Las)
 50246;Brea de Aragon
 50247;Purroy
 50248;Sestrica
-50249;Sestrica
 50250;Illueca
 50257;Gotor
 50258;Jarque
@@ -10880,7 +9145,6 @@
 50332;Belmonte de Gracian
 50333;Villalba de Perejil
 50334;Sediles
-50335;Torres
 50336;Huermeda
 50340;Maluenda
 50341;Olves
@@ -10902,7 +9166,6 @@
 50372;Val de San Martin
 50373;Berrueco
 50374;Aldehuela de Liestos
-50375;Abanto
 50390;Fuentes de Jiloca
 50391;Monton
 50400;Cariñena
@@ -10913,7 +9176,6 @@
 50430;Maria de Huerva
 50440;Mozota
 50441;Botorrita
-50450;Estacion (La)
 50460;Longares
 50461;Alfamen
 50470;Encinacorba
@@ -10956,7 +9218,6 @@
 50614;Ardisa
 50615;Lacorvilla
 50616;Piedratajada
-50617;Sabinar (El)
 50619;Asin
 50620;Casetas
 50629;Sobradiel
@@ -10969,20 +9230,17 @@
 50650;Gallur
 50660;Tauste
 50667;Pradilla de Ebro
-50668;Pradilla de Ebro
 50669;Sancho Abarca
 50670;Sadaba
 50678;Uncastillo
 50679;Layana
 50680;Mamillas
 50682;Esco
-50683;Artieda
 50684;Lorbes
 50685;Bagües
 50686;Petilla de Aragon
 50687;Isuerre
 50688;Longas
-50689;Campo Real
 50690;Pedrola
 50691;Alcala de Ebro
 50692;Joyosa (La)
@@ -10992,9 +9250,7 @@
 50696;Castiliscar
 50697;Barues
 50700;Caspe
-50709;Miraflores
 50710;Maella
-50720;Ricla
 50730;Burgo de Ebro (El)
 50740;Fuentes de Ebro
 50750;Pina de Ebro
@@ -11007,7 +9263,6 @@
 50784;Zaida (La)
 50786;Gelsa
 50790;Escatron
-50791;Escatron
 50792;Chiprana
 50793;Fabara
 50794;Nonaspe
@@ -11015,18 +9270,8 @@
 50800;Estacion Portazgo
 50810;Ontinar de Salz
 50820;San Juan de Mozarrifar
-50830;Alagon
 50840;San Mateo de Gallego
 50850;Moran
 51001;Ceuta
 51002;Benzu
-51003;Benzu
-51004;Benzu
-51005;Ceuta
 52001;Melilla
-52002;Melilla
-52003;Melilla
-52004;Melilla
-52005;Melilla
-52006;Melilla
-90007;Zaragoza
