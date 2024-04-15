@@ -132,8 +132,6 @@ CREATE TABLE IF NOT EXISTS persona (
     sexo CHAR(1) CHECK (sexo IN ('H','M','O')),
     teléfono CHAR(9) NOT NULL,
     correo_electrónico VARCHAR(40) CHECK (correo_electrónico ~ '^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'),
-    usuario VARCHAR(20),
-    contraseña VARCHAR(30),
     id_direccion INTEGER NOT NULL,
     FOREIGN KEY (id_direccion) REFERENCES direccion (id_direccion)
 );
