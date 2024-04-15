@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS especialidad (
 
 CREATE TABLE IF NOT EXISTS ciudad (
     id_ciudad SERIAL PRIMARY KEY,
+    codigo_postal CHAR(5) NOT NULL,
     nombre VARCHAR(30) UNIQUE NOT NULL 
 );
 
@@ -118,7 +119,6 @@ CREATE TABLE IF NOT EXISTS direccion (
     numero VARCHAR(5) NOT NULL,
     piso VARCHAR(7),
     puerta CHAR(1),
-    codigo_postal CHAR(5) NOT NULL,
     id_ciudad INTEGER NOT NULL,
     FOREIGN KEY (id_ciudad) REFERENCES ciudad (id_ciudad)
 );
@@ -132,8 +132,6 @@ CREATE TABLE IF NOT EXISTS persona (
     sexo CHAR(1) CHECK (sexo IN ('H','M','O')),
     teléfono CHAR(9) NOT NULL,
     correo_electrónico VARCHAR(40) CHECK (correo_electrónico ~ '^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'),
-    usuario VARCHAR(20),
-    contraseña VARCHAR(30),
     id_direccion INTEGER NOT NULL,
     FOREIGN KEY (id_direccion) REFERENCES direccion (id_direccion)
 );
