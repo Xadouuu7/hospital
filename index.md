@@ -13,7 +13,7 @@ Fet per: Anderson Pérez Brazoban, Isaac Ruiz García i  M. del Mar Manzano Baen
 
 - [Model Relacional - Imatge](https://github.com/Xadouuu7/hospital/blob/main/postgres/Bloc%20Esquema%20ER%20-%20Relacional%20-%20SQL/Esquema%20Relacional.svg)
 
-- [Model Relacional - Text](https://github.com/Xadouuu7/hospital/blob/main/postgres/Bloc%20Esquema%20ER%20-%20Relacional%20-%20SQL/Esquema%20Relacional.svg)
+- [Model Relacional - Text](https://github.com/Xadouuu7/hospital/blob/main/postgres/Bloc%20Esquema%20ER%20-%20Relacional%20-%20SQL/Relacional%20Texto.png)
 
 - [SQL](https://github.com/Xadouuu7/hospital/blob/main/postgres/Bloc%20Esquema%20ER%20-%20Relacional%20-%20SQL/Creaci%C3%B3BD.sql)
 
