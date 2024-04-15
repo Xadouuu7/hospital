@@ -14,7 +14,7 @@ A l’hora de fer el disseny de l’Entitat-Relació vam començar per llegir el
 ### Persones
 Primer ens parlen del personal de l’hospital, per tant, vam prendre la decisió de fer un model Entitat-Relació Estès amb les persones. Aquesta decisió es pren perquè hi ha informació que volem guardar tant dels empleats com dels pacients que és la mateixa, exceptuant algunes coses específiques.
 ![](imagenes/postgres/Bloc%20Esquema%20ER%20-%20Relacional%20-%20SQL/persona.png) 
- 
+![](imagenes/postgres/Bloc%20Esquema%20ER%20-%20Relacional%20-%20SQL/)
 Al principi vam crear diferents subclasses segons si era pacient, metge, infermer… Però al final ens vam adonar que tornem a repetir massa informació que són comuns a tots els empleats, per tant, vam prendre la decisió de fer una superclasse dins de “persona” que és “empleat”.
 ![](imagenes/postgres/Bloc%20Esquema%20ER%20-%20Relacional%20-%20SQL/superclase.png)
 El disseny de la superclasse persona tracta d’una especialització (top-down) on primer s’identifica la superclasse (persona) i posteriorment es troben les subclasses (“persona” i “pacients”). En aquest cas, l’especialització és solapada perquè els empleats poden ser pacients de l’hospital on treballen, per tant, també és total perquè qualsevol persona ha de pertànyer a “empleats”, a “pacients” o a ambdues.
@@ -22,6 +22,8 @@ El disseny de la superclasse persona tracta d’una especialització (top-down) 
 En canvi, la superclasse “empleats”, encara que també és una especialització (top-down) on primer s’identifica la superclasse “empleats” i després les subclasses de diferents tipus de treballadors: metges, infermers, científics, farmacèutics, administratius, recursos humans i varis. Aquesta decisió es va prendre a part de per evitar repetir informació igual, també és per l’hora de crear els rols dins de la base de dades, ja que els diferents actors de la base de dades tindran diferents tipus d’accés a les dades segons la seva relació amb la base de dades.
 
 Posteriorment vam decidir fer una entitat amb especialitat per assegurar-nos de que les dades entrades de cada especialitat del personal mèdic són correctes, exactament igual que fem a l’hora de separar direcció i ciutat en diferents entitats.
+
+
 ![](imagenes/postgres/Bloc%20Esquema%20ER%20-%20Relacional%20-%20SQL/especialidad.png)
 ### Localitzacions
 A l’hora de distribuir les diferents parts de l’hospital vam arribar a la conclusió de que totes les diferents habitacions de l’hospital (quiròfan, magatzems, habitacions, consultes…) són entitats febles perquè depenen de la planta on es troben. Com són entitats febles totes elles tindran la clau forana de la planta en la seva taula, d’aquesta manera es pot identificar quins magatzems, habitacions, consultes… són.
