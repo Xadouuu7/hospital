@@ -140,8 +140,8 @@ CREATE TABLE IF NOT EXISTS persona (
 
 CREATE TABLE IF NOT EXISTS paciente (
     tarjeta_sanitaria CHAR(14) PRIMARY KEY CHECK (LENGTH(tarjeta_sanitaria) = 14),
-    altura NUMERIC(4,1) NOT NULL,
-    peso NUMERIC(5,2) NOT NULL,
+    altura NUMERIC(3) NOT NULL,
+    peso NUMERIC(6,3) NOT NULL,
     grupo_sanguíneo VARCHAR(2) CHECK (grupo_sanguíneo IN ('A','B','AB','0')) NOT NULL,
     rh CHAR(1) CHECK (rh IN ('+','-')) NOT NULL,
     dni_nie CHAR(9) NOT NULL,
