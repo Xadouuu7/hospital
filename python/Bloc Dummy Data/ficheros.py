@@ -27,4 +27,12 @@ def quitarDuplicados():
         for a in fichero:
             writer.writerow({'codigo_postal':a["codigo_postal"],'nombre':a["nombre"]})
 
-quitarDuplicados()
+def leer_ciudad():
+    fichero = []
+    with open("ciudad.csv", 'r',encoding="UTF-8") as f:
+        reader = csv.DictReader(f, delimiter=';')
+        for row in reader:
+            fichero.append(row)
+    return fichero
+
+leer_ciudad()

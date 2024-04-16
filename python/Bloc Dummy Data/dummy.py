@@ -8,7 +8,7 @@ from ficheros import *
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
         db_config = {
-            'host': '192.168.56.102',
+            'host': '192.168.1.115',
             'user': usuario,
             'password': contraseña,
             'dbname':'hospital'
@@ -18,12 +18,19 @@ def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
         conn.autocommit = True
         return conn,cursor
     except Exception as error:
-       print('Error en el usuario o la contraseña', error)
+       print('Error: ', error)
 
 def fake_ciudad():
     fichero = leer_ciudad()
-    
+    conn, cursor = conectarBaseDatos()
+    datos_ciudad = [(ciudad['codigo_postal'], ciudad['nombre']) for ciudad in fichero]
+    post_records = ", ".join(["%s"] * len(datos_ciudad[0]))
+    insert_query = f"INSERT INTO ciudad (codigo_postal, nombre) VALUES ({post_records})"
+    cursor.executemany(insert_query, datos_ciudad)
+    conn.commit()
+    conn.close()
 
+    
 def fake_direccion():
     fake = Faker('es_ES')
     num_registros = 10
