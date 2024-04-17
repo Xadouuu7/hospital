@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS especialidad (
+CREATE TABLE IF NOT EXISTS specialidad (
     id_especialidad SERIAL PRIMARY KEY,
     nombre VARCHAR(30) UNIQUE NOT NULL
 );
