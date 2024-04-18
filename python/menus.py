@@ -1,0 +1,140 @@
+import os
+
+def menuPrincipal():
+    os.system('cls')
+    print('-' * 40)
+    print('Menu Login')
+    print('-' * 40, end='\n\n\n')
+    print("1. Inicio de sesion")
+    print("2. Registrarse", end='\n\n\n')
+    print("Escoger una opcion: ", end='')
+
+def menuLogin():
+    os.system('cls')
+    print('-' * 40)
+    print('Iniciar Sesión')
+    print('-' * 40, end='\n\n\n')
+    print('Nombre de Usuario: ',end='')
+    usuario = input()
+    print('Contraseña: ', end='')
+    contraseña = input()
+    return usuario,contraseña
+
+def menuRegistrarse():
+    os.system('cls')
+    print('-' * 40)
+    print('Registrarse')
+    print('-' * 40, end='\n\n\n')
+    print('CIP: ',end='')
+    cip = input()
+    print('Contraseña: ', end='')
+    contraseña = input()
+    return cip,contraseña
+
+def menuEscogerFecha():
+    os.system('cls')
+    print('-' * 40)
+    print('Escoge fecha')
+    print('-' * 40, end='\n\n\n')
+    print('Dia: ',end='')
+    dia = input()
+    print('Mes: ', end='')
+    mes = input()
+    print('Año: ',end='')
+    año = input()
+    return dia,mes,año
+
+def menuEscogerQuirófano():
+    os.system('cls')
+    print('-' * 40)
+    print('Escoge quirófano')
+    print('-' * 40, end='\n\n\n')
+    print('Número Quirófano: ',end='')
+    idQuirofano = input()
+    return idQuirofano
+
+def menuDarAlta():
+    os.system('cls')
+    print('-' * 40)
+    print('Dar de alta personal')
+    print('-' * 40, end='\n\n\n')
+    print('DNI/NIE: ',end='')
+    dni_nie = input()
+    print('Nombre: ',end='')
+    dni_nie = input()
+    print('1r Apellido: ',end='')
+    dni_nie = input()
+    print('2o Apellido: ',end='')
+    dni_nie = input()
+    print('Fecha De Nacimiento (YYYY-MM-DD): ',end='')
+    dni_nie = input()
+    print('Sexo (H,M,O): ',end='')
+    dni_nie = input()
+    print('Teléfono: ',end='')
+    dni_nie = input()
+    print('Correo electrónico: ',end='')
+    dni_nie = input()
+    print('Dirección: ',end='')
+    dni_nie = input()
+    print('Código postal: ',end='')
+    dni_nie = input()
+    print('Número: ',end='')
+    dni_nie = input()
+    print('Piso: ',end='')
+    dni_nie = input()
+    print('Puerta: ',end='')
+    dni_nie = input()
+
+def menuPaciente1():
+    os.system('cls')
+    print('-' * 40)
+    print('Menú gestión paciente')
+    print('-' * 40, end='\n\n\n')
+    print("1. Concertar visita")
+    print("2. Consultar historial")
+    print("3. Salir", end='\n\n\n')
+    print("Escoger una opcion: ", end='')
+
+def menuPaciente2():
+    os.system('cls')
+    print('-' * 40)
+    print('Historial Médico')
+    print('-' * 40, end='\n\n\n')
+    print("1. Ver visitas")
+    print("2. Ver reservas de quirófano")
+    print("3. Ver reservas de habitación")
+    print("4. Salir", end='\n\n\n')
+    print("Escoger una opcion: ", end='')
+
+def menuGestion():
+    os.system('cls')
+    print('-' * 40)
+    print('Menú gestión hospital')
+    print('-' * 40, end='\n\n\n')
+    print("1. Mantenimiento")
+    print("2. Consultas y informes")
+    print("3. Exportación de datos")
+    print("4. Salir",end='\n\n\n')
+    print("Escoger una opcion: ", end='')
+
+def menuMedicoMantenimiento():
+    os.system('cls')
+    print('-' * 40)
+    print('Menú mantenimiento médico')
+    print('-' * 40, end='\n\n\n')
+    print("1. Ver personal asignado")
+    print("2. Operaciones previstas")
+    print("3. Visitas planificadas")
+    print("4. Reservas de habitación previstas")
+    print("5. Aparatos médicos quirófano")
+    print("6. Salir",end='\n\n\n')
+    print("Escoger una opcion: ", end='')
+
+def menuRRHHMantenimiento():
+    os.system('cls')
+    print('-' * 40)
+    print('Menú mantenimiento recursos humanos')
+    print('-' * 40, end='\n\n\n')
+    print("1. Dar de alta nuevo personal al centro")
+    print("2. Salir",end='\n\n\n')
+    print("Escoger una opcion: ", end='')
