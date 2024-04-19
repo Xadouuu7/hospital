@@ -1,4 +1,0 @@
-from funciones import *
-
-menuInicial()
-

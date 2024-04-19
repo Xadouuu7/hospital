@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS specialidad (
+CREATE TABLE IF NOT EXISTS especialidad (
     id_especialidad SERIAL PRIMARY KEY,
     nombre VARCHAR(30) UNIQUE NOT NULL
 );
@@ -307,4 +307,22 @@ CREATE TABLE IF NOT EXISTS reserva_habitacion (
     FOREIGN KEY (tarjeta_sanitaria) REFERENCES paciente(tarjeta_sanitaria),
     FOREIGN KEY (num_habitacion, num_planta) REFERENCES habitacion(num_habitacion, num_planta),
     FOREIGN KEY (id_administrativo) REFERENCES administrativo(id_empleado)
+);
+
+CREATE TABLE IF NOT EXISTS agenda (
+    id_agenda SERIAL PRIMARY KEY,
+    id_medico  INTEGER,
+    fecha DATE,
+    hora TIME
+    FOREIGN KEY (id_medico) REFERENCES medico(id_empleado)
+);
+
+CREATE TABLE IF NOT EXISTS reserva_visita (
+    id_reserva_visita SERIAL PRIMARY KEY,
+    id_medico INTEGER,
+    tarjeta_sanitaria VARHCAR(14),
+    fecha DATE,
+    hora TIME,
+    FOREIGN KEY (id_medico) REFERENCES medico(id_empleado),
+    FOREIGN KEY (tarjeta_sanitaria) REFERENCES paciente(tarjeta_sanitaria)
 );

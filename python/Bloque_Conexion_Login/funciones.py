@@ -4,43 +4,19 @@ import csv
 import os
 import random
 import string
-### MENU
-def tituloMenu(texto):
-    print('-' * 40)
-    print(texto)
-    print('-' * 40, end='\n\n\n')
+from menus import *
 
-def menuInicial():
-    os.system('cls')
-    tituloMenu('Menu Login')
-    print("1. Inicio de sesion")
-    print("2. Registrarse", end='\n\n\n')
-    print("Escoger una opcion: ", end='')
+### MENU
+def paginaInicial():
+    menuPrincipal()
     respuesta = input()
     if '1' == respuesta:
-        menuIniciarSesion()
+        usuario,contraseña = menuLogin()
+        conectarBaseDatos(usuario,contraseña)
     else:
-        menuRegistrarse()
-
-def menuIniciarSesion():
-    os.system('cls')
-    tituloMenu('Iniciar Sesion')
-    print('Nombre de Usuario: ',end='')
-    usuario = input()
-    print('Contraseña: ', end='')
-    contraseña = input()
-    conectarBaseDatos(usuario,contraseña)
-    
-
-def menuRegistrarse():
-    os.system('cls')
-    tituloMenu('Registrarse')
-    print('Nombre usuario: ',end='')
-    usuario = input()
-    print('Contraseña: ', end='')
-    contraseña = input()
-    crearUsuario(usuario,contraseña)
-    menuInicial()
+        cip,contraseña = menuRegistrarse()
+        crearUsuario(cip,contraseña)
+        menuPrincipal()
 
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
