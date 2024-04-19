@@ -1,5 +1,3 @@
---- MÉDICO
-
 CREATE VIEW view_visita AS 
     SELECT
         CONCAT(pepa.nombre, pepa.apellido1, pepa.apellido2),
@@ -55,15 +53,23 @@ CREATE VIEW view_reserva_quirofano AS
         CONCAT(peme.nombre, peme.apellido1), 
         reservquiro.fecha_entrada 
     FROM reserva_quirofano 
-    INNER JOIN medico me ON reservquiro.id_medico = me.id_empleado
+    INNER JOIN medico me ON reservquiro.id_medico = me.id_medico
+    INNER JOIN empleado em ON me.id_medico = em.id_medico
     INNER JOIN persona peme ON peme.dni_nie = me.dni_nie
     INNER JOIN paciente pa ON reservquiro.id_paciente = pa.tarjeta_sanitaria
     INNER JOIN persona pepa ON pepa.dni_nie = pa.dni_nie;
 
---- ADMINISTRATIVO
---- tengo que pensar como hacer para las reservas de las visitas
+CREATE VIEW view_agenda AS
+    SELECT 
+        CONCAT(peme.nombre, peme.apellido1),
+        ag.id_medico,
+        ag.fecha,
+        ag.fecha
+    FROM agenda agaaaa
+    INNER JOIN medico me ON ag.id_medico = me.id_medico
+    INNER JOIN empleado em ON em.id_empleado = me.id_medico
+    INNER JOIN persona peme ON peme.dni_nie = me.dni_nie;
 
---- CIENTÍFICO
 CREATE VIEW view_prueba AS
     SELECT 
         CONCAT(pepa.nombre, pepa.apellido1, pepa.apellido2),
@@ -73,13 +79,3 @@ CREATE VIEW view_prueba AS
     INNER JOIN visita v ON d.id_diagnostico=v.id_diagnostico
     INNER JOIN paciente pa ON reservquiro.id_paciente = pa.tarjeta_sanitaria
     INNER JOIN persona peme ON peme.dni_nie = me.dni_nie;
-
---- ENFERMERO
-CREATE VIEW view_triaje AS
-    SELECT 
-
-
---- FARMACÉUTICO
-
-
---- RH
