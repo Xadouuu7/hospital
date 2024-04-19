@@ -1,6 +1,7 @@
 ---
-title: Home
+title: Bloc Esquema ER - Relacional - SQL
 layout: home
+nav_order: 2
 ---
 
 # Projecte Base de Dades i Programació: Hospital de Blanes
