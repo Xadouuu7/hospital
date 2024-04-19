@@ -82,5 +82,8 @@ host    replication     all             127.0.0.1/32            scram-sha-256
 host    replication     all             ::1/128                 scram-sha-256
 ```
 
+Aquí la comprovació de que estem connectats utilitzant SSL.
+![](imagenes/postgres/bloc_seguretat/verificacion_ssl.png)
+
 ## DATAMASKING
 ## AGPD
