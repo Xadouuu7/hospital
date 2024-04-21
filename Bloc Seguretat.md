@@ -89,4 +89,4 @@ Aquí la comprovació de que estem connectats utilitzant SSL.
 
 ## DATAMASKING
 ## AEPD
-[Documentació AEPD](https://github.com/Xadouuu7/hospital/blob/main/postgres/Esquema%20Seguridad/AEPD.pdf)
+[Documentació AEPD](https://github.com/Xadouuu7/hospital/blob/main/postgres/Esquema_Seguridad/AEPD.pdf)
