@@ -7,6 +7,8 @@ nav_order: 3
 # BLOC DE SEGURETAT
 
 ## MATRIU DE SEGURETAT
+
+
 ## SSL
 El primer pas és crear un certificat SSL/TLS. Per fer-ho, utilitzarem OpenSSL, una eina que ens ajudarà a aconseguir-ho.
 
@@ -86,4 +88,4 @@ Aquí la comprovació de que estem connectats utilitzant SSL.
 ![](imagenes/postgres/bloc_seguretat/verificacion_ssl.png)
 
 ## DATAMASKING
-## AGPD
+## AEPD
