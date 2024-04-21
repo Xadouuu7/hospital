@@ -241,7 +241,7 @@ CREATE TABLE IF NOT EXISTS patologia (
 CREATE TABLE IF NOT EXISTS diagnostico (
     id_diagnostico SERIAL PRIMARY KEY,
     id_patologia CHAR(4) NOT NULL,
-    descripción TEXT NOT NULL,
+    descripcion TEXT NOT NULL,
     FOREIGN KEY (id_patologia) REFERENCES patologia(id_patologia)
 );
 
@@ -313,14 +313,14 @@ CREATE TABLE IF NOT EXISTS agenda (
     id_agenda SERIAL PRIMARY KEY,
     id_medico  INTEGER,
     fecha DATE,
-    hora TIME
+    hora TIME,
     FOREIGN KEY (id_medico) REFERENCES medico(id_empleado)
 );
 
 CREATE TABLE IF NOT EXISTS reserva_visita (
     id_reserva_visita SERIAL PRIMARY KEY,
     id_medico INTEGER,
-    tarjeta_sanitaria VARHCAR(14),
+    tarjeta_sanitaria VARCHAR(14),
     fecha DATE,
     hora TIME,
     FOREIGN KEY (id_medico) REFERENCES medico(id_empleado),
