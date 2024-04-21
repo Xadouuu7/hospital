@@ -4,7 +4,7 @@ layout: home
 nav_order: 3
 ---
 
-# BLOC DE SEGURETAT
+# Documentació del bloc de Seguretat
 
 ## MATRIU DE SEGURETAT
 

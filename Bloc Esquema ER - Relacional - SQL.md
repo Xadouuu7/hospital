@@ -4,9 +4,6 @@ layout: home
 nav_order: 2
 ---
 
-# Projecte Base de Dades i Programació: Hospital de Blanes
-Fet per: Anderson Pérez Brazoban, Isaac Ruiz García i  M. del Mar Manzano Baena
-
 # Documentació de l'esquema de la Base de Dades
 
 ## MENU
