@@ -50,6 +50,7 @@ CREATE ROLE farmaceutico;
 GRANT CONNECT ON DATABASE hospital TO farmaceutico;
 GRANT USAGE ON SCHEMA public TO farmaceutico;
 GRANT SELECT ON view_receta TO farmaceutico;
+GRANT SELECT, INSERT ON medicamento TO farmaceutico;
 GRANT SELECT, INSERT ON inv_medicamento TO farmaceutico;
 
 --- RH
