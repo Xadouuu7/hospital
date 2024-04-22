@@ -14,6 +14,8 @@ L'hem fet amb dues pàgines: La primera pàgina del document de Google Sheets é
 
 ### Vistes
 
+[SQL Vistes](https://github.com/Xadouuu7/hospital/blob/main/postgres/Esquema_Seguridad/SQLVistas.sql)
+
 Primer explicarem les vistes i perquè les fem d'aquesta manera. En tots els casos, utilitzem les vistes per poder fer un "control" de què poden veure i què no. D'aquesta manera les dades de caràcter personal que no són necessàries a l'hora de registrar visites, diagnosticar o fer una recepta no es poden veure per part de cap dels empleats. 
 
 - **Vista de la visita**: Hem creat una vista que ens permet veure la visita amb el metge, tant el nom complet del pacient, la data, l'hora, el motiu de la visita i el nom del metge. 
@@ -25,6 +27,8 @@ Primer explicarem les vistes i perquè les fem d'aquesta manera. En tots els cas
 - **Vista de la prova**: Per últim, la vista de la prova a la qual tindrà accés el metge i el científic hem afegit el nom complet del pacient i el tipus de prova a fer.
 
 ### Rols
+
+[SQL Seguretat](https://github.com/Xadouuu7/hospital/blob/main/postgres/Esquema_Seguridad/SQLSeguridad.sql)
 
 Hem decidit crear set rols: metge, administratiu, científic, infermer, farmacèutic, recursos humans i informàtic.
 - Al rol de **Metge** l'hem donat accés a les següents coses: 
