@@ -134,12 +134,35 @@ Aquí la comprovació de que estem connectats utilitzant SSL.
 
 ## DATAMASKING
 
-Aprovechando que el Isaac tenía el reto de Datamasking seguimos los pasos para instalarlo y activarlo.
+Aprofitant que l'Isaac tenia el repte de Datamasking seguim els passos per a instal·lar-lo i activar-lo.
 
-Primero de todo desplegamos la extensión en el servidor con los siguientes comandos:
+Primer de tot despleguem l'extensió en el servidor amb les següents comandes
 ```
 sudo apt install pgxnclient postgresql-server-dev-15
 sudo pgxn install postgresql_anonymizer
 ```
+Aquí les comprovacions
+
+![](imagenes/postgres/bloc_seguretat/instalacion1.png)
+![](imagenes/postgres/bloc_seguretat/instalacion2.png)
+
+Una vegada fet carreguem l'extensió en la nostra base de dades:
+```
+ALTER DATABASE hospital SET session_preload_libraries = 'anon';
+```
+
+![](imagenes/postgres/bloc_seguretat/alter.png)
+
+Després dins de la nostra base de dades creem l'extensió:
+```
+CREATE EXTENSION anon CASCADE;
+```
+![](imagenes/postgres/bloc_seguretat/createextension.png)
+
+Ara ja executarem el nostre sql en el qual iniciem el servei, determinem els rols que tindran seguretat i creguem la segureta
+
+[LINK SQL](https://github.com/Xadouuu7/hospital/blob/main/postgres/Esquema_Seguridad/Anon.sql)
+
+
 ## AEPD
 [Documentació AEPD](https://github.com/Xadouuu7/hospital/blob/main/postgres/Esquema_Seguridad/AEPD.pdf)
