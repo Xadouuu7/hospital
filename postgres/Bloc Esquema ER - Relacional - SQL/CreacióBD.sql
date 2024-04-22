@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS paciente (
 
 CREATE TABLE IF NOT EXISTS empleado (
     id_empleado SERIAL PRIMARY KEY,
-    horario_trabajo TSRANGE NOT NULL,
+    horario_trabajo NUMRANGE NOT NULL,
     dias_vacaciones INTEGER NOT NULL,
     salario NUMERIC(7,2) NOT NULL,
     num_ss CHAR(12) CHECK (LENGTH(num_ss) = 12),
