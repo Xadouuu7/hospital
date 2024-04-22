@@ -29,7 +29,7 @@ GRANT INSERT ON reserva_quirofano TO administrativo;
 GRANT INSERT ON reserva_habitacion TO administrativo;
 
 --- CIENTÍFICO
-CREATE ROLE científico;
+CREATE ROLE cientifico;
 GRANT CONNECT ON DATABASE hospital TO cientifico;
 GRANT USAGE ON SCHEMA public TO cientifico;
 GRANT SELECT ON view_prueba TO cientifico;
@@ -58,7 +58,7 @@ GRANT SELECT, INSERT ON inv_medicamento TO farmaceutico;
 CREATE ROLE recursos_humanos;
 GRANT CONNECT ON DATABASE hospital TO recursos_humanos;
 GRANT USAGE ON SCHEMA public TO recursos_humanos;
-GRANT SELECT, INSERT ON empleados TO recursos_humanos;
+GRANT SELECT, INSERT ON empleado TO recursos_humanos;
 
 --- INFORMATICO
 CREATE ROLE informatico;
