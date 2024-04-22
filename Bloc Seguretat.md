@@ -133,5 +133,13 @@ Aquí la comprovació de que estem connectats utilitzant SSL.
 ![](imagenes/postgres/bloc_seguretat/verificacion_ssl.png)
 
 ## DATAMASKING
+
+Aprovechando que el Isaac tenía el reto de Datamasking seguimos los pasos para instalarlo y activarlo.
+
+Primero de todo desplegamos la extensión en el servidor con los siguientes comandos:
+```
+sudo apt install pgxnclient postgresql-server-dev-15
+sudo pgxn install postgresql_anonymizer
+```
 ## AEPD
 [Documentació AEPD](https://github.com/Xadouuu7/hospital/blob/main/postgres/Esquema_Seguridad/AEPD.pdf)
