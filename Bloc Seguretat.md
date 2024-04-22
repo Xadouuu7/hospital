@@ -159,7 +159,9 @@ CREATE EXTENSION anon CASCADE;
 ```
 ![](imagenes/postgres/bloc_seguretat/createextension.png)
 
-Ara ja executarem el nostre sql en el qual iniciem el servei, determinem els rols que tindran seguretat i creguem la segureta
+Ara ja executarem el nostre sql en el qual iniciem el servei, determinem els rols que tindran seguretat i creem la seguretat
+
+Hem decidit censurar aquestes dades ja que són dades d'alta privacitat, la salut és una de les dades que més s'han de protegir i és per això que hem censurat els diagnóstics i les visites en comptes de censurar els DNI o els telèfons de les persones ja que són dades de caràcter personal.
 
 [LINK SQL](https://github.com/Xadouuu7/hospital/blob/main/postgres/Esquema_Seguridad/Anon.sql)
 
