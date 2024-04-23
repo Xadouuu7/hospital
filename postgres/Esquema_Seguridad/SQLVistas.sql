@@ -83,3 +83,27 @@ CREATE OR REPLACE VIEW view_prueba AS
 	INNER JOIN visita v ON d.id_diagnostico=v.id_diagnostico
 	INNER JOIN paciente pa ON v.tarjeta_sanitaria=pa.tarjeta_sanitaria
 	INNER JOIN persona pe ON pa.dni_nie=pe.dni_nie;
+
+CREATE OR REPLACE VIEW view_paciente AS
+    SELECT 
+        CONCAT(pe.nombre, pe.apellido1, pe.apellido2) as "paciente",
+        vis.id_visita,
+        vis.fecha_hora,
+        vis.motivo_visita,
+        dia.id_diagnostico,
+        dia.descripcion, 
+        pato.nombre,
+        rece.dosis,
+        medi.nombre_medicamento,
+        COUNT(reshab.id_reserva),
+        COUNT(resqui.id_reserva)
+        FROM persona pe
+    INNER JOIN paciente paci ON  pe.dni_nie = paci.dni_nie,
+    INNER JOIN visita vis ON paci.tarjeta_sanitaria = vis.tarjeta_sanitaria,
+    INNER JOIN diagnostico dia ON vis.id_diagnostico = dia.id_diagnostico,
+    INNER JOIN patologia pato ON dia.id_patologia = pato.id_patologia,
+    INNER JOIN receta rece ON dia.id_diagnostico = rece.id_diagnostico,
+    INNER JOIN inv_medicamento invmed ON rece.id_inv_medicamento = invmed.id_inv_medicamento,
+    INNER JOIN medicamento medi ON  invmed.id_medicamento = medi.id_medicamento,
+    INNER JOIN reserva_quirofano resqui ON paci.tarjeta_sanitaria = resqui.tarjeta_sanitaria,
+    INNER JOIN reserva_habitacion reshab ON paci.tarjeta_sanitaria = reshab.tarjeta_sanitaria;
