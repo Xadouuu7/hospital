@@ -1,18 +1,34 @@
 import psycopg2
-import hashlib
 import csv
-import os
+import hashlib
 import random
 import string
 from menus import *
 
-### MENU
+## GENERAL
 def paginaInicial():
     menuPrincipal()
     respuesta = input()
     if '1' == respuesta:
         usuario,contraseña = menuLogin()
-        conectarBaseDatos(usuario,contraseña)
+        conn, cursor = conectarBaseDatos(usuario,contraseña)
+        rol = comprobarRol(usuario)
+        if rol == 'medico':
+            pass
+        elif rol == 'administrativo':
+            pass
+        elif rol == 'cientifico':
+            pass
+        elif rol == 'enfermero':
+            pass
+        elif rol == 'farmaceutico':
+            pass
+        elif rol == 'recursos_humanos':
+            pass
+        elif rol == 'informatico':
+            pass
+        else:
+            menuPaciente(usuario, conn, cursor)
     else:
         cip,contraseña = menuRegistrarse()
         crearUsuario(cip,contraseña)
@@ -21,10 +37,10 @@ def paginaInicial():
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
         db_config = {
-            'host': '192.168.56.102',
+            'host': '192.168.1.43',
             'user': usuario,
             'password': contraseña,
-            'dbname':'postgres'
+            'dbname':'hospital'
         }
         conn = psycopg2.connect(**db_config)
         cursor = conn.cursor()  
@@ -81,6 +97,14 @@ def readUsuario():
             fichero.append(row)
     return fichero
 
+def comprobarRol(usuario):
+    conn, cursor = conectarBaseDatos()
+    consulta = "SELECT grupos FROM view_rol WHERE usuario = %s"
+    cursor.execute(consulta, (usuario,))
+    resultados = cursor.fetchall()
+    return resultados[0][0][0]
 
-
+## PACIENTE
+def verVisitas(usuario, conn, cursor):
+    consulta = "SELECT grupos FROM view_rol WHERE usuario = %s"
 
