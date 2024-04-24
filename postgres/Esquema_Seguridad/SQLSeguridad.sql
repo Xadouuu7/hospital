@@ -43,7 +43,6 @@ GRANT CONNECT ON DATABASE hospital TO enfermero;
 GRANT USAGE ON SCHEMA public TO enfermero;
 GRANT SELECT ON view_receta TO enfermero;
 GRANT SELECT, INSERT ON material_general TO enfermero;
-GRANT SELECT, INSERT ON triaje TO enfermero;
 GRANT SELECT, INSERT ON inv_material_general TO enfermero;
 
 --- FARMACÉUTICO

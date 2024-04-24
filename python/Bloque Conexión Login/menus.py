@@ -47,14 +47,14 @@ def menuPaciente(usuario, conn, cursor):
     print("2. Ver visitas")
     print("3. Ver historial")
     print("4. Salir", end='\n\n\n')
-    respuesta = input("Escoger una opcion: ", end='')
+    respuesta = input("Escoger una opcion: ")
     if respuesta == 1:
         pass
         ##concertarVisita() si nos apetece
-    elif respuesta == 2:
+    elif respuesta == '2':
         verVisitas(usuario, conn, cursor)
     elif respuesta == 3:
-        verHistorial()
+        verHistorial(usuario, conn, cursor)
     elif respuesta == 4:
         exit()
 

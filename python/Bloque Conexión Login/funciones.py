@@ -3,41 +3,43 @@ import csv
 import hashlib
 import random
 import string
+from tabulate import tabulate
 from menus import *
 
 ## GENERAL
 def paginaInicial():
-    menuPrincipal()
-    respuesta = input()
-    if '1' == respuesta:
-        usuario,contraseña = menuLogin()
-        conn, cursor = conectarBaseDatos(usuario,contraseña)
-        rol = comprobarRol(usuario)
-        if rol == 'medico':
-            pass
-        elif rol == 'administrativo':
-            pass
-        elif rol == 'cientifico':
-            pass
-        elif rol == 'enfermero':
-            pass
-        elif rol == 'farmaceutico':
-            pass
-        elif rol == 'recursos_humanos':
-            pass
-        elif rol == 'informatico':
-            pass
-        else:
-            menuPaciente(usuario, conn, cursor)
-    else:
-        cip,contraseña = menuRegistrarse()
-        crearUsuario(cip,contraseña)
+    while True:
         menuPrincipal()
+        respuesta = input()
+        if '1' == respuesta:
+            usuario,contraseña = menuLogin()
+            conn, cursor = conectarBaseDatos(usuario,contraseña)
+            rol = comprobarRol(usuario)
+            if rol == 'medico':
+                pass
+            elif rol == 'administrativo':
+                pass
+            elif rol == 'cientifico':
+                pass
+            elif rol == 'enfermero':
+                pass
+            elif rol == 'farmaceutico':
+                pass
+            elif rol == 'recursos_humanos':
+                pass
+            elif rol == 'informatico':
+                pass
+            else:
+                menuPaciente(usuario, conn, cursor)
+        else:
+            cip,contraseña = menuRegistrarse()
+            crearUsuario(cip,contraseña)
+
 
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
         db_config = {
-            'host': '192.168.1.43',
+            'host': '10.94.255.236',
             'user': usuario,
             'password': contraseña,
             'dbname':'hospital'
@@ -54,8 +56,10 @@ def crearUsuario(usuario, contraseña):
         if not comprobarUsuario(usuario):
             ## CREACION DEL USUARIO EN POSTGRES
             conn, cursor = conectarBaseDatos()
-            query = f'CREATE ROLE "{usuario}" LOGIN PASSWORD %s'
-            cursor.execute(query,(contraseña,))
+            query1 = f'CREATE ROLE "{usuario}" LOGIN PASSWORD %s'
+            query2 = f'GRANT paciente TO "{usuario}"'
+            cursor.execute(query1,(contraseña,))
+            cursor.execute(query2)
 
             ## CREACION DEL USUARIO EN CSV
             ### SALTS
@@ -106,5 +110,12 @@ def comprobarRol(usuario):
 
 ## PACIENTE
 def verVisitas(usuario, conn, cursor):
-    consulta = "SELECT grupos FROM view_rol WHERE usuario = %s"
-
+    consulta = "SELECT * FROM view_visita WHERE tarjeta_sanitaria = %s AND TO_CHAR(fecha_hora,'YYYY-MM-DD') = CURRENT_DATE::text"
+    cursor.execute(consulta, (usuario,))
+    rows = cursor.fetchall()
+    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico'], tablefmt="simple_grid"))
+    input("Enter per continuar: ")
+    
+def verHistorial(usuario,conn,cursor):
+    consulta = "SELECT * FROM view_visita WHERE tarjeta_sanitaria = %s AND TO_CHAR(fecha_hora,'YYYY-MM-DD') != CURRENT_DATE::text"
+    cursor.execute(consulta, (usuario,))
