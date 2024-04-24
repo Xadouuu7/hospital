@@ -38,7 +38,6 @@ CREATE TABLE IF NOT EXISTS triaje (
     FOREIGN KEY (num_sala_urgencia, num_planta) REFERENCES sala_urgencia(num_sala_urgencia, num_planta)
 );
 
-
 CREATE TABLE IF NOT EXISTS habitacion (
     num_habitacion SERIAL,
     num_planta SMALLINT NOT NULL,
