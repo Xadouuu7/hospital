@@ -99,7 +99,7 @@ def readUsuario():
 
 def comprobarRol(usuario):
     conn, cursor = conectarBaseDatos()
-    consulta = "SELECT grupos FROM view_rol WHERE usuario = %s"
+    consulta = "SELECT grupos FROM view_rol WHERE  = %s"
     cursor.execute(consulta, (usuario,))
     resultados = cursor.fetchall()
     return resultados[0][0][0]
@@ -110,5 +110,5 @@ def verVisitas(usuario, conn, cursor):
     cursor.execute(consulta, (usuario,))
 
 def verHistorial(usuario,conn,cursor):
-    consulta = "SELECT * FROM view_visita WHERE usuario = %s"
+    consulta = "SELECT * FROM view_paciente WHERE tarjeta_sanitaria = %s"
     cursor.execute(consulta, (usuario,))

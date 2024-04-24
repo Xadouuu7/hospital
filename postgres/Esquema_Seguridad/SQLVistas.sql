@@ -1,3 +1,4 @@
+-- SQLBook: Code
 CREATE OR REPLACE VIEW view_visita AS 
     SELECT
         CONCAT(pepa.nombre, ' ', pepa.apellido1, ' ', pepa.apellido2) as "paciente",
@@ -103,3 +104,13 @@ CREATE OR REPLACE VIEW view_paciente AS
     INNER JOIN medicamento medi ON  invmed.id_medicamento = medi.id_medicamento
     INNER JOIN reserva_quirofano resqui ON paci.tarjeta_sanitaria = resqui.tarjeta_sanitaria
     INNER JOIN reserva_habitacion reshab ON paci.tarjeta_sanitaria = reshab.tarjeta_sanitaria;
+    
+CREATE OR REPLACE VIEW view_rol AS
+ SELECT r.rolname AS usuario,
+    ARRAY( SELECT b.rolname
+           FROM pg_auth_members m
+             JOIN pg_roles b ON m.roleid = b.oid
+          WHERE m.member = r.oid) AS grupos
+   FROM pg_roles r
+  WHERE r.rolname !~ '^pg_'::text AND r.rolname !~ '^postgres'::text
+  ORDER BY r.rolname;
