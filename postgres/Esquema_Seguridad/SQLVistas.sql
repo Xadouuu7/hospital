@@ -1,17 +1,18 @@
--- SQLBook: Code
-CREATE OR REPLACE VIEW view_visita AS 
-    SELECT
-        CONCAT(pepa.nombre, ' ', pepa.apellido1, ' ', pepa.apellido2) as "paciente",
-        vi.fecha_hora, vi.motivo_visita,
-        CONCAT(peme.nombre, ' ', peme.apellido1) as "medico"
-    FROM visita vi 
-    INNER JOIN paciente pa ON vi.tarjeta_sanitaria = pa.tarjeta_sanitaria
-    INNER JOIN medico me ON vi.id_medico = me.id_empleado
-    INNER JOIN persona pepa ON pepa.dni_nie = pa.dni_nie
-	INNER JOIN empleado em ON em.id_empleado=me.id_empleado
-    INNER JOIN persona peme ON peme.dni_nie = em.dni_nie;
+CREATE OR REPLACE VIEW view_visita
+ AS
+ SELECT pa.tarjeta_sanitaria,
+    concat(pepa.nombre, ' ', pepa.apellido1, ' ', pepa.apellido2) AS paciente,
+    vi.fecha_hora,
+    vi.motivo_visita,
+    concat(peme.nombre, ' ', peme.apellido1) AS medico,
+    em.num_ss
+   FROM visita vi
+     JOIN paciente pa ON vi.tarjeta_sanitaria::bpchar = pa.tarjeta_sanitaria
+     JOIN medico me ON vi.id_medico = me.id_empleado
+     JOIN persona pepa ON pepa.dni_nie = pa.dni_nie
+     JOIN empleado em ON em.id_empleado = me.id_empleado
+     JOIN persona peme ON peme.dni_nie = em.dni_nie;
 	
-
 CREATE OR REPLACE VIEW view_diagnostico AS 
     SELECT
         CONCAT(pers.nombre, ' ', pers.apellido1, ' ',pers.apellido2),
@@ -25,6 +26,7 @@ CREATE OR REPLACE VIEW view_diagnostico AS
 
 CREATE OR REPLACE  VIEW view_receta AS 
     SELECT
+
         CONCAT(pepa.nombre, pepa.apellido1, pepa.apellido2) as "paciente",
         medic.nombre_medicamento as "medicamento",
         rece.fecha_hora,
@@ -51,19 +53,20 @@ CREATE OR REPLACE  VIEW view_reserva_habitacion AS
     INNER JOIN paciente pa ON reservhab.tarjeta_sanitaria = pa.tarjeta_sanitaria
     INNER JOIN persona pepa ON pepa.dni_nie = pa.dni_nie;
 
-CREATE OR REPLACE  VIEW view_reserva_quirofano AS 
-    SELECT 
-        CONCAT(pepa.nombre, pepa.apellido1, pepa.apellido2) as "paciente", 
-        reservquiro.num_quirofano, 
-        reservquiro.num_planta, 
-        CONCAT(peme.nombre, peme.apellido1) as "medico", 
-        reservquiro.fecha_hora_entrada 
-    FROM reserva_quirofano reservquiro
-    INNER JOIN medico medi ON reservquiro.id_medico = medi.id_empleado
-    INNER JOIN empleado empl ON medi.id_empleado = empl.id_empleado
-    INNER JOIN persona peme ON peme.dni_nie = empl.dni_nie
-    INNER JOIN paciente paci ON reservquiro.tarjeta_sanitaria = paci.tarjeta_sanitaria
-    INNER JOIN persona pepa ON pepa.dni_nie = paci.dni_nie;
+CREATE OR REPLACE VIEW view_reserva_quirofano
+ AS
+ SELECT concat(pepa.nombre, pepa.apellido1, pepa.apellido2) AS paciente,
+    reservquiro.num_quirofano,
+    reservquiro.num_planta,
+    concat(peme.nombre, peme.apellido1) AS medico,
+    empl.num_ss,
+    reservquiro.fecha_hora_entrada
+   FROM reserva_quirofano reservquiro
+     JOIN medico medi ON reservquiro.id_medico = medi.id_empleado
+     JOIN empleado empl ON medi.id_empleado = empl.id_empleado
+     JOIN persona peme ON peme.dni_nie = empl.dni_nie
+     JOIN paciente paci ON reservquiro.tarjeta_sanitaria = paci.tarjeta_sanitaria
+     JOIN persona pepa ON pepa.dni_nie = paci.dni_nie;
 
 CREATE OR REPLACE  VIEW view_agenda AS
     SELECT 

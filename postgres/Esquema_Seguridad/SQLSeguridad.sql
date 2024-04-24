@@ -9,7 +9,8 @@ GRANT SELECT ON view_reserva_habitacion TO medico;
 GRANT SELECT ON view_reserva_quirofano TO medico;
 GRANT SELECT ON view_prueba TO medico;
 GRANT SELECT ON medicamento TO medico;   
-GRANT SELECT ON patologia TO medico;     
+GRANT SELECT ON patologia TO medico;  
+GRANT SELECT ON view_contador_enfermeros TO medico   
 GRANT INSERT ON visita TO medico;
 GRANT INSERT ON diagnostico TO medico;
 GRANT INSERT ON prueba TO medico;
@@ -62,3 +63,9 @@ GRANT SELECT, INSERT ON empleado TO recursos_humanos;
 --- INFORMATICO
 CREATE ROLE informatico;
 GRANT ALL PRIVILEGES ON DATABASE hospital TO informatico;
+
+--- PACIENTE
+CREATE ROLE paciente;
+GRANT CONNECT ON DATABASE hospital TO paciente;
+GRANT USAGE ON SCHEMA public TO paciente;
+GRANT SELECT ON view_visita TO paciente;
