@@ -63,3 +63,9 @@ GRANT SELECT, INSERT ON empleado TO recursos_humanos;
 --- INFORMATICO
 CREATE ROLE informatico;
 GRANT ALL PRIVILEGES ON DATABASE hospital TO informatico;
+
+--- PACIENTE
+CREATE ROLE paciente;
+GRANT CONNECT ON DATABASE hospital TO paciente;
+GRANT USAGE ON SCHEMA public TO paciente;
+GRANT SELECT ON view_visita TO paciente;

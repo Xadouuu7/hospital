@@ -24,6 +24,7 @@ CREATE OR REPLACE VIEW view_diagnostico AS
 
 CREATE OR REPLACE  VIEW view_receta AS 
     SELECT
+
         CONCAT(pepa.nombre, pepa.apellido1, pepa.apellido2) as "paciente",
         medic.nombre_medicamento as "medicamento",
         rece.fecha_hora,
