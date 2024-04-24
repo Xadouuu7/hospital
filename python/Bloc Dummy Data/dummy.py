@@ -8,7 +8,7 @@ from ficheros import *
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
         db_config = {
-            'host': '192.168.1.115',
+            'host': '10.94.255.236',
             'user': usuario,
             'password': contraseña,
             'dbname':'hospital'

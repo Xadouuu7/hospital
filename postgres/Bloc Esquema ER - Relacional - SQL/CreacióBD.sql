@@ -21,23 +21,6 @@ CREATE TABLE IF NOT EXISTS quirofano (
     PRIMARY KEY (num_quirofano, num_planta)
 );
 
-CREATE TABLE IF NOT EXISTS sala_urgencia (
-    num_sala_urgencia SERIAL UNIQUE,
-    num_planta SMALLINT UNIQUE,
-    PRIMARY KEY (num_sala_urgencia, num_planta),
-    FOREIGN KEY (num_planta) REFERENCES planta(num_planta)
-);
-
-CREATE TABLE IF NOT EXISTS triaje (
-    num_sala_triaje SERIAL,
-    num_sala_urgencia INTEGER NOT NULL,
-    num_planta SMALLINT NOT NULL,
-    PRIMARY KEY (num_sala_triaje, num_sala_urgencia, num_planta),
-    motivo_visita TEXT,
-    nivel_prioridad TEXT,
-    FOREIGN KEY (num_sala_urgencia, num_planta) REFERENCES sala_urgencia(num_sala_urgencia, num_planta)
-);
-
 CREATE TABLE IF NOT EXISTS habitacion (
     num_habitacion SERIAL,
     num_planta SMALLINT NOT NULL,
@@ -47,9 +30,10 @@ CREATE TABLE IF NOT EXISTS habitacion (
 );
 
 CREATE TABLE IF NOT EXISTS consulta (
-    id_consulta SERIAL PRIMARY KEY,
+    id_consulta SERIAL,
     num_planta SMALLINT NOT NULL,
     tipo VARCHAR(20),
+    PRIMARY KEY (id_consulta,num_planta),
     FOREIGN KEY (num_planta) REFERENCES planta(num_planta)
 );
 
@@ -285,15 +269,14 @@ CREATE TABLE IF NOT EXISTS visita (
     id_medico INTEGER,
     tarjeta_sanitaria VARCHAR(14),
     id_diagnostico INTEGER,
-    id_triaje INTEGER,
-	id_sala_urgencia INTEGER,
+    id_consulta INTEGER,
 	num_planta SMALLINT,
-    fecha_hora TIMESTAMP NOT NULL,
+    fecha_hora TIMESTAMP NOT NULL DEFAULT NOW(),
     motivo_visita TEXT NOT NULL,
     FOREIGN KEY (id_medico) REFERENCES medico(id_empleado),
     FOREIGN KEY (tarjeta_sanitaria) REFERENCES paciente(tarjeta_sanitaria),
     FOREIGN KEY (id_diagnostico) REFERENCES diagnostico(id_diagnostico),
-    FOREIGN KEY (id_triaje, id_sala_urgencia, num_planta) REFERENCES triaje(num_sala_triaje, num_sala_urgencia, num_planta)
+    FOREIGN KEY (id_consulta,num_planta) REFERENCES consulta(id_consulta,num_planta)
 );
 
 CREATE TABLE IF NOT EXISTS reserva_habitacion (
