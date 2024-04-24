@@ -106,5 +106,9 @@ def comprobarRol(usuario):
 
 ## PACIENTE
 def verVisitas(usuario, conn, cursor):
-    consulta = "SELECT grupos FROM view_rol WHERE usuario = %s"
+    consulta = "SELECT * FROM view_visita WHERE usuario = %s"
+    cursor.execute(consulta, (usuario,))
 
+def verHistorial(usuario,conn,cursor):
+    consulta = "SELECT * FROM view_visita WHERE usuario = %s"
+    cursor.execute(consulta, (usuario,))

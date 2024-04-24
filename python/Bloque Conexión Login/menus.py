@@ -54,7 +54,7 @@ def menuPaciente(usuario, conn, cursor):
     elif respuesta == 2:
         verVisitas(usuario, conn, cursor)
     elif respuesta == 3:
-        verHistorial()
+        verHistorial(usuario, conn, cursor)
     elif respuesta == 4:
         exit()
 
