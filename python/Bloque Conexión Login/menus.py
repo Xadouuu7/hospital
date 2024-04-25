@@ -9,7 +9,8 @@ def menuPrincipal():
     print('Menu Login')
     print('-' * 40, end='\n\n\n')
     print("1. Inicio de sesion")
-    print("2. Registrarse", end='\n\n\n')
+    print("2. Registrarse")
+    print("3. Salir", end='\n\n\n')
     print("Escoger una opcion: ", end='')
 
 def menuLogin():
@@ -70,20 +71,22 @@ def menuMedico(usuario, conn, cursor):
         print("2. Ver operaciones")
         print("3. Ver visitas")
         print("4. Ver visitas pacientes")
+        print("5. Ver Diagnostico y receta de un paciente")
+        print("6. Salir")
         respuesta = input("Escoger una opcion: ")
         if respuesta == '1':
             personalCargo(usuario, conn, cursor)
         elif respuesta == '2':
             verOperaciones(usuario, conn, cursor)
         elif respuesta == '3':
-            ## Devuelve vacia puede ser porque simplemente no tiene visitas o que la query este mal
             verVisitasMedico(usuario, conn, cursor)
         elif respuesta == '4':
-            ##verVisitasMedico(usuario, conn, cursor) ver visitas paciente
-            pass
+            verVisitasMedicoPaciente(usuario, conn, cursor)
         elif respuesta == '5':
+            verDiagnosticoRecetaPaciente(usuario, conn, cursor)
+        elif respuesta == '6':
             bucle = False
 
-### RRHH
+### Administrativo
 
 ###

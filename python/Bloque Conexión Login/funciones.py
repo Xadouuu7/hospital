@@ -103,14 +103,34 @@ def personalCargo(usuario, conn, cursor):
     input("Enter per continuar: ")
 
 def verOperaciones(usuario, conn, cursor):
-    consulta = "SELECT * FROM view_reserva_quirofano WHERE num_ss = %s AND TO_CHAR(fecha_hora_entrada,'YYYY-MM-DD') = CURRENT_DATE::text"
+    consulta = "SELECT * FROM view_reserva_quirofano WHERE num_ss = %s ORDER BY fecha_hora_entrada ASC"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico','num_ss'], tablefmt="simple_grid"))
+    print("Operaciones")
+    print(tabulate(rows, headers=['Paciente', 'Quirofano' ,' Planta', 'Medico' , 'Seguridad Social', 'Fecha entrada'], tablefmt="simple_grid"))
     input("Enter per continuar: ")
 
 def verVisitasMedico(usuario, conn, cursor):
-    consulta = "SELECT * FROM view_visitas WHERE num_ss = %s AND TO_CHAR(fecha_hora_entrada,'YYYY-MM-DD') = CURRENT_DATE::text"
+    consulta = "SELECT tarjeta_sanitaria, paciente, fecha_hora, motivo_visita, medico FROM public.view_visita WHERE num_ss = %s ORDER BY fecha_hora DESC;"
+    cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
+    print("visitas")
     print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico','num_ss'], tablefmt="simple_grid"))
+    input("Enter per continuar: ")
+
+def verVisitasMedicoPaciente(usuario, conn, cursor):
+    respuesta = input("Tarjeta sanitaria del paciente: ")
+    consulta = "SELECT tarjeta_sanitaria, paciente, fecha_hora, motivo_visita, medico FROM public.view_visita WHERE tarjeta_sanitaria = %s AND num_ss = %s ORDER BY fecha_hora DESC;"
+    cursor.execute(consulta, (respuesta,usuario))
+    rows = cursor.fetchall()
+    print("visitas")
+    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico','num_ss'], tablefmt="simple_grid"))
+    input("Enter per continuar: ")
+
+def verDiagnosticoRecetaPaciente(usuario, conn, cursor):
+    respuesta = input("Tarjeta sanitaria del paciente: ")
+    consulta = "SELECT tarjeta_sanitaria, paciente, descripcion, medicamento, dosis, fecha_hora, medico FROM public.view_receta  WHERE tarjeta_sanitaria = %s AND num_ss = %s ORDER BY fecha_hora DESC;"
+    cursor.execute(consulta, (respuesta,usuario))
+    rows = cursor.fetchall()
+    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Diagnostico','medicamento','Dosis','fecha y hora','Médico'], tablefmt="simple_grid"))
     input("Enter per continuar: ")

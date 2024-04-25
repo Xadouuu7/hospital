@@ -3,7 +3,8 @@ from menus import *
 
 ## GENERAL
 def paginaInicial():
-    while True:
+    bucle = True
+    while bucle:
         menuPrincipal()
         respuesta = input()
         if '1' == respuesta:
@@ -26,9 +27,11 @@ def paginaInicial():
                 pass
             else:
                 menuPaciente(usuario, conn, cursor)
-        else:
+        elif '2' == respuesta:
             cip,contraseña = menuRegistrarse()
             crearUsuario(cip,contraseña)
+        elif '3' == respuesta:
+            bucle = False
 
 
 def main():
