@@ -24,10 +24,15 @@ GRANT SELECT ON view_visita TO administrativo;
 GRANT SELECT ON view_reserva_quirofano TO administrativo;
 GRANT SELECT ON view_reserva_habitacion TO administrativo;
 GRANT SELECT ON view_agenda TO administrativo;
+GRANT SELECT ON view_contador_enfermeros TO administrativo;
+GRANT SELECT ON ciudad TO administrativo;
 GRANT SELECT, INSERT ON paciente TO administrativo;
+GRANT SELECT, INSERT ON persona TO administrativo;
+GRANT SELECT, INSERT ON direccion TO administrativo;
 GRANT INSERT ON reserva_visita TO administrativo;
 GRANT INSERT ON reserva_quirofano TO administrativo;
 GRANT INSERT ON reserva_habitacion TO administrativo;
+GRANT SELECT ON view_inv_quirofano TO administrativo;
 
 --- CIENTÍFICO
 CREATE ROLE cientifico;
