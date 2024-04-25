@@ -60,10 +60,18 @@ GRANT SELECT, INSERT ON medicamento TO farmaceutico;
 GRANT SELECT, INSERT ON inv_medicamento TO farmaceutico;
 
 --- RH
-CREATE ROLE recursos_humanos;
+CREATE ROLE recursos_humanos CREATEROLE;
 GRANT CONNECT ON DATABASE hospital TO recursos_humanos;
 GRANT USAGE ON SCHEMA public TO recursos_humanos;
-GRANT SELECT, INSERT ON empleado TO recursos_humanos;
+GRANT SELECT, INSERT ON empleado TO recursos_humanos
+GRANT SELECT, INSERT ON medico TO recursos_humanos;
+GRANT SELECT, INSERT ON enfermero TO recursos_humanos;
+GRANT SELECT, INSERT ON farmaceutico TO recursos_humanos;
+GRANT SELECT, INSERT ON cientifico TO recursos_humanos;
+GRANT SELECT, INSERT ON administrativo TO recursos_humanos;
+GRANT SELECT, INSERT ON informatico TO recursos_humanos;
+GRANT SELECT ON especialidad TO recursos_humanos;
+GRANT SELECT, INSERT ON persona TO recursos_humanos;
 
 --- INFORMATICO
 CREATE ROLE informatico;
