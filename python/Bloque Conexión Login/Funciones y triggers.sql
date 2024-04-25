@@ -27,8 +27,8 @@ BEGIN
     JOIN persona p ON e.dni_nie = p.dni_nie
     WHERE e.id_empleado = NEW.id_empleado;
 
-    EXECUTE CONCAT('CREATE USER', ' ', usuario, ' ', 'WITH PASSWORD', ' ', dni_persona);
-	EXECUTE CONCAT('GRANT', ' ', rol_empleado, ' ', 'TO', ' ', usuario);
+    EXECUTE FORMAT('CREATE USER %I WITH PASSWORD %L', usuario, dni_persona);
+    EXECUTE FORMAT('GRANT %I TO %I', rol_empleado, usuario);
 END;
 $$
 
@@ -64,9 +64,62 @@ FOR EACH ROW EXECUTE FUNCTION crear_usuario_empleado();
 
 --- FUNCIÓN PARA ELIMINAR USUARIO CUANDO SE ELIMINE UN EMPLEADO
 
+CREATE OR REPLACE FUNCTION eliminar_usuario_empleado()
+    RETURNS TRIGGER 
+    LANGUAGE plpgsql
+AS $$
+DECLARE
+    ssn_empleado TEXT;
+    tabla_empleado TEXT;
+BEGIN
+    SELECT num_ss, 
+        CASE
+            WHEN TG_TABLE_NAME = 'medico' THEN 'medico'
+            WHEN TG_TABLE_NAME = 'enfermero' THEN 'enfermero'
+            WHEN TG_TABLE_NAME = 'administrativo' THEN 'administrativo'
+            WHEN TG_TABLE_NAME = 'cientifico' THEN 'cientifico'
+            WHEN TG_TABLE_NAME = 'farmaceutico' THEN 'farmaceutico'
+            WHEN TG_TABLE_NAME = 'recursos_humanos' THEN 'recursos_humanos'
+            WHEN TG_TABLE_NAME = 'informatico' THEN 'informatico'
+        END 
+    INTO ssn_empleado, tabla_empleado
+    FROM empleado
+    WHERE id_empleado = OLD.id_empleado;
 
+    EXECUTE 'REVOKE ' || tabla_empleado || ' FROM ' || quote_ident(ssn_empleado);
 
+    EXECUTE 'DROP USER IF EXISTS ' || quote_ident(ssn_empleado);
 
+    RETURN OLD;
+END;
+$$;
 
---- FUNCIÓN ENFERMEROS
-CREATE OR REPLACE FUNCTION 
+--- TRIGGERS PARA ELIMINAR LOS USUARIOS
+
+CREATE TRIGGER eliminar_medico_trigger
+AFTER DELETE ON medico
+FOR EACH ROW EXECUTE FUNCTION eliminar_usuario_empleado();
+
+CREATE TRIGGER eliminar_administrativo_trigger
+AFTER DELETE ON administrativo
+FOR EACH ROW EXECUTE FUNCTION eliminar_usuario_empleado();
+
+CREATE TRIGGER eliminar_enfermero_trigger
+AFTER DELETE ON enfermero
+FOR EACH ROW EXECUTE FUNCTION eliminar_usuario_empleado();
+
+CREATE TRIGGER eliminar_cientifico_trigger
+AFTER DELETE ON cientifico
+FOR EACH ROW EXECUTE FUNCTION eliminar_usuario_empleado();
+
+CREATE TRIGGER eliminar_farmaceutico_trigger
+AFTER DELETE ON farmaceutico
+FOR EACH ROW EXECUTE FUNCTION eliminar_usuario_empleado();
+
+CREATE TRIGGER eliminar_rh_trigger
+AFTER DELETE ON recursos_humanos
+FOR EACH ROW EXECUTE FUNCTION eliminar_usuario_empleado();
+
+CREATE TRIGGER eliminar_informatico_trigger
+AFTER DELETE ON informatico
+FOR EACH ROW EXECUTE FUNCTION eliminar_usuario_empleado();
