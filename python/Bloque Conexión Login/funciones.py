@@ -3,6 +3,7 @@ import csv
 import hashlib
 import random
 import string
+import os
 from tabulate import tabulate
 
 
@@ -10,7 +11,7 @@ from tabulate import tabulate
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
         db_config = {
-            'host': '10.94.255.236',
+            'host': '192.168.1.73',
             'user': usuario,
             'password': contraseña,
             'dbname':'hospital'
@@ -157,7 +158,6 @@ def darAltaDireccion(usuario,conn,cursor):
             consulta2 = f"SELECT id_direccion FROM direccion WHERE direccion = %s"
             cursor.execute(consulta2, (direccion,))
             id_direccion = cursor.fetchall()
-            print(id_direccion)
             return id_direccion[0][0]
         except Exception as error:
             print(f"Error: {error}")
@@ -256,3 +256,102 @@ def verInventarioQuirofano(usuario,conn,cursor):
     rows = cursor.fetchall()
     print(tabulate(rows, headers=['Material','Planta','Quirofano'], tablefmt="simple_grid"))
     input("Enter per continuar: ")
+
+# RECURSOS HUMANOS
+def darAltaEmpleado(usuario, conn, cursor, dni_nie):
+    while True:
+        try:
+            horario_trabajo = input("Introduce su horario de trabajo (HH:MM,HH:MM): ")
+            dias_vacaciones = input("Introduce los días de vacaciones: ")
+            salario = input("Introduce su salario: ")
+            num_ss = input("Introduce su número de la seguridad social: ")
+            consulta = "INSERT INTO empleado (horario_trabajo, dias_vacaciones, salario, num_ss, dni_nie) VALUES (numrange(%s),%s,%s,%s,%s)"
+            cursor.execute(consulta, (f"({horario_trabajo})", dias_vacaciones, salario, num_ss, dni_nie))
+            conn.commit()
+            consulta2 = "SELECT id_empleado FROM empleado WHERE num_ss = %s"
+            cursor.execute(consulta2, (num_ss,))
+            id_empleado = cursor.fetchone()[0]
+            return id_empleado
+        except Exception as error:
+            print("Error:", error)
+            input("Enter per continuar")
+
+def darAltaProfesion(usuario,conn,cursor,id_empleado):
+    bucle = True
+    while bucle:
+        try:
+            os.system('cls')
+            print('-' * 40)
+            print('Escoge una profesión')
+            print('-' * 40, end='\n\n\n')
+            print("1. Médico")
+            print("2. Enfermero")
+            print("3. Científico")
+            print("4. Administrativo")
+            print("5. RRHH")
+            print("6. Farmacéutico")
+            print("7. Informático")
+            print("8. Salir", end='\n\n\n')
+            respuesta = input("Escoger una opcion: ")
+            if respuesta == '1':
+                estudios = input("Introduce sus estudios: ")
+                experiencia = input("Introduce su experiéncia previa: ")
+                especialidad = input("Introduce su especialidad exacta: ")
+                consulta = "INSERT INTO medico VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s))"
+                cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad))
+            elif respuesta == '2':
+                estudios = input("Introduce sus estudios: ")
+                experiencia = input("Introduce su experiéncia previa: ")
+                especialidad = input("Introduce su especialidad exacta: ")
+                os.system('cls')
+                print('-' * 40)
+                print('Tipo de enfermero')
+                print('-' * 40, end='\n\n\n')
+                print("1. Planta")
+                print("2. Asignado a un médico")
+                print("3. Salir", end='\n\n\n')
+                respuesta = input("Escoge una opción: ")
+                if respuesta == '1':
+                    planta = input("Introduce el número de planta")
+                    consulta = "INSERT INTO enfermero (id_empleado,estudio,experiencia_previa,id_especialidad,num_planta) VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s),%s)"
+                    cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad,planta))
+                elif respuesta == '2':
+                    num_ss = input("Introduce el número de la seguridad social del médico responsable: ")
+                    consulta = "INSERT INTO enfermero (id_empleado,estudio,experiencia_previa,id_especialidad,id_medico) VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s),(SELECT id_empleado FROM empleado WHERE num_ss = %s))"
+                    cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad,num_ss))
+                elif respuesta == '3':
+                    bucle = False
+            elif respuesta == '3':
+                estudios = input("Introduce sus estudios: ")
+                experiencia = input("Introduce su experiéncia previa: ")
+                especialidad = input("Introduce su especialidad exacta: ")
+                id_laboratorio = input("Introduce el número de laboratorio: ")
+                num_planta = input("Introduce el número de planta: ")
+                consulta = "INSERT INTO cientifico VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s),%s,%s)"
+                cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad,id_laboratorio,num_planta))
+            elif respuesta == '4':
+                estudios = input("Introduce sus estudios: ")
+                experiencia = input("Introduce su experiéncia previa: ")
+                consulta = "INSERT INTO administrativo VALUES (%s,%s,%s)"
+                cursor.execute(consulta,(id_empleado,estudios,experiencia))
+            elif respuesta == '5':
+                estudios = input("Introduce sus estudios: ")
+                experiencia = input("Introduce su experiéncia previa: ")
+                consulta = "INSERT INTO recursos_humanos VALUES (%s,%s,%s)"
+                cursor.execute(consulta,(id_empleado,estudios,experiencia))
+            elif respuesta == '6':
+                estudios = input("Introduce sus estudios: ")
+                experiencia = input("Introduce su experiéncia previa: ")
+                especialidad = input("Introduce su especialidad exacta: ")
+                consulta = "INSERT INTO farmaceutico VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s))"
+                cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad))
+            elif respuesta == '7':
+                estudios = input("Introduce sus estudios: ")
+                experiencia = input("Introduce su experiéncia previa: ")
+                consulta = "INSERT INTO informatico VALUES (%s,%s,%s)"
+                cursor.execute(consulta,(id_empleado,estudios,experiencia))
+            elif respuesta == '8':
+                bucle = False
+        except Exception as error:
+            print(f"Error: {error}")
+            input("Enter per continuar: ")

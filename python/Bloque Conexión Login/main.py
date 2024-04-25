@@ -23,7 +23,7 @@ def paginaInicial():
                 elif rol == 'farmaceutico':
                     pass
                 elif rol == 'recursos_humanos':
-                    pass
+                    menuRecursosHumanos(usuario, conn, cursor)
                 elif rol == 'informatico':
                     pass
                 else:

@@ -134,3 +134,25 @@ def menuAdministrativo(usuario, conn, cursor):
             print(f"Error: {error}")
             input("Enter per continuar: ")
 ###
+
+def menuRecursosHumanos(usuario, conn, cursor):
+    bucle = True
+    while bucle:
+        try:
+            os.system('cls')
+            print('-' * 40)
+            print('Menú gestión recursos humanos')
+            print('-' * 40, end='\n\n\n')
+            print("1. Dar alta empleado")
+            print("2. Salir")
+            respuesta = input("Escoger una opcion: ")
+            if respuesta == '1':
+                id_direccion = darAltaDireccion(usuario, conn, cursor)
+                dni_nie = darAltaPersona(usuario, conn, cursor, id_direccion)
+                id_empleado = darAltaEmpleado(usuario, conn, cursor, dni_nie)
+                darAltaProfesion(usuario, conn, cursor, id_empleado)
+            elif respuesta == '2':
+                bucle = False
+        except Exception as error:
+            print(f"Error: {error}")
+            input("Enter per continuar: ")
