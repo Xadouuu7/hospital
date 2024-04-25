@@ -24,28 +24,29 @@ CREATE OR REPLACE VIEW view_diagnostico AS
 	INNER JOIN paciente paci ON paci.tarjeta_sanitaria = visi.tarjeta_sanitaria
 	INNER JOIN persona pers ON pers.dni_nie = paci.dni_nie;
 
-CREATE OR REPLACE  VIEW view_receta AS 
-    SELECT
-
-        CONCAT(pepa.nombre, pepa.apellido1, pepa.apellido2) as "paciente",
-        medic.nombre_medicamento as "medicamento",
+CREATE OR REPLACE VIEW public.view_receta AS
+    SELECT paci.tarjeta_sanitaria,
+        CONCAT(pepa.nombre, ' ', pepa.apellido1, ' ', pepa.apellido2) AS paciente,
+        medic.nombre_medicamento AS medicamento,
+        diag.descripcion,
         rece.fecha_hora,
         rece.dosis,
-        CONCAT(peme.nombre, peme.apellido1) as "medico"
+        empl.num_ss,
+        CONCAT(peme.nombre, ' ', peme.apellido1) AS medico
     FROM receta rece
     INNER JOIN inv_medicamento inv_medi ON inv_medi.id_inv_medicamento = rece.id_inv_medicamento
-	INNER JOIN medicamento medic ON medic.id_medicamento = inv_medi.id_medicamento
+    INNER JOIN medicamento medic ON medic.id_medicamento = inv_medi.id_medicamento
     INNER JOIN diagnostico diag ON diag.id_diagnostico = rece.id_diagnostico
-	INNER JOIN visita visi ON visi.id_diagnostico = diag.id_diagnostico
-	INNER JOIN paciente paci ON paci.tarjeta_sanitaria = visi.tarjeta_sanitaria
-	INNER JOIN persona pepa ON pepa.dni_nie = paci.dni_nie
-	INNER JOIN medico medi ON medi.id_empleado = visi.id_medico
-	INNER JOIN empleado empl ON empl.id_empleado = medi.id_empleado
-	INNER JOIN persona  peme ON peme.dni_nie = empl.dni_nie;
+    INNER JOIN visita visi ON visi.id_diagnostico = diag.id_diagnostico
+    INNER JOIN paciente paci ON paci.tarjeta_sanitaria = visi.tarjeta_sanitaria::bpchar
+    INNER JOIN persona pepa ON pepa.dni_nie = paci.dni_nie
+    INNER JOIN medico medi ON medi.id_empleado = visi.id_medico
+     JOIN empleado empl ON empl.id_empleado = medi.id_empleado
+     JOIN persona peme ON peme.dni_nie = empl.dni_nie;
 	
-CREATE OR REPLACE  VIEW view_reserva_habitacion AS 
+CREATE OR REPLACE VIEW public.view_reserva_habitacion AS
     SELECT
-        CONCAT(pepa.nombre, pepa.apellido1, pepa.apellido2),
+        CONCAT(pepa.nombre, ' ', pepa.apellido1, ' ', pepa.apellido2) AS Paciente,
         reservhab.num_habitacion,
         reservhab.num_planta,
         reservhab.fecha_entrada_salida
@@ -53,20 +54,34 @@ CREATE OR REPLACE  VIEW view_reserva_habitacion AS
     INNER JOIN paciente pa ON reservhab.tarjeta_sanitaria = pa.tarjeta_sanitaria
     INNER JOIN persona pepa ON pepa.dni_nie = pa.dni_nie;
 
-CREATE OR REPLACE VIEW view_reserva_quirofano
- AS
- SELECT concat(pepa.nombre, pepa.apellido1, pepa.apellido2) AS paciente,
-    reservquiro.num_quirofano,
-    reservquiro.num_planta,
-    concat(peme.nombre, peme.apellido1) AS medico,
-    empl.num_ss,
-    reservquiro.fecha_hora_entrada
-   FROM reserva_quirofano reservquiro
-     JOIN medico medi ON reservquiro.id_medico = medi.id_empleado
-     JOIN empleado empl ON medi.id_empleado = empl.id_empleado
-     JOIN persona peme ON peme.dni_nie = empl.dni_nie
-     JOIN paciente paci ON reservquiro.tarjeta_sanitaria = paci.tarjeta_sanitaria
-     JOIN persona pepa ON pepa.dni_nie = paci.dni_nie;
+CREATE OR REPLACE VIEW view_reserva_quirofano AS
+    SELECT
+        CONCAT(pepa.nombre, ' ', pepa.apellido1, ' ', pepa.apellido2) AS Paciente,
+        reservquiro.num_quirofano,
+        reservquiro.num_planta,
+        CONCAT(peme.nombre, ' ', peme.apellido1) AS Medico,
+        ARRAY_AGG (perenf.nombre || ' ' || perenf.apellido1 || ' ' || perenf.apellido2) AS Enfermero,
+        empl.num_ss,
+        reservquiro.fecha_hora_entrada,
+	    CONCAT(peradm.nombre, ' ', peradm.apellido1, ' ', peradm.apellido2) AS Administrativo
+    FROM reserva_quirofano reservquiro
+    INNER JOIN medico medi ON reservquiro.id_medico = medi.id_empleado
+    INNER JOIN empleado empl ON medi.id_empleado = empl.id_empleado
+    INNER JOIN persona peme ON peme.dni_nie = empl.dni_nie
+    INNER JOIN paciente paci ON reservquiro.tarjeta_sanitaria = paci.tarjeta_sanitaria
+    INNER JOIN persona pepa ON pepa.dni_nie = paci.dni_nie
+	INNER JOIN empleado empadm ON empadm.id_empleado = reservquiro.id_administrativo
+	INNER JOIN persona peradm ON empadm.dni_nie = peradm.dni_nie
+    INNER JOIN enfermero enfer ON enfer.id_medico = medi.id_empleado
+    INNER JOIN empleado empenf ON empenf.id_empleado=enfer.id_empleado
+    INNER JOIN persona perenf ON empenf.dni_nie = perenf.dni_nie
+	GROUP BY
+        CONCAT(pepa.nombre, ' ', pepa.apellido1, ' ', pepa.apellido2),
+        reservquiro.num_quirofano, reservquiro.num_planta,
+        CONCAT(peme.nombre, ' ', peme.apellido1), 
+        empl.num_ss,
+        reservquiro.fecha_hora_entrada,
+        CONCAT(peradm.nombre, ' ', peradm.apellido1, ' ', peradm.apellido2);
 
 CREATE OR REPLACE  VIEW view_agenda AS
     SELECT 
@@ -114,6 +129,14 @@ CREATE OR REPLACE VIEW view_rol AS
            FROM pg_auth_members m
              JOIN pg_roles b ON m.roleid = b.oid
           WHERE m.member = r.oid) AS grupos
-   FROM pg_roles r
+    FROM pg_roles r
   WHERE r.rolname !~ '^pg_'::text AND r.rolname !~ '^postgres'::text
   ORDER BY r.rolname;
+
+CREATE OR REPLACE VIEW view_inv_quirofano AS
+    SELECT
+        matqui.nombre AS material,
+        invmatqui.num_planta_quirofano AS planta,
+        invmatqui.num_quirofano AS quirofano
+    FROM inv_material_quirofano invmatqui
+    INNER JOIN material_quirofano matqui ON matqui.id_material_quirofano=invmatqui.id_material_quirofano;
