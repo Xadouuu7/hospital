@@ -47,7 +47,8 @@ def menuPaciente(usuario, conn, cursor):
         print("1. Concertar visita #EXTRA")
         print("2. Ver visitas")
         print("3. Ver historial")
-        print("4. Salir", end='\n\n\n')
+        print("4. Ver diagnósticos y receta")
+        print("5. Salir", end='\n\n\n')
         respuesta = input("Escoger una opcion: ")
         if respuesta == '1':
             pass
@@ -57,6 +58,8 @@ def menuPaciente(usuario, conn, cursor):
         elif respuesta == '3':
             verHistorial(usuario, conn, cursor)
         elif respuesta == '4':
+            verDiagnosticoReceta(usuario, conn, cursor)
+        elif respuesta == '5':
             bucle = False
 
 ### MEDICO
@@ -89,4 +92,45 @@ def menuMedico(usuario, conn, cursor):
 
 ### Administrativo
 
+def menuAdministrativo(usuario, conn, cursor):
+    bucle = True
+    while bucle:
+        try:
+            os.system('cls')
+            print('-' * 40)
+            print('Menú gestión Administrativo')
+            print('-' * 40, end='\n\n\n')
+            print("1. Dar alta paciente")
+            print("2. Ver personal enfermeria")
+            print("3. Ver operaciones")
+            print("4. Ver visitas")
+            print("5. Reservas de habitaciones")
+            print("6. Reservas de quirofano")
+            print("7. Ver visitas programadas")
+            print("8. Ver inventario Quirofano")
+            print("9. Salir")
+            respuesta = input("Escoger una opcion: ")
+            if respuesta == '1':
+                id_direccion = darAltaDireccion(usuario, conn, cursor)
+                dni_nie = darAltaPersona(usuario, conn, cursor, id_direccion)
+                darAltaPaciente(usuario, conn, cursor, dni_nie)
+            elif respuesta == '2':
+                verPersonalEnfermeria(usuario,conn,cursor)
+            elif respuesta == '3':
+                verOperacionesAdministrativo(usuario, conn, cursor)
+            elif respuesta == '4':
+                verVisitasAdministrativo(usuario, conn, cursor)
+            elif respuesta == '5': 
+                verReservaHabitacion(usuario, conn, cursor)
+            elif respuesta == '6':
+                verOperacionesAdministrativo(usuario,conn,cursor)
+            elif respuesta == '7':
+                verVisitasProgramadas(usuario,conn,cursor)
+            elif respuesta == '8':
+                verInventarioQuirofano(usuario,conn,cursor)
+            elif respuesta == '9':
+                bucle = False
+        except Exception as error:
+            print(f"Error: {error}")
+            input("Enter per continuar: ")
 ###
