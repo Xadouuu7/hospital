@@ -308,3 +308,10 @@ CREATE TABLE IF NOT EXISTS reserva_visita (
     FOREIGN KEY (id_medico) REFERENCES medico(id_empleado),
     FOREIGN KEY (tarjeta_sanitaria) REFERENCES paciente(tarjeta_sanitaria)
 );
+
+CREATE TABLE IF NOT EXISTS informatico (
+    id_empleado INTEGER PRIMARY KEY,
+    estudio TEXT,
+    experiencia_previa TEXT,
+    FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado)
+);
