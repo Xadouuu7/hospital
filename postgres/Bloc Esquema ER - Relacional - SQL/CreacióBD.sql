@@ -315,3 +315,12 @@ CREATE TABLE IF NOT EXISTS informatico (
     experiencia_previa TEXT,
     FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado)
 );
+
+CREATE TABLE IF NOT EXISTS auditoria_pacientes (
+    usuario VARCHAR(30),
+    fecha_hora TIMESTAMP,
+    tarjeta_sanitaria VARCHAR(14),
+    accion VARCHAR(10),
+    PRIMARY KEY (usuario, fecha_hora),
+    FOREIGN KEY (tarjeta_sanitaria) REFERENCES paciente(tarjeta_sanitaria)
+);

@@ -123,3 +123,29 @@ FOR EACH ROW EXECUTE FUNCTION eliminar_usuario_empleado();
 CREATE TRIGGER eliminar_informatico_trigger
 AFTER DELETE ON informatico
 FOR EACH ROW EXECUTE FUNCTION eliminar_usuario_empleado();
+
+--- FUNCIÓN PARA EL LOG DE LOS USUARIOS QUE ACCEDEN A LOS DATOS DE LOS PACIENTES
+
+CREATE OR REPLACE FUNCTION log_informacion_pacientes()
+RETURNS TRIGGER 
+LANGUAGE PLPGSQL
+AS
+$$
+BEGIN
+	IF TG_OP = 'INSERT' THEN
+        INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
+            (current_user, now(), NEW.tarjeta_sanitaria, 'Insertar paciente')
+    ELSIF TG_OP = 'DELETE' THEN
+        INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
+            (current_user, now(), OLD.tarjeta_sanitaria, 'Eliminar paciente')
+    ELSIF TG_OP = 'UPDATE' THEN
+        INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
+            (current_user, now(), tarjeta_sanitaria, 'Cambiar paciente') --- <-- esto no sé muy bien, a ver como lo cambio
+    END IF;
+END;
+
+--- TRIGGER PARA LA FUNCIÓN DEL LOG
+
+CREATE TRIGGER trigger_info_pacientes
+    AFTER INSERT OR DELETE OR UPDATE ON paciente
+    FOR EACH ROW EXECUTE FUNCTION log_informacion_pacientes();
