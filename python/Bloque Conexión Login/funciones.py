@@ -6,12 +6,16 @@ import string
 import os
 from tabulate import tabulate
 
-
+def titulo(string):
+    os.system('cls')
+    print('-' * 40)
+    print(string)
+    print('-' * 40, end='\n\n\n')
 
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
         db_config = {
-            'host': '192.168.1.73',
+            'host': '188.77.217.85',
             'user': usuario,
             'password': contraseña,
             'dbname':'hospital'
@@ -82,6 +86,7 @@ def comprobarRol(usuario):
 
 ## PACIENTE
 def verVisitaPaciente(usuario, conn, cursor):
+    titulo("Visitas del dia")
     consulta = "SELECT * FROM view_visita WHERE tarjeta_sanitaria = %s AND TO_CHAR(fecha_hora,'YYYY-MM-DD') = CURRENT_DATE::text"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
@@ -89,6 +94,7 @@ def verVisitaPaciente(usuario, conn, cursor):
     input("Enter per continuar: ")
     
 def verHistorial(usuario,conn,cursor):
+    titulo("Visitas pasadas")
     consulta = "SELECT * FROM view_visita WHERE tarjeta_sanitaria = %s AND TO_CHAR(fecha_hora,'YYYY-MM-DD') != CURRENT_DATE::text"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
@@ -96,6 +102,7 @@ def verHistorial(usuario,conn,cursor):
     input("Enter per continuar: ")
 
 def verDiagnosticoReceta(usuario, conn, cursor):
+    titulo("Diagnósticos y recetas")
     consulta = "SELECT tarjeta_sanitaria, paciente, descripcion, medicamento, dosis, fecha_hora, medico FROM public.view_receta  WHERE tarjeta_sanitaria = %s ORDER BY fecha_hora DESC;"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
@@ -104,43 +111,47 @@ def verDiagnosticoReceta(usuario, conn, cursor):
 
 ## MEDICO 
 def personalCargo(usuario, conn, cursor):
+    titulo("Personal a cargo")
     consulta = "SELECT enfermero FROM view_contador_enfermeros WHERE num_ss = %s"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Enfermeros a cargo'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Enfermeros a cargo'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 def verOperaciones(usuario, conn, cursor):
+    titulo("Operaciones")
     consulta = "SELECT * FROM view_reserva_quirofano WHERE num_ss = %s ORDER BY fecha_hora_entrada ASC"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print("Operaciones")
-    print(tabulate(rows, headers=['Paciente', 'Quirofano' ,' Planta', 'Medico' , 'Seguridad Social', 'Fecha entrada'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Paciente', 'Quirofano' ,' Planta', 'Medico' ,'Enfermeros','Seguridad Social', 'Fecha entrada','Administrativo'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 def verVisitasMedico(usuario, conn, cursor):
+    titulo("Visitas")
     consulta = "SELECT tarjeta_sanitaria, paciente, fecha_hora, motivo_visita, medico FROM public.view_visita WHERE num_ss = %s ORDER BY fecha_hora DESC;"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print("visitas")
-    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico','num_ss'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico','num_ss'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 def verVisitasMedicoPaciente(usuario, conn, cursor):
+    os.system("cls")
     respuesta = input("Tarjeta sanitaria del paciente: ")
     consulta = "SELECT tarjeta_sanitaria, paciente, fecha_hora, motivo_visita, medico FROM public.view_visita WHERE tarjeta_sanitaria = %s AND num_ss = %s ORDER BY fecha_hora DESC;"
     cursor.execute(consulta, (respuesta,usuario))
     rows = cursor.fetchall()
-    print("visitas")
-    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico','num_ss'], tablefmt="simple_grid"))
+    titulo(f"Visitas de {respuesta}")
+    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico','num_ss'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 def verDiagnosticoRecetaPaciente(usuario, conn, cursor):
+    os.system("cls")
     respuesta = input("Tarjeta sanitaria del paciente: ")
     consulta = "SELECT tarjeta_sanitaria, paciente, descripcion, medicamento, dosis, fecha_hora, medico FROM public.view_receta  WHERE tarjeta_sanitaria = %s AND num_ss = %s ORDER BY fecha_hora DESC;"
     cursor.execute(consulta, (respuesta,usuario))
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Diagnostico','medicamento','Dosis','fecha y hora','Médico'], tablefmt="simple_grid"))
+    titulo(f"Diagnósticos y recetas de {respuesta}")
+    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Diagnostico','medicamento','Dosis','fecha y hora','Médico'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 
@@ -148,6 +159,7 @@ def verDiagnosticoRecetaPaciente(usuario, conn, cursor):
 def darAltaDireccion(usuario,conn,cursor):
     while True:
         try:
+            titulo("Introduzca la dirección")
             direccion = input("Introduzca el nombre de la calle: ")
             numero = input("Introduzca el número: ")
             piso = input("Introduzca el piso: ")
@@ -165,6 +177,7 @@ def darAltaDireccion(usuario,conn,cursor):
 def darAltaPersona(usuario,conn,cursor,id_direccion):
     while True:
         try:
+            titulo("Introduzca los datos de la persona")
             dni_nie = input("Introduzca el DNI/NIE: ")
             nombre = input("Introduzca el nombre: ").capitalize()
             apellido1 = input("Introduzca el primer apellido: ").capitalize()
@@ -183,6 +196,7 @@ def darAltaPaciente(usuario,conn,cursor, dni):
     bucle = True
     while bucle:
         try:
+            titulo("Introduzca los datos del paciente")
             tarjeta_sanitaria = input("Introduzca la tarjeta sanitaria: ")
             altura = input("Introduzca tu altura en centimetros: ")
             peso = input("Introduzca tu peso (kg): ")
@@ -195,72 +209,77 @@ def darAltaPaciente(usuario,conn,cursor, dni):
             print(f"Error: {error}")
 
 def verPersonalEnfermeria(usuario, conn, cursor):
+    titulo("Personal de enfermeria")
     consulta = "SELECT enfermero, num_planta, medico FROM view_contador_enfermeros"
     cursor.execute(consulta)
     rows = cursor.fetchall()
-    print("Personal de enfermeria")
-    print(tabulate(rows, headers=['Enfermero','Planta','Medico responsable'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Enfermero','Planta','Medico responsable'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
     
 
 def verOperacionesAdministrativo(usuario, conn, cursor):
+    titulo("Operaciones")
     consulta = "SELECT * FROM view_reserva_quirofano ORDER BY fecha_hora_entrada DESC"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print("Operaciones")
-    print(tabulate(rows, headers=['Paciente', 'Quirofano' ,' Planta', 'Medico' , 'Seguridad Social', 'Fecha entrada'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Paciente', 'Quirofano' ,' Planta', 'Medico' , 'Seguridad Social', 'Fecha entrada'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 def verVisitasAdministrativo(usuario, conn, cursor):
+    titulo("Visitas")
     consulta = "SELECT tarjeta_sanitaria, paciente, fecha_hora, motivo_visita, medico FROM public.view_visita ORDER BY fecha_hora DESC;"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print("visitas")
-    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
-def verOperacionesAdministrativo(usuario,conn,cursor):
+def verOperacionesAdministrativoFecha(usuario,conn,cursor):
+    os.system("cls")
     fecha = input("Introduce la fecha deseada (YYYY-MM-DD): ")
     consulta = "SELECT * FROM view_reserva_quirofano WHERE TO_CHAR(fecha_hora_entrada,'YYYY-MM-DD') = %s"
     cursor.execute(consulta,(fecha,))
     rows = cursor.fetchall()
-    print(f"Operaciones previstas | {fecha}")
+    titulo(f"Operaciones previstas | {fecha}")
     print(tabulate(rows, headers=['Paciente','Quirófano','Planta','Médico','Enfermeros','Tarjeta Sanitaria','Fecha y hora de entrada','Administrativo'], tablefmt="simple_grid"))
     input("Enter per continuar: ")
     
 def verReservaHabitacion(usuario, conn, cursor):
-    habitacion = input("Introduzca el numero de habitacion") 
-    planta = input("Introduzca el numero de planta")
+    os.system("cls")
+    habitacion = input("Introduzca el numero de habitacion: ") 
+    planta = input("Introduzca el numero de planta: ")
+    titulo(f"Reservas Habitación | {habitacion}-{planta}")
     consulta = f"SELECT * FROM view_reserva_habitacion WHERE num_habitacion = %s AND num_planta = %s"
     cursor.execute(consulta,(habitacion,planta))
     rows = cursor.fetchall()
-    print(f"Reservas Habitación | {habitacion}-{planta}")
-    print(tabulate(rows, headers=['Paciente','Numero de habitacion','Numero de planta','fecha de entrada y salida'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Paciente','Numero de habitacion','Numero de planta','fecha de entrada y salida'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 def verVisitasProgramadas(usuario,conn,cursor):
+    os.system("cls")
     fecha = input("Introduce la fecha deseada (YYYY-MM-DD): ")
-    consulta = "SELECT * FROM view_visita WHERE TO_CHAR(fecha_hora,'YYYY-MM-DD') = %s"
+    consulta = "SELECT tarjeta_sanitaria, paciente, fecha_hora, motivo_visita, medico FROM view_visita WHERE TO_CHAR(fecha_hora,'YYYY-MM-DD') = %s"
     cursor.execute(consulta,(fecha,))
     rows = cursor.fetchall()
-    print(f"Visitas programadas | {fecha}")
-    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico'], tablefmt="simple_grid"))
+    titulo(f"Visitas programadas | {fecha}")
+    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 def verInventarioQuirofano(usuario,conn,cursor):
+    os.system("cls")
     quirofano = input("Introduce el quirofano: ")
     planta = input("Introduce la planta: ")
     consulta = f"SELECT * FROM view_inv_quirofano WHERE planta = %s AND quirofano = %s"
     cursor.execute(consulta,(planta, quirofano))
-    print(f"Inventario quirofano")
+    titulo(f"Inventario quirofano {quirofano}-{planta}")
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Material','Planta','Quirofano'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Material','Planta','Quirofano'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 # RECURSOS HUMANOS
 def darAltaEmpleado(usuario, conn, cursor, dni_nie):
     while True:
         try:
+            titulo("Introduzca los datos del empleado")
             horario_trabajo = input("Introduce su horario de trabajo (HH:MM,HH:MM): ")
             dias_vacaciones = input("Introduce los días de vacaciones: ")
             salario = input("Introduce su salario: ")
@@ -280,10 +299,7 @@ def darAltaProfesion(usuario,conn,cursor,id_empleado):
     bucle = True
     while bucle:
         try:
-            os.system('cls')
-            print('-' * 40)
-            print('Escoge una profesión')
-            print('-' * 40, end='\n\n\n')
+            titulo("Escoge una profesión")
             print("1. Médico")
             print("2. Enfermero")
             print("3. Científico")
@@ -294,34 +310,36 @@ def darAltaProfesion(usuario,conn,cursor,id_empleado):
             print("8. Salir", end='\n\n\n')
             respuesta = input("Escoger una opcion: ")
             if respuesta == '1':
+                os.system("cls")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 especialidad = input("Introduce su especialidad exacta: ")
                 consulta = "INSERT INTO medico VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s))"
                 cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad))
             elif respuesta == '2':
+                os.system("cls")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 especialidad = input("Introduce su especialidad exacta: ")
-                os.system('cls')
-                print('-' * 40)
-                print('Tipo de enfermero')
-                print('-' * 40, end='\n\n\n')
+                titulo("Tipo de enfermero")
                 print("1. Planta")
                 print("2. Asignado a un médico")
                 print("3. Salir", end='\n\n\n')
                 respuesta = input("Escoge una opción: ")
                 if respuesta == '1':
+                    os.system("cls")
                     planta = input("Introduce el número de planta")
                     consulta = "INSERT INTO enfermero (id_empleado,estudio,experiencia_previa,id_especialidad,num_planta) VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s),%s)"
                     cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad,planta))
                 elif respuesta == '2':
+                    os.system("cls")
                     num_ss = input("Introduce el número de la seguridad social del médico responsable: ")
                     consulta = "INSERT INTO enfermero (id_empleado,estudio,experiencia_previa,id_especialidad,id_medico) VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s),(SELECT id_empleado FROM empleado WHERE num_ss = %s))"
                     cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad,num_ss))
                 elif respuesta == '3':
                     bucle = False
             elif respuesta == '3':
+                os.system("cls")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 especialidad = input("Introduce su especialidad exacta: ")
@@ -330,22 +348,26 @@ def darAltaProfesion(usuario,conn,cursor,id_empleado):
                 consulta = "INSERT INTO cientifico VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s),%s,%s)"
                 cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad,id_laboratorio,num_planta))
             elif respuesta == '4':
+                os.system("cls")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 consulta = "INSERT INTO administrativo VALUES (%s,%s,%s)"
                 cursor.execute(consulta,(id_empleado,estudios,experiencia))
             elif respuesta == '5':
+                os.system("cls")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 consulta = "INSERT INTO recursos_humanos VALUES (%s,%s,%s)"
                 cursor.execute(consulta,(id_empleado,estudios,experiencia))
             elif respuesta == '6':
+                os.system("cls")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 especialidad = input("Introduce su especialidad exacta: ")
                 consulta = "INSERT INTO farmaceutico VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s))"
                 cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad))
             elif respuesta == '7':
+                os.system("cls")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 consulta = "INSERT INTO informatico VALUES (%s,%s,%s)"

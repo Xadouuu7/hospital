@@ -40,55 +40,59 @@ def menuRegistrarse():
 def menuPaciente(usuario, conn, cursor):
     bucle = True
     while bucle:
-        os.system('cls')
-        print('-' * 40)
-        print('Menú gestión paciente')
-        print('-' * 40, end='\n\n\n')
-        print("1. Concertar visita #EXTRA")
-        print("2. Ver visitas")
-        print("3. Ver historial")
-        print("4. Ver diagnósticos y receta")
-        print("5. Salir", end='\n\n\n')
-        respuesta = input("Escoger una opcion: ")
-        if respuesta == '1':
-            pass
-            ##concertarVisita() si nos apetece
-        elif respuesta == '2':
-            verVisitaPaciente(usuario, conn, cursor)
-        elif respuesta == '3':
-            verHistorial(usuario, conn, cursor)
-        elif respuesta == '4':
-            verDiagnosticoReceta(usuario, conn, cursor)
-        elif respuesta == '5':
-            bucle = False
+        try:
+            os.system('cls')
+            print('-' * 40)
+            print('Menú gestión paciente')
+            print('-' * 40, end='\n\n\n')
+            print("1. Ver visitas")
+            print("2. Ver historial")
+            print("3. Ver diagnósticos y receta")
+            print("4. Salir", end='\n\n\n')
+            respuesta = input("Escoger una opcion: ")
+            if respuesta == '1':
+                verVisitaPaciente(usuario, conn, cursor)
+            elif respuesta == '2':
+                verHistorial(usuario, conn, cursor)
+            elif respuesta == '3':
+                verDiagnosticoReceta(usuario, conn, cursor)
+            elif respuesta == '4':
+                bucle = False
+        except Exception as error:
+            print(f"Error: {error}")
+            input("Enter per continuar")
 
 ### MEDICO
 def menuMedico(usuario, conn, cursor):
     bucle = True
     while bucle:
-        os.system('cls')
-        print('-' * 40)
-        print('Menú gestión medico')
-        print('-' * 40, end='\n\n\n')
-        print("1. Personal a cargo")
-        print("2. Ver operaciones")
-        print("3. Ver visitas")
-        print("4. Ver visitas pacientes")
-        print("5. Ver Diagnostico y receta de un paciente")
-        print("6. Salir")
-        respuesta = input("Escoger una opcion: ")
-        if respuesta == '1':
-            personalCargo(usuario, conn, cursor)
-        elif respuesta == '2':
-            verOperaciones(usuario, conn, cursor)
-        elif respuesta == '3':
-            verVisitasMedico(usuario, conn, cursor)
-        elif respuesta == '4':
-            verVisitasMedicoPaciente(usuario, conn, cursor)
-        elif respuesta == '5':
-            verDiagnosticoRecetaPaciente(usuario, conn, cursor)
-        elif respuesta == '6':
-            bucle = False
+        try:
+            os.system('cls')
+            print('-' * 40)
+            print('Menú gestión medico')
+            print('-' * 40, end='\n\n\n')
+            print("1. Personal a cargo")
+            print("2. Ver operaciones")
+            print("3. Ver visitas")
+            print("4. Ver visitas pacientes")
+            print("5. Ver Diagnostico y receta de un paciente")
+            print("6. Salir", end='\n\n\n')
+            respuesta = input("Escoger una opcion: ")
+            if respuesta == '1':
+                personalCargo(usuario, conn, cursor)
+            elif respuesta == '2':
+                verOperaciones(usuario, conn, cursor)
+            elif respuesta == '3':
+                verVisitasMedico(usuario, conn, cursor)
+            elif respuesta == '4':
+                verVisitasMedicoPaciente(usuario, conn, cursor)
+            elif respuesta == '5':
+                verDiagnosticoRecetaPaciente(usuario, conn, cursor)
+            elif respuesta == '6':
+                bucle = False
+        except Exception as error:
+            print(f"Error: {error}")
+            input("Enter para continuar")
 
 ### Administrativo
 
@@ -108,7 +112,7 @@ def menuAdministrativo(usuario, conn, cursor):
             print("6. Reservas de quirofano")
             print("7. Ver visitas programadas")
             print("8. Ver inventario Quirofano")
-            print("9. Salir")
+            print("9. Salir", end='\n\n\n')
             respuesta = input("Escoger una opcion: ")
             if respuesta == '1':
                 id_direccion = darAltaDireccion(usuario, conn, cursor)
@@ -123,7 +127,7 @@ def menuAdministrativo(usuario, conn, cursor):
             elif respuesta == '5': 
                 verReservaHabitacion(usuario, conn, cursor)
             elif respuesta == '6':
-                verOperacionesAdministrativo(usuario,conn,cursor)
+                verOperacionesAdministrativoFecha(usuario,conn,cursor)
             elif respuesta == '7':
                 verVisitasProgramadas(usuario,conn,cursor)
             elif respuesta == '8':
@@ -144,7 +148,7 @@ def menuRecursosHumanos(usuario, conn, cursor):
             print('Menú gestión recursos humanos')
             print('-' * 40, end='\n\n\n')
             print("1. Dar alta empleado")
-            print("2. Salir")
+            print("2. Salir", end='\n\n\n')
             respuesta = input("Escoger una opcion: ")
             if respuesta == '1':
                 id_direccion = darAltaDireccion(usuario, conn, cursor)
