@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS inv_material_general (
 
 CREATE TABLE IF NOT EXISTS direccion (
     id_direccion SERIAL PRIMARY KEY,
-    direccion VARCHAR(40) NOT NULL,
+    direccion VARCHAR(70) NOT NULL,
     numero VARCHAR(5) NOT NULL,
     piso VARCHAR(7),
     puerta CHAR(1),
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS persona (
     apellido1 VARCHAR(30) NOT NULL CHECK (INITCAP(apellido1) = apellido1),
     apellido2 VARCHAR(30) CHECK (INITCAP(apellido2) = apellido2),
     fecha_nacimiento DATE NOT NULL,
-    sexo CHAR(1) CHECK (sexo IN ('H','M','O')),
+    sexo CHAR(1) CHECK (sexo IN ('H','M')),
     teléfono CHAR(9) NOT NULL,
     correo_electrónico VARCHAR(40) CHECK (correo_electrónico ~ '^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+[.][A-Za-z]+$'),
     id_direccion INTEGER NOT NULL,
