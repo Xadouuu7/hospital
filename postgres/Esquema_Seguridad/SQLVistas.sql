@@ -145,6 +145,7 @@ CREATE OR REPLACE VIEW view_inv_quirofano AS
 
 CREATE OR REPLACE VIEW view_contador_planta AS
     SELECT
+        pla.num_planta AS "Planta",
         COUNT(DISTINCT hab.num_habitacion) AS "Habitaciones",
         COUNT(DISTINCT qui.num_quirofano) AS "Quirófanos",
         COUNT(DISTINCT enf.num_planta) AS "Enfermeros"
@@ -152,11 +153,25 @@ CREATE OR REPLACE VIEW view_contador_planta AS
     INNER JOIN quirofano qui ON pla.num_planta = qui.num_planta
     INNER JOIN enfermero enf ON pla.num_planta = enf.num_planta
     INNER JOIN habitacion hab ON pla.num_planta = hab.num_planta
+	GROUP BY pla.num_planta;
 
 -- Informe de tot el personal que treballa a l’hospital
 
-CREATE OR REPLACE VIEW view_contador_empelados AS
-
+CREATE OR REPLACE VIEW view_contador_empleados AS
+    SELECT 
+        COUNT(DISTINCT med.id_empleado) AS "Cantidad de médicos",
+        COUNT(DISTINCT enf.id_empleado) AS "Cantidad de enfermeros",
+        COUNT(DISTINCT farm.id_empleado) AS "Cantidad de farmacéuticos",
+        COUNT(DISTINCT cien.id_empleado) AS "Cantidad de científicos",
+        COUNT(DISTINCT rrhh.id_empleado) AS "Cantidad de recursos humanos",
+        COUNT(DISTINCT inf.id_empleado) AS "Cantidad de informáticos"
+    FROM empleado emp
+    LEFT JOIN medico med ON emp.id_empleado = med.id_empleado
+    LEFT JOIN enfermero enf ON emp.id_empleado = enf.id_empleado
+    LEFT JOIN farmaceutico farm ON emp.id_empleado = farm.id_empleado
+    LEFT JOIN cientifico cien ON emp.id_empleado = cien.id_empleado
+    LEFT JOIN recursos_humanos rrhh ON emp.id_empleado = rrhh.id_empleado
+    LEFT JOIN informatico inf ON emp.id_empleado = inf.id_empleado;
 
 -- Informe de nombre de visites ateses per dia
 

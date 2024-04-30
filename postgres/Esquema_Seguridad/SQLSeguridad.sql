@@ -73,6 +73,11 @@ GRANT SELECT, INSERT ON informatico TO recursos_humanos;
 GRANT SELECT ON especialidad TO recursos_humanos;
 GRANT SELECT, INSERT ON persona TO recursos_humanos;
 GRANT SELECT ON view_contador_planta TO recursos_humanos;
+GRANT SELECT ON view_contador_planta TO recursos_humanos;
+GRANT SELECT ON view_contador_empleados TO recursos_humanos;
+GRANT SELECT ON view_contador_visitas TO recursos_humanos;
+GRANT SELECT ON view_ranking_medicos TO recursos_humanos;
+GRANT SELECT ON view_malalties_comuns TO recursos_humanos;
 
 --- INFORMATICO
 CREATE ROLE informatico;
