@@ -180,7 +180,8 @@ CREATE OR REPLACE VIEW view_contador_visitas AS
         TO_CHAR(fecha_hora, 'YYYY-MM-DD') AS "Fecha",
         COUNT(id_visita) AS "Total Visitas"
     FROM visita
-    GROUP BY fecha_hora;
+    GROUP BY fecha_hora
+	ORDER BY fecha_hora DESC;
 
 -- Ranking de metges que atenen més pacients.
 
