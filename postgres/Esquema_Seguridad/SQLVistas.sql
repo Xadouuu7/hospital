@@ -140,3 +140,53 @@ CREATE OR REPLACE VIEW view_inv_quirofano AS
         invmatqui.num_quirofano AS quirofano
     FROM inv_material_quirofano invmatqui
     INNER JOIN material_quirofano matqui ON matqui.id_material_quirofano=invmatqui.id_material_quirofano;
+
+-- Donada una planta de l'hospital, saber quantes habitacions, quiròfans i personal d’infermeria té.
+
+CREATE OR REPLACE VIEW view_contador_planta AS
+    SELECT
+        COUNT(DISTINCT hab.num_habitacion) AS "Habitaciones",
+        COUNT(DISTINCT qui.num_quirofano) AS "Quirófanos",
+        COUNT(DISTINCT enf.num_planta) AS "Enfermeros"
+    FROM planta pla
+    INNER JOIN quirofano qui ON pla.num_planta = qui.num_planta
+    INNER JOIN enfermero enf ON pla.num_planta = enf.num_planta
+    INNER JOIN habitacion hab ON pla.num_planta = hab.num_planta
+
+-- Informe de tot el personal que treballa a l’hospital
+
+CREATE OR REPLACE VIEW view_contador_empelados AS
+
+
+-- Informe de nombre de visites ateses per dia
+
+CREATE OR REPLACE VIEW view_contador_visitas AS
+    SELECT 
+        TO_CHAR(fecha_hora, 'YYYY-MM-DD') AS "Fecha",
+        COUNT(id_visita) AS "Total Visitas"
+    FROM visita
+    GROUP BY fecha_hora;
+
+-- Ranking de metges que atenen més pacients.
+
+CREATE OR REPLACE VIEW view_ranking_medicos AS
+    SELECT 
+        per.nombre  ' '  per.apellido1  ' '  per.apellido2 AS "Nombre Médico",
+        COUNT(id_visita) AS "Total Visitas"
+    FROM visita vi
+    INNER JOIN medico me ON me.id_empleado = vi.id_medico
+    INNER JOIN empleado emp ON emp.id_empleado = me.id_empleado
+    INNER JOIN persona per ON per.dni_nie = emp.dni_nie
+    GROUP BY "Nombre Médico"
+    ORDER BY "Total Visitas" DESC;
+
+-- Malalties més comunes.
+
+CREATE OR REPLACE VIEW view_malalties_comuns AS
+    SELECT 
+        pat.nombre AS "Patologia",
+        COUNT(dia.id_patologia) AS "Total" 
+    FROM diagnostico dia
+    INNER JOIN patologia pat ON pat.id_patologia = dia.id_patologia
+    GROUP BY "Patologia"
+    ORDER BY "Total" DESC;
