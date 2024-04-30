@@ -148,7 +148,12 @@ def menuRecursosHumanos(usuario, conn, cursor):
             print('Menú gestión recursos humanos')
             print('-' * 40, end='\n\n\n')
             print("1. Dar alta empleado")
-            print("2. Salir", end='\n\n\n')
+            print("2. Consultar recursos hospitalarios")
+            print("3. Informe personal")
+            print("4. Informe visitas")
+            print("5. Ranking médicos")
+            print("6. Patologias más comunes")
+            print("7. Salir", end='\n\n\n')
             respuesta = input("Escoger una opcion: ")
             if respuesta == '1':
                 id_direccion = darAltaDireccion(usuario, conn, cursor)
@@ -156,6 +161,16 @@ def menuRecursosHumanos(usuario, conn, cursor):
                 id_empleado = darAltaEmpleado(usuario, conn, cursor, dni_nie)
                 darAltaProfesion(usuario, conn, cursor, id_empleado)
             elif respuesta == '2':
+                consultarRecursos(usuario, conn, cursor)
+            elif respuesta == '3':
+                informePersonal(usuario, conn, cursor)
+            elif respuesta == '4':
+                informeVisitas(usuario, conn, cursor)
+            elif respuesta == '5':
+                rankingMedicos(usuario, conn, cursor)
+            elif respuesta == '6':
+                patologiasMasComunes(usuario, conn, cursor)
+            elif respuesta == '7':
                 bucle = False
         except Exception as error:
             print(f"Error: {error}")

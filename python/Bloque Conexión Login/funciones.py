@@ -15,7 +15,7 @@ def titulo(string):
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
         db_config = {
-            'host': '188.77.217.85',
+            'host': '10.94.255.236',
             'user': usuario,
             'password': contraseña,
             'dbname':'hospital'
@@ -173,6 +173,7 @@ def darAltaDireccion(usuario,conn,cursor):
             return id_direccion[0][0]
         except Exception as error:
             print(f"Error: {error}")
+            input("Enter per continuar: ")
 
 def darAltaPersona(usuario,conn,cursor,id_direccion):
     while True:
@@ -191,6 +192,7 @@ def darAltaPersona(usuario,conn,cursor,id_direccion):
             return dni_nie
         except Exception as error:
             print(f"Error: {error}")
+            input()
 
 def darAltaPaciente(usuario,conn,cursor, dni):
     bucle = True
@@ -222,7 +224,7 @@ def verOperacionesAdministrativo(usuario, conn, cursor):
     consulta = "SELECT * FROM view_reserva_quirofano ORDER BY fecha_hora_entrada DESC"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Paciente', 'Quirofano' ,' Planta', 'Medico' , 'Seguridad Social', 'Fecha entrada'], tablefmt="simple_grid"), end='\n\n\n')
+    print(tabulate(rows, headers=['Paciente', 'Quirofano' ,' Planta', 'Medico' ,'Enfermeros/as', 'Seguridad Social', 'Fecha entrada', 'Administrativo/a'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 def verVisitasAdministrativo(usuario, conn, cursor):
@@ -377,3 +379,45 @@ def darAltaProfesion(usuario,conn,cursor,id_empleado):
         except Exception as error:
             print(f"Error: {error}")
             input("Enter per continuar: ")
+
+def consultarRecursos(usuario,conn,cursor):
+    os.system("cls")
+    planta = input("Introduce la planta: ")
+    consulta = f'SELECT "Habitaciones", "Quirófanos", "Enfermeros" FROM view_contador_planta WHERE "Planta" = %s'
+    cursor.execute(consulta,(planta,))
+    titulo(f"Recursos hospitalarios")
+    rows = cursor.fetchall()
+    print(tabulate(rows, headers=['Habitaciones','Quirófanos','Enfermeros'], tablefmt="simple_grid"), end='\n\n\n')
+    input("Enter per continuar: ")
+
+def informePersonal(usuario, conn, cursor):
+    consulta = f"SELECT * FROM view_contador_empleados"
+    cursor.execute(consulta)
+    titulo(f"Contador Personal")
+    rows = cursor.fetchall()
+    print(tabulate(rows, headers=['Medicos','Enfermeros','Farmaceuticos','Cientificos','Recursos Humano','Informaticos'], tablefmt="simple_grid"), end='\n\n\n')
+    input("Enter per continuar: ")
+
+def informeVisitas(usuario, conn, cursor):
+    consulta = f"SELECT * FROM view_contador_visitas"
+    cursor.execute(consulta)
+    titulo(f"Contador visitas por dia")
+    rows = cursor.fetchall()
+    print(tabulate(rows, headers=['Fecha','Total Visitas'], tablefmt="simple_grid"), end='\n\n\n')
+    input("Enter per continuar: ")
+
+def rankingMedicos(usuario, conn, cursor):
+    consulta = f"SELECT * FROM view_ranking_medicos"
+    cursor.execute(consulta)
+    titulo(f"Ranking visitas por médico")
+    rows = cursor.fetchall()
+    print(tabulate(rows, headers=['Médico','Cantidad de visitas'], tablefmt="simple_grid"), end='\n\n\n')
+    input("Enter per continuar: ")
+    
+def patologiasMasComunes(usuario, conn, cursor):
+    consulta = f"SELECT * FROM view_malalties_comuns"
+    cursor.execute(consulta)
+    titulo(f"Patologias mas comunes")
+    rows = cursor.fetchall()
+    print(tabulate(rows, headers=['Patologia','Total'], tablefmt="simple_grid"), end='\n\n\n')
+    input("Enter per continuar: ")
