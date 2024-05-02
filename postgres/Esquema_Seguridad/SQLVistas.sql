@@ -141,7 +141,7 @@ CREATE OR REPLACE VIEW view_inv_quirofano AS
     FROM inv_material_quirofano invmatqui
     INNER JOIN material_quirofano matqui ON matqui.id_material_quirofano=invmatqui.id_material_quirofano;
 
--- Donada una planta de l'hospital, saber quantes habitacions, quiròfans i personal d’infermeria té.
+-- Dado una planta del hospital, saber: cuántas habitaciones, quirófanos y personal de enfermería tiene:
 
 CREATE OR REPLACE VIEW view_contador_planta AS
     SELECT
@@ -155,7 +155,7 @@ CREATE OR REPLACE VIEW view_contador_planta AS
     INNER JOIN habitacion hab ON pla.num_planta = hab.num_planta
 	GROUP BY pla.num_planta;
 
--- Informe de tot el personal que treballa a l’hospital
+-- Informe de todo el personal que trabaja en el hospital: 
 
 CREATE OR REPLACE VIEW view_contador_empleados AS
     SELECT 
@@ -173,7 +173,7 @@ CREATE OR REPLACE VIEW view_contador_empleados AS
     LEFT JOIN recursos_humanos rrhh ON emp.id_empleado = rrhh.id_empleado
     LEFT JOIN informatico inf ON emp.id_empleado = inf.id_empleado;
 
--- Informe de nombre de visites ateses per dia
+-- Informe del número de visitas atendidas por día: 
 
 CREATE OR REPLACE VIEW view_contador_visitas AS
     SELECT 
@@ -183,7 +183,7 @@ CREATE OR REPLACE VIEW view_contador_visitas AS
     GROUP BY fecha_hora
 	ORDER BY fecha_hora DESC;
 
--- Ranking de metges que atenen més pacients.
+-- Ranking de médicos que atienden a más pacientes:
 
 CREATE OR REPLACE VIEW view_ranking_medicos AS
     SELECT 
@@ -196,7 +196,7 @@ CREATE OR REPLACE VIEW view_ranking_medicos AS
     GROUP BY "Nombre Médico"
     ORDER BY "Total Visitas" DESC;
 
--- Malalties més comunes.
+-- Enfermedades más comunes:
 
 CREATE OR REPLACE VIEW view_malalties_comuns AS
     SELECT 
