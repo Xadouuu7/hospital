@@ -13,6 +13,8 @@ Dell EMC PowerEdge R7515 Rack Servidor Premium
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/Servidor.png)
 #### Components
 
+
+
 | Component                     | Descripció                                                                                           |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------- |
 | Processador                   | AMD EPYC 7543P 2.8GHz, 32C/64T, 256M Cache (225W) DDR4-3200                                          |
