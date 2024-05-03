@@ -11,6 +11,7 @@ nav_order: 4
 Dell EMC PowerEdge R7515 Rack Servidor Premium
 
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/Servidor.png)
+
 #### Components
 
 
