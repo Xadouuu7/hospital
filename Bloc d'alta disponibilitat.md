@@ -6,13 +6,13 @@ nav_order: 4
 
 # BLOC D'ALTA DISPONIBILITAT
 
-## Infraestructura de hardware
-### Servidor
+# Infraestructura de hardware
+## Servidor
 Dell EMC PowerEdge R7515 Rack Servidor Premium
 
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/Servidor.png)
 
-#### Components
+### Components
 
 
 
@@ -32,9 +32,9 @@ Dell EMC PowerEdge R7515 Rack Servidor Premium
 | Dimensions                    | Alçada: 4.28 cm, Ample: 44.6 cm, Profunditat: 70.1 cm                                                |
 | Pes                           | 16.5kg aproximadament                                                                                |
 
-### Discs durs
+## Discs durs
 
-#### Investigació
+### Investigació
 
 L'Hospital de Blanes dona cobertura, principalment, als municipis de Blanes, Lloret de Mar i Tossa (amb les seves urbanitzacions corresponents), per tant, això implica uns 86.000 pacients aproximadament. Podriem afegir, i considerar, també els turistes que pasen en aquesta zona les seves vacances, podriem fer una aproximació d'uns 200.000 pacients aproximadament (amb els turistes). 
 
@@ -55,28 +55,28 @@ Segons el repte que van fer l'Anderson i la Maria del Mar sobre afegir mil mili�
 
 
 
-### Armari Rack
+## Armari Rack
 
-### SAI
+## SAI
 
 
-## Rèplica dels nodes
+# Rèplica dels nodes
 
-## Diagrama
+# Diagrama
 
-## Manual d'instal·lació i d'administració
+# Manual d'instal·lació i d'administració
 
-## Backups
+# Backups
 
-### Codi de bash/python
+## Codi de bash/python
 
-### Explicació del codi
+## Explicació del codi
 
-## Restauració de tota la base de dades
+# Restauració de tota la base de dades
 
-### Script
+## Script
 
-### Documentació
+## Documentació
 
 
 ----
