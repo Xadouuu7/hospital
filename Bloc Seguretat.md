@@ -1,6 +1,6 @@
 ---
 title: Bloc Seguretat
-layout: home
+layout: default
 nav_order: 3
 ---
 

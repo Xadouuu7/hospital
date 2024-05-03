@@ -1,6 +1,6 @@
 ---
 title: Bloc d'alta disponibilitat
-layout: home
+layout: default
 nav_order: 4
 ---
 
@@ -13,7 +13,7 @@ Dell EMC PowerEdge R7515 Rack Servidor Premium
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/Servidor.png)
 #### Components
 | Component                     | Descripció                                                                                           |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------- |
+| :---------------------------- | :--------------------------------------------------------------------------------------------------- |
 | Processador                   | AMD EPYC 7543P 2.8GHz, 32C/64T, 256M Cache (225W) DDR4-3200                                          |
 | Memoria RAM                   | 4x 16GB RDIMM, 3200MT/s, Dual Rank                                                                   |
 | Emmagatzematge frontal        | Xassís amb 24x2.5"                                                                                   |

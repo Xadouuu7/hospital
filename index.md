@@ -1,6 +1,6 @@
 ---
 title: Principal
-layout: home
+layout: default
 nav_order: 1
 ---
 
