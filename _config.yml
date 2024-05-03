@@ -1,8 +1,5 @@
 title: HOSPITAL BLANES
-description: A starter template for a Jeykll site using the Just the Docs theme!
+description: Projecte de Bases de dades i Programació.
 theme: just-the-docs
 
 url: https://xadouuu7.github.io/hospital/
-
-plugins:
-  - jekyll-default-layout

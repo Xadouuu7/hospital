@@ -1,6 +1,6 @@
 ---
 title: Bloc d'alta disponibilitat
-layout: default
+layout: home
 nav_order: 4
 ---
 

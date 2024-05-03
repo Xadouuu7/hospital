@@ -1,6 +1,6 @@
 ---
 title: Bloc Esquema ER - Relacional - SQL
-layout: default
+layout: home
 nav_order: 2
 ---
 
