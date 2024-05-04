@@ -64,14 +64,7 @@ Segons el repte que van fer l'Anderson i la Maria del Mar sobre afegir mil mili�
 Una de les millors maneres de garantir l'alta disponibilitat dels nostres servidors és mitjançant l'ús d'un SAI (Sistema d'Alimentació Ininterrompuda). Aquest dispositiu permet mantenir el subministrament elèctric als nostres servidors durant els talls d'energia, assegurant el seu funcionament continu i evitant la pèrdua de dades o danys a l'equip a causa d'apagades repentines.
 A més, els SAIs també proporcionen protecció contra fluctuacions de voltatge, pics de corrent i altres problemes relacionats amb la qualitat de l'energia elèctrica. És un element essencial en la infraestructura de qualsevol servidor crític.
 
-
-
-
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/sai.jpg)
-
-
-
-
 
 Aquest [SAI](https://todosai.com/todosai/294-SAI-Phasak-2000VA-Online-LCD--PH-8020.html) utilitza la tecnologia on-line que garanteix una alimentació estable en tot moment, protegint els servidors de qualsevol fluctuació o interferència. Amb una capacitat de 2000VA i una potència de 1800W, el SAI té la capacitat suficient per alimentar dos servidors amb un consum de 750W cadascun, amb marge per a futurs augments de càrrega. A més de tot, té un programari de gestió que ens permetrà programar les accions del SAI com ara l'apagat automàtic dels servidors després d'un tall de llum o l'avís per correu electrònic dels esdeveniments.
 
