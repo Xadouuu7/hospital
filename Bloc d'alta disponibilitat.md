@@ -66,7 +66,9 @@ A més, els SAIs també proporcionen protecció contra fluctuacions de voltatge,
 
 
 
+
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/sai.jpg)
+
 
 
 
