@@ -24,7 +24,6 @@ Dell EMC PowerEdge R7515 Rack Servidor Premium
 | RAID                          | RAID desconfigurada per HDDs o SSDs (permet barrejar diferents tipus)                                |
 | Emmagatzematge intern         | 2x 480GB SSD SATA Read Intensive 6Gbps 512 2.5in Hot-plug AG Drive, 1 DWPD                           |
 | Controladora d'emmagatzematge | PERC H740P, HBA330, RAID intern                                                                      |
-| Xarxa                         | Broadcom 57416 Dual Port 1                                                                           |
 | Ports USB                     | 4x USB 3.0 (1 frontal, 2 interns i 1 traser)                                                         |
 | Ports de xarxa                | 2x ports RJ-45 d'1GbE                                                                                |
 | Font d'alimentació            | Dual Hot-plug Redundant Power Supply(1+1) 750W Titanium 200-240Vac(CAUTION only supports 200-240Vac) |
