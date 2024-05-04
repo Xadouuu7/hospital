@@ -8,7 +8,7 @@ nav_order: 4
 
 # Infraestructura de hardware
 ## Servidor
-2x Dell EMC PowerEdge R7515 Rack Servidor Premium: 6.934,73 €
+2x [Dell EMC PowerEdge R7515 Rack Servidor Premium](https://www.dell.com/es-es/shop/servidores-almacenamiento-y-redes/poweredge-r7515-servidor-rack-premium/spd/poweredge-r7515/per751509a): 6.934,73 €
 
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/Servidor.png)
 
@@ -34,7 +34,9 @@ nav_order: 4
 
 ## Discs durs
 
-### Investigació
+Segons la recerca que hem fet i expliquem més abaix, ens decantem per agafar 6 discs durs per posar a cada servidor. Hem escollit el [Seagate Barracuda SATA 6Gb/s 128MB 1TB](https://a.co/d/fencil0). Els servidors que hem escollit poden ampliar-se d'emmagatzematge, per tant, a priori agafem 3TB per a cada servidor, però sempre es poden ampliar en cas de que la base de dades s'ompli amb més velocitat del que estava previst.
+
+### Recerca
 
 L'Hospital de Blanes dona cobertura, principalment, als municipis de Blanes, Lloret de Mar i Tossa (amb les seves urbanitzacions corresponents), per tant, això implica uns 86.000 pacients aproximadament. Podriem afegir, i considerar, també els turistes que pasen en aquesta zona les seves vacances, podriem fer una aproximació d'uns 200.000 pacients aproximadament (amb els turistes). 
 
@@ -55,15 +57,15 @@ Segons el repte que van fer l'Anderson i la Maria del Mar sobre afegir mil mili�
 
 ## Armari Rack
 
-Armari rack 19" 12U 600 x 800 I700
+[Armari rack 19" 12U 600 x 800 I700](https://www.rackonline.es/armarios-rack-12u/armario-rack-19-12u-600-x-800-i700.html#/21-color-negro_antracita_ral_7016/23-puerta_frontal-puerta_cristal)
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/armari_rack.png)
 
 ## SAI
-Una de les millors maneres de garantir l'alta disponibilitat dels nostres servidors és mitjançant l'ús d'un SAI (Sistema d'Alimentació Ininterrompuda). Aquest dispositiu permet mantenir el subministrament elèctric als nostres servidors durant els talls d'energia, assegurant el seu funcionament continu i evitant la pèrdua de dades o danys a l'equip a causa d'apagades repentines. A més, els SAIs també proporcionen protecció contra fluctuacions de voltatge, pics de corrent i altres problemes relacionats amb la qualitat de l'energia elèctrica. 
-És un element essencial en la infraestructura de qualsevol o servidor crític.
-![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/SAI-Phasak-2000VA-Online-LCD--PH-8020.jpg)
+Una de les millors maneres de garantir l'alta disponibilitat dels nostres servidors és mitjançant l'ús d'un SAI (Sistema d'Alimentació Ininterrompuda). Aquest dispositiu permet mantenir el subministrament elèctric als nostres servidors durant els talls d'energia, assegurant el seu funcionament continu i evitant la pèrdua de dades o danys a l'equip a causa d'apagades repentines.
+A més, els SAIs també proporcionen protecció contra fluctuacions de voltatge, pics de corrent i altres problemes relacionats amb la qualitat de l'energia elèctrica. És un element essencial en la infraestructura de qualsevol servidor crític.
+![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/sai.jpg)
 
-Aquest [SAI](https://todosai.com/todosai/294-SAI-Phasak-2000VA-Online-LCD--PH-8020.html) utilitza la tecnologia on-line que garanteix una alimentació estable en tot moment, protegint els servidors de qualsevol fluctuació o interferència. Amb una capacitat de 2000VA i una potència de 1800W, el SAI té la capacitat suficient per alimentar dos servidors amb un consum de 750W cadascun, amb marge per a futurs augmentos de càrrega. A més de tot, té un programari de gestió que ens permetrà programar les accions del SAI com ara l'apagat automàtic dels servidors després d'un tall de llum o l'avís per correu electrònic dels esdeveniments.
+Aquest [SAI](https://todosai.com/todosai/294-SAI-Phasak-2000VA-Online-LCD--PH-8020.html) utilitza la tecnologia on-line que garanteix una alimentació estable en tot moment, protegint els servidors de qualsevol fluctuació o interferència. Amb una capacitat de 2000VA i una potència de 1800W, el SAI té la capacitat suficient per alimentar dos servidors amb un consum de 750W cadascun, amb marge per a futurs augments de càrrega. A més de tot, té un programari de gestió que ens permetrà programar les accions del SAI com ara l'apagat automàtic dels servidors després d'un tall de llum o l'avís per correu electrònic dels esdeveniments.
 
 # Rèplica dels nodes
 
