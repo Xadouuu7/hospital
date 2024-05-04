@@ -8,7 +8,7 @@ nav_order: 4
 
 # Infraestructura de hardware
 ## Servidor
-Dell EMC PowerEdge R7515 Rack Servidor Premium
+2x Dell EMC PowerEdge R7515 Rack Servidor Premium: 6.934,73 €
 
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/Servidor.png)
 
@@ -30,6 +30,7 @@ Dell EMC PowerEdge R7515 Rack Servidor Premium
 | Sistema operatiu preinstalat  | Cap                                                                                                  |
 | Dimensions                    | Alçada: 4.28 cm, Ample: 44.6 cm, Profunditat: 70.1 cm                                                |
 | Pes                           | 16.5kg aproximadament                                                                                |
+| Assitència                    | ProSupport and NextBusiness Day Onsite Service durant 84 mesos
 
 ## Discs durs
 
@@ -52,9 +53,10 @@ Tot això, si afegim totes les posibilitats que hem explicat aquí, ens situem e
 
 Segons el repte que van fer l'Anderson i la Maria del Mar sobre afegir mil milió de files dins d'una base de dades, que cada fila contenia 3 columnes d'informació, aquestes dades van ser d'aproximadament 50 Gb d'emmagatzematge. Tenint en compte que nosaltres, per a l'hospital, requerirem aproximadament de poc més d'1 milió de files a l'any que contenen 30 columnes cadascuna, podriem considerar que serien 5Gb d'emmagatzematge a l'any aproximadament (donat que hi ha columnes de la nostra base de dades tenen columnes amb molta més informació que la de mil milió de files).
 
-
-
 ## Armari Rack
+
+Armari rack 19" 12U 600 x 800 I700
+![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/armari_rack.png)
 
 ## SAI
 
