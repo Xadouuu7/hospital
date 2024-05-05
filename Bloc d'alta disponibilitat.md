@@ -75,17 +75,138 @@ Aquest [SAI](https://todosai.com/todosai/294-SAI-Phasak-2000VA-Online-LCD--PH-80
 # Manual d'instal·lació i d'administració
 
 # Backups
+En aquesta part mostrem el codi de Python que utilitzem per fer backups de la base de dades.
 
-## Codi de bash/python
+## Codi de python
+```
+import os
+import subprocess
+import datetime
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import requests
+from github import Github
 
-## Explicació del codi
+# Dades d'autenticació per pujar l'arxiu al Github:
+repository_name = "Xadouuu7/hospital"
+backup_path = "/etc/postgresql/backup"
+date = datetime.datetime.now().strftime("%d-%b-%Y")
+backup_file = f"Backup_logico_{date}.dump"
+
+# Dades d'accés al server de POSTGRESQL:
+user = "postgres"
+password = "postgres" 
+server = "192.168.1.73"
+
+# Ruta on vam guardar els arxius de backup
+backup_path = "/etc/postgresql/backup"
+date = datetime.datetime.now().strftime("%d-%b-%Y")
+backup_file = f"Backup_logico_{date}.dump"
+
+# Fem la còpia de totes les bases de dades que hi ha a PostgreSQL server i comprimeix l'arxiu:
+dump_command = f"PGPASSWORD={password} pg_dumpall -h {server} -U {user} | gzip > {backup_path}/{backup_file}.gz"
+subprocess.run(dump_command, shell=True, check=True)
+
+# Eliminem els arxius de backup creats fa més de 30 dies
+old_files = subprocess.run(f"find {backup_path}/* -mtime +30", shell=True, capture_output=True, text=True)
+for file in old_files.stdout.split('\n'):
+    if file:
+        os.remove(file)
+
+# Canviem el propietari de l'arxiu de backup: 
+os.chown(f"{backup_path}/{backup_file}.gz", 114, 114)  # El "114" és la ID de postgres.
+
+# Obtenim el repositori de GitHub amb el token personal de l'Anderson:
+g = Github("Token_del_repositori_De_Github")
+repo = g.get_repo(repository_name)
+
+# Pujem l'arxiu al respositori "hospital" de Github:
+with open(f"{backup_path}/{backup_file}.gz", 'rb') as file:
+    content = file.read()
+    repo.create_file(f"backups/{backup_file}.gz", f"Backup lógico {date}", content)
+
+# Enviem el correu electrònic que notifica que el backup s'ha fet:
+smtp_server = "smtp.gmail.com"
+smtp_port = 587
+sender_email = "a.perez12@sapalomera.cat"
+receiver_email = "a.perez12@sapalomera.cat"
+password = "contrasenya"
+
+message = MIMEMultipart()
+message["From"] = sender_email
+message["To"] = receiver_email
+message["Subject"] = "Backup Logico PostgreSQL"
+body = "La copia de seguridad lógica de la base de datos PostgreSQL ha sido realizada correctamente."
+message.attach(MIMEText(body, "plain"))
+
+text = message.as_string()
+
+with smtplib.SMTP(smtp_server, smtp_port) as server:
+    server.starttls()
+    server.login(sender_email, password)
+    server.sendmail(sender_email, receiver_email, text)
+
+# Enviem la notificació a través d'un bot de Telegram: 
+TOKEN = "6994393989:AAEpPV3jAr9vV4MnFVI_M3HJ-azcpPQDdmE"
+CHAT_ID = "1599791868"
+URL = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+TEXT = f"Copia de seguridad backup_logico realizada {date}"
+
+data = {
+    "chat_id": CHAT_ID,
+    "text": TEXT,
+    "disable_web_page_preview": "1"
+}
+
+requests.post(URL, data=data) 
+```
+
+## Explicació del codi de backup
+Aquest script realitza una copia de seguretat lògica completa de la base de dades, envia un missatge per correu electrònic i per Telegram. A més, també puja la copia a un repositori de GitHub per poder tenir la còpia en cloud i no només en local.
 
 # Restauració de tota la base de dades
-
+En cas de que hi hagi algun problema amb la base de dades, hem de crear un script que faci una restauració de tota la base de dades.
 ## Script
+```
+#!/bin/bash
 
-## Documentació
+# Dades d'accés a POSTGRESQL server
+USER="postgres"
+export PGPASSWORD="postgres"
+SERVER="192.168.1.73"
 
+# Ruta on vam guardar els arxius de backup
+BACKUP_PATH="/etc/postgresql/backup"
+DATE=$(date +"%d-%b-%Y")
+BACKUP_FILE="Backup_logico_$DATE.dump.gz"
+LAST_BACKUP=""
+
+# Comprovem si l'arxiu de backup d'avui existeix
+if [ -f "$BACKUP_PATH/$BACKUP_FILE" ]; then
+    LAST_BACKUP="$BACKUP_FILE"
+else
+    # Si no existeix, busquem l'últim arxiu disponible
+    LAST_BACKUP=$(ls -t $BACKUP_PATH/Backup_logico_* | head -n 1)
+fi
+
+# Si no s'ha trobat cap arxiu de backup, mostrem un missatge i sortim
+if [ -z "$LAST_BACKUP" ]; then
+    echo "No s'ha trobat cap arxiu de backup disponible."
+    exit 1
+fi
+
+# Descomprimim l'arxiu de backup
+echo $BACKUP_PATH
+echo $LAST_BACKUP
+gunzip -c "$LAST_BACKUP" > "$BACKUP_PATH/restore_$DATE.sql"
+
+# Restaurem les bases de dades
+psql -h $SERVER -U $USER -f "$BACKUP_PATH/restore_$DATE.sql"
+```
+## Explicació del codi de restauració
+
+Aquest script és una eina per restaurar la base de dades en cas de que hi hagi algun problema. Primer s'asegura si existeix un arxiu de backup recent per poder restaurar-lo. Si no és així, busca l'arxiu més recent disponible, en cas de que no hi hagi cap arxiu de backup ho mostra per terminal. Si troba l'arxiu de backup, el descomprimeix i el restaura.
 
 ----
 
