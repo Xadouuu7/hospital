@@ -42,14 +42,15 @@ L'Hospital de Blanes dona cobertura, principalment, als municipis de Blanes, Llo
 
 Totes les dades que utilitzarem a continuació estan estretes de l"*Informe anual del sistema nacional de salud, 2022"*
 
-Segons aquest informe, la freqüència amb la que els catalans van al metge són unes 7,8 vegades a l'any. (Aquí va foto del gráfico del Informe)
+Segons aquest informe, la freqüència amb la que els catalans van al metge són unes 7,8 vegades a l'any. 
+
 Per tant, podem calcular una aproximació de 86.000 pacients locals per 7,8 vegades a l'any, serien unes 654.000 visites a l'any de pacients locals. Podem afegir el doble d'aquestes pel que fa als turistes. En total seríen una mica més d'un milió aproximadament.
 
-Per altra banda, també segons el mateix informe que utilitzem per treure les dades, hi ha un total de 0,1 ingressos per persona i any a Espanya. Això implicaria unes 9.000 hospitalitzacions a l'any aproximadament. (Otra foto)
+Per altra banda, també segons el mateix informe que utilitzem per treure les dades, hi ha un total de 0,1 ingressos per persona i any a Espanya. Això implicaria unes 9.000 hospitalitzacions a l'any aproximadament. 
 
-L'any 2021 hi va haver 3.388.609 intervencions quirúrguiques en tot el país segons l'Informe. Això significa que seria, aproximadament, respecte a 86.000 habitants unes 6020 intervencions quirúrguiques a l'any. Tenint consideració dels turistes podriem augmentar 1.000 aquestes intervencions a l'any per fer-nos una idea. Això faria unes 7.000 intervencions a l'any. (Otra foto)
+L'any 2021 hi va haver 3.388.609 intervencions quirúrguiques en tot el país segons l'Informe. Això significa que seria, aproximadament, respecte a 86.000 habitants unes 6020 intervencions quirúrguiques a l'any. Tenint consideració dels turistes podriem augmentar 1.000 aquestes intervencions a l'any per fer-nos una idea. Això faria unes 7.000 intervencions a l'any. 
 
-Per últim, pel que fa a consultes d'urgència d'atenció primària, van ser 29.718.224 (2021). Per tant, una aproximació a 86.000 d'habitants serien unes 53.234 visites d'urgència a l'any. (Otra foto)
+Per últim, pel que fa a consultes d'urgència d'atenció primària, van ser 29.718.224 (2021). Per tant, una aproximació a 86.000 d'habitants serien unes 53.234 visites d'urgència a l'any.
 
 Tot això, si afegim totes les posibilitats que hem explicat aquí, ens situem en 1.070.000 aproximadament. Això implica una mica més de mil files de dades a l'any que s'introduiran a la base de dades. 
 
