@@ -155,7 +155,8 @@ CREATE OR REPLACE VIEW view_contador_planta AS
     INNER JOIN habitacion hab ON pla.num_planta = hab.num_planta
 	GROUP BY pla.num_planta;
 
--- Informe de todo el personal que trabaja en el hospital: 
+-- Informe de todo el personal que trabaja en el hospital, hay que cambiarlo, realmente quiere info importante de cada empleado,
+-- Nombre, apellido, de qué trabaja, por ejemplo
 
 CREATE OR REPLACE VIEW view_contador_empleados AS
     SELECT 
@@ -171,9 +172,10 @@ CREATE OR REPLACE VIEW view_contador_empleados AS
     LEFT JOIN farmaceutico farm ON emp.id_empleado = farm.id_empleado
     LEFT JOIN cientifico cien ON emp.id_empleado = cien.id_empleado
     LEFT JOIN recursos_humanos rrhh ON emp.id_empleado = rrhh.id_empleado
-    LEFT JOIN informatico inf ON emp.id_empleado = inf.id_empleado;
+    LEFT JOIN informatico inf ON emp.id_empleado = inf.id_empleado; 
 
--- Informe del número de visitas atendidas por día: 
+-- Informe del número de visitas atendidas por día, y esto está mal también, tendría que ser fecha, nombre del médico, nombre del paciente
+-- así como info importante
 
 CREATE OR REPLACE VIEW view_contador_visitas AS
     SELECT 

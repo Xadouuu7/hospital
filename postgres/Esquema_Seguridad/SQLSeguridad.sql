@@ -10,7 +10,7 @@ GRANT SELECT ON view_reserva_quirofano TO medico;
 GRANT SELECT ON view_prueba TO medico;
 GRANT SELECT ON medicamento TO medico;   
 GRANT SELECT ON patologia TO medico;  
-GRANT SELECT ON view_contador_enfermeros TO medico   
+GRANT SELECT ON view_contador_enfermeros TO medico;   
 GRANT INSERT ON visita TO medico;
 GRANT INSERT ON diagnostico TO medico;
 GRANT INSERT ON prueba TO medico;
@@ -63,7 +63,7 @@ GRANT SELECT, INSERT ON inv_medicamento TO farmaceutico;
 CREATE ROLE recursos_humanos CREATEROLE;
 GRANT CONNECT ON DATABASE hospital TO recursos_humanos;
 GRANT USAGE ON SCHEMA public TO recursos_humanos;
-GRANT SELECT, INSERT ON empleado TO recursos_humanos
+GRANT SELECT, INSERT ON empleado TO recursos_humanos;
 GRANT SELECT, INSERT ON medico TO recursos_humanos;
 GRANT SELECT, INSERT ON enfermero TO recursos_humanos;
 GRANT SELECT, INSERT ON farmaceutico TO recursos_humanos;
