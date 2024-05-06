@@ -166,6 +166,15 @@ requests.post(URL, data=data)
 ## Explicació del codi de backup
 Aquest script realitza una copia de seguretat lògica completa de la base de dades, envia un missatge per correu electrònic i per Telegram. A més, també puja la copia a un repositori de GitHub per poder tenir la còpia en cloud i no només en local.
 
+## CRONTAB 
+
+S'ha decidit programar l'execució de la còpia de seguretat del servidor de PostgreSQL a les 6 del matí per les següents raons:
+
+- **Menor càrrega de treball**: A les 6 del matí la càrrega de treball del servidor és baixa ja que està fora de l'horari laboral, la qual cosa ens garanteix que la còpia de seguretat no afecti el rendiment del sistema.
+- **Major disponibilitat**: Tenint una còpia de seguretat recent al començament del dia, es garanteix una major disponibilitat de les dades en cas de qualsevol eventualitat que pugui ocórrer durant el dia.
+
+![crontab](imagenes/postgres/Bloc%20d'alta%20disponibilitat/crontab.png)
+
 # Restauració de tota la base de dades
 En cas de que hi hagi algun problema amb la base de dades, hem de crear un script que faci una restauració de tota la base de dades.
 ## Script
