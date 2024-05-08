@@ -31,9 +31,8 @@ def fake_ciudad(conn,cursor):
     conn.close()
 
     
-def fake_direccion(conn,cursor):
+def fake_direccion(conn,cursor, num_registros):
     fake = Faker('es_ES')
-    num_registros = 60000
     for _ in range(num_registros):
         direccion = fake.street_name()
         numero = random.randint(1,99)
@@ -44,9 +43,8 @@ def fake_direccion(conn,cursor):
         cursor.execute(consulta,(direccion, numero, piso, puerta, id_ciudad))
 
 
-def fake_persona(conn, cursor):
+def fake_persona(conn, cursor, num_registros):
     fake = Faker('es_ES')
-    num_registros = 10
     lista_sexo = ['H','M']
     lista_dni = []
     lista_tsi = []
@@ -82,7 +80,6 @@ def fake_persona(conn, cursor):
 
 def fake_paciente(conn, cursor, lista_dni, lista_tsi, lista_fecha):
     fecha_actual = str(datetime.now())
-    num_registros = 100
     lista_grupo = ['A','AB','B','0']
     lista_rh = ('+','-')
     for dni, tsi, fecha in zip(lista_dni, lista_tsi, lista_fecha):
@@ -112,7 +109,6 @@ def fake_paciente(conn, cursor, lista_dni, lista_tsi, lista_fecha):
         rh = random.choice(lista_rh)
         consulta = f"INSERT INTO paciente VALUES (%s, %s, %s, %s, %s, %s)"
         cursor.execute(consulta,(tsi,altura,peso,grupo_sanguineo,rh,dni))
-
         
 def fake_empleado(conn, cursor, lista_dni):
     lista_ss = []
@@ -129,15 +125,28 @@ def fake_empleado(conn, cursor, lista_dni):
         horario_trabajo = f"{hora_entrada}.00,{hora_salida}.00"
         dias_vacaciones = random.randint(10,20)
         salario = random.randint(1000,10000)
+        consulta = f"SELECT MAX(id_empleado) from medico"
+        cursor.execute(consulta)
+        max_empleado = cursor.fetchall()
         consulta = f"INSERT INTO empleado (horario_trabajo, dias_vacaciones, salario, num_ss, dni_nie) VALUES (numrange(%s), %s, %s, %s, %s)"
         cursor.execute(consulta,(f"({horario_trabajo})", dias_vacaciones, salario, num_ss, dni))
+        return max_empleado[0][0]
 
-
+def fake_medicos(conn, cursor, maximo, num_registros):
+    lista_hospitales = [ "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma de Mallorca", 
+                       "Las Palmas de Gran Canaria", "Bilbao", "Alicante", "Córdoba", "Valladolid","Vigo","Gijón"]
+    for _ in range(num_registros):
+        maximo += 1
+        experiencia_previa = f"Hospital {random.choice(lista_hospitales)}"
+        especialidad = random.randint(1,24)
+        consulta = f"INSERT INTO medico VALUES (%s, %s, %s, %s)"
+        cursor.execute(consulta,(maximo,"Medicina",experiencia_previa,especialidad))
 
 def main():
     conn, cursor = conectarBaseDatos()
     #fake_direccion(conn, cursor)
     lista_dni, lista_tsi, lista_fecha  = fake_persona(conn, cursor)
-    #fake_paciente(conn, cursor, lista_dni, lista_tsi, lista_fecha)
-    fake_empleado(conn, cursor, lista_dni)
+    fake_paciente(conn, cursor, lista_dni, lista_tsi, lista_fecha)
+    maximo = fake_empleado(conn, cursor, lista_dni)
+    fake_medicos(conn, cursor, maximo,)
 main()
