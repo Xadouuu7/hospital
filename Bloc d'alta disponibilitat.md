@@ -71,7 +71,11 @@ Aquest [SAI](https://todosai.com/todosai/294-SAI-Phasak-2000VA-Online-LCD--PH-80
 
 # Rèplica dels nodes
 
+Perquè el sistema sigui altament disponible i es puguin gestionar les fallades sense interrompre el servei, hem decidit replicar el node. D'aquesta manera tenim dos nodes que estan sempre disponibles com Actiu - Actiu. En cas de que un dels dos nodes caigui, sempre hagi un altre disponible on es pugui fer totes les consultes i insercions. És a dir, que encara que un dels nodes caigui, l'aplicació funcioni igualment.
+
 # Diagrama
+
+Això és un diagrama on s'explica visualment com és l'estructura dels nodes de la nostra aplicació:
 
 # Manual d'instal·lació i d'administració
 
