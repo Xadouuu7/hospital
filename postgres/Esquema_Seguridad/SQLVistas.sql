@@ -1,3 +1,5 @@
+--- VISTAS PARA LOS DIFERENTES ROLES DE LA BASE DE DATOS
+
 CREATE OR REPLACE VIEW view_visita
  AS
  SELECT pa.tarjeta_sanitaria,
@@ -141,7 +143,7 @@ CREATE OR REPLACE VIEW view_inv_quirofano AS
     FROM inv_material_quirofano invmatqui
     INNER JOIN material_quirofano matqui ON matqui.id_material_quirofano=invmatqui.id_material_quirofano;
 
--- Dado una planta del hospital, saber: cuántas habitaciones, quirófanos y personal de enfermería tiene:
+--- DADO UNA PLANTA DEL HOSPITAL SABER: CUÁNTAS HABITACIONES, QUIRÓFANOS Y PERSONAL DE ENFERMERÍA TIENE
 
 CREATE OR REPLACE VIEW view_contador_planta AS
     SELECT
@@ -155,27 +157,45 @@ CREATE OR REPLACE VIEW view_contador_planta AS
     INNER JOIN habitacion hab ON pla.num_planta = hab.num_planta
 	GROUP BY pla.num_planta;
 
--- Informe de todo el personal que trabaja en el hospital, hay que cambiarlo, realmente quiere info importante de cada empleado,
--- Nombre, apellido, de qué trabaja, por ejemplo
+--- INFORME EMPLEADOS
 
-CREATE OR REPLACE VIEW view_contador_empleados AS
-    SELECT 
-        COUNT(DISTINCT med.id_empleado) AS "Cantidad de médicos",
-        COUNT(DISTINCT enf.id_empleado) AS "Cantidad de enfermeros",
-        COUNT(DISTINCT farm.id_empleado) AS "Cantidad de farmacéuticos",
-        COUNT(DISTINCT cien.id_empleado) AS "Cantidad de científicos",
-        COUNT(DISTINCT rrhh.id_empleado) AS "Cantidad de recursos humanos",
-        COUNT(DISTINCT inf.id_empleado) AS "Cantidad de informáticos"
-    FROM empleado emp
-    LEFT JOIN medico med ON emp.id_empleado = med.id_empleado
-    LEFT JOIN enfermero enf ON emp.id_empleado = enf.id_empleado
-    LEFT JOIN farmaceutico farm ON emp.id_empleado = farm.id_empleado
-    LEFT JOIN cientifico cien ON emp.id_empleado = cien.id_empleado
-    LEFT JOIN recursos_humanos rrhh ON emp.id_empleado = rrhh.id_empleado
-    LEFT JOIN informatico inf ON emp.id_empleado = inf.id_empleado; 
+CREATE OR REPLACE VIEW view_medicos AS 
+    SELECT pe.*
+    FROM persona pe
+    INNER JOIN empleado emp ON emp.dni_nie = pe.dni_nie
+    INNER JOIN medico me ON me.id_empleado = emp.id_empleado;
 
--- Informe del número de visitas atendidas por día, y esto está mal también, tendría que ser fecha, nombre del médico, nombre del paciente
--- así como info importante
+CREATE OR REPLACE VIEW view_enfermeros AS
+    SELECT pe.*
+    FROM persona pe
+    INNER JOIN empleado emp ON emp.dni_nie = pe.dni_nie
+    INNER JOIN enfermero enf ON enf.id_empleado = emp.id_empleado;
+
+CREATE OR REPLACE VIEW view_farmaceuticos AS
+    SELECT pe.*
+    FROM persona pe
+    INNER JOIN empleado emp ON emp.dni_nie = pe.dni_nie
+    INNER JOIN farmaceutico fa ON fa.id_empleado = emp.id_empleado;
+
+CREATE OR REPLACE VIEW view_informaticos AS
+    SELECT pe.*
+    FROM persona pe
+    INNER JOIN empleado emp ON emp.dni_nie = pe.dni_nie
+    INNER JOIN informatico inf ON inf.id_empleado = emp.id_empleado;
+
+CREATE OR REPLACE VIEW view_recursos_humanos AS
+SELECT pe.*
+    FROM persona pe
+    INNER JOIN empleado emp ON emp.dni_nie = pe.dni_nie
+    INNER JOIN recursos_humanos rrhh ON rrhh.id_empleado = emp.id_empleado;
+
+CREATE OR REPLACE VIEW view_cientificos AS 
+    SELECT pe.*
+    FROM persona pe
+    INNER JOIN empleado emp ON emp.dni_nie = pe.dni_nie
+    INNER JOIN cientifico cien ON cien.id_empleado = emp.id_empleado;
+
+--- INFORME NÚMERO VISITAS POR DÍA
 
 CREATE OR REPLACE VIEW view_contador_visitas AS
     SELECT 
@@ -185,7 +205,7 @@ CREATE OR REPLACE VIEW view_contador_visitas AS
     GROUP BY fecha_hora
 	ORDER BY fecha_hora DESC;
 
--- Ranking de médicos que atienden a más pacientes:
+--- RANKING DE MÉDICOS QUE TIENEN MÁS VISITAS
 
 CREATE OR REPLACE VIEW view_ranking_medicos AS
     SELECT 
@@ -198,7 +218,7 @@ CREATE OR REPLACE VIEW view_ranking_medicos AS
     GROUP BY "Nombre Médico"
     ORDER BY "Total Visitas" DESC;
 
--- Enfermedades más comunes:
+--- ENFERMEDADES MÁS COMUNES
 
 CREATE OR REPLACE VIEW view_malalties_comuns AS
     SELECT 
