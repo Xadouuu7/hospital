@@ -137,7 +137,7 @@ def menuAdministrativo(usuario, conn, cursor):
         except Exception as error:
             print(f"Error: {error}")
             input("Enter per continuar: ")
-###
+### RRHH
 
 def menuRecursosHumanos(usuario, conn, cursor):
     bucle = True
@@ -171,6 +171,31 @@ def menuRecursosHumanos(usuario, conn, cursor):
             elif respuesta == '6':
                 patologiasMasComunes(usuario, conn, cursor)
             elif respuesta == '7':
+                bucle = False
+        except Exception as error:
+            print(f"Error: {error}")
+            input("Enter per continuar: ")
+
+### Informático
+
+def menuInformatico(usuario, conn, cursor):
+    bucle = True
+    while bucle:
+        try:
+            os.system('cls')
+            print('-' * 40)
+            print('Menú informático')
+            print('-' * 40, end='\n\n\n')
+            print("1. Meter pacientes")
+            print("8. Salir", end='\n\n\n')
+            respuesta = input("Escoger una opcion: ")
+            if respuesta == '1':
+                titulo("Insertar pacientes")
+                respuesta = input("Número pacientes: ")
+                fake_direccion(conn,cursor,respuesta)
+                lista_dni, lista_tsi, lista_fecha = fake_persona(conn,cursor,respuesta)
+                fake_paciente(conn,cursor,lista_dni,lista_tsi,lista_fecha)
+            elif respuesta == '2':
                 bucle = False
         except Exception as error:
             print(f"Error: {error}")
