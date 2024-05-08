@@ -391,12 +391,24 @@ def consultarRecursos(usuario,conn,cursor):
     input("Enter per continuar: ")
 
 def informePersonal(usuario, conn, cursor):
-    consulta = f"SELECT * FROM view_contador_empleados"
-    cursor.execute(consulta)
-    titulo(f"Contador Personal")
-    rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Medicos','Enfermeros','Farmaceuticos','Cientificos','Recursos Humano','Informaticos'], tablefmt="simple_grid"), end='\n\n\n')
-    input("Enter per continuar: ")
+    lista = [
+        "SELECT nombre, CONCAT(apellido1, ' ', apellido2), fecha_nacimiento FROM view_medicos",
+        "SELECT nombre, CONCAT(apellido1, ' ', apellido2), fecha_nacimiento FROM view_enfermeros",
+        "SELECT nombre, CONCAT(apellido1, ' ', apellido2), fecha_nacimiento FROM view_farmaceuticos",
+        "SELECT nombre, CONCAT(apellido1, ' ', apellido2), fecha_nacimiento FROM view_cientificos",
+        "SELECT nombre, CONCAT(apellido1, ' ', apellido2), fecha_nacimiento FROM view_recursos_humanos",
+        "SELECT nombre, CONCAT(apellido1, ' ', apellido2), fecha_nacimiento FROM view_informaticos"
+    ]
+    lista_titulos = ['Medicos','Enfermeros','Farmaceuticos','Cientificos','Recursos Humanos','Informaticos']
+    for consulta, empleado in zip(lista, lista_titulos):
+        contador = 0
+        cursor.execute(consulta)
+        rows = cursor.fetchall()
+        for i in rows:
+            contador += 1
+        titulo(f"{empleado} | {contador}")
+        print(tabulate(rows, headers=["Nombre","Apellidos","Fecha de nacimiento"], tablefmt="simple_grid"), end='\n\n\n')
+        input("Enter per continuar: ")
 
 def informeVisitas(usuario, conn, cursor):
     consulta = f"SELECT * FROM view_contador_visitas"
