@@ -34,5 +34,3 @@ def leer_ciudad():
         for row in reader:
             fichero.append(row)
     return fichero
-
-leer_ciudad()
