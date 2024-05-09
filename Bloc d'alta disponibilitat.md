@@ -43,18 +43,26 @@ L'Hospital de Blanes dona cobertura, principalment, als municipis de Blanes, Llo
 Totes les dades que utilitzarem a continuació estan estretes de l"*Informe anual del sistema nacional de salud, 2022"*
 
 Segons aquest informe, la freqüència amb la que els catalans van al metge són unes 7,8 vegades a l'any. 
+![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/gráfico1.png)
+Aquest és el gràfic 5-13 de l'"*Informe anual del sistema nacional de salud, 2022"*, aquí es pot veure la freqüentació de les consultes d'atenció primaria del Sistema Nacional de Salut segons professional (metge/ssa o infermer/a) a 2021. Com es pot veure a Catalunya és 4,6 visites al/la metge/ssa i 3,2 a l'infermer/a.
 
 Per tant, podem calcular una aproximació de 86.000 pacients locals per 7,8 vegades a l'any, serien unes 654.000 visites a l'any de pacients locals. Podem afegir el doble d'aquestes pel que fa als turistes. En total seríen una mica més d'un milió aproximadament.
 
-Per altra banda, també segons el mateix informe que utilitzem per treure les dades, hi ha un total de 0,1 ingressos per persona i any a Espanya. Això implicaria unes 9.000 hospitalitzacions a l'any aproximadament. 
+![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/gráfico2.png)
 
-L'any 2021 hi va haver 3.388.609 intervencions quirúrguiques en tot el país segons l'Informe. Això significa que seria, aproximadament, respecte a 86.000 habitants unes 6020 intervencions quirúrguiques a l'any. Tenint consideració dels turistes podriem augmentar 1.000 aquestes intervencions a l'any per fer-nos una idea. Això faria unes 7.000 intervencions a l'any. 
+Per altra banda, en aquesta part de l'Informe podem veure com la freqüentació d'ingressos per persona i any són de 0,1 a Espanya. Això implicaria unes 9.000 hospitalitzacions a l'any aproximadament. 
 
-Per últim, pel que fa a consultes d'urgència d'atenció primària, van ser 29.718.224 (2021). Per tant, una aproximació a 86.000 d'habitants serien unes 53.234 visites d'urgència a l'any.
+![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/gráfico3.png)
+Segons el mateix informe, l'any 2021 hi va haver 3.388.609 intervencions quirúrguiques en tot el país. Això significa que seria, aproximadament, respecte a 86.000 habitants unes 6020 intervencions quirúrguiques a l'any. Tenint consideració dels turistes podriem augmentar 1.000 aquestes intervencions a l'any per fer-nos una idea. Això faria unes 7.000 intervencions a l'any. 
 
-Tot això, si afegim totes les posibilitats que hem explicat aquí, ens situem en 1.070.000 aproximadament. Això implica una mica més de mil files de dades a l'any que s'introduiran a la base de dades. 
+![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/gráfico4.png)
+Per últim, pel que fa a consultes d'urgència d'atenció primària, van ser 29.718.224 a l'any 2021. Per tant, una aproximació a 86.000 d'habitants serien unes 53.234 visites d'urgència a l'any.
 
-Segons el repte que van fer l'Anderson i la Maria del Mar sobre afegir mil milió de files dins d'una base de dades, que cada fila contenia 3 columnes d'informació, aquestes dades van ser d'aproximadament 50 Gb d'emmagatzematge. Tenint en compte que nosaltres, per a l'hospital, requerirem aproximadament de poc més d'1 milió de files a l'any que contenen 30 columnes cadascuna, podriem considerar que serien 5Gb d'emmagatzematge a l'any aproximadament (donat que hi ha columnes de la nostra base de dades tenen columnes amb molta més informació que la de mil milió de files).
+Tot això, si afegim totes les posibilitats que hem explicat aquí, ens situem en 1.070.000 aproximadament, només pel que fa a visites, en general podrien ser aproximadament un milió i mig (tenint en compte les reserves de quiròfan i d'habitacions). 
+Això implicaria, aproximadament, un milió i mig de files de dades a l'any que s'introduiran a la base de dades. 
+
+Segons el repte que van fer l'Anderson i la Maria del Mar sobre afegir mil milió de files dins d'una base de dades, que cada fila contenia 3 columnes d'informació, aquestes dades van ser d'aproximadament 50 Gb d'emmagatzematge.
+Tenint en compte que nosaltres, per a l'hospital, requerirem aproximadament de poc més d'un milió i mig de files a l'any que contenen 30 columnes cadascuna, podriem considerar que serien 5Gb d'emmagatzematge a l'any aproximadament (donat que hi ha columnes de la nostra base de dades amb molta més informació que la del mil milió de files).
 
 ## Armari Rack
 
@@ -62,6 +70,7 @@ Segons el repte que van fer l'Anderson i la Maria del Mar sobre afegir mil mili�
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/armari_rack.png)
 
 ## SAI
+
 Una de les millors maneres de garantir l'alta disponibilitat dels nostres servidors és mitjançant l'ús d'un SAI (Sistema d'Alimentació Ininterrompuda). Aquest dispositiu permet mantenir el subministrament elèctric als nostres servidors durant els talls d'energia, assegurant el seu funcionament continu i evitant la pèrdua de dades o danys a l'equip a causa d'apagades repentines.
 A més, els SAIs també proporcionen protecció contra fluctuacions de voltatge, pics de corrent i altres problemes relacionats amb la qualitat de l'energia elèctrica. És un element essencial en la infraestructura de qualsevol servidor crític.
 
@@ -71,11 +80,16 @@ Aquest [SAI](https://todosai.com/todosai/294-SAI-Phasak-2000VA-Online-LCD--PH-80
 
 # Rèplica dels nodes
 
+Perquè el sistema sigui altament disponible i es puguin gestionar les fallades sense interrompre el servei, hem decidit replicar el node. D'aquesta manera tenim dos nodes que estan sempre disponibles com Actiu - Actiu. En cas de que un dels dos nodes caigui, sempre hagi un altre disponible on es pugui fer totes les consultes i insercions. És a dir, que encara que un dels nodes caigui, l'aplicació funcioni igualment.
+
 # Diagrama
+
+Això és un diagrama on s'explica visualment com és l'estructura dels nodes de la nostra aplicació:
 
 # Manual d'instal·lació i d'administració
 
 # Backups
+
 En aquesta part mostrem el codi de Python que utilitzem per fer backups de la base de dades.
 
 ## Codi de python
@@ -164,18 +178,20 @@ requests.post(URL, data=data)
 ```
 
 ## Explicació del codi de backup
+
 Aquest script realitza una copia de seguretat lògica completa de la base de dades, envia un missatge per correu electrònic i per Telegram. A més, també puja la copia a un repositori de GitHub per poder tenir la còpia en cloud i no només en local.
 
 ## CRONTAB 
 
 S'ha decidit programar l'execució de la còpia de seguretat del servidor de PostgreSQL a les 6 del matí per les següents raons:
 
-- **Menor càrrega de treball**: A les 6 del matí la càrrega de treball del servidor és baixa ja que està fora de l'horari laboral, la qual cosa ens garanteix que la còpia de seguretat no afecti el rendiment del sistema.
+- **Menor càrrega de treball**: A les 6 del matí la càrrega de treball del servidor és baixa ja que hi ha menys càrrega de treball, la qual cosa ens garanteix que la còpia de seguretat no afecti el rendiment del sistema.
 - **Major disponibilitat**: Tenint una còpia de seguretat recent al començament del dia, es garanteix una major disponibilitat de les dades en cas de qualsevol eventualitat que pugui ocórrer durant el dia.
 
 ![crontab](imagenes/postgres/Bloc%20d'alta%20disponibilitat/crontab.png)
 
 # Restauració de tota la base de dades
+
 En cas de que hi hagi algun problema amb la base de dades, hem de crear un script que faci una restauració de tota la base de dades.
 ## Script
 ```

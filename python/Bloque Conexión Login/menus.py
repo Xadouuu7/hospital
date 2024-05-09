@@ -137,7 +137,7 @@ def menuAdministrativo(usuario, conn, cursor):
         except Exception as error:
             print(f"Error: {error}")
             input("Enter per continuar: ")
-###
+### RRHH
 
 def menuRecursosHumanos(usuario, conn, cursor):
     bucle = True
