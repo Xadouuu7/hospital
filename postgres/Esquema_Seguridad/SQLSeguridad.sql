@@ -87,6 +87,8 @@ GRANT SELECT ON view_malalties_comuns TO recursos_humanos;
 --- INFORMATICO
 CREATE ROLE informatico;
 GRANT ALL PRIVILEGES ON DATABASE hospital TO informatico;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO informatico;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO informatico;
 
 --- PACIENTE
 CREATE ROLE paciente;
