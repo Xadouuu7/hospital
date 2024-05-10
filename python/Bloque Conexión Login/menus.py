@@ -2,7 +2,7 @@ import os
 from funciones import *
 from sys import exit
 from tabulate import tabulate
-
+from dummy import *
 def menuPrincipal():
     os.system('cls')
     print('-' * 40)
@@ -187,16 +187,29 @@ def menuInformatico(usuario, conn, cursor):
             print('Menú informático')
             print('-' * 40, end='\n\n\n')
             print("1. Meter pacientes")
+            print("2. Meter medicos")
+            print("3. Meter enfermeros")
             print("8. Salir", end='\n\n\n')
             respuesta = input("Escoger una opcion: ")
             if respuesta == '1':
                 titulo("Insertar pacientes")
-                respuesta = input("Número pacientes: ")
-                fake_direccion(conn,cursor,respuesta)
-                lista_dni, lista_tsi, lista_fecha = fake_persona(conn,cursor,respuesta)
-                fake_paciente(conn,cursor,lista_dni,lista_tsi,lista_fecha)
+                respuesta = int(input("Número pacientes: "))
+                maxid = fake_direccion(usuario,cursor,int(respuesta))
+                lista_dni, lista_tsi, lista_fecha  = fake_persona(usuario,cursor,respuesta, maxid)
+                fake_paciente(usuario,cursor,lista_dni,lista_tsi,lista_fecha)
             elif respuesta == '2':
-                bucle = False
+                titulo("Insertar medicos")
+                respuesta = int(input("Número medicos: "))
+                maxid = fake_direccion(usuario,cursor,int(respuesta))
+                lista_dni, lista_tsi, lista_fecha  = fake_persona(usuario,cursor,respuesta, maxid)
+                maximo = fake_empleado(usuario, cursor, lista_dni)
+                fake_medicos(conn, cursor, maximo, respuesta)
+            elif respuesta == '3':
+                titulo("Insertar enfermeros")
+                respuesta = int(input("Número enfermeros: "))
+                maxid = fake_direccion(usuario,cursor,int(respuesta))
+                lista_dni, lista_tsi, lista_fecha  = fake_persona(usuario,cursor,respuesta, maxid)
+                maximo = fake_empleado(usuario, cursor, lista_dni)
         except Exception as error:
             print(f"Error: {error}")
             input("Enter per continuar: ")

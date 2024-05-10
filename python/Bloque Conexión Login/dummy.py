@@ -5,24 +5,10 @@ import string
 from datetime import *
 from ficheros import *
 from unidecode import unidecode
-def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
-    try:
-        db_config = {
-            'host': '10.94.255.236',
-            'user': usuario,
-            'password': contraseña,
-            'dbname':'hospital'
-        }
-        conn = psycopg2.connect(**db_config)
-        cursor = conn.cursor()  
-        conn.autocommit = True
-        return conn,cursor
-    except Exception as error:
-       print('Error: ', error)
+from funciones import conectarBaseDatos
 
 def fake_ciudad(conn,cursor):
     fichero = leer_ciudad()
-    conn, cursor = conectarBaseDatos()
     datos_ciudad = [(ciudad['codigo_postal'], ciudad['nombre']) for ciudad in fichero]
     post_records = ", ".join(["%s"] * len(datos_ciudad[0]))
     insert_query = f"INSERT INTO ciudad (codigo_postal, nombre) VALUES ({post_records})"
@@ -41,16 +27,20 @@ def fake_direccion(conn,cursor, num_registros):
         id_ciudad = random.randint(1,9276)
         consulta = f"INSERT INTO direccion (direccion, numero, piso, puerta, id_ciudad) VALUES (%s, %s, %s, %s, %s)"
         cursor.execute(consulta,(direccion, numero, piso, puerta, id_ciudad))
+        consulta = f"SELECT MAX(id_direccion) from direccion"
+        cursor.execute(consulta)
+    max_idDireccion = cursor.fetchall()
+    return max_idDireccion
 
 
-def fake_persona(conn, cursor, num_registros):
+def fake_persona(conn, cursor, num_registros, maxid):
     fake = Faker('es_ES')
     lista_sexo = ['H','M']
     lista_dni = []
     lista_tsi = []
     lista_fecha = []
     letras = ("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E","T",)
-    for _ in range(num_registros):
+    for _ in range(int(num_registros)):
         dni_generado = False
         while not dni_generado:
             num_dni = random.randint(10000000, 99999999)
@@ -61,6 +51,8 @@ def fake_persona(conn, cursor, num_registros):
         nombre = fake.first_name()
         apellido1 = fake.last_name()
         apellido2 = fake.last_name()
+        print(nombre,apellido1,apellido2)
+        input("coñete")
         fecha_de_nacimiento = str(fake.date_of_birth(maximum_age=120))
         sexo = random.choice(lista_sexo)
         if sexo == 'H':
@@ -73,7 +65,7 @@ def fake_persona(conn, cursor, num_registros):
         print(lista_tsi)
         telefono = fake.phone_number().replace(' ', '').replace('+34', '')
         email = nombre[0:3] + '.' + apellido1 + str(fecha_de_nacimiento)[0:4]+ "@gmail.com"
-        id_direccion = random.randint(2,60000)
+        id_direccion = maxid[0][0]
         consulta = f"INSERT INTO persona VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
         cursor.execute(consulta,(dni,nombre, apellido1, apellido2, fecha_de_nacimiento, sexo, telefono, unidecode(email), id_direccion))
     return lista_dni, lista_tsi, lista_fecha
@@ -135,18 +127,37 @@ def fake_empleado(conn, cursor, lista_dni):
 def fake_medicos(conn, cursor, maximo, num_registros):
     lista_hospitales = [ "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma de Mallorca", 
                        "Las Palmas de Gran Canaria", "Bilbao", "Alicante", "Córdoba", "Valladolid","Vigo","Gijón"]
+    estudios = ['Grado en Medicina con especialidad en Anestesiología y reanimación', 'Grado en Medicina con especialidad en Anatomía Patológica',
+                'Grado en Medicina con especialidad en Cardiología', 'Grado en Medicina con especialidad en Cirugía general',
+                'Grado en Medicina con especialidad en Dermatología', 'Grado en Medicina con especialidad en Diagnostico para la imagen',
+                'Grado en Medicina con especialidad en Digestología', 'Grado en Medicina con especialidad en Endocrinología',
+                'Grado en Medicina con especialidad en Ginecología y obstetricia', 'Grado en Medicina con especialidad en Medicina del deporte']
+    
     for _ in range(num_registros):
         maximo += 1
-        experiencia_previa = f"Hospital {random.choice(lista_hospitales)}"
+        experiencia_previa = f"Hospital de {random.choice(lista_hospitales)}"
         especialidad = random.randint(1,24)
         consulta = f"INSERT INTO medico VALUES (%s, %s, %s, %s)"
-        cursor.execute(consulta,(maximo,"Medicina",experiencia_previa,especialidad))
-
-def main():
-    conn, cursor = conectarBaseDatos()
-    #fake_direccion(conn, cursor)
-    lista_dni, lista_tsi, lista_fecha  = fake_persona(conn, cursor)
-    fake_paciente(conn, cursor, lista_dni, lista_tsi, lista_fecha)
-    maximo = fake_empleado(conn, cursor, lista_dni)
-    fake_medicos(conn, cursor, maximo,)
-main()
+        cursor.execute(consulta,(maximo,random.choice(estudios),experiencia_previa,especialidad))
+def fake_medicos(conn, cursor, maximo, num_registros):
+    lista_hospitales = [ "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma de Mallorca", 
+                       "Las Palmas de Gran Canaria", "Bilbao", "Alicante", "Córdoba", "Valladolid","Vigo","Gijón"]
+    estudios = ['Grado de Enfermería con especialidad en Cirugía general', 'Grado de Enfermería con especialidad en Ginecología y obstetricia', 
+                 'Grado de Enfermería con especialidad en Pediatría', 'Grado de Enfermería con especialidad en Trabajo Social',
+                 'Grado de Enfermería con especialidad en Salud Mental']
+    
+    for _ in range(num_registros):
+        opcion = random.randint(0,1)
+        if opcion == 0:
+            maximo += 1
+            experiencia_previa = f"Hospital de {random.choice(lista_hospitales)}"
+            especialidad = random.randint(1,24)
+            consulta = f"INSERT INTO enfermero (id_empleado, estudio, experiencia_previa, id_especialidad, num_planta) VALUES (%s, %s, %s, %s, %s, %s)"
+            cursor.execute(consulta,(maximo,random.choice(estudios),experiencia_previa,especialidad,1,))
+        else:
+            maximo += 1
+            experiencia_previa = f"Hospital de {random.choice(lista_hospitales)}"
+            especialidad = random.randint(1,24)
+            consulta = f"INSERT INTO enfermero (id_empleado, estudio, experiencia_previa, id_especialidad, id_medico) VALUES (%s, %s, %s, %s, %s, %s)"
+            cursor.execute(consulta,(maximo,random.choice(estudios),experiencia_previa,especialidad,))
+            ## HAY QUE HACER QUE SELECCIONE RANDOM DE ENTRE TODOS LOS MEDICOS
