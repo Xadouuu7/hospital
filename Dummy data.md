@@ -8,8 +8,8 @@ nav_order: 5
 
 Per poder fer les proves inicials, l'Hospital de Blanes ens demana que creem dades aleatòries en cadascuna de les taules. Aquestes dades han de tener sentit i format correcte. En concret ens demanen unes 100.000 visites, 50.000 pacients, 100 metges/sses, 200 infermers/res i 150 empleats variats més. 
 
-- [Arxiu de Dummy Data](/python/Bloque%20Conexión%20Login/dummy.py)
-- [Arxiu del menú des d'on es pot executar](/python/Bloque%20Conexión%20Login/menus.py)
+- [Arxiu de Dummy Data](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/dummy.py)
+- [Arxiu del menú des d'on es pot executar](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/menus.py)
 
 # Com generem les dades per diferents taules?
 
@@ -17,7 +17,7 @@ En aquesta part del treball explicarem com hem fet les dades aleatòries de les 
 
 # Ciutats i direccions
 
-A l'hora de crear les ciutats, hem utilitzat [CSV de municipis d'Espanya](/python/Bloque%20Conexión%20Login/ciudad.csv) amb tots els municipis d'Espanya, d'aquesta manera ens assegurem que sense importar la direcció de la persona que s'ha d'afegir a la Base de Dades està contemplat el municipi d'on pot provenir. Utilitzem una funció anomenada `fake_ciudad()` on pasem per paràmetre `(conn, cursor)`. Aquests paràmetres són la connexió a la base de dades i el cursor.
+A l'hora de crear les ciutats, hem utilitzat [CSV de municipis d'Espanya](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/ciudad.csv) amb tots els municipis d'Espanya, d'aquesta manera ens assegurem que sense importar la direcció de la persona que s'ha d'afegir a la Base de Dades està contemplat el municipi d'on pot provenir. Utilitzem una funció anomenada `fake_ciudad()` on pasem per paràmetre `(conn, cursor)`. Aquests paràmetres són la connexió a la base de dades i el cursor.
 La funció que utilitzem per fer la ciutat és la següent:
 
 ```python
@@ -253,7 +253,7 @@ Per generar la jornada laboral, utilitzem números random i que per l'hora de so
 
 Al final retornem l'últim número generat de l'id d'empleat (utilitzem `[0][0]` perquè la sentència SQL retorna una llista dins d'una tupla, així podem agafar només els valors que necessitem).
 
-A tots els empleats utilitzem un fixer diferent que s'anomena "datos.py" on guardem llistes que ens fan falta a l'hora de generar certs aspectes dels empleats:
+A tots els empleats utilitzem un fixer diferent que s'anomena [datos.py](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/datos.py) on guardem llistes que ens fan falta a l'hora de generar certs aspectes dels empleats:
 
 ```python
 lista_hospitales = [ "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma de Mallorca", 
@@ -344,9 +344,9 @@ Igual que metge/ssa però amb una llista diferent per els diferents estudis que 
 ## Materials: general, quiròfan i laboratori
 
 Pels materials tant general, com de quiròfan i de laboratori simplement hem fet una petita investigació sobre els diferents materials que es poden fer servir. Amb aquesta investigació en diferents pàgines webs del material emprat, hem creat tres arxius on estan els diferents `INSERT` necessaris per tenir-ho dins de la base de dades.
-- [Material general](/python/Bloque%20Conexión%20Login/material_general.sql)
-- [Material Quiròfan](/python/Bloque%20Conexión%20Login/material_quiròfan.sql)
-- [Material Laboratori](python/Bloque%20Conexión%20Login/material_laboratori.sql)
+- [Material general](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/material_general.sql)
+- [Material Quiròfan](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/material_quiròfan.sql)
+- [Material Laboratori](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/material_laboratori.sql)
 
 ## Generar i eliminar dades des del menú de l'aplicació
 
