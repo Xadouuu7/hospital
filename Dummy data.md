@@ -6,7 +6,10 @@ nav_order: 5
 
 # Dummy Data
 
-Per poder fer les proves inicials, l'Hospital de Blanes ens demana que creem dades aleatòries en cadascuna de les taules. Aquestes dades han de tener sentit i format correcte. En concret ens demanen unes 100.000 visites, 50.000 pacients, 100 metges/sses, 200 infermers/res i 150 empleats variats més.
+Per poder fer les proves inicials, l'Hospital de Blanes ens demana que creem dades aleatòries en cadascuna de les taules. Aquestes dades han de tener sentit i format correcte. En concret ens demanen unes 100.000 visites, 50.000 pacients, 100 metges/sses, 200 infermers/res i 150 empleats variats més. 
+
+[Arxiu de Dummy Data](/python/Bloque%20Conexión%20Login/dummy.py)
+[Arxiu del menú des d'on es pot executar](/python/Bloque%20Conexión%20Login/menus.py)
 
 # Com generem les dades per diferents taules?
 
@@ -53,6 +56,7 @@ Després utilitzem un `for` per generar totes les dades que necessitem per la di
 
 Aquesta funció, com hem mencionat anteriorment, utilitza la llibrería `faker` en espanyol per poder generar dades lògiques espanyoles. 
 Després utilitzem un `for` per generar totes les dades que necessitem de la direcció:
+
 - **Nom**: El nom de la direcció utilitza la llibreria `faker`.
 - **Número**: El número del carrer utilitza la llibreria `random` per generar un número aleatori entre l'1 i el 99.
 - **Pis i porta**: Fa exactament el mateix que el número del carrer però amb un número aleatori de l'1 al 9.
@@ -217,6 +221,7 @@ I afegim les dades dins de la base de dades amb un cursor:
 Per a crear els empleats hem creat una funció que s'anomena `fake_empleado()` i passem per paràmetres `(conn, cursor, lista_dni)` que és la connexió, el cursor i la llista on estan els DNIs per poder posar-ho a la taula com a clau forana.
 
 Generem una llista pel número de la seguretat social. Creem una variable que s'anomena `consulta` on seleccionem l'`id_empleado` màxim per poder agafar l'últim que hem generat. Després utilitzem un `for` per recorrer la llista i saber quants cops hem de generar el número de la seguretat social. Ho genera amb un número aleatori entre el 100000000000 i el 999999999999. 
+
 ```python
 def fake_empleado(conn, cursor, lista_dni):
     lista_ss = []
@@ -233,6 +238,7 @@ def fake_empleado(conn, cursor, lista_dni):
 ```
 
 Per generar la jornada laboral, utilitzem números random i que per l'hora de sortida afegeixi 8 hores. Després fem una variable que sigui l'hora d'entrada i l'hora de sortida per insertar-ho a `horario_trabajo`. Per acabar utilitzem un cursor per acabar-ho d'afegir a la base de dades.
+
 ```python
         entrada_jornada = random.randint(0,16)
         hora_entrada = int(entrada_jornada)
@@ -244,6 +250,7 @@ Per generar la jornada laboral, utilitzem números random i que per l'hora de so
         cursor.execute(consulta,(f"({horario_trabajo})", dias_vacaciones, salario, num_ss, dni))
     return max_empleado[0][0]
 ```
+
 Al final retornem l'últim número generat de l'id d'empleat (utilitzem `[0][0]` perquè la sentència SQL retorna una llista dins d'una tupla, així podem agafar només els valors que necessitem).
 
 A tots els empleats utilitzem un fixer diferent que s'anomena "datos.py" on guardem llistes que ens fan falta a l'hora de generar certs aspectes dels empleats:
@@ -252,6 +259,7 @@ A tots els empleats utilitzem un fixer diferent que s'anomena "datos.py" on guar
 lista_hospitales = [ "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma de Mallorca", 
                        "Las Palmas de Gran Canaria", "Bilbao", "Alicante", "Córdoba", "Valladolid","Vigo","Gijón"]
 ```
+
 Aquesta llista l'utilitzem per generar l'experiència previa dels/de les metges/ses a l'hora de posar en quin hospital van estar treballant abans.
 
 ```python
@@ -261,6 +269,7 @@ estudios_medicos = ['Grado en Medicina con especialidad en Anestesiología y rea
                 'Grado en Medicina con especialidad en Digestología', 'Grado en Medicina con especialidad en Endocrinología',
                 'Grado en Medicina con especialidad en Ginecología y obstetricia', 'Grado en Medicina con especialidad en Medicina del deporte']
 ```
+
 Aquesta llista l'utilitzem per generar els diferents graus que han pogut cursar els/les metges/ses.
 
 ```python
@@ -268,6 +277,7 @@ estudios_enfermeros = ['Grado de Enfermería con especialidad en Cirugía genera
                 'Grado de Enfermería con especialidad en Pediatría', 'Grado de Enfermería con especialidad en Trabajo Social',
                 'Grado de Enfermería con especialidad en Salud Mental']
 ```
+
 Aquesta llista l'utilitzem per generar els graus que han pogut fer els/les infermers/res.
 
 I, per últim, aquesta llista l'utilitzem per generar els diferents estudis que han pogut fer els empleats de recursos humans:
@@ -276,6 +286,7 @@ I, per últim, aquesta llista l'utilitzem per generar els diferents estudis que 
 estudios_recursos_humanos = ['Grado en Relaciones Laborales y Recursos Humanos', 'Grado en Psicología', 'Grado en Derecho', 
                         'Grado en Administración y Dirección de Empresas', 'Grado en Pedagogía', 'Grado en Economía', 'Grado en Sociología']
 ```
+
 ## Empleats
 
 Totes les funcions que generen empleats entren per paràmetre la connexió a la base de dades, el cursor, el `maximo` que és l'últim `id_empleado` que s'ha generat i el `num_registros` per saber quants empleats es volen crear.
@@ -363,9 +374,6 @@ CREATE INDEX CONCURRENTLY indice_visitas ON visita (id_visita);
 
 CREATE INDEX CONCURRENTLY indice_diagnosticos ON diagnostico (id_diagnostico);
 ```
-
-
-
 
 ----
 
