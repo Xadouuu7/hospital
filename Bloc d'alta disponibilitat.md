@@ -76,17 +76,7 @@ A més, els SAIs també proporcionen protecció contra fluctuacions de voltatge,
 
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/sai.jpg)
 
-Aquest [SAI](https://todosai.com/todosai/294-SAI-Phasak-2000VA-Online-LCD--PH-8020.html) utilitza la tecnologia on-line que garanteix una alimentació estable en tot moment, protegint els servidors de qualsevol fluctuació o interferència. Amb una capacitat de 2000VA i una potència de 1800W, el SAI té la capacitat suficient per alimentar dos servidors amb un consum de 750W cadascun, amb marge per a futurs augments de càrrega. A més de tot, té un programari de gestió que ens permetrà programar les accions del SAI com ara l'apagat automàtic dels servidors després d'un tall de llum o l'avís per correu electrònic dels esdeveniments.
-
-# Rèplica dels nodes
-
-Perquè el sistema sigui altament disponible i es puguin gestionar les fallades sense interrompre el servei, hem decidit replicar el node. D'aquesta manera tenim dos nodes que estan sempre disponibles com Actiu - Actiu. En cas de que un dels dos nodes caigui, sempre hagi un altre disponible on es pugui fer totes les consultes i insercions. És a dir, que encara que un dels nodes caigui, l'aplicació funcioni igualment.
-
-# Diagrama
-
-Això és un diagrama on s'explica visualment com és l'estructura dels nodes de la nostra aplicació:
-
-# Manual d'instal·lació i d'administració
+Aquest [SAI](https://todosai.com/todosai/294-SAI-Phasak-2000VA-Online-LCD--PH-8020.html) utilitza la tecnologia on-line que garanteix una alimentació estable en tot moment, protegint els servidors de qualsevol fluctuació o interferència. Amb una capacitat de 2000VA i una potència de 1800W, el SAI té la capacitat suficient per alimentar dos servidors amb un consum de 750W cadascun, amb marge per a futurs augments de càrrega. A més de tot, té un programari de gestió que ens permetrà programar les accions del SAI com ara l'apagat automàtic dels servidors després d'un tall de llum o l'avís per correu electrònic dels esdeveniments.s
 
 # Backups
 
