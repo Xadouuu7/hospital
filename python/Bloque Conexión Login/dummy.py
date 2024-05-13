@@ -6,7 +6,7 @@ from datetime import *
 from ficheros import *
 from unidecode import unidecode
 from funciones import conectarBaseDatos
-
+from datos import *
 def fake_ciudad(conn,cursor):
     fichero = leer_ciudad()
     datos_ciudad = [(ciudad['codigo_postal'], ciudad['nombre']) for ciudad in fichero]
@@ -34,25 +34,26 @@ def fake_direccion(conn,cursor, num_registros):
 
 
 def fake_persona(conn, cursor, num_registros, maxid):
-    fake = Faker('es_ES')
     lista_sexo = ['H','M']
-    lista_dni = []
+    lista_dni = set()
     lista_tsi = []
     lista_fecha = []
     letras = ("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E","T",)
     for _ in range(int(num_registros)):
-        dni_generado = False
+        if random.randint(0, 20) <= 15:
+            fake = Faker('es_ES')
+        else:
+            fake = Faker('ru_RU')
+        dni_generado = False 
         while not dni_generado:
             num_dni = random.randint(10000000, 99999999)
             dni = str(num_dni) + letras[num_dni % 23]
             if dni not in lista_dni:
-                lista_dni.append(dni)
+                lista_dni.add(dni)
                 dni_generado = True
         nombre = fake.first_name()
         apellido1 = fake.last_name()
         apellido2 = fake.last_name()
-        print(nombre,apellido1,apellido2)
-        input("coñete")
         fecha_de_nacimiento = str(fake.date_of_birth(maximum_age=120))
         sexo = random.choice(lista_sexo)
         if sexo == 'H':
@@ -62,12 +63,13 @@ def fake_persona(conn, cursor, num_registros, maxid):
         tsi = ''.join((apellido1[0:2].upper(), apellido2[0:2].upper(), num_sexo, fecha_de_nacimiento[2:4], fecha_de_nacimiento[5:7], fecha_de_nacimiento[-2:], str(random.randint(0, 999)).zfill(3)))
         lista_tsi.append(tsi)
         lista_fecha.append(fecha_de_nacimiento)
-        print(lista_tsi)
+        fake = Faker('es_ES')
         telefono = fake.phone_number().replace(' ', '').replace('+34', '')
-        email = nombre[0:3] + '.' + apellido1 + str(fecha_de_nacimiento)[0:4]+ "@gmail.com"
+        email = unidecode(nombre[0:3] + '.' + apellido1 + str(fecha_de_nacimiento)[0:4] + "@gmail.com")
         id_direccion = maxid[0][0]
         consulta = f"INSERT INTO persona VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
-        cursor.execute(consulta,(dni,nombre, apellido1, apellido2, fecha_de_nacimiento, sexo, telefono, unidecode(email), id_direccion))
+        cursor.execute(consulta, (dni, nombre, apellido1, apellido2, fecha_de_nacimiento, sexo, telefono, email.replace("'",''), id_direccion))
+
     return lista_dni, lista_tsi, lista_fecha
 
 def fake_paciente(conn, cursor, lista_dni, lista_tsi, lista_fecha):
@@ -104,6 +106,9 @@ def fake_paciente(conn, cursor, lista_dni, lista_tsi, lista_fecha):
         
 def fake_empleado(conn, cursor, lista_dni):
     lista_ss = []
+    consulta = f"SELECT MAX(id_empleado) from empleado"
+    cursor.execute(consulta)
+    max_empleado = cursor.fetchall()
     for dni in lista_dni:
         ss_generado = False
         while not ss_generado:
@@ -117,47 +122,76 @@ def fake_empleado(conn, cursor, lista_dni):
         horario_trabajo = f"{hora_entrada}.00,{hora_salida}.00"
         dias_vacaciones = random.randint(10,20)
         salario = random.randint(1000,10000)
-        consulta = f"SELECT MAX(id_empleado) from medico"
-        cursor.execute(consulta)
-        max_empleado = cursor.fetchall()
         consulta = f"INSERT INTO empleado (horario_trabajo, dias_vacaciones, salario, num_ss, dni_nie) VALUES (numrange(%s), %s, %s, %s, %s)"
         cursor.execute(consulta,(f"({horario_trabajo})", dias_vacaciones, salario, num_ss, dni))
-        return max_empleado[0][0]
+    return max_empleado[0][0]
 
 def fake_medicos(conn, cursor, maximo, num_registros):
-    lista_hospitales = [ "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma de Mallorca", 
-                       "Las Palmas de Gran Canaria", "Bilbao", "Alicante", "Córdoba", "Valladolid","Vigo","Gijón"]
-    estudios = ['Grado en Medicina con especialidad en Anestesiología y reanimación', 'Grado en Medicina con especialidad en Anatomía Patológica',
-                'Grado en Medicina con especialidad en Cardiología', 'Grado en Medicina con especialidad en Cirugía general',
-                'Grado en Medicina con especialidad en Dermatología', 'Grado en Medicina con especialidad en Diagnostico para la imagen',
-                'Grado en Medicina con especialidad en Digestología', 'Grado en Medicina con especialidad en Endocrinología',
-                'Grado en Medicina con especialidad en Ginecología y obstetricia', 'Grado en Medicina con especialidad en Medicina del deporte']
-    
     for _ in range(num_registros):
         maximo += 1
         experiencia_previa = f"Hospital de {random.choice(lista_hospitales)}"
         especialidad = random.randint(1,24)
         consulta = f"INSERT INTO medico VALUES (%s, %s, %s, %s)"
-        cursor.execute(consulta,(maximo,random.choice(estudios),experiencia_previa,especialidad))
-def fake_medicos(conn, cursor, maximo, num_registros):
-    lista_hospitales = [ "Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma de Mallorca", 
-                       "Las Palmas de Gran Canaria", "Bilbao", "Alicante", "Córdoba", "Valladolid","Vigo","Gijón"]
-    estudios = ['Grado de Enfermería con especialidad en Cirugía general', 'Grado de Enfermería con especialidad en Ginecología y obstetricia', 
-                 'Grado de Enfermería con especialidad en Pediatría', 'Grado de Enfermería con especialidad en Trabajo Social',
-                 'Grado de Enfermería con especialidad en Salud Mental']
-    
+        cursor.execute(consulta,(maximo,random.choice(estudios_medicos),experiencia_previa,especialidad))
+
+def fake_enfermeros(conn, cursor, maximo, num_registros):
     for _ in range(num_registros):
-        opcion = random.randint(0,1)
+        opcion = random.randint(0, 1)
+        maximo += 1
+        experiencia_previa = f"Hospital de {random.choice(lista_hospitales)}"
+        especialidad = random.randint(1, 24)
         if opcion == 0:
-            maximo += 1
-            experiencia_previa = f"Hospital de {random.choice(lista_hospitales)}"
-            especialidad = random.randint(1,24)
-            consulta = f"INSERT INTO enfermero (id_empleado, estudio, experiencia_previa, id_especialidad, num_planta) VALUES (%s, %s, %s, %s, %s, %s)"
-            cursor.execute(consulta,(maximo,random.choice(estudios),experiencia_previa,especialidad,1,))
+            consulta = f"INSERT INTO enfermero (id_empleado, estudio, experiencia_previa, id_especialidad, num_planta) VALUES (%s, %s, %s, %s, %s)"
+            cursor.execute(consulta, (maximo, random.choice(estudios_enfermeros), experiencia_previa, especialidad, 1,))
         else:
-            maximo += 1
-            experiencia_previa = f"Hospital de {random.choice(lista_hospitales)}"
-            especialidad = random.randint(1,24)
-            consulta = f"INSERT INTO enfermero (id_empleado, estudio, experiencia_previa, id_especialidad, id_medico) VALUES (%s, %s, %s, %s, %s, %s)"
-            cursor.execute(consulta,(maximo,random.choice(estudios),experiencia_previa,especialidad,))
-            ## HAY QUE HACER QUE SELECCIONE RANDOM DE ENTRE TODOS LOS MEDICOS
+            consulta = f"SELECT id_empleado FROM medico ORDER BY RANDOM() LIMIT 1"
+            cursor.execute(consulta)
+            id_medico = cursor.fetchone()[0]
+            consulta = f"INSERT INTO enfermero (id_empleado, estudio, experiencia_previa, id_especialidad, id_medico) VALUES (%s, %s, %s, %s, %s)"
+            cursor.execute(consulta, (maximo, random.choice(estudios_enfermeros), experiencia_previa, especialidad, id_medico))
+
+def fake_administrativo(conn, cursor, maximo, num_registros):
+    for _ in range(num_registros):
+        maximo += 1
+        estudios = 'Técnico Superior en Documentación y Administración Sanitarias'
+        experiencia_previa = f"Hospital de {random.choice(lista_hospitales)}"
+        consulta = f"INSERT INTO administrativo VALUES (%s, %s, %s)"
+        cursor.execute(consulta,(maximo,estudios,experiencia_previa))
+
+def fake_recursos_humanos(conn, cursor, maximo, num_registros):
+    lista_hospitales = ["Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma de Mallorca",
+                            "Las Palmas de Gran Canaria", "Bilbao", "Alicante", "Córdoba", "Valladolid", "Vigo", "Gijón"]
+    for _ in range(num_registros):
+        maximo += 1
+        experiencia_previa = f"Hospital de {random.choice(lista_hospitales)}"
+        consulta = f"INSERT INTO recursos_humanos VALUES (%s, %s, %s)"
+        cursor.execute(consulta,(maximo,random.choice(estudios_recursos_humanos),experiencia_previa))
+    
+def fake_diagnostico(conn,cursor,num_registros):
+    lista_descripciones = []
+    consulta = f"SELECT MAX(id_diagnostico) from diagnostico"
+    cursor.execute(consulta)
+    max_diagnostico = cursor.fetchone()[0]
+    for _ in range(num_registros):
+        consulta = f"SELECT id_patologia FROM patologia ORDER BY RANDOM() LIMIT 1"
+        cursor.execute(consulta)
+        id_patologia = cursor.fetchone()[0]
+        motivo = random.choice(palabras_clave)
+        descripcion = random.choice(descripciones[motivo])
+        diagnostico = f"{motivo} {descripcion}"
+        lista_descripciones.append(diagnostico)
+        consulta = f"INSERT INTO diagnostico (id_patologia,descripcion) VALUES (%s, %s)"
+        cursor.execute(consulta,(id_patologia, diagnostico))
+    return lista_descripciones, max_diagnostico
+
+def fake_visita(conn, cursor, lista_descripciones, max_diagnostico):
+    for motivo in lista_descripciones:
+        max_diagnostico += 1
+        cursor.execute("SELECT id_empleado FROM medico ORDER BY RANDOM() LIMIT 1")
+        id_medico = cursor.fetchone()[0]
+        cursor.execute("SELECT tarjeta_sanitaria FROM paciente ORDER BY RANDOM() LIMIT 1")
+        tsi = cursor.fetchone()[0]
+        cursor.execute("SELECT id_consulta, num_planta FROM consulta ORDER BY RANDOM() LIMIT 1")
+        id_consulta, num_planta = cursor.fetchone()
+        consulta = f"INSERT INTO visita (id_medico,tarjeta_sanitaria,id_diagnostico,id_consulta,num_planta,motivo_visita) VALUES (%s, %s, %s, %s, %s, %s)"
+        cursor.execute(consulta,(id_medico,tsi,max_diagnostico,id_consulta,num_planta,motivo))

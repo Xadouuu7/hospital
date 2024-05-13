@@ -183,12 +183,13 @@ def menuInformatico(usuario, conn, cursor):
     while bucle:
         try:
             os.system('cls')
-            print('-' * 40)
-            print('Menú informático')
-            print('-' * 40, end='\n\n\n')
-            print("1. Meter pacientes")
-            print("2. Meter medicos")
-            print("3. Meter enfermeros")
+            titulo('Menú informático')
+            print('1. Insertar pacientes')
+            print('2. Insertar medicos')
+            print('3. Insertar enfermeros')
+            print('4. Insertar administrativo')
+            print('5. Insertar recursos humanos')
+            print('6. Insertar visitas')
             print("8. Salir", end='\n\n\n')
             respuesta = input("Escoger una opcion: ")
             if respuesta == '1':
@@ -210,6 +211,27 @@ def menuInformatico(usuario, conn, cursor):
                 maxid = fake_direccion(usuario,cursor,int(respuesta))
                 lista_dni, lista_tsi, lista_fecha  = fake_persona(usuario,cursor,respuesta, maxid)
                 maximo = fake_empleado(usuario, cursor, lista_dni)
+                fake_enfermeros(conn, cursor, maximo, respuesta)
+            elif respuesta == '4':
+                titulo("Insertar administrativo")
+                respuesta = int(input("Número administrativo: "))
+                maxid = fake_direccion(usuario,cursor,int(respuesta))
+                lista_dni, lista_tsi, lista_fecha  = fake_persona(usuario,cursor,respuesta, maxid)
+                maximo = fake_empleado(usuario, cursor, lista_dni)
+                fake_administrativo(conn, cursor, maximo, respuesta)
+            elif respuesta == '5':
+                titulo("Insertar recursos humanos")
+                respuesta = int(input("Número de empleados de recursos humanos: "))
+                maxid = fake_direccion(usuario,cursor,int(respuesta))
+                lista_dni, lista_tsi, lista_fecha  = fake_persona(usuario,cursor,respuesta, maxid)
+                maximo = fake_empleado(usuario, cursor, lista_dni)
+                fake_recursos_humanos(conn, cursor, maximo, respuesta)
+            elif respuesta == '6':
+                ## DIAGNOSITCOS
+                titulo("Insertar visitas")
+                respuesta = int(input("Número de visitas: "))
+                lista_descripciones, max_diagnostico = fake_diagnostico(conn,cursor,respuesta)
+                fake_visita(conn,cursor,lista_descripciones,max_diagnostico)
         except Exception as error:
             print(f"Error: {error}")
             input("Enter per continuar: ")
