@@ -8,8 +8,8 @@ nav_order: 5
 
 Per poder fer les proves inicials, l'Hospital de Blanes ens demana que creem dades aleatòries en cadascuna de les taules. Aquestes dades han de tener sentit i format correcte. En concret ens demanen unes 100.000 visites, 50.000 pacients, 100 metges/sses, 200 infermers/res i 150 empleats variats més. 
 
-[Arxiu de Dummy Data](/python/Bloque%20Conexión%20Login/dummy.py)
-[Arxiu del menú des d'on es pot executar](/python/Bloque%20Conexión%20Login/menus.py)
+- [Arxiu de Dummy Data](/python/Bloque%20Conexión%20Login/dummy.py)
+- [Arxiu del menú des d'on es pot executar](/python/Bloque%20Conexión%20Login/menus.py)
 
 # Com generem les dades per diferents taules?
 
@@ -344,9 +344,9 @@ Igual que metge/ssa però amb una llista diferent per els diferents estudis que 
 ## Materials: general, quiròfan i laboratori
 
 Pels materials tant general, com de quiròfan i de laboratori simplement hem fet una petita investigació sobre els diferents materials que es poden fer servir. Amb aquesta investigació en diferents pàgines webs del material emprat, hem creat tres arxius on estan els diferents `INSERT` necessaris per tenir-ho dins de la base de dades.
-[Material general](/python/Bloque%20Conexión%20Login/material_general.sql)
-[Material Quiròfan](/python/Bloque%20Conexión%20Login/material_quiròfan.sql)
-[Material Laboratori](python/Bloque%20Conexión%20Login/material_laboratori.sql)
+- [Material general](/python/Bloque%20Conexión%20Login/material_general.sql)
+- [Material Quiròfan](/python/Bloque%20Conexión%20Login/material_quiròfan.sql)
+- [Material Laboratori](python/Bloque%20Conexión%20Login/material_laboratori.sql)
 
 ## Generar i eliminar dades des del menú de l'aplicació
 
