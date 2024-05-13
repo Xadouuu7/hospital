@@ -19,6 +19,9 @@ def fake_ciudad(conn,cursor):
     
 def fake_direccion(conn,cursor, num_registros):
     fake = Faker('es_ES')
+    consulta = f"SELECT CASE WHEN MAX(id_direccion) IS NULL THEN '1' ELSE MAX(id_direccion) END FROM direccion;"
+    cursor.execute(consulta)
+    max_idDireccion = cursor.fetchall()
     for _ in range(num_registros):
         direccion = fake.street_name()
         numero = random.randint(1,99)
@@ -27,30 +30,26 @@ def fake_direccion(conn,cursor, num_registros):
         id_ciudad = random.randint(1,9276)
         consulta = f"INSERT INTO direccion (direccion, numero, piso, puerta, id_ciudad) VALUES (%s, %s, %s, %s, %s)"
         cursor.execute(consulta,(direccion, numero, piso, puerta, id_ciudad))
-        consulta = f"SELECT MAX(id_direccion) from direccion"
-        cursor.execute(consulta)
-    max_idDireccion = cursor.fetchall()
-    return max_idDireccion
+    return max_idDireccion[0][0] 
 
 
-def fake_persona(conn, cursor, num_registros, maxid):
+def fake_persona(conn, cursor, num_registros, id_direcion):
     lista_sexo = ['H','M']
-    lista_dni = set()
+    lista_dni = []
     lista_tsi = []
     lista_fecha = []
     letras = ("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E","T",)
+    cursor.execute("SELECT CASE WHEN MAX(dni_nie) IS NULL THEN '10000000A' ELSE MAX(dni_nie) END FROM persona;")
+    dni_minimo = cursor.fetchone()[0][:-1]
     for _ in range(int(num_registros)):
         if random.randint(0, 20) <= 15:
             fake = Faker('es_ES')
         else:
             fake = Faker('ru_RU')
-        dni_generado = False 
-        while not dni_generado:
-            num_dni = random.randint(10000000, 99999999)
-            dni = str(num_dni) + letras[num_dni % 23]
-            if dni not in lista_dni:
-                lista_dni.add(dni)
-                dni_generado = True
+        dni_minimo = int(dni_minimo)  + 1
+        print(dni_minimo)
+        dni = str(dni_minimo) + letras[dni_minimo % 23]
+        lista_dni.append(dni)
         nombre = fake.first_name()
         apellido1 = fake.last_name()
         apellido2 = fake.last_name()
@@ -66,10 +65,9 @@ def fake_persona(conn, cursor, num_registros, maxid):
         fake = Faker('es_ES')
         telefono = fake.phone_number().replace(' ', '').replace('+34', '')
         email = unidecode(nombre[0:3] + '.' + apellido1 + str(fecha_de_nacimiento)[0:4] + "@gmail.com")
-        id_direccion = maxid[0][0]
+        id_direcion += 1
         consulta = f"INSERT INTO persona VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
-        cursor.execute(consulta, (dni, nombre, apellido1, apellido2, fecha_de_nacimiento, sexo, telefono, email.replace("'",''), id_direccion))
-
+        cursor.execute(consulta, (dni, nombre, apellido1, apellido2, fecha_de_nacimiento, sexo, telefono, email.replace("'",''), id_direcion))
     return lista_dni, lista_tsi, lista_fecha
 
 def fake_paciente(conn, cursor, lista_dni, lista_tsi, lista_fecha):

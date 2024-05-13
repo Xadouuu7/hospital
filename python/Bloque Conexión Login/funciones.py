@@ -15,7 +15,7 @@ def titulo(string):
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
         db_config = {
-            'host': '10.94.255.236',
+            'host': '192.168.1.73',
             'user': usuario,
             'password': contraseña,
             'dbname':'hospital'

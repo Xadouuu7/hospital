@@ -190,6 +190,7 @@ def menuInformatico(usuario, conn, cursor):
             print('4. Insertar administrativo')
             print('5. Insertar recursos humanos')
             print('6. Insertar visitas')
+            print('7. Borrar dummy')
             print("8. Salir", end='\n\n\n')
             respuesta = input("Escoger una opcion: ")
             if respuesta == '1':
@@ -227,11 +228,19 @@ def menuInformatico(usuario, conn, cursor):
                 maximo = fake_empleado(usuario, cursor, lista_dni)
                 fake_recursos_humanos(conn, cursor, maximo, respuesta)
             elif respuesta == '6':
-                ## DIAGNOSITCOS
                 titulo("Insertar visitas")
                 respuesta = int(input("Número de visitas: "))
                 lista_descripciones, max_diagnostico = fake_diagnostico(conn,cursor,respuesta)
                 fake_visita(conn,cursor,lista_descripciones,max_diagnostico)
+            elif respuesta == '7':
+                titulo("Borrar dummy")
+                respuesta = input("1 para confimar: ")
+                if respuesta == '1':
+                    cursor.execute('TRUNCATE TABLE persona CASCADE;')
+                    cursor.execute('TRUNCATE TABLE direccion CASCADE;')
+                    cursor.execute('TRUNCATE TABLE diagnostico CASCADE;')
+                    cursor.execute("SELECT setval('direccion_id_direccion_seq', 1, true);")
+                    cursor.execute("SELECT setval('diagnostico_id_diagnostico_seq', 1, true);")
         except Exception as error:
             print(f"Error: {error}")
             input("Enter per continuar: ")
