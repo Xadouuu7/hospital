@@ -62,27 +62,27 @@ Com es pot veure, els diferents rols que tenen accés a la Base de Dades s'han e
 El primer pas és crear un certificat SSL/TLS. Per fer-ho, utilitzarem OpenSSL, una eina que ens ajudarà a aconseguir-ho.
 
 Aquesta comanda generarà una nova sol·licitud de signatura de certificat (CSR).
-```
+```bash
 sudo openssl req -new -text -out server.req
 ```
 
 ara farem una operació RSA amb la següent ordre, que agafarà la clau privada RSA de l'arxiu ```privkey.pem``` i guardarà la clau en un ```arxiu.key```
-```
+```bash
 sudo openssl rsa -in privkey.pem -out server.key
 ```
 
 Aquesta comanda genera un certificat autofirmat en el qual agafarà la sol·licitud de certificat ```server.req```, la clau privada del certificat ```server.key``` i generarà un fitxer anomenat ```server.crt```, creant així un certificat X.509 autofirmat.
-```
+```bash
 sudo openssl req -x509 -in server.req -text -key server.key -out server.crt
 ```
 
 Ara modificarem els fitxers ```server.key``` i ```server.crt``` perquè només el propietari tingui permisos de lectura i escriptura.
-```
+```bash
 sudo chmod og-rwx server.key server.crt
 ```
 
 Traslladem els fitxers a la ruta de destinació i canviem el propietari i el grup a 'postgres' de tots els fitxers ```server.key``` i ```server.crt```.
-```
+```bash
 mv server.crt server.key /var/lib/postgresql/15/main/
 chown -R postgres:postgres server.*
 ```
@@ -93,7 +93,7 @@ Per configurar correctament PostgreSQL, necessitaràs accedir a l'arxiu de confi
 - ```ssl_cert_file```, hauràs d'especificar la ruta del teu arxiu .crt que conté el certificat SSL.
 - ```ssl_key_file```, hauràs de proporcionar la ruta del teu arxiu .key que conté la clau privada SSL.
 
-```
+```bash
 # - SSL -
 
 ssl = on
@@ -113,7 +113,7 @@ ssl_key_file = '/var/lib/postgresql/15/main/server.key'
 ```
 
 Amb aquesta configuració només es permet que les connexions locals puguin accedir a la base de dades sense cap informació addicional. Totes les connexions IPv4 hauran de autenticar-se utilitzant MD5 a través de SSL, el que ens proporciona una capa addicional de seguretat.
-```
+```bash
 # Database administrative login by Unix domain socket
 local   all             postgres                                peer
 
@@ -141,7 +141,7 @@ Aquí la comprovació de que estem connectats utilitzant SSL.
 Aprofitant que l'Isaac tenia el repte de Datamasking seguim els passos per a instal·lar-lo i activar-lo.
 
 Primer de tot despleguem l'extensió en el servidor amb les següents comandes
-```
+```bash
 sudo apt install pgxnclient postgresql-server-dev-15
 sudo pgxn install postgresql_anonymizer
 ```
@@ -151,14 +151,14 @@ Aquí les comprovacions
 ![](imagenes/postgres/bloc_seguretat/instalacion2.png)
 
 Una vegada fet carreguem l'extensió en la nostra base de dades:
-```
+```bash
 ALTER DATABASE hospital SET session_preload_libraries = 'anon';
 ```
 
 ![](imagenes/postgres/bloc_seguretat/alter.png)
 
 Després dins de la nostra base de dades creem l'extensió:
-```
+```bash
 CREATE EXTENSION anon CASCADE;
 ```
 ![](imagenes/postgres/bloc_seguretat/createextension.png)
