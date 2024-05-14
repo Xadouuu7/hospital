@@ -75,40 +75,39 @@ Després creem una variable per que s'executi la inserció dins de la Base de Da
 
 ## Persona
 
-En la nostra base de dades tenim una taula per guardar a totes les persones (siguin pacients o empleats).
-Tenim una funció per generar a les persones de manera aleatoria.
+En la nostra base de dades tenim una taula per guardar a totes les persones (siguin pacients o empleats). 
+Tenim una funció per generar a les persones de manera aleatoria. La funció s'anomena `fake_persona()` i passem per paràmetres la connexió a la base de dades, el cursor, el `num_registros` i la `id_direccion`.
 Aquesta funció primer té diferents llistes que necessitem a l'hora de generar certes columnes de la taula: sexe, dni, tarjeta sanitària i data de naixement. A l'hora d'escollir les lletres del dni utilitzem una tupla.
 
 ```python
-def fake_persona(conn, cursor, num_registros, maxid):
-    fake = Faker('es_ES')
+def fake_persona(conn, cursor, num_registros, id_direcion):
     lista_sexo = ['H','M']
     lista_dni = []
     lista_tsi = []
     lista_fecha = []
     letras = ("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E","T",)
+    cursor.execute("SELECT CASE WHEN MAX(dni_nie) IS NULL THEN '10000000A' ELSE MAX(dni_nie) END FROM persona;")
+    dni_minimo = cursor.fetchone()[0][:-1]
 ```
 
-Després per generar un dni vàlid, utilitzem la tupla i un `for` per poder crear la quantitat de DNIs que es demanin des del menú amb l'`input`. Després amb un `while` generem la quantitat de DNIs necessaris.
+Utilitzem un cursor que selecciona el dni més gran que hi ha a la taula per transformar-lo a `integer` i després sumar-li 1, d'aquesta manera no hi ha DNIs repetits i també va més ràpid.
 
 ```python
-for _ in range(int(num_registros)):
-    if random.randint(0, 20) <= 15:
-        fake = Faker('es_ES')
-    else:
-        fake = Faker('ru_RU')
-    dni_generado = False 
-    while not dni_generado:
-        num_dni = random.randint(10000000, 99999999)
-        dni = str(num_dni) + letras[num_dni % 23]
-        if dni not in lista_dni:
-            lista_dni.add(dni)
-            dni_generado = True
+    for _ in range(int(num_registros)):
+        if random.randint(0, 20) <= 15:
+            fake = Faker('es_ES')
+        else:
+            fake = Faker('ru_RU')
+        dni_minimo = int(dni_minimo)  + 1
+        print(dni_minimo)
+        dni = str(dni_minimo) + letras[dni_minimo % 23]
+        lista_dni.append(dni)
 ```
+A l'hora de crear persones utilitzem un número aleatori, aquest número aleatori l'utilitzem per crear persones amb noms espanyols o amb l'alfabet ciríl·lic. Crea un número aleatori entre 0 i 20, si aquest número és més petit o igual que 15 crea persones amb noms espanyols i sino, crea persones que tinguin el nom en alfabet ciríl·lic. 
 
-Primer generem un número aleatori entre 10000000 i 99999999, una vegada tenim aquest número creem una variable que es diu `dni` on fem una combinació del número generat prèviament i fem el mod 23 del número generat per afegir la lletra que pertoca segons el número que ha sorgit. Utilitzem una llista per assegurar-nos de que els DNIs generats d'una vegada no es repeteixen: sí el dni no és a la `lista_dni` l'escriu dins la llista i també es guarda a la variable. 
+Passem el DNI a string per poder afegir la lletra que li pertoca al DNI fent el mòdul 23 del número del DNI generat anteriorment.
 
-Després, per generar el nom i els cognoms de la persona utilitzem la llibreria `faker` en espanyol, d'aquesta manera ens genera noms i cognoms que puguin ser en el nostre idioma.
+Després, per generar el nom i els cognoms de la persona utilitzem la llibreria `faker`, i com hem comentat anteriorment, ho fa en espanyol o en alfabet ciríl·lic segons el número aleatori que es genera.
 
 ```python
 nombre = fake.first_name()
@@ -293,7 +292,8 @@ Totes les funcions que generen empleats entren per paràmetre la connexió a la 
 
 ### Metges/es
 
-Per a crear un metge utilitzem un `for` que recorre la quantitat de vegades que s'ha posat per paràmetre a `num_registros`. Cada cop que el `for` s'executa s'afegeix 1 a l'`id_empleado` per que sempre agafi l'últim. Per afegir els estudis, utilitzem una llista 
+Per a crear un metge utilitzem un `for` que recorre la quantitat de vegades que s'ha posat per paràmetre a `num_registros`. Cada cop que el `for` s'executa s'afegeix 1 a l'`id_empleado` per que sempre agafi l'últim. Per afegir els estudis, utilitzem una llista:
+
 ```python
     for _ in range(num_registros):
         maximo += 1
@@ -302,11 +302,13 @@ Per a crear un metge utilitzem un `for` que recorre la quantitat de vegades que 
         consulta = f"INSERT INTO medico VALUES (%s, %s, %s, %s)"
         cursor.execute(consulta,(maximo,random.choice(estudios_medicos),experiencia_previa,especialidad))
 ```
+
 Per generar l'experiència previa utilitzem la frase "Hospital de" i d'una llista anomenada `lista_hospitales` on tenim diversos municipis ho fem de manera aleatoria. A l'hora d'escollir l'especialitat que té el metge fem que ho esculli de manera aleatoria dins de l'`id_especialitat` des de l'1 fins el 24 (que són les especialitats que poden ser de metge). Després s'executa el cursor que fa l'`INSERT` dins de la base de dades.
 
 ### Infermer/es
 
 Els/les infermer/es poden dependre d'una planta o d'un metge, per això primer fem una variable `opcion` que esculli de manera aleatoria el 0 o l'1. Si l'opció és 0 significa que depèn d'una planta i per tant posem de manera automàtica la planta. Si es genera un 1 significa que depèn d'un metge i per tant afegim un id de metge a l'empleat.
+
 ```python
         if opcion == 0:
             consulta = f"INSERT INTO enfermero (id_empleado, estudio, experiencia_previa, id_especialidad, num_planta) VALUES (%s, %s, %s, %s, %s)"
@@ -337,13 +339,59 @@ def fake_administrativo(conn, cursor, maximo, num_registros):
 
 Igual que metge/ssa però amb una llista diferent per els diferents estudis que es poden tenir si treballes a recursos humans.
 
+## Diagnòstic
+
+Utilitzem una funció anomenada `fake_diagnostico()` a la qual li passem per paràmetres la connexió a la base de dades, el cursor i el número de registres que es volen crear.
+Creem una llista anomenada `lista_descripciones` on guardem una combinació de `motivo` i `descripción` de les llistes que tenim a l'arxiu de `datos.py`. Seleccionem l'id màxim del diagnòstic perque esculli l'últim que hi ha a la base de dades.
+
+```python
+def fake_diagnostico(conn,cursor,num_registros):
+    lista_descripciones = []
+    consulta = f"SELECT MAX(id_diagnostico) from diagnostico"
+    cursor.execute(consulta)
+    max_diagnostico = cursor.fetchone()[0]
+```
+
+Després utilitzem un `for` segons la quantitat de `num_registres` que s'hagi indicat. Dins d'aquest `for` seleccionem una `id_patologia` aleatoria, fem que esculli una paraula clau aleatoriament per utilitzar-la a la descripció del diagnòstic i també fem el mateix amb la descripció. Després ho juntem tot perquè sigui una sola variable que sigui la descripció del diagnòstic que hi ha dins de la taula de la Base de dades. 
+
+```python
+    for _ in range(num_registros):
+        consulta = f"SELECT id_patologia FROM patologia ORDER BY RANDOM() LIMIT 1"
+        cursor.execute(consulta)
+        id_patologia = cursor.fetchone()[0]
+        motivo = random.choice(palabras_clave)
+        descripcion = random.choice(descripciones[motivo])
+        diagnostico = f"{motivo} {descripcion}"
+        lista_descripciones.append(diagnostico)
+        consulta = f"INSERT INTO diagnostico (id_patologia,descripcion) VALUES (%s, %s)"
+        cursor.execute(consulta,(id_patologia, diagnostico))
+    return lista_descripciones, max_diagnostico
+```
+
 ## Visites
 
-## Diagnòstic
+La funció que genera visites s'anomena `fake_visita()` i passem per paràmetres la connexió a la base de dades, el cursor, la llista de les descripcions (que es una de les llistes que hi ha a l'arxiu anomenat `datos.py`) i el número màxim del diagnòstic.
+
+```python
+def fake_visita(conn, cursor, lista_descripciones, max_diagnostico):
+    for motivo in lista_descripciones:
+        max_diagnostico += 1
+        cursor.execute("SELECT id_empleado FROM medico ORDER BY RANDOM() LIMIT 1")
+        id_medico = cursor.fetchone()[0]
+        cursor.execute("SELECT tarjeta_sanitaria FROM paciente ORDER BY RANDOM() LIMIT 1")
+        tsi = cursor.fetchone()[0]
+        cursor.execute("SELECT id_consulta, num_planta FROM consulta ORDER BY RANDOM() LIMIT 1")
+        id_consulta, num_planta = cursor.fetchone()
+        consulta = f"INSERT INTO visita (id_medico,tarjeta_sanitaria,id_diagnostico,id_consulta,num_planta,motivo_visita) VALUES (%s, %s, %s, %s, %s, %s)"
+        cursor.execute(consulta,(id_medico,tsi,max_diagnostico,id_consulta,num_planta,motivo))
+```
+
+Utilitzem un `for` per crear els motius de visita sumem 1 a l'ID de diagnòstic, selecciona de manera aleatoria: un id de metge, una tarjeta sanitària i un número de planta.
 
 ## Materials: general, quiròfan i laboratori
 
 Pels materials tant general, com de quiròfan i de laboratori simplement hem fet una petita investigació sobre els diferents materials que es poden fer servir. Amb aquesta investigació en diferents pàgines webs del material emprat, hem creat tres arxius on estan els diferents `INSERT` necessaris per tenir-ho dins de la base de dades.
+
 - [Material general](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/material_general.sql)
 - [Material Quiròfan](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/material_quiròfan.sql)
 - [Material Laboratori](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/material_laboratori.sql)
@@ -363,6 +411,7 @@ Dins del menú de l'informàtic/a hem afegit una opció per poder esborrar les d
                     cursor.execute("SELECT setval('direccion_id_direccion_seq', 1, true);")
                     cursor.execute("SELECT setval('diagnostico_id_diagnostico_seq', 1, true);")
 ```
+
 L'opció 7 del menú de l'informàtic és fer una execució de diferents cursors que eliminen la informació.
 
 ## Índexos
