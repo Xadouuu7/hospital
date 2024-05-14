@@ -157,8 +157,6 @@ def fake_administrativo(conn, cursor, maximo, num_registros):
         cursor.execute(consulta,(maximo,estudios,experiencia_previa))
 
 def fake_recursos_humanos(conn, cursor, maximo, num_registros):
-    lista_hospitales = ["Madrid", "Barcelona", "Valencia", "Sevilla", "Zaragoza", "Málaga", "Murcia", "Palma de Mallorca",
-                            "Las Palmas de Gran Canaria", "Bilbao", "Alicante", "Córdoba", "Valladolid", "Vigo", "Gijón"]
     for _ in range(num_registros):
         maximo += 1
         experiencia_previa = f"Hospital de {random.choice(lista_hospitales)}"
