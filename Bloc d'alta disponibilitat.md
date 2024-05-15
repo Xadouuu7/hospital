@@ -184,7 +184,7 @@ S'ha decidit programar l'execució de la còpia de seguretat del servidor de Pos
 
 En cas de que hi hagi algun problema amb la base de dades, hem de crear un script que faci una restauració de tota la base de dades.
 ## Script
-```
+```bash
 #!/bin/bash
 
 # Dades d'accés a POSTGRESQL server
