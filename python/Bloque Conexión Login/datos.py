@@ -16,7 +16,6 @@ estudios_recursos_humanos = ['Grado en Relaciones Laborales y Recursos Humanos',
 
 palabras_clave = ["lesión", "enfermedad", "consulta", "examen", "tratamiento", "cirugía", "emergencia", "control", "seguimiento", "dolor"]
 
-        # Lista de posibles descripciones para cada palabra clave
 descripciones = {
     "lesión": ["fractura", "esguince", "contusión", "quemadura", "corte", "luxación", "deportiva", "en la espalda"],
     "enfermedad": ["resfriado", "gripe", "diabetes", "hipertensión", "asma", "cáncer", "VIH/SIDA", "enfermedad autoinmune"],
@@ -29,9 +28,3 @@ descripciones = {
     "seguimiento": ["post-operatorio", "de tratamiento", "de embarazo", "enfermedad crónica", "de lesión", "de cirugía", "de rehabilitación", "de quimioterapia"],
     "dolor": ["de cabeza", "abdominal", "de espalda", "muscular", "articular", "en el pecho", "en las articulaciones", "neuropático"]
 }
-from faker import Faker
-fake = Faker('es_ES')
-print(fake.ascii_email())
-
-from unidecode import *
-print(unidecode('à'))

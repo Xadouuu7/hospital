@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="table">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="row" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id_visita" type="xs:integer" minOccurs="1" maxOccurs="1"></xs:element>
+                            <xs:element name="fecha_hora" type="xs:dateTime" minOccurs="1" maxOccurs="1"></xs:element>
+                            <xs:element name="tarjeta_sanitaria" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                            <xs:element name="dni_nie" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                            <xs:element name="paciente" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                            <xs:element name="motivo_visita" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                            <xs:element name="medico" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                            <xs:element name="especialidad" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

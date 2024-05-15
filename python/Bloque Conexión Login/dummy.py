@@ -47,7 +47,6 @@ def fake_persona(conn, cursor, num_registros, id_direcion):
         else:
             fake = Faker('ru_RU')
         dni_minimo = int(dni_minimo)  + 1
-        print(dni_minimo)
         dni = str(dni_minimo) + letras[dni_minimo % 23]
         lista_dni.append(dni)
         nombre = fake.first_name()
@@ -104,7 +103,7 @@ def fake_paciente(conn, cursor, lista_dni, lista_tsi, lista_fecha):
         
 def fake_empleado(conn, cursor, lista_dni):
     lista_ss = []
-    consulta = f"SELECT MAX(id_empleado) from empleado"
+    consulta = f"SELECT CASE WHEN MAX(id_empleado) IS NULL THEN '1' ELSE MAX(id_empleado) END from empleado"
     cursor.execute(consulta)
     max_empleado = cursor.fetchall()
     for dni in lista_dni:
@@ -167,7 +166,7 @@ def fake_recursos_humanos(conn, cursor, maximo, num_registros):
     
 def fake_diagnostico(conn,cursor,num_registros):
     lista_descripciones = []
-    consulta = f"SELECT MAX(id_diagnostico) from diagnostico"
+    consulta = f"SELECT CASE WHEN MAX(id_diagnostico) IS NULL THEN '1' ELSE MAX(id_diagnostico) END from diagnostico"
     cursor.execute(consulta)
     max_diagnostico = cursor.fetchone()[0]
     for _ in range(num_registros):
@@ -183,6 +182,7 @@ def fake_diagnostico(conn,cursor,num_registros):
     return lista_descripciones, max_diagnostico
 
 def fake_visita(conn, cursor, lista_descripciones, max_diagnostico):
+    fake = Faker('es_ES')
     for motivo in lista_descripciones:
         max_diagnostico += 1
         cursor.execute("SELECT id_empleado FROM medico ORDER BY RANDOM() LIMIT 1")
@@ -191,5 +191,5 @@ def fake_visita(conn, cursor, lista_descripciones, max_diagnostico):
         tsi = cursor.fetchone()[0]
         cursor.execute("SELECT id_consulta, num_planta FROM consulta ORDER BY RANDOM() LIMIT 1")
         id_consulta, num_planta = cursor.fetchone()
-        consulta = f"INSERT INTO visita (id_medico,tarjeta_sanitaria,id_diagnostico,id_consulta,num_planta,motivo_visita) VALUES (%s, %s, %s, %s, %s, %s)"
-        cursor.execute(consulta,(id_medico,tsi,max_diagnostico,id_consulta,num_planta,motivo))
+        consulta = f"INSERT INTO visita (id_medico,tarjeta_sanitaria,id_diagnostico,id_consulta,num_planta,fecha_hora,motivo_visita) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+        cursor.execute(consulta,(id_medico,tsi,max_diagnostico,id_consulta,num_planta,fake.date_time(),motivo))
