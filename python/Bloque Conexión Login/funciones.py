@@ -15,7 +15,7 @@ def titulo(string):
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
         db_config = {
-            'host': '192.168.1.73',
+            'host': '10.94.255.236',
             'user': usuario,
             'password': contraseña,
             'dbname':'hospital'
@@ -433,3 +433,30 @@ def patologiasMasComunes(usuario, conn, cursor):
     rows = cursor.fetchall()
     print(tabulate(rows, headers=['Patologia','Total'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
+
+def exportXML(usuario, conn, cursor):
+    titulo('Exportacion de visitas')
+    #fecha_inicial = input('Introduce la fecha inicial(YYYY-MM-DD):')
+    #fecha_final = input('Introduce la fecha final(YYYY-MM-DD):')
+    fecha_inicial = '1994-10-20'
+    fecha_final = '2000-10-20'
+    consulta = """
+    WITH xml_output AS (
+        SELECT query_to_xml('SELECT * FROM view_visita2 WHERE TO_CHAR(fecha_hora, ''YYYY-MM-DD'') BETWEEN '%s' AND '%s'', true, false, '') AS xml_result
+    )
+    SELECT REPLACE(xml_result::text, '<table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">', '<table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="visitas.xsd">
+    ') AS modified_xml_result
+    FROM xml_output;
+"""
+    
+    cursor.execute(consulta, (fecha_inicial, fecha_final))
+    xml_result = cursor.fetchone()[0]
+
+    nombre_archivo = 'visitas.xml'
+    with open(nombre_archivo, 'w',encoding='UTF-8') as archivo:
+        archivo.write(xml_result)
+    print(f"Los datos han sido exportados correctamente a '{nombre_archivo}'.")
+
+
+
+

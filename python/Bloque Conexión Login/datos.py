@@ -6,6 +6,7 @@ estudios_medicos = ['Grado en Medicina con especialidad en Anestesiología y rea
                 'Grado en Medicina con especialidad en Dermatología', 'Grado en Medicina con especialidad en Diagnostico para la imagen',
                 'Grado en Medicina con especialidad en Digestología', 'Grado en Medicina con especialidad en Endocrinología',
                 'Grado en Medicina con especialidad en Ginecología y obstetricia', 'Grado en Medicina con especialidad en Medicina del deporte']
+
 estudios_enfermeros = ['Grado de Enfermería con especialidad en Cirugía general', 'Grado de Enfermería con especialidad en Ginecología y obstetricia',
                 'Grado de Enfermería con especialidad en Pediatría', 'Grado de Enfermería con especialidad en Trabajo Social',
                 'Grado de Enfermería con especialidad en Salud Mental']
@@ -16,7 +17,6 @@ estudios_recursos_humanos = ['Grado en Relaciones Laborales y Recursos Humanos',
 
 palabras_clave = ["lesión", "enfermedad", "consulta", "examen", "tratamiento", "cirugía", "emergencia", "control", "seguimiento", "dolor"]
 
-        # Lista de posibles descripciones para cada palabra clave
 descripciones = {
     "lesión": ["fractura", "esguince", "contusión", "quemadura", "corte", "luxación", "deportiva", "en la espalda"],
     "enfermedad": ["resfriado", "gripe", "diabetes", "hipertensión", "asma", "cáncer", "VIH/SIDA", "enfermedad autoinmune"],
@@ -29,9 +29,3 @@ descripciones = {
     "seguimiento": ["post-operatorio", "de tratamiento", "de embarazo", "enfermedad crónica", "de lesión", "de cirugía", "de rehabilitación", "de quimioterapia"],
     "dolor": ["de cabeza", "abdominal", "de espalda", "muscular", "articular", "en el pecho", "en las articulaciones", "neuropático"]
 }
-from faker import Faker
-fake = Faker('es_ES')
-print(fake.ascii_email())
-
-from unidecode import *
-print(unidecode('à'))

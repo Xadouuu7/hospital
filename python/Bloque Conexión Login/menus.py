@@ -153,7 +153,8 @@ def menuRecursosHumanos(usuario, conn, cursor):
             print("4. Informe visitas")
             print("5. Ranking médicos")
             print("6. Patologias más comunes")
-            print("7. Salir", end='\n\n\n')
+            print("7. Exportar a XML")
+            print("8. Salir", end='\n\n\n')
             respuesta = input("Escoger una opcion: ")
             if respuesta == '1':
                 id_direccion = darAltaDireccion(usuario, conn, cursor)
@@ -171,6 +172,8 @@ def menuRecursosHumanos(usuario, conn, cursor):
             elif respuesta == '6':
                 patologiasMasComunes(usuario, conn, cursor)
             elif respuesta == '7':
+                exportXML(usuario, conn, cursor)
+            elif respuesta == '8':
                 bucle = False
         except Exception as error:
             print(f"Error: {error}")
@@ -241,6 +244,10 @@ def menuInformatico(usuario, conn, cursor):
                     cursor.execute('TRUNCATE TABLE diagnostico CASCADE;')
                     cursor.execute("SELECT setval('direccion_id_direccion_seq', 1, true);")
                     cursor.execute("SELECT setval('diagnostico_id_diagnostico_seq', 1, true);")
+                    cursor.execute("SELECT setval('empleado_id_empleado_seq', 1, true);")
+                    cursor.execute("SELECT setval('visita_id_visita_seq', 1, true);")
+            elif respuesta == '8':
+                bucle = False
         except Exception as error:
             print(f"Error: {error}")
             input("Enter per continuar: ")
