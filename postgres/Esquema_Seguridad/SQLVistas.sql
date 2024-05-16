@@ -228,3 +228,23 @@ CREATE OR REPLACE VIEW view_malalties_comuns AS
     INNER JOIN patologia pat ON pat.id_patologia = dia.id_patologia
     GROUP BY "Patologia"
     ORDER BY "Total" DESC;
+
+--- VISTA QUE UTILIZAMOS PARA LA EXPORTACIÓN DEL XML
+
+CREATE OR REPLACE VIEW view_visita2 AS
+SELECT 
+    vi.id_visita,
+    vi.fecha_hora,
+    pa.tarjeta_sanitaria,
+    pepa.dni_nie,
+    concat(pepa.nombre, ' ', pepa.apellido1, ' ', pepa.apellido2) AS paciente,
+    vi.motivo_visita,
+    concat(peme.nombre, ' ', peme.apellido1) AS medico,
+	espe.nombre as "especialidad"
+   FROM visita vi
+     JOIN paciente pa ON vi.tarjeta_sanitaria::bpchar = pa.tarjeta_sanitaria
+     JOIN medico me ON vi.id_medico = me.id_empleado
+	 JOIN especialidad espe ON me.id_especialidad = espe.id_especialidad
+     JOIN persona pepa ON pepa.dni_nie = pa.dni_nie
+     JOIN empleado em ON em.id_empleado = me.id_empleado
+     JOIN persona peme ON peme.dni_nie = em.dni_nie;
