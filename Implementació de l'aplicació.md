@@ -17,6 +17,7 @@ La solució que nosaltres proposem és guardar el programa de python en el servi
 ### Com ho hem assolit
 
 Primer hem creat l'usuari que es connecta al servidor.
+
 ```bash
 sudo useradd -m program_user
 sudo passwd program_user 

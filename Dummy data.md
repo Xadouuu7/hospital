@@ -103,6 +103,7 @@ Utilitzem un cursor que selecciona el dni més gran que hi ha a la taula per tra
         dni = str(dni_minimo) + letras[dni_minimo % 23]
         lista_dni.append(dni)
 ```
+Aquesta part de la funció genera el dni de la persona. Primer utilitzem una variable `dni_minimo` que és el m
 A l'hora de crear persones utilitzem un número aleatori, aquest número aleatori l'utilitzem per crear persones amb noms espanyols o amb l'alfabet ciríl·lic. Crea un número aleatori entre 0 i 20, si aquest número és més petit o igual que 15 crea persones amb noms espanyols i sino, crea persones que tinguin el nom en alfabet ciríl·lic. 
 
 Passem el DNI a string per poder afegir la lletra que li pertoca al DNI fent el mòdul 23 del número del DNI generat anteriorment.
