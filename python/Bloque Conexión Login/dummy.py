@@ -7,6 +7,7 @@ from ficheros import *
 from unidecode import unidecode
 from funciones import conectarBaseDatos
 from datos import *
+
 def fake_ciudad(conn,cursor):
     fichero = leer_ciudad()
     datos_ciudad = [(ciudad['codigo_postal'], ciudad['nombre']) for ciudad in fichero]

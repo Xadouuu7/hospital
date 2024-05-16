@@ -40,5 +40,5 @@ def paginaInicial():
 
 def main():
     paginaInicial()
-    
+
 main()

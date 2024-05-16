@@ -6,6 +6,7 @@ estudios_medicos = ['Grado en Medicina con especialidad en Anestesiología y rea
                 'Grado en Medicina con especialidad en Dermatología', 'Grado en Medicina con especialidad en Diagnostico para la imagen',
                 'Grado en Medicina con especialidad en Digestología', 'Grado en Medicina con especialidad en Endocrinología',
                 'Grado en Medicina con especialidad en Ginecología y obstetricia', 'Grado en Medicina con especialidad en Medicina del deporte']
+
 estudios_enfermeros = ['Grado de Enfermería con especialidad en Cirugía general', 'Grado de Enfermería con especialidad en Ginecología y obstetricia',
                 'Grado de Enfermería con especialidad en Pediatría', 'Grado de Enfermería con especialidad en Trabajo Social',
                 'Grado de Enfermería con especialidad en Salud Mental']
