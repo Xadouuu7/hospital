@@ -4,7 +4,7 @@ from sys import exit
 from tabulate import tabulate
 from dummy import *
 def menuPrincipal():
-    os.system('cls')
+    os.system('clear')
     print('-' * 40)
     print('Menu Login')
     print('-' * 40, end='\n\n\n')
@@ -14,7 +14,7 @@ def menuPrincipal():
     print("Escoger una opcion: ", end='')
 
 def menuLogin():
-    os.system('cls')
+    os.system('clear')
     print('-' * 40)
     print('Iniciar Sesión')
     print('-' * 40, end='\n\n\n')
@@ -25,7 +25,7 @@ def menuLogin():
     return usuario,contraseña
 
 def menuRegistrarse():
-    os.system('cls')
+    os.system('clear')
     print('-' * 40)
     print('Registrarse')
     print('-' * 40, end='\n\n\n')
@@ -41,7 +41,7 @@ def menuPaciente(usuario, conn, cursor):
     bucle = True
     while bucle:
         try:
-            os.system('cls')
+            os.system('clear')
             print('-' * 40)
             print('Menú gestión paciente')
             print('-' * 40, end='\n\n\n')
@@ -67,7 +67,7 @@ def menuMedico(usuario, conn, cursor):
     bucle = True
     while bucle:
         try:
-            os.system('cls')
+            os.system('clear')
             print('-' * 40)
             print('Menú gestión medico')
             print('-' * 40, end='\n\n\n')
@@ -100,7 +100,7 @@ def menuAdministrativo(usuario, conn, cursor):
     bucle = True
     while bucle:
         try:
-            os.system('cls')
+            os.system('clear')
             print('-' * 40)
             print('Menú gestión Administrativo')
             print('-' * 40, end='\n\n\n')
@@ -143,7 +143,7 @@ def menuRecursosHumanos(usuario, conn, cursor):
     bucle = True
     while bucle:
         try:
-            os.system('cls')
+            os.system('clear')
             print('-' * 40)
             print('Menú gestión recursos humanos')
             print('-' * 40, end='\n\n\n')
@@ -172,7 +172,14 @@ def menuRecursosHumanos(usuario, conn, cursor):
             elif respuesta == '6':
                 patologiasMasComunes(usuario, conn, cursor)
             elif respuesta == '7':
-                exportXML(usuario, conn, cursor)
+                titulo('Exportar XML')
+                print('1. Exportar XML de las visitas entre dos fechas')
+                print('2. Exportar XML de las patologias mas comunes')
+                respuesta = input("Escoger una opcion: ")
+                if respuesta == '1':
+                    exportXML_visitas(usuario, conn, cursor)
+                elif respuesta == '2':
+                    exportXML_patologies(usuario, conn, cursor)
             elif respuesta == '8':
                 bucle = False
         except Exception as error:
@@ -185,7 +192,7 @@ def menuInformatico(usuario, conn, cursor):
     bucle = True
     while bucle:
         try:
-            os.system('cls')
+            os.system('clear')
             titulo('Menú informático')
             print('1. Insertar pacientes')
             print('2. Insertar medicos')
