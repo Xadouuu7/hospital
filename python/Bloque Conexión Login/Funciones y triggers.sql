@@ -140,7 +140,10 @@ BEGIN
             (current_user, now(), OLD.tarjeta_sanitaria, 'Eliminar paciente')
     ELSIF TG_OP = 'UPDATE' THEN
         INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
-            (current_user, now(), tarjeta_sanitaria, 'Cambiar paciente') --- <-- esto no sé muy bien, a ver como lo cambio
+            (current_user, now(), tarjeta_sanitaria, 'Agregar paciente')
+    ELSIF TG_OP = 'SELECT' THEN
+        INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
+            (current_user, now(), tarjeta_sanitaria, 'Mirar paciente') 
     END IF;
 END;
 

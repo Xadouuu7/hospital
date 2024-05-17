@@ -1,7 +1,7 @@
 ---
 title: Implementació de l'aplicació
 layout: home
-nav_order: 6
+nav_order: 7
 ---
 
 # Implementació de l'aplicació 
@@ -53,3 +53,4 @@ Iniciem l'usuari que hem creat i amb el qual s'inicia el programa:
 I per últim, tenim com s'inicialitza el programa:
 
 ![](/imagenes/postgres/Implementació%20aplicació/sesion.png)
+

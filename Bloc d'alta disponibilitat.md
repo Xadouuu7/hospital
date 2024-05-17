@@ -223,14 +223,3 @@ psql -h $SERVER -U $USER -f "$BACKUP_PATH/restore_$DATE.sql"
 ## Explicació del codi de restauració
 
 Aquest script és una eina per restaurar la base de dades en cas de que hi hagi algun problema. Primer s'asegura si existeix un arxiu de backup recent per poder restaurar-lo. Si no és així, busca l'arxiu més recent disponible, en cas de que no hi hagi cap arxiu de backup ho mostra per terminal. Si troba l'arxiu de backup, el descomprimeix i el restaura.
-
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
