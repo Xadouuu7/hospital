@@ -217,8 +217,8 @@ CREATE TABLE IF NOT EXISTS varios (
 );
 
 CREATE TABLE IF NOT EXISTS patologia (
-    id_patologia CHAR(4) PRIMARY KEY,
-    nombre VARCHAR(60) NOT NULL
+    id_patologia VARCHAR(20) PRIMARY KEY,
+    nombre TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS diagnostico (
