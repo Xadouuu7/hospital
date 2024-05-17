@@ -134,15 +134,16 @@ $$
 BEGIN
 	IF TG_OP = 'INSERT' THEN
         INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
-            (current_user, now(), NEW.tarjeta_sanitaria, 'Insertar paciente')
+            (current_user, now(), NEW.tarjeta_sanitaria, 'Insertar paciente');
     ELSIF TG_OP = 'DELETE' THEN
         INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
-            (current_user, now(), OLD.tarjeta_sanitaria, 'Eliminar paciente')
+            (current_user, now(), OLD.tarjeta_sanitaria, 'Eliminar paciente');
     ELSIF TG_OP = 'UPDATE' THEN
         INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
-            (current_user, now(), tarjeta_sanitaria, 'Agregar paciente')
+            (current_user, now(), tarjeta_sanitaria, 'Agregar paciente');
     END IF;
 END;
+$$
 
 --- TRIGGER PARA LA FUNCIÓN DEL LOG
 
