@@ -1,0 +1,19 @@
+<table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="patologies.xsd">
+    
+
+<row>
+  <Patologia>vaginofobia</Patologia>
+  <Total>179</Total>
+</row>
+
+<row>
+  <Patologia>fimosis</Patologia>
+  <Total>165</Total>
+</row>
+
+<row>
+  <Patologia>tetafobia</Patologia>
+  <Total>56</Total>
+</row>
+
+</table>

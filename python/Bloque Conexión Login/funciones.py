@@ -7,7 +7,7 @@ import os
 from tabulate import tabulate
 
 def titulo(string):
-    os.system('cls')
+    os.system('clear')
     print('-' * 40)
     print(string)
     print('-' * 40, end='\n\n\n')
@@ -135,7 +135,7 @@ def verVisitasMedico(usuario, conn, cursor):
     input("Enter per continuar: ")
 
 def verVisitasMedicoPaciente(usuario, conn, cursor):
-    os.system("cls")
+    os.system("clear")
     respuesta = input("Tarjeta sanitaria del paciente: ")
     consulta = "SELECT tarjeta_sanitaria, paciente, fecha_hora, motivo_visita, medico FROM public.view_visita WHERE tarjeta_sanitaria = %s AND num_ss = %s ORDER BY fecha_hora DESC;"
     cursor.execute(consulta, (respuesta,usuario))
@@ -145,7 +145,7 @@ def verVisitasMedicoPaciente(usuario, conn, cursor):
     input("Enter per continuar: ")
 
 def verDiagnosticoRecetaPaciente(usuario, conn, cursor):
-    os.system("cls")
+    os.system("clear")
     respuesta = input("Tarjeta sanitaria del paciente: ")
     consulta = "SELECT tarjeta_sanitaria, paciente, descripcion, medicamento, dosis, fecha_hora, medico FROM public.view_receta  WHERE tarjeta_sanitaria = %s AND num_ss = %s ORDER BY fecha_hora DESC;"
     cursor.execute(consulta, (respuesta,usuario))
@@ -236,7 +236,7 @@ def verVisitasAdministrativo(usuario, conn, cursor):
     input("Enter per continuar: ")
 
 def verOperacionesAdministrativoFecha(usuario,conn,cursor):
-    os.system("cls")
+    os.system("clear")
     fecha = input("Introduce la fecha deseada (YYYY-MM-DD): ")
     consulta = "SELECT * FROM view_reserva_quirofano WHERE TO_CHAR(fecha_hora_entrada,'YYYY-MM-DD') = %s"
     cursor.execute(consulta,(fecha,))
@@ -246,7 +246,7 @@ def verOperacionesAdministrativoFecha(usuario,conn,cursor):
     input("Enter per continuar: ")
     
 def verReservaHabitacion(usuario, conn, cursor):
-    os.system("cls")
+    os.system("clear")
     habitacion = input("Introduzca el numero de habitacion: ") 
     planta = input("Introduzca el numero de planta: ")
     titulo(f"Reservas Habitación | {habitacion}-{planta}")
@@ -257,7 +257,7 @@ def verReservaHabitacion(usuario, conn, cursor):
     input("Enter per continuar: ")
 
 def verVisitasProgramadas(usuario,conn,cursor):
-    os.system("cls")
+    os.system("clear")
     fecha = input("Introduce la fecha deseada (YYYY-MM-DD): ")
     consulta = "SELECT tarjeta_sanitaria, paciente, fecha_hora, motivo_visita, medico FROM view_visita WHERE TO_CHAR(fecha_hora,'YYYY-MM-DD') = %s"
     cursor.execute(consulta,(fecha,))
@@ -267,7 +267,7 @@ def verVisitasProgramadas(usuario,conn,cursor):
     input("Enter per continuar: ")
 
 def verInventarioQuirofano(usuario,conn,cursor):
-    os.system("cls")
+    os.system("clear")
     quirofano = input("Introduce el quirofano: ")
     planta = input("Introduce la planta: ")
     consulta = f"SELECT * FROM view_inv_quirofano WHERE planta = %s AND quirofano = %s"
@@ -312,14 +312,14 @@ def darAltaProfesion(usuario,conn,cursor,id_empleado):
             print("8. Salir", end='\n\n\n')
             respuesta = input("Escoger una opcion: ")
             if respuesta == '1':
-                os.system("cls")
+                os.system("clear")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 especialidad = input("Introduce su especialidad exacta: ")
                 consulta = "INSERT INTO medico VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s))"
                 cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad))
             elif respuesta == '2':
-                os.system("cls")
+                os.system("clear")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 especialidad = input("Introduce su especialidad exacta: ")
@@ -329,19 +329,19 @@ def darAltaProfesion(usuario,conn,cursor,id_empleado):
                 print("3. Salir", end='\n\n\n')
                 respuesta = input("Escoge una opción: ")
                 if respuesta == '1':
-                    os.system("cls")
+                    os.system("clear")
                     planta = input("Introduce el número de planta")
                     consulta = "INSERT INTO enfermero (id_empleado,estudio,experiencia_previa,id_especialidad,num_planta) VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s),%s)"
                     cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad,planta))
                 elif respuesta == '2':
-                    os.system("cls")
+                    os.system("clear")
                     num_ss = input("Introduce el número de la seguridad social del médico responsable: ")
                     consulta = "INSERT INTO enfermero (id_empleado,estudio,experiencia_previa,id_especialidad,id_medico) VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s),(SELECT id_empleado FROM empleado WHERE num_ss = %s))"
                     cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad,num_ss))
                 elif respuesta == '3':
                     bucle = False
             elif respuesta == '3':
-                os.system("cls")
+                os.system("clear")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 especialidad = input("Introduce su especialidad exacta: ")
@@ -350,26 +350,26 @@ def darAltaProfesion(usuario,conn,cursor,id_empleado):
                 consulta = "INSERT INTO cientifico VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s),%s,%s)"
                 cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad,id_laboratorio,num_planta))
             elif respuesta == '4':
-                os.system("cls")
+                os.system("clear")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 consulta = "INSERT INTO administrativo VALUES (%s,%s,%s)"
                 cursor.execute(consulta,(id_empleado,estudios,experiencia))
             elif respuesta == '5':
-                os.system("cls")
+                os.system("clear")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 consulta = "INSERT INTO recursos_humanos VALUES (%s,%s,%s)"
                 cursor.execute(consulta,(id_empleado,estudios,experiencia))
             elif respuesta == '6':
-                os.system("cls")
+                os.system("clear")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 especialidad = input("Introduce su especialidad exacta: ")
                 consulta = "INSERT INTO farmaceutico VALUES (%s,%s,%s,(SELECT id_especialidad FROM especialidad WHERE nombre = %s))"
                 cursor.execute(consulta,(id_empleado,estudios,experiencia,especialidad))
             elif respuesta == '7':
-                os.system("cls")
+                os.system("clear")
                 estudios = input("Introduce sus estudios: ")
                 experiencia = input("Introduce su experiéncia previa: ")
                 consulta = "INSERT INTO informatico VALUES (%s,%s,%s)"
@@ -381,7 +381,7 @@ def darAltaProfesion(usuario,conn,cursor,id_empleado):
             input("Enter per continuar: ")
 
 def consultarRecursos(usuario,conn,cursor):
-    os.system("cls")
+    os.system("clear")
     planta = input("Introduce la planta: ")
     consulta = f'SELECT "Habitaciones", "Quirófanos", "Enfermeros" FROM view_contador_planta WHERE "Planta" = %s'
     cursor.execute(consulta,(planta,))
@@ -434,7 +434,7 @@ def patologiasMasComunes(usuario, conn, cursor):
     print(tabulate(rows, headers=['Patologia','Total'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
-def exportXML(usuario, conn, cursor):
+def exportXML_visitas(usuario, conn, cursor):
     titulo('Exportacion de visitas')
     #fecha_inicial = input('Introduce la fecha inicial(YYYY-MM-DD):')
     #fecha_final = input('Introduce la fecha final(YYYY-MM-DD):')
@@ -452,10 +452,32 @@ def exportXML(usuario, conn, cursor):
     cursor.execute(consulta, (fecha_inicial, fecha_final))
     xml_result = cursor.fetchone()[0]
 
-    nombre_archivo = 'visitas.xml'
+    nombre_archivo = '/home/program_user/XML/visitas.xml'
     with open(nombre_archivo, 'w',encoding='UTF-8') as archivo:
         archivo.write(xml_result)
-    print(f"Los datos han sido exportados correctamente a '{nombre_archivo}'.")
+    print(f"Los datos han sido exportados correctamente a {nombre_archivo}.")
+    input('Enter para continuar')
+
+def exportXML_patologies(usuario, conn, cursor):
+    titulo('Exportacion de patologias')
+    consulta = """
+    WITH xml_output AS (
+        SELECT query_to_xml('SELECT * FROM view_malalties_comuns', true, false, '') AS xml_result
+    )
+    SELECT REPLACE(xml_result::text, '<table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">', '<table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="patologies.xsd">
+    ') AS modified_xml_result
+    FROM xml_output;
+"""
+    
+    cursor.execute(consulta)
+    xml_result = cursor.fetchone()[0]
+
+    nombre_archivo = '/home/program_user/XML/patologies.xml'
+    with open(nombre_archivo, 'w',encoding='UTF-8') as archivo:
+        archivo.write(xml_result)
+    print(f"Los datos han sido exportados correctamente a {nombre_archivo}.")
+    input('Enter para continuar')
+
 
 
 
