@@ -126,6 +126,25 @@ Nosaltres hem optat per utilitzar els XMLs que es generen des de l'aplicació i 
 
 Hem fet que la carpeta on es generan els diferents XMLs sigui accessible a qualsevol usuari que estigui dins de la mateixa xarxa, d'aquesta manera les dades dels gràfics sempre estan actualitzats.
 
+Utilitzem el [samba](https://www.samba.org) que és un programa que ens permet compartir carpetes en la xarxa. 
+Configurant el samba ens permet encriptar la connexió perque no estigui en text pla. Només em permés que l'únic usuari vàlid sigui `program_user`:
+
+```bash
+[xml]
+path = /home/program_user/XML
+public = no
+browseable = yes
+guest ok = no
+smb encrypt = required
+valid users = program_user
+```
+
+Hem utilitzat el WireShark per comprovar que efectivament les dades estan encriptades a la xarxa:
+
+![](/imagenes/postgres/power_bi/encriptado.png)
+
+Els usuaris que utilitzin el PowerBI hauràn de escriure la ruta de la carpeta compartida en la xarxa.
+
 Amb el PowerBI hem generat dos informes: Patologies més comuns i especialitats més visitades.
 
 ### Patologies més comuns
@@ -138,4 +157,4 @@ Amb el PowerBI hem generat dos informes: Patologies més comuns i especialitats 
 
 Es pot veure el PDF generat a partir de PowerBI aquí:
 
-[Informe](/postgres/PowerBI/Informes.pdf)
+[Informe en PDF](/postgres/PowerBI/Informes.pdf)
