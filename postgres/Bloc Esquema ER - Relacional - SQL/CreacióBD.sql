@@ -223,7 +223,7 @@ CREATE TABLE IF NOT EXISTS patologia (
 
 CREATE TABLE IF NOT EXISTS diagnostico (
     id_diagnostico SERIAL PRIMARY KEY,
-    id_patologia CHAR(4) NOT NULL,
+    id_patologia VARCHAR(20) NOT NULL,
     descripcion TEXT NOT NULL,
     FOREIGN KEY (id_patologia) REFERENCES patologia(id_patologia)
 );
