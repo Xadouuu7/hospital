@@ -141,14 +141,11 @@ BEGIN
     ELSIF TG_OP = 'UPDATE' THEN
         INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
             (current_user, now(), tarjeta_sanitaria, 'Agregar paciente')
-    ELSIF TG_OP = 'SELECT' THEN
-        INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
-            (current_user, now(), tarjeta_sanitaria, 'Mirar paciente') 
     END IF;
 END;
 
 --- TRIGGER PARA LA FUNCIÓN DEL LOG
 
 CREATE TRIGGER trigger_info_pacientes
-    AFTER SELECT OR INSERT OR DELETE OR UPDATE ON paciente
+    AFTER INSERT OR DELETE OR UPDATE ON paciente
     FOR EACH ROW EXECUTE FUNCTION log_informacion_pacientes();
