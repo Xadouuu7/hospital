@@ -84,13 +84,17 @@ SELECT REPLACE(xml_result::text, '<table xmlns:xsi="http://www.w3.org/2001/XMLSc
     FROM xml_output;
 ```
 
-[Enllaç a l'XML de les visites](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/visitas.xml)
-[Enllaç a l'XML de les patologies](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/patologies.xml)
+### XML
+
+- [Enllaç a l'XML de les visites](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/visitas.xml)
+- [Enllaç a l'XML de les patologies](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/patologies.xml)
+
+### XSD
 
 I els XSD que hem escrit són els següents:
 
-[Enllaç a l'XSD de les visites](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/visitas.xsd)
-[Enllaç a l'XSD de les patologies](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/patologies.xsd)
+- [Enllaç a l'XSD de les visites](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/visitas.xsd)
+- [Enllaç a l'XSD de les patologies](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/patologies.xsd)
 
 I després, la darrera part de la funció és la que serveix per crear l'arxiu dins del servidor i escriure l'XML:
 
