@@ -8,7 +8,7 @@ nav_order: 6
 
 S'ens demana que es pugui exportar diferents dades des del menú de l'aplicació. Nosaltres l'implementem al menú dels empleats de Recursos Humans perquè puguin descarregar-se l'XML que ells/es escullen i així poder utilitzar l'XML per generar diferents gràfics i taules d'informació rellevant amb la eina de PowerBI. Primer explicarem el codi d'exportació i després ensenyarem els XMLs dins de PowerBI amb diferents gràfics.
 
-[Enllaç al codi d'exportació](python/Bloque%20Conexión%20Login/funciones.py)
+[Enllaç al codi d'exportació](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/funciones.py)
 
 ## Bloc d'Exportació
 
