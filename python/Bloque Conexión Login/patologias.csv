@@ -1,5 +1,5 @@
-Id_patologia;Nombre
-A00;C�lera
+﻿Id_patologia;Nombre
+A00;Colera
 A000;Colera debido a vibrio cholerae o1, biotipo cholerae
 A001;Colera debido a vibrio cholerae o1, biotipo el tor
 A009;Colera no especificado
@@ -67,7 +67,7 @@ A083;Otras enteritis virales
 A084;Infeccion intestinal viral, sin otra especificacion
 A085;Otras infecciones intestinales especificadas
 A09;Diarrea y gastroenteritis de presunto origen infeccioso
-A15;Tuberculosis respiratoria, confirmada bacteriol�gica e histologicamente
+A15;Tuberculosis respiratoria, confirmada bacteriologica e histologicamente
 A150;Tuberculosis del pulmon, confirmada por hallazgo microscopico del bacilo tuberculoso en esputo, con o sin cultivo
 A151;Tuberculosis del pulmon, confirmada unicamente por cultivo
 A152;Tuberculosis del pulmon, confirmada histologicamente
@@ -93,7 +93,7 @@ A170;Meningitis tuberculosa (g01)
 A171;Tuberculoma meningeo (g07)
 A178;Otras tuberculosis del sistema nervioso
 A179;Tuberculosis del sistema nervioso, no especificada (g99.8)
-A18;Tuberculosis de otros �rganos
+A18;Tuberculosis de otros organos
 A180;Tuberculosis de huesos y articulaciones
 A181;Tuberculosis del aparato genitourinario
 A182;Linfadenopatia periferica tuberculosa
@@ -125,7 +125,7 @@ A213;Tularemia gastrointestinal
 A217;Tularemia generalizada
 A218;Otras formas de tularemia
 A219;Tularemia , no especificada
-A22;Carbunco (�ntrax)
+A22;Carbunco (antrax)
 A220;Carbunco cutaneo
 A221;Carbunco pulmonar
 A222;Carbunco gastrointestinal
@@ -158,9 +158,9 @@ A27;Leptospirosis
 A270;Leptospirosis icterohemorragica
 A278;Otras formas de leptospirosis
 A279;Leptospirosis, no especificada
-A28;Otras enfermedades zoon�ticas bacterianas, no clasificadas en otra parte
+A28;Otras enfermedades zoonoticas bacterianas, no clasificadas en otra parte
 A280;Pasteurelosis
-A281;Enfermedad por rasgu�o de gato
+A281;Enfermedad por rasguño de gato
 A282;Yersiniosis extraintestinal
 A288;Otras enfermedades zoonoticas bacterianas especificadas, no clasificadas en otra parte
 A289;Enfermedad zoonotica bacteriana, sin otra especificacion
@@ -200,7 +200,7 @@ A371;Tos ferina debida a bordetella parapertussis
 A378;Tos ferina debida a otras especies de bordetella
 A379;Tos ferina, no especificada
 A38;Escarlatina
-A39;Infecci�n meningoc�cica
+A39;Infeccion meningococica
 A390;Meningitis meningococica (g01)
 A391;Sindrome de waterhouse
 A392;Meningococemia aguda
@@ -209,7 +209,7 @@ A394;Meningococemia, no especificada
 A395;Enfermedad cardiaca debida a meningococo
 A398;Otras infecciones meningococicas
 A399;Infeccion meningococica, no especificada
-A40;Septicemia estreptoc�cica
+A40;Septicemia estreptococica
 A400;Septicemia debida a estreptococo, grupo a
 A401;Septicemia debida a estreptococo, grupo b
 A402;Septicemia debida a estreptococo, grupo d
@@ -248,9 +248,9 @@ A480;Gangrena gaseosa
 A481;Enfermedad de los legionarios
 A482;Enfermedad de los legionarios no neumonica [fiebre de pontiac]
 A483;Sindrome de choque toxico
-A484;Fiebre purpurica brasile�a
+A484;Fiebre purpurica brasileña
 A488;Otras enfermedades bacterianas especificadas
-A49;Infecci�n bacteriana de sitio no especificado
+A49;Infeccion bacteriana de sitio no especificado
 A490;Infeccion estafilococica, sin otra especificacion
 A491;Infeccion estreptococica, sin otra especificacion
 A492;Infeccion por haemophilus influenzae, sin otra especificacion
@@ -273,7 +273,7 @@ A513;Sifilis secundaria de piel y membranas mucosas
 A514;Otras sifilis secundarias
 A515;Sifilis precoz, latente
 A519;Sifilis precoz, sin otra especificacion
-A52;S�filis tard�a
+A52;Sifilis tardia
 A520;Sifilis cardiovascular
 A521;Neurosifilis sintomatica
 A522;Neurosifilis asintomatica
@@ -281,10 +281,10 @@ A523;Neurosifilis no especificada
 A527;Otras sifilis tardias sintomaticas
 A528;Sifilis tardia, latente
 A529;Sifilis tardia, no especificada
-A53;Otras s�filis y las no especificadas
+A53;Otras sifilis y las no especificadas
 A530;Sifilis latente, no especificada como precoz o tardia
 A539;Sifilis, no especificada
-A54;Infecci�n gonoc�cica
+A54;Infeccion gonococica
 A540;Infeccion gonococica del tracto genitourinario inferior sin absceso periuretral o de glandula accesoria
 A541;Infeccion gonococica del tracto genitourinario inferior con absceso periuretral y de glandulas accesorias
 A542;Pelviperitonitis gonococica y otras infecciones gonococicas genitourinarias
@@ -295,7 +295,7 @@ A546;Infeccion gonococica del ano y del recto
 A548;Otras infecciones gonococicas
 A549;Infeccion, gonococica, no especificada
 A55;Linfogranuloma (venereo) por clamidias
-A56;Otras enfermedades de transmisi�n sexual debidas a clamidias
+A56;Otras enfermedades de transmision sexual debidas a clamidias
 A560;Infeccion del tracto genitourinario inferior debida a clamidias
 A561;Infeccion del pelviperitoneo y otros organos genitourinarios debida a clamidias
 A562;Infecciones del tracto genitourinario debidas a clamidias, sin otra especificacion
@@ -308,7 +308,7 @@ A59;Tricomoniasis
 A590;Tricomoniasis urogenital
 A598;Tricomoniasis de otros sitios
 A599;Tricomoniasis, no especificada
-A60;Infecci�n anogenital debida a virus del herpes (herpes simple)
+A60;Infeccion anogenital debida a virus del herpes (herpes simple)
 A600;Infeccion de genitales y trayecto urogenital y debida a virus del herpes [herpes simple]
 A601;Infeccion de la piel perianal y recto por virus del herpes simple
 A609;Infeccion anogenital por virus del herpes simple, sin otra especificacion
@@ -425,13 +425,13 @@ A90;Fiebre del dengue [dengue clasico]
 A91;Fiebre del dengue hemorragico
 A92;Otras fiebres virales transmitidas por mosquitos
 A920;Enfermedad por virus chikungunya
-A921;Fiebre de o´nyong
+A921;Fiebre de oÂ´nyong
 A922;Fiebre equina venezolana
 A923;Fiebre del oeste del nilo
 A924;Fiebre del valle del rift
 A928;Otras fiebres virales especificadas transmitidas por mosquitos
 A929;Fiebre viral transmitida por mosquito, sin otra especificacion
-A93;Otras fiebres virales transmitidas por artr�podos, no clasificadas en otra parte
+A93;Otras fiebres virales transmitidas por artropodos, no clasificadas en otra parte
 A930;Enfermedad por virus de oropouche
 A931;Fiebre transmitida por flebotomos
 A932;Fiebre de colorado transmitida por garrapatas
@@ -441,13 +441,13 @@ A95;Fiebre amarilla
 A950;Fiebre amarilla selvatica
 A951;Fiebre amarilla urbana
 A959;Fiebre amarilla, no especificada
-A96;Fiebre hemorr�gica por arenavirus
+A96;Fiebre hemorragica por arenavirus
 A960;Fiebre hemorragica de junin
 A961;Fiebre hemorragica de machupo
 A962;Fiebre de lassa
 A968;Otras fiebres hemorragicas por arenavirus
 A969;Fiebre hemorragica por arenavirus, sin otra especificacion
-A98;Otras fiebres virales hemorr�gicas, no clasificadas en otra parte
+A98;Otras fiebres virales hemorragicas, no clasificadas en otra parte
 A980;Fiebre hemorragica de crimea
 A981;Fiebre hemorragica de omsk
 A982;Enfermedad de la selva de kyasanur
@@ -456,7 +456,7 @@ A984;Enfermedad por el virus de ebola
 A985;Fiebres hemorragicas con sindrome renal
 A988;Otras fiebres hemorragicas virales especificadas
 A99;Fiebre viral hemorragica, no especificada
-B00;Infecciones herp�tica [herpes simple]
+B00;Infecciones herpetica [herpes simple]
 B000;Eczema herpetico
 B001;Dermatitis vesicular herpetica
 B002;Gingivoestomatitis y faringoamigdalitis herpetica
@@ -482,7 +482,7 @@ B028;Herpes zoster con otras complicaciones
 B029;Herpes zoster sin complicaciones
 B03;Viruela
 B04;Viruela de los monos
-B05;Sarampi�n
+B05;Sarampion
 B050;Sarampion complicado con encefalitis (g05.1)
 B051;Sarampion complicado con meningitis (g02.0)
 B052;Sarampion complicado con neumonia (j17.1)
@@ -490,12 +490,12 @@ B053;Sarampion complicado con otitis media (h67.1)
 B054;Sarampion con complicaciones intestinales
 B058;Sarampion con otras complicaciones
 B059;Sarampion sin complicaciones
-B06;Rub�ola [sarampi�n alem�n]
+B06;Rubeola [sarampion aleman]
 B060;Rubeola con complicaciones neurologicas
 B068;Rubeola con otras complicaciones
 B069;Rubeola sin complicaciones
 B07;Verrugas viricas
-B08;Otras infeciones v�ricas caracterizadas por lesiones de la piel y de l
+B08;Otras infeciones viricas caracterizadas por lesiones de la piel y de l
 B080;Otras infecciones debidas a ortopoxvirus
 B081;Molusco contagioso
 B082;Exantema subito [sexta enfermedad]
@@ -517,13 +517,13 @@ B170;Infeccion (superinfeccion) aguda por agente delta en el portador de hepatit
 B171;Hepatitis aguda tipo c
 B172;Hepatitis aguda tipo e
 B178;Otras hepatitis virales agudas especificadas
-B18;Hepatitis viral cr�nica
+B18;Hepatitis viral cronica
 B180;Hepatitis viral tipo b cronica, con agente delta
 B181;Hepatitis viral tipo b cronica, sin agente delta
 B182;Hepatitis viral tipo c cronica
 B188;Otras hepatitis virales cronicas
 B189;Hepatitis viral cronica, sin otra especificacion
-B19;Hepatitis viral, sin otra especificaci�n
+B19;Hepatitis viral, sin otra especificacion
 B190;Hepatitis viral no especificada con coma
 B199;Hepatitis viral no especificada sin coma
 B20;Enfermedad por virus de la inmunodeficiencia humana [VIH], resultante en enfermedades infecciosas y parasitarias
@@ -556,7 +556,7 @@ B231;Enfermedad por vih, resultante en linfadenopatia generalizada (persistente)
 B232;Enfermedad por vih, resultante en anormalidades inmunologicas y hematologicas, no clasificadas en otra parte
 B238;Enfermedad por vih, resultante en otras afecciones especificadas
 B24;Enfermedad por virus de la inmunodeficiencia humana (vih), sin otra especificacion
-B25;Enfermedad debida a virus citomeg�lico
+B25;Enfermedad debida a virus citomegalico
 B250;Neumonitis debida a virus citomegalico (j17.1)
 B251;Hepatitis debida a virus citomegalico
 B252;Pancreatitis debida a virus citomegalico
@@ -587,7 +587,7 @@ B331;Enfermedad del rio ross
 B332;Carditis viral
 B333;Infecciones debidas a retrovirus, no clasificadas en otra parte
 B338;Otras enfermedades virales especificadas
-B34;Infecci�n viral de sitio no especificado
+B34;Infeccion viral de sitio no especificado
 B340;Infeccion debida a adenovirus, sin otra especificacion
 B341;Infeccion debida a enterovirus, sin otra especificacion
 B342;Infeccion debida a coronavirus, sin otra especificacion
@@ -596,18 +596,18 @@ B344;Infeccion debida a papovavirus, sin otra especificacion
 B348;Otras infecciones virales de sitio no especificado
 B349;Infeccion viral, no especificada
 B35;Dermatofitosis
-B350;Ti�a de la barba y del cuero cabelludo
-B351;Ti�a de las u�as
-B352;Ti�a de la mano
-B353;Ti�a del pie [tinea pedis]
-B354;Ti�a del cuerpo [tinea corporis]
-B355;Ti�a imbricada [tinea imbricata]
-B356;Ti�a inguinal [tinea cruris]
+B350;Tiña de la barba y del cuero cabelludo
+B351;Tiña de las uñas
+B352;Tiña de la mano
+B353;Tiña del pie [tinea pedis]
+B354;Tiña del cuerpo [tinea corporis]
+B355;Tiña imbricada [tinea imbricata]
+B356;Tiña inguinal [tinea cruris]
 B358;Otras dermatofitosis
 B359;Dermatofitosis, no especificada
 B36;Otras micosis superficiales
 B360;Pitiriasis versicolor
-B361;Ti�a negra
+B361;Tiña negra
 B362;Piedra blanca
 B363;Piedra negra
 B368;Otras micosis superficiales especificadas
@@ -615,7 +615,7 @@ B369;Micosis superficial, sin otra especificacion
 B37;Candidiasis
 B370;Estomatitis candidiasica
 B371;Candidiasis pulmonar
-B372;Candidiasis de la piel y de las u�as
+B372;Candidiasis de la piel y de las uñas
 B373;Candidiasis de la vulva y de la vagina (n77.1)
 B374;Candidiasis de otras localizaciones urogenitales
 B375;Meningitis debida a candida (g02.1)
@@ -659,7 +659,7 @@ B421;Esporotricosis linfocutanea
 B427;Esporotricosis diseminada
 B428;Otras formas de esporotricosis
 B429;Esporotricosis, no especificada
-B43;Cromomicosis y absceso feomic�tico
+B43;Cromomicosis y absceso feomicotico
 B430;Cromomicosis cutanea
 B431;Absceso cerebral feomicotico
 B432;Absceso y quiste subcutaneo feomicotico
@@ -714,7 +714,7 @@ B52;Paludismo (malaria) debido a Plasmodium malariae
 B520;Paludismo debido a plasmodium malariae con nefropatia
 B528;Paludismo debido a plasmodium malariae con otras complicaciones
 B529;Paludismo debido a plasmodium malariae, sin complicaciones
-B53;Otro paludismo [malaria] confirmado parasitol�gicamente
+B53;Otro paludismo [malaria] confirmado parasitologicamente
 B530;Paludismo debido a plasmodium avale
 B531;Paludismo debido a plasmodios de los simios
 B538;Otro paludismo confirmado parasitologicamente, no clasificado en otra parte
@@ -827,7 +827,7 @@ B812;Tricoestrongiliasis
 B813;Angioestrongiliasis intestinal
 B814;Helmintiasis intestinal mixta
 B818;Otras helmintiasis intestinales especificadas
-B82;Parasitosis intestinal, sin otra especificaci�n
+B82;Parasitosis intestinal, sin otra especificacion
 B820;Helmintiasis intestinal, sin otra especificacion
 B829;Parasitosis intestinal, sin otra especificacion
 B83;Otros helmintiasis
@@ -1322,7 +1322,7 @@ C786;Tumor maligno secundario del peritoneo y del retroperitoneo
 C787;Tumor maligno secundario del higado
 C788;Tumor maligno secundario de otros organos digestivos y de los no especificados
 C79;Tumor maligno secundario de otros sitios
-C790;Tumor maligno secundario del ri�on y de la pelvis renal
+C790;Tumor maligno secundario del riñon y de la pelvis renal
 C791;Tumor maligno secundario de la vejiga, y de otros organos y los no especificados de las vias urinarias
 C792;Tumor maligno secundario de la piel
 C793;Tumor maligno secundario del encefalo y de las meninges cerebrales
@@ -1340,15 +1340,15 @@ C813;Enfermedad de hodgkin con deplecion linfocitica
 C817;Otros tipos de enfermedad de hodgkin
 C819;Enfermedad de hodgkin, no especificada
 C82;Linfoma no hodgkin folicular [ nodular ]
-C820;Linfoma no hodgkin de celulas peque�as hendidas, folicular
-C821;Linfoma no hodgkin mixto, de peque�as celulas hendidas y de grandes celulas, folicular
+C820;Linfoma no hodgkin de celulas pequeñas hendidas, folicular
+C821;Linfoma no hodgkin mixto, de pequeñas celulas hendidas y de grandes celulas, folicular
 C822;Linfoma no hodgkin de celulas grandes, folicular
 C827;Otros tipos especificados de linfoma no hodgkin folicular
 C829;Linfoma no hodgkin folicular, sin otra especificacion
 C83;Linfoma no
-C830;Linfoma no hodgkin de celulas peque�as (difuso)
-C831;Linfoma no hodgkin de celulas peque�as hendidas (difuso)
-C832;Linfoma no hodgkin mixto, de celulas peque�as y grandes (difuso)
+C830;Linfoma no hodgkin de celulas pequeñas (difuso)
+C831;Linfoma no hodgkin de celulas pequeñas hendidas (difuso)
+C832;Linfoma no hodgkin mixto, de celulas pequeñas y grandes (difuso)
 C833;Linfoma no hodgkin de celulas grandes (difuso)
 C834;Linfoma no hodgkin inmunoblastico (difuso)
 C835;Linfoma no hodgkin linfoblastico (difuso)
@@ -1626,7 +1626,7 @@ D294;Tumor benigno del escroto
 D297;Tumor benigno de otros organos genitales masculinos
 D299;Tumor benigno de organo genital masculino, sitio no especificado
 D30;Tumor benigno de los organos urinarios
-D300;Tumor benigno del ri�on
+D300;Tumor benigno del riñon
 D301;Tumor benigno de la pelvis renal
 D302;Tumor benigno del ureter
 D303;Tumor benigno de la vejiga
@@ -1701,7 +1701,7 @@ D401;Tumor de comportamiento incierto o desconocido del testiculo
 D407;Tumor de comportamiento incierto o desconocido de otros organos genitales masculinos
 D409;Tumor de comportamiento incierto o desconocido de organo genital masculino no especificado
 D41;Tumor de comportamiento incierto de los organos urinarios
-D410;Tumor de comportamiento incierto o desconocido del ri�on
+D410;Tumor de comportamiento incierto o desconocido del riñon
 D411;Tumor de comportamiento incierto o desconocido dec la pelvis renal
 D412;Tumor de comportamiento incierto o desconocido del ureter
 D413;Tumor de comportamiento incierto o desconocido de la uretra
@@ -2647,12 +2647,12 @@ F509;Trastorno de la ingestion de alimentos, no especificado
 F51;Trastornos no organicos del sueno
 F510;Insomnio no organico
 F511;Hipersomnio no organico
-F512;Trastorno no organico del ciclo sue�o
+F512;Trastorno no organico del ciclo sueño
 F513;Sonambulismo
-F514;Terrores del sue�o [terrores nocturnos]
+F514;Terrores del sueño [terrores nocturnos]
 F515;Pesadillas
-F518;Otros trastornos no organicos del sue�o
-F519;Trastorno no organico del sue�o, no especificado
+F518;Otros trastornos no organicos del sueño
+F519;Trastorno no organico del sueño, no especificado
 F52;Disfuncion sexual no ocasionada por trastornos ni enfermedades organicos
 F520;Falta o perdida del deseo sexual
 F521;Aversion al sexo y falta de goce sexual
@@ -2699,7 +2699,7 @@ F639;Trastorno de los habitos y de los impulsos, no especificado
 F64;Trastornos de la identidad de genero
 F640;Transexualismo
 F641;Transvestismo de rol dual
-F642;Trastorno de la identidad de genero en la ni�ez
+F642;Trastorno de la identidad de genero en la niñez
 F648;Otros trastornos de la identidad de genero
 F649;Trastorno de la identidad de genero, no especificado
 F65;Trastornos de la preferencia sexual
@@ -2770,10 +2770,10 @@ F819;Trastorno del desarrollo de las habilidades escolares, no especificado
 F82;Trastornos especificos del desarrollo de la funcion motriz
 F83;Trastornos especificos mixtos desarrollo
 F84;Trastornos generalizados del desarrollo
-F840;Autismo en la ni�ez
+F840;Autismo en la niñez
 F841;Autismo atipico
 F842;Sindrome de rett
-F843;Otro trastorno desintegrativo de la ni�ez
+F843;Otro trastorno desintegrativo de la niñez
 F844;Trastorno hiperactivo asociado con retraso mental y movimientos estereotipados
 F845;Sindrome de asperger
 F848;Otros trastornos generalizados del desarrollo
@@ -2797,18 +2797,18 @@ F920;Trastorno depresivo de la conducta
 F928;Otros trastornos mixtos de la conducta y de las emociones
 F929;Trastorno mixto de la conducta y de las emociones, no especificado
 F93;Trastornos emocionales comienzo especifico en la ninez
-F930;Trastorno de ansiedad de separacion en la ni�ez
-F931;Trastorno de ansiedad fobica en la ni�ez
-F932;Trastorno de ansiedad social en la ni�ez
+F930;Trastorno de ansiedad de separacion en la niñez
+F931;Trastorno de ansiedad fobica en la niñez
+F932;Trastorno de ansiedad social en la niñez
 F933;Trastorno de rivalidad entre hermanos
-F938;Otros trastornos emocionales en la ni�ez
-F939;Trastorno emocional en la ni�ez, no especificado
+F938;Otros trastornos emocionales en la niñez
+F939;Trastorno emocional en la niñez, no especificado
 F94;Trastornos del comport social de comienzo especifico en la ninez y en la adolescencia
 F940;Mutismo electivo
-F941;Trastorno de vinculacion reactiva en la ni�ez
-F942;Trastorno de vinculacion desinhibida en la ni�ez
-F948;Otros trastornos del comportamiento social en la ni�ez
-F949;Trastorno del comportamiento social en la ni�ez, no especificado
+F941;Trastorno de vinculacion reactiva en la niñez
+F942;Trastorno de vinculacion desinhibida en la niñez
+F948;Otros trastornos del comportamiento social en la niñez
+F949;Trastorno del comportamiento social en la niñez, no especificado
 F95;Trastornos por tics
 F950;Trastorno por tic transitorio
 F951;Trastorno por tic motor o vocal cronico
@@ -2818,13 +2818,13 @@ F959;Trastorno por tic, no especificado
 F98;Otros trastornos emocionales y del comportamiento que aparecen habitualmente en la ninez y en la adolescencia
 F980;Enuresis no organica
 F981;Ecopresis no organica
-F982;Trastorno de la ingestion alimentaria en la infancia y en la ni�ez
-F983;Pica en la infancia y la ni�ez
+F982;Trastorno de la ingestion alimentaria en la infancia y en la niñez
+F983;Pica en la infancia y la niñez
 F984;Trastornos de los movimientos estereotipados
 F985;Tartamudez [espasmofemia]
 F986;Farfulleo
-F988;Otros trastornos emocionales y del comportamiento que aparecen habitualmente en la ni�ez y en la adolescencia
-F989;Trastornos no especificados, emocionales y del comportamiento, que aparecen habitualmente en la ni�ez y en la adolescencia
+F988;Otros trastornos emocionales y del comportamiento que aparecen habitualmente en la niñez y en la adolescencia
+F989;Trastornos no especificados, emocionales y del comportamiento, que aparecen habitualmente en la niñez y en la adolescencia
 F99;Trastorno mental no especificado
 G00;Meningitis bacteriana no clasificada en otra parte
 G000;Meningitis por hemofilos
@@ -2953,23 +2953,23 @@ G402;Epilepsia y sindromes epilepticos sintomaticos relacionados con localizacio
 G403;Epilepsia y sindromes epilepticos idiopaticos generalizados
 G404;Otras epilepsias y sindromes epilepticos generalizados
 G405;Sindromes epilepticos especiales
-G406;Ataques de gran mal, no especificados (con o sin peque�o mal)
-G407;Peque�o mal, no especificado (sin ataque de gran mal)
+G406;Ataques de gran mal, no especificados (con o sin pequeño mal)
+G407;Pequeño mal, no especificado (sin ataque de gran mal)
 G408;Otras epilepsias
 G409;Epilepsia, tipo no especificado
 G41;Estado de mal epileptico
 G410;Estado de gran mal epileptico
-G411;Estado de peque�o mal epileptico
+G411;Estado de pequeño mal epileptico
 G412;Estado de mal epileptico parcial complejo
 G418;Otros estados epilepticos
 G419;Estado de mal epileptico de tipo no especificado
-G43;Migra�a
-G430;Migra�a sin aura [migra�a comun]
-G431;Migra�a con aura [migra�a clasica]
-G432;Estado migra�oso
-G433;Migra�a complicada
-G438;Otras migra�as
-G439;Migra�a, no especificada
+G43;Migraña
+G430;Migraña sin aura [migraña comun]
+G431;Migraña con aura [migraña clasica]
+G432;Estado migrañoso
+G433;Migraña complicada
+G438;Otras migrañas
+G439;Migraña, no especificada
 G44;Otros sindromes de cefalea
 G440;Sindrome de cefalea en racimos
 G441;Cefalea vascular, ncop
@@ -2996,13 +2996,13 @@ G466;Sindrome lacunar sensorial puro (i60
 G467;Otros sindromes lacunares (i60
 G468;Otros sindromes vasculares encefalicos en enfermedades cerebrovasculares (i60
 G47;Trastornos del sueno
-G470;Trastornos del inicio y del mantenimiento del sue�o [insomnios]
+G470;Trastornos del inicio y del mantenimiento del sueño [insomnios]
 G471;Trastornos de somnolencia excesiva [hipersomnios]
 G472;Trastornos del ritmo nictameral
-G473;Apnea del sue�o
+G473;Apnea del sueño
 G474;Narcolepsia y cataplexia
-G478;Otros trastornos del sue�o
-G479;Trastorno del sue�o, no especificado
+G478;Otros trastornos del sueño
+G479;Trastorno del sueño, no especificado
 G50;Trastornos del nervio trigemino
 G500;Neuralgia del trigemino
 G501;Dolor facial atipico
@@ -3251,7 +3251,7 @@ H051;Trastornos inflamatorios cronicos de la orbita
 H052;Afecciones exoftalmicas
 H053;Deformidad de la orbita
 H054;Enoftalmia
-H055;Retencion de cuerpo extra�o (antiguo), consecutiva a herida penetrante de la orbita
+H055;Retencion de cuerpo extraño (antiguo), consecutiva a herida penetrante de la orbita
 H058;Otros trastornos de la orbita
 H059;Trastorno de la orbita, no especificado
 H06;Trastornos del aparato lagrimal y de la orbita en enfermedades clasificadas en otra parte
@@ -3431,8 +3431,8 @@ H442;Miopia degenerativa
 H443;Otros trastornos degenerativos del globo ocular
 H444;Hipotonia ocular
 H445;Afecciones degenerativas del globo ocular
-H446;Retencion intraocular de cuerpo extra�o magnetico (antiguo)
-H447;Retencion intraocular de cuerpo extra�o no magnetico (antiguo)
+H446;Retencion intraocular de cuerpo extraño magnetico (antiguo)
+H447;Retencion intraocular de cuerpo extraño no magnetico (antiguo)
 H448;Otros trastornos del globo ocular
 H449;Trastorno del globo ocular, no especificado
 H45;Trastornos del cuerp vitreo y del globo ocular en enfermedades clasificadas en otra parte
@@ -4291,7 +4291,7 @@ J631;Fibrosis (del pulmon) debida a bauxita
 J632;Beriliosis
 J633;Fibrosis (del pulmon) debida a grafito
 J634;Siderosis
-J635;Esta�osis
+J635;Estañosis
 J638;Neumoconiosis debida a otros polvos inorganicos especificados
 J64;Neumoconiosis no especificada
 J65;Neumoconiosis asociada con tuberculosis
@@ -4393,7 +4393,7 @@ J998;Trastornos respiratorios en otras enfermedades clasificadas en otra parte
 K00;Trastornos del desarrollo y de la erupcion de los dientes
 K000;Anodoncia
 K001;Dientes supernumerarios
-K002;Anomalias del tama�o y de la forma del diente
+K002;Anomalias del tamaño y de la forma del diente
 K003;Dientes moteados
 K004;Alteraciones en la formacion dentaria
 K005;Alteraciones hereditarias de la estructura dentaria, no clasificadas en otra parte
@@ -4449,7 +4449,7 @@ K062;Lesiones de la encia y de la zona edentula asociadas con traumatismo
 K068;Otros trastornos especificados de la encia y de la zona edentula
 K069;Trastorno no especificado de la encia y de la zona edentula
 K07;Anomalias dentofaciales [inclusola maloclusion]
-K070;Anomalias evidentes del tama�o de los maxilares
+K070;Anomalias evidentes del tamaño de los maxilares
 K071;Anomalias de la relacion maxilobasilar
 K072;Anomalias de la relacion entre los arcos dentarios
 K073;Anomalias de la posicion del diente
@@ -4907,7 +4907,7 @@ L10;Penfigo
 L100;Penfigo vulgar
 L101;Penfigo vegetante
 L102;Penfigo foliaceo
-L103;Penfigo brasile�o [fogo selvagem]
+L103;Penfigo brasileño [fogo selvagem]
 L104;Penfigo eritematoso
 L105;Penfigo inducido por drogas
 L108;Otros penfigos
@@ -5010,7 +5010,7 @@ L41;Parapsoriasis
 L410;Pitiriasis linquenoide y varioliforme aguda
 L411;Pitiriasis linquenoide cronica
 L412;Papulosis linfomatoide
-L413;Parapsoriasis en placas peque�as
+L413;Parapsoriasis en placas pequeñas
 L414;Parapsoriasis en placas grandes
 L415;Parapsoriasis retiforme
 L418;Otras parapsoriasis
@@ -5090,18 +5090,18 @@ L59;Otros trastornos de la piel y del tejido subcutaneo relacionados con radiaci
 L590;Eritema ab igne [dermatitis ab igne]
 L598;Otros trastornos especificados de la piel y del tejido subcutaneo relacionados con radiacion
 L599;Trastornos no especificados de la piel y del tejido subcutaneo relacionados con radiacion
-L60;Trastornos de las u�as
-L600;U�a encarnada
+L60;Trastornos de las uñas
+L600;Uña encarnada
 L601;Onicolisis
 L602;Onicogriposis
 L603;Distrofia ungueal
 L604;Lineas de beau
-L605;Sindrome de la u�a amarilla
-L608;Otros trastornos de las u�as
-L609;Trastorno de la u�a, no especificado
-L62;Trastornos u�as en enfermedades clasificadas en otra parte
-L620;U�a deforme de la paquidermoperiostosis (m89.4)
-L628;Trastornos de las u�as en otras enfermedades clasificadas en otra parte
+L605;Sindrome de la uña amarilla
+L608;Otros trastornos de las uñas
+L609;Trastorno de la uña, no especificado
+L62;Trastornos uñas en enfermedades clasificadas en otra parte
+L620;Uña deforme de la paquidermoperiostosis (m89.4)
+L628;Trastornos de las uñas en otras enfermedades clasificadas en otra parte
 L63;Alopecia areata
 L630;Alopecia (capitis) total
 L631;Alopecia universal
@@ -5227,7 +5227,7 @@ L92;Trastornos granulomatosos de la piel y del tejido subcutaneo
 L920;Granuloma anular
 L921;Necrobiosis lipidica, no clasificada en otra parte
 L922;Granuloma facial [granuloma eosinofilo de la piel]
-L923;Granuloma por cuerpo extra�o de la piel y en el tejido subcutaneo
+L923;Granuloma por cuerpo extraño de la piel y en el tejido subcutaneo
 L928;Otros trastornos granulomatosos de la piel y del tejido subcutaneo
 L929;Trastorno granulomatoso de la piel y del tejido subcutaneo, no especificado
 L93;Lupus eritematoso
@@ -5413,7 +5413,7 @@ M21;Otras deformidades adquiridas de los miembros
 M210;Deformidad en valgo, no clasificada en otra parte
 M211;Deformidad en varo, no clasificada en otra
 M212;Deformidad en flexion
-M213;Mu�eca o pie en pendulo (adquirido)
+M213;Muñeca o pie en pendulo (adquirido)
 M214;Pie plano [pes planus] (adquirido)
 M215;Mano o pie en garra o en talipes, pie equinovaro o zambo adquiridos
 M216;Otras deformidades adquiridas del tobillo y del pie
@@ -5493,7 +5493,7 @@ M342;Esclerosis sistemica inducida por drogas o productos quimicos
 M348;Otras formas de esclerosis sistemica
 M349;Esclerosis sistemica, no especificada
 M35;Otro compromiso sistemico del tejido conjuntivo
-M350;Sindrome seco [sjÖgren]
+M350;Sindrome seco [sjÃ–gren]
 M351;Otros sindromes superpuestos
 M352;Enfermedad de behcet
 M353;Polimialgia reumatica
@@ -5608,7 +5608,7 @@ M549;Dorsalgia, no especificada
 M60;Miositis
 M600;Miositis infecciosa
 M601;Miositis intersticial
-M602;Granuloma por cuerpo extra�o en tejido blando, no clasificado en otra parte
+M602;Granuloma por cuerpo extraño en tejido blando, no clasificado en otra parte
 M608;Otras miositis
 M609;Miositis, no especificada
 M61;Calcificacion y osificacion del musculo
@@ -5662,7 +5662,7 @@ M68;Trastornos de la sinovia y del tendon del enfermedades clasificadas en otra 
 M680;Sinovitis y tenosinovitis en enfermedades bacterianas clasificadas en otra parte
 M688;Otros trastornos sinoviales y tendinosos en enfermedades clasificadas en otra parte
 M70;Trastornos del tejido blando relacionados con el uso, el uso excesivo y la presion
-M700;Sinovitis crepitante cronica de la mano y de la mu�eca
+M700;Sinovitis crepitante cronica de la mano y de la muñeca
 M701;Bursitis de la mano
 M702;Bursitis del olecranon
 M703;Otras bursitis del codo
@@ -5717,7 +5717,7 @@ M769;Entesopatia del miembro inferior, no especificada
 M77;Otras entesopatias
 M770;Epicondilitis media
 M771;Epicondilitis lateral
-M772;Periartritis de la mu�eca
+M772;Periartritis de la muñeca
 M773;Espolon calcaneo
 M774;Metatarsalgia
 M775;Otras entesopatias del pie
@@ -5729,7 +5729,7 @@ M791;Mialgia
 M792;Neuralgia y neuritis, no especificadas
 M793;Paniculitis, no especificada
 M794;Hipertrofia de paquete adiposo (infrarrotuliano)
-M795;Cuerpo extra�o residual en tejido blando
+M795;Cuerpo extraño residual en tejido blando
 M796;Dolor en miembro
 M798;Otros trastornos especificados de los tejidos blandos
 M799;Trastorno de los tejidos blandos, no especificado
@@ -5844,7 +5844,7 @@ M928;Otras osteocondrosis juveniles especificadas
 M929;Osteocondrosis juvenil, no especificada
 M93;Otras osteocondropatias
 M930;Deslizamiento de la epifisis femoral superior (no traumatico)
-M931;Enfermedad de kienbÖck del adulto
+M931;Enfermedad de kienbÃ–ck del adulto
 M932;Osteocondrosis disecante
 M938;Otras osteocondropatias especificadas
 M939;Osteocondropatia, no especificada
@@ -5991,7 +5991,7 @@ N12;Nefritis tubulointerst no especificada como aguda o cronica
 N13;Uropatia obstructiva y por reflujo
 N130;Hidronefrosis con obstruccion de la union uretero
 N131;Hidronefrosis con estrechez ureteral, no clasificada en otra parte
-N132;Hidronefrosis con obstruccion por calculos del ri�on y del ureter
+N132;Hidronefrosis con obstruccion por calculos del riñon y del ureter
 N133;Otras hidronefrosis y las no especificadas
 N134;Hidroureter
 N135;Torsion y estrechez del ureter sin hidronefrosis
@@ -6030,9 +6030,9 @@ N188;Otras insuficiencias renales cronicas
 N189;Insuficiencia renal cronica, no especificada
 N19;Insuficiencia renal no especificada
 N20;Calculo del rinon y del ureter
-N200;Calculo del ri�on
+N200;Calculo del riñon
 N201;Calculo del ureter
-N202;Calculo del ri�on con calculo del ureter
+N202;Calculo del riñon con calculo del ureter
 N209;Calculo urinario, no especificado
 N21;Calculo de las vias urinarias inferiores
 N210;Calculo en la vejiga
@@ -6050,18 +6050,18 @@ N258;Otros trastornos resultantes de la funcion tubular renal alterada
 N259;Trastorno no especificado, resultante de la funcion tubular renal alterada
 N26;Rinon contraido no especificado
 N27;Rinon pequeno de causa desconocida
-N270;Ri�on peque�o, unilateral
-N271;Ri�on peque�o, bilateral
-N279;Ri�on peque�o, no especificado
+N270;Riñon pequeño, unilateral
+N271;Riñon pequeño, bilateral
+N279;Riñon pequeño, no especificado
 N28;Otros trastornos del rinon y del ureter no clasificadas en otra parte
-N280;Isquemia e infarto del ri�on
-N281;Quiste de ri�on, adquirido
-N288;Otros trastornos especificados del ri�on y del ureter
-N289;Trastorno del ri�on y del ureter, no especificado
+N280;Isquemia e infarto del riñon
+N281;Quiste de riñon, adquirido
+N288;Otros trastornos especificados del riñon y del ureter
+N289;Trastorno del riñon y del ureter, no especificado
 N29;Otros trastornos del rinon y del ureter en enfermedades clasificadas en otra parte
 N290;Sifilis renal tardia (a52.7)
-N291;Otros trastornos del ri�on y del ureter en enfermedades infecciosas y parasitarias clasificadas en otra parte
-N298;Otros trastornos del ri�on y del ureter en otras enfermedades clasificadas en otra parte
+N291;Otros trastornos del riñon y del ureter en enfermedades infecciosas y parasitarias clasificadas en otra parte
+N298;Otros trastornos del riñon y del ureter en otras enfermedades clasificadas en otra parte
 N30;Cistitis
 N300;Cistitis agudas
 N301;Cistitis intersticial (cronica)
@@ -6510,7 +6510,7 @@ O225;Trombosis venosa cerebral en el embarazo
 O228;Otras complicaciones venosas en el embarazo
 O229;Complicacion venosa no especificada en el embarazo
 O23;Infeccionesion de las vias genitourinarias en el embarazo
-O230;Infeccion del ri�on en el embarazo
+O230;Infeccion del riñon en el embarazo
 O231;Infeccion de la vejiga urinaria en el embarazo
 O232;Infeccion de la uretra en el embarazo
 O233;Infeccion de otras partes de las vias urinarias en el embarazo
@@ -6527,7 +6527,7 @@ O249;Diabetes mellitus no especificada, en el embarazo
 O25;Desnutricion en el embarazo
 O26;Atencion materna por otras complicaciones relacionadas con el embarazo
 O260;Aumento excesivo de peso en el embarazo
-O261;Aumento peque�o de peso en el embarazo
+O261;Aumento pequeño de peso en el embarazo
 O262;Atencion del embarazo en una abortadora habitual
 O263;Retencion de dispositivo anticonceptivo intrauterino en el embarazo
 O264;Herpes gestacional
@@ -6852,7 +6852,7 @@ O926;Galactorrea
 O927;Otros trastornos y los no especificados de la lactancia
 O93;Muerte materna de causa basica especificada en otro capitulo relacionada con el embarazo
 O95;Muerte obstetrica de causa no especificada
-O96;Muerte materna debida a cualquier causa obstetrica que ocurre despues de 42 dias pero antes de un a�o del parto
+O96;Muerte materna debida a cualquier causa obstetrica que ocurre despues de 42 dias pero antes de un año del parto
 O97;Muerte por secuelas de causas obstetricas directas
 O98;Enfermedades maternas infecciosas y parasitarias clasificables en otra parte, pero que complican el embarazo, el parto y el puerperio
 O980;Tuberculosis que complica el embarazo, el parto y el puerperio
@@ -6929,7 +6929,7 @@ P048;Feto y recien nacido afectados por otras influencias nocivas de la madre
 P049;Feto y recien nacido afectados por influencias nocivas de la madre, no especificadas
 P05;Retardo del crecimiento fetal y desnutricion fetal
 P050;Bajo peso para la edad gestacional
-P051;Peque�o para edad gestacional
+P051;Pequeño para edad gestacional
 P052;Desnutricion fetal, sin mencion de peso o talla bajos para la edad gestacional
 P059;Retardo del crecimiento fetal, no especificado
 P07;Trastornos relacionados con la duracion corta de la gestacion y con bajo peso al nacer, no clasificados en otra parte
@@ -7040,7 +7040,7 @@ P28;Otros problemas respiratorios del recien nacido originados en el periodo per
 P280;Atelectasia primaria del recien nacido
 P281;Otras atelectasias del recien nacido y las no especificadas
 P282;Ataque cianotico del recien nacido
-P283;Apnea primaria del sue�o del recien nacido
+P283;Apnea primaria del sueño del recien nacido
 P284;Otras apneas del recien nacido
 P285;Insuficiencia respiratoria del recien nacido
 P288;Otros problemas respiratorios especificados del recien nacido
@@ -7652,13 +7652,13 @@ Q605;Hipoplasia renal, no especificada
 Q606;Sindrome de potter
 Q61;Enfermedad quistica del rinon
 Q610;Quiste renal solitario congenito
-Q611;Ri�on poliquistico, autosomico recesivo
-Q612;Ri�on poliquistico, autosomico dominante
-Q613;Ri�on poliquistico, tipo no especificado
+Q611;Riñon poliquistico, autosomico recesivo
+Q612;Riñon poliquistico, autosomico dominante
+Q613;Riñon poliquistico, tipo no especificado
 Q614;Displasia renal
-Q615;Ri�on quistico medular
+Q615;Riñon quistico medular
 Q618;Otras enfermedades renales quisticas
-Q619;Enfermedad quistica del ri�on, no especificada
+Q619;Enfermedad quistica del riñon, no especificada
 Q62;Defectos obstructivos congenitos de la pelvis renal y malformaciones congenitas del ureter
 Q620;Hidronefrosis congenita
 Q621;Atresia y estenosis del ureter
@@ -7669,13 +7669,13 @@ Q625;Duplicacion del ureter
 Q626;Mala posicion del ureter
 Q627;Reflujo vesico
 Q628;Otras malformaciones congenitas del ureter
-Q63;Otras malformaciones congenitas del ri�on
-Q630;Ri�on supernumerario
-Q631;Ri�on lobulado, fusionado y en herradura
-Q632;Ri�on ectopico
-Q633;Hiperplasia renal y ri�on gigante
-Q638;Otras malformaciones congenitas del ri�on, especificadas
-Q639;Malformacion congenita del ri�on, no especificada
+Q63;Otras malformaciones congenitas del riñon
+Q630;Riñon supernumerario
+Q631;Riñon lobulado, fusionado y en herradura
+Q632;Riñon ectopico
+Q633;Hiperplasia renal y riñon gigante
+Q638;Otras malformaciones congenitas del riñon, especificadas
+Q639;Malformacion congenita del riñon, no especificada
 Q64;Otras malformaciones congenitas del sistema urinario
 Q640;Epispadias
 Q641;Extrofia de la vejiga urinaria
@@ -7857,8 +7857,8 @@ Q841;Alteraciones morfologicas congenitas del pelo, no clasificadas en otra part
 Q842;Otras malformaciones congenitas del pelo
 Q843;Anoniquia
 Q844;Leuconiquia congenita
-Q845;Agrandamiento e hipertrofia de las u�as
-Q846;Otras malformaciones congenitas de las u�as
+Q845;Agrandamiento e hipertrofia de las uñas
+Q846;Otras malformaciones congenitas de las uñas
 Q848;Otras malformaciones congenitas de las faneras, especificadas
 Q849;Malformacion congenita de las faneras, no especificada
 Q85;Facomatosis no clasificadas en otra parte
@@ -8125,8 +8125,8 @@ R457;Tension y estado de choque emocional, no especificado
 R458;Otros sintomas y signos que involucran el estado emocional
 R46;Sintomas y signos que involucran la apariencia y el comportamiento
 R460;Muy bajo nivel de higiene personal
-R461;Apariencia personal extra�a
-R462;Conducta extra�a e inexplicable
+R461;Apariencia personal extraña
+R462;Conducta extraña e inexplicable
 R463;Hiperactividad
 R464;Lentitud y pobre respuesta
 R465;Suspicacia y evasividad marcadas
@@ -8340,7 +8340,7 @@ R940;Resultados anormales en estudios funcionales del sistema nervioso central
 R941;Resultados anormales en estudios funcionales del sistema nervioso periferico y sentidos especiales
 R942;Resultados anormales en estudios funcionales del pulmon
 R943;Resultados anormales en estudios funcionales cardiovasculares
-R944;Resultados anormales en estudios funcionales del ri�on
+R944;Resultados anormales en estudios funcionales del riñon
 R945;Resultados anormales en estudios funcionales del higado
 R946;Resultados anormales en estudios funcionales de la tiroides
 R947;Resultados anormales en otros estudios funcionales endocrinos
@@ -8401,13 +8401,13 @@ S047;Traumatismo del nervio espinal [xi par]
 S048;Traumatismo de otros nervios craneales
 S049;Traumatismo del nervios craneales, no especificado
 S05;Traumatismo del ojo y de la orbita
-S050;Traumatismo de la conjuntiva y abrasion corneal sin mencion de cuerpo extra�o
+S050;Traumatismo de la conjuntiva y abrasion corneal sin mencion de cuerpo extraño
 S051;Contusion del globo ocular y del tejido orbitario
 S052;Laceracion y ruptura ocular con prolapso o perdida del tejido intraocular
 S053;Laceracion ocular sin prolapso o perdida del tejido intraocular
-S054;Herida penetrante de la orbita con o sin cuerpo extra�o
-S055;Herida penetrante del globo ocular con cuerpo extra�o
-S056;Herida penetrante del globo ocular sin cuerpo extra�o
+S054;Herida penetrante de la orbita con o sin cuerpo extraño
+S055;Herida penetrante del globo ocular con cuerpo extraño
+S056;Herida penetrante del globo ocular sin cuerpo extraño
 S057;Avulsion del ojo
 S058;Otros traumatismos del ojo y de la orbita
 S059;Traumatismo del ojo y de la orbita, no especificado
@@ -8630,7 +8630,7 @@ S367;Traumatismo de multiples organos intraabdominales
 S368;Traumatismo de otros organos intraabdominales
 S369;Traumatismo de organo intraabdominal no especificado
 S37;Traumatismo del aparato urinario y de los organos pelvicos
-S370;Traumatismo del ri�on
+S370;Traumatismo del riñon
 S371;Traumatismo del ureter
 S372;Traumatismo de la vejiga
 S373;Traumatismo de la uretra
@@ -8772,25 +8772,25 @@ S578;Traumatismo por aplastamiento de otras partes del antebrazo
 S579;Traumatismo por aplastamiento del antebrazo, parte no especificada
 S58;Amputacion traumatica del antebrazo
 S580;Amputacion traumatica a nivel del codo
-S581;Amputacion traumatica a nivel entre el codo y la mu�eca
+S581;Amputacion traumatica a nivel entre el codo y la muñeca
 S589;Amputacion traumatica del antebrazo, nivel no especificado
 S59;Otros traumatismos y los no especificados del antebrazo
 S597;Traumatismos multiples del antebrazo
 S598;Otros traumatismos especificados del antebrazo
 S599;Traumatismos no especificados del antebrazo
 S60;Traumatismo superficial de la muneca y de la mano
-S600;Contusion de dedo(s) de la mano, sin da�o de la(s) u�a(s)
-S601;Contusion de dedo(s) de la mano, con da�o de la(s) u�a(s)
-S602;Contusion de otras partes de la mu�eca y de la mano
-S607;Traumatismos superficiales multiples de la mu�eca y de la mano
-S608;Otros traumatismos superficiales de la mu�eca y de la mano
-S609;Traumatismo superficial de la mu�eca y de la mano, no especificado
+S600;Contusion de dedo(s) de la mano, sin daño de la(s) uña(s)
+S601;Contusion de dedo(s) de la mano, con daño de la(s) uña(s)
+S602;Contusion de otras partes de la muñeca y de la mano
+S607;Traumatismos superficiales multiples de la muñeca y de la mano
+S608;Otros traumatismos superficiales de la muñeca y de la mano
+S609;Traumatismo superficial de la muñeca y de la mano, no especificado
 S61;Herida de la muneca y de la mano
-S610;Herida de dedo(s) de la mano, sin da�o de la(s) u�a(s)
-S611;Herida de dedo(s) de la mano, con da�o de la(s) u�a(s)
-S617;Heridas multiples de la mu�eca y de la mano
-S618;Heridas de otras partes de la mu�eca y de la mano
-S619;Herida de la mu�eca y de la mano, parte no especificada
+S610;Herida de dedo(s) de la mano, sin daño de la(s) uña(s)
+S611;Herida de dedo(s) de la mano, con daño de la(s) uña(s)
+S617;Heridas multiples de la muñeca y de la mano
+S618;Heridas de otras partes de la muñeca y de la mano
+S619;Herida de la muñeca y de la mano, parte no especificada
 S62;Fractura a nivel de la muneca y de la mano
 S620;Fractura del hueso escafoides [navicular] de la mano
 S621;Fractura de otro(s) hueso(s) del carpo
@@ -8800,61 +8800,61 @@ S624;Fracturas multiples de huesos metacarpianos
 S625;Fractura del pulgar
 S626;Fractura de otro dedo de la mano
 S627;Fracturas multiples de los dedos de la mano
-S628;Fractura de otras partes y de las no especificadas de la mu�eca y de la mano
+S628;Fractura de otras partes y de las no especificadas de la muñeca y de la mano
 S63;Luxacion, esguince y torcedura de articulaciones y ligamentos a nivel de la muneca y de la mano
-S630;Luxacion de la mu�eca
+S630;Luxacion de la muñeca
 S631;Luxacion de dedos de la mano
 S632;Luxaciones multiples de dedos de la mano
-S633;Ruptura traumatica de ligamentos de la mu�eca y del carpo
+S633;Ruptura traumatica de ligamentos de la muñeca y del carpo
 S634;Ruptura traumatica de ligamentos del dedo de la mano en la(s) articulacion(es) metacarpofalangica e interfalangica
-S635;Esguinces y torceduras de la mu�eca
+S635;Esguinces y torceduras de la muñeca
 S636;Esguinces y torceduras de dedo(s) de la mano
-S637;Esguinces y torceduras de otras partes y de las no especificadas de la mu�eca y de la mano
+S637;Esguinces y torceduras de otras partes y de las no especificadas de la muñeca y de la mano
 S64;Traumatismo de nervios a nivel de la muneca y de la mano
-S640;Traumatismo del nervio cubital a nivel de la mu�eca y de la mano
-S641;Traumatismo del nervio mediano a nivel de la mu�eca y de la mano
-S642;Traumatismo del nervio radial a nivel de la mu�eca y de la mano
+S640;Traumatismo del nervio cubital a nivel de la muñeca y de la mano
+S641;Traumatismo del nervio mediano a nivel de la muñeca y de la mano
+S642;Traumatismo del nervio radial a nivel de la muñeca y de la mano
 S643;Traumatismo del nervio digital del pulgar
 S644;Traumatismo del nervio digital de otro dedo
-S647;Traumatismo de multiples nervios a nivel de la mu�eca y de la mano
-S648;Traumatismo de otros nervios a nivel de la mu�eca y de la mano
-S649;Traumatismo de nervio no especificado a nivel de la mu�eca y de la mano
+S647;Traumatismo de multiples nervios a nivel de la muñeca y de la mano
+S648;Traumatismo de otros nervios a nivel de la muñeca y de la mano
+S649;Traumatismo de nervio no especificado a nivel de la muñeca y de la mano
 S65;Traumatismo de los vasos sanguineos a nivel de la muneca y de la mano
-S650;Traumatismo de la arteria cubital a nivel de la mu�eca y de la mano
-S651;Traumatismo de la arteria radial a nivel de la mu�eca y de la mano
+S650;Traumatismo de la arteria cubital a nivel de la muñeca y de la mano
+S651;Traumatismo de la arteria radial a nivel de la muñeca y de la mano
 S652;Traumatismo del arco palmar superficial
 S653;Traumatismo del arco palmar profundo
 S654;Traumatismo de vaso(s) sanguineo(s) del pulgar
 S655;Traumatismo de vaso(s) sanguineo(s) de otro dedo
-S657;Traumatismo de multiples vasos sanguineos a nivel de la mu�eca y de la mano
-S658;Traumatismo de otros vasos sanguineos a nivel de la mu�eca y de la mano
-S659;Traumatismo de vaso sanguineo no especificado a nivel de la mu�eca y de la mano
+S657;Traumatismo de multiples vasos sanguineos a nivel de la muñeca y de la mano
+S658;Traumatismo de otros vasos sanguineos a nivel de la muñeca y de la mano
+S659;Traumatismo de vaso sanguineo no especificado a nivel de la muñeca y de la mano
 S66;Traumatismo de tendon y musculo a nivel de la muneca y de la mano
-S660;Traumatismo del tendon y musculo flexor largo del pulgar a nivel de la mu�eca y de la mano
-S661;Traumatismo del tendon y musculo flexor de otro dedo a nivel de la mu�eca y de la mano
-S662;Traumatismo del tendon y musculo extensor del pulgar a nivel de la mu�eca y de la mano
-S663;Traumatismo del tendon y musculo extensor de otro(s) dedo(s) a nivel de la mu�eca y de la mano
-S664;Traumatismo del musculo y tendon intrinseco del pulgar a nivel de la mu�eca y de la mano
-S665;Traumatismo del musculo y tendon intrinseco de otro(s) dedo(s) a nivel de la mu�eca y de la mano
-S666;Traumatismo de multiples tendones y musculos flexores a nivel de la mu�eca y de la mano
-S667;Traumatismo de multiples tendones y musculos extensores a nivel de la mu�eca y de la mano
-S668;Traumatismo de otros tendones y musculos a nivel de la mu�eca y de la mano
-S669;Traumatismo de tendon y musculo no especificado, a nivel de la mu�eca y de la mano
+S660;Traumatismo del tendon y musculo flexor largo del pulgar a nivel de la muñeca y de la mano
+S661;Traumatismo del tendon y musculo flexor de otro dedo a nivel de la muñeca y de la mano
+S662;Traumatismo del tendon y musculo extensor del pulgar a nivel de la muñeca y de la mano
+S663;Traumatismo del tendon y musculo extensor de otro(s) dedo(s) a nivel de la muñeca y de la mano
+S664;Traumatismo del musculo y tendon intrinseco del pulgar a nivel de la muñeca y de la mano
+S665;Traumatismo del musculo y tendon intrinseco de otro(s) dedo(s) a nivel de la muñeca y de la mano
+S666;Traumatismo de multiples tendones y musculos flexores a nivel de la muñeca y de la mano
+S667;Traumatismo de multiples tendones y musculos extensores a nivel de la muñeca y de la mano
+S668;Traumatismo de otros tendones y musculos a nivel de la muñeca y de la mano
+S669;Traumatismo de tendon y musculo no especificado, a nivel de la muñeca y de la mano
 S67;Traumatismo por aplastamiento de la muneca y de la mano
 S670;Traumatismo por aplastamiento del pulgar y otro(s) dedo(s)
-S678;Traumatismo por aplastamiento de otras partes y de las no especificadas de la mu�eca y de la mano
+S678;Traumatismo por aplastamiento de otras partes y de las no especificadas de la muñeca y de la mano
 S68;Amputacion traumatica de la muneca y de la mano
 S680;Amputacion traumatica del pulgar (completa) (parcial)
 S681;Amputacion traumatica de otro dedo unico (completa) (parcial)
 S682;Amputacion traumatica de dos o mas dedos solamente (completa) (parcial)
-S683;Amputacion traumatica combinada (de parte) de dedo(s) con otras partes de la mu�eca y de la mano
-S684;Amputacion traumatica de la mano a nivel de la mu�eca
-S688;Amputacion traumatica de otras partes de la mu�eca y de la mano
-S689;Amputacion traumatica de la mu�eca y de la mano, nivel no especificado
+S683;Amputacion traumatica combinada (de parte) de dedo(s) con otras partes de la muñeca y de la mano
+S684;Amputacion traumatica de la mano a nivel de la muñeca
+S688;Amputacion traumatica de otras partes de la muñeca y de la mano
+S689;Amputacion traumatica de la muñeca y de la mano, nivel no especificado
 S69;Otros traumatismo y no especificados de la muneca y de la mano
-S697;Traumatismos multiples de la mu�eca y de la mano
-S698;Otros traumatismos especificados de la mu�eca y de la mano
-S699;Traumatismo no especificado de la mu�eca y de la mano
+S697;Traumatismos multiples de la muñeca y de la mano
+S698;Otros traumatismos especificados de la muñeca y de la mano
+S699;Traumatismo no especificado de la muñeca y de la mano
 S70;Traumatismo superficial de la cadera y del muslo
 S700;Contusion de la cadera
 S701;Contusion del muslo
@@ -8980,16 +8980,16 @@ S898;Otros traumatismos de la pierna, especificados
 S899;Traumatismo de la pierna, no especificado
 S90;Traumatismo superficial del tobillo y del pie
 S900;Contusion del tobillo
-S901;Contusion de dedo(s) del pie, sin da�o de la(s) u�a(s)
-S902;Contusion de dedo(s) del pie, con da�o de la(s) u�a(s)
+S901;Contusion de dedo(s) del pie, sin daño de la(s) uña(s)
+S902;Contusion de dedo(s) del pie, con daño de la(s) uña(s)
 S903;Contusion de otras partes y de las no especificadas del pie
 S907;Traumatismos superficiales multiples del pie y del tobillo
 S908;Otros traumatismos superficiales del pie y del tobillo
 S909;Traumatismo superficial del pie y del tobillo, no especificado
 S91;Herida del tobillo y del pie
 S910;Herida del tobillo
-S911;Herida de dedo(s) del pie sin da�o de la(s) u�a(s)
-S912;Herida de dedo(s) del pie con da�o de la(s) u�a(s)
+S911;Herida de dedo(s) del pie sin daño de la(s) uña(s)
+S912;Herida de dedo(s) del pie con daño de la(s) uña(s)
 S913;Heridas de otras partes del pie
 S917;Heridas multiples del tobillo y del pie
 S92;Fractura del pie, excepto del tobillo
@@ -9153,36 +9153,36 @@ T147;Traumatismo por aplastamiento y amputacion traumatica de regiones no especi
 T148;Otros traumatismos de region no especificada del cuerpo
 T149;Traumatismo, no especificado
 T15;Cuerpo extrano en parte externa del ojo
-T150;Cuerpo extra�o en la cornea
-T151;Cuerpo extra�o en el saco conjuntival
-T158;Cuerpo extra�o en otras y en multiples partes de la parte externa del ojo
-T159;Cuerpo extra�o en parte externa del ojo, sitio no especificado
+T150;Cuerpo extraño en la cornea
+T151;Cuerpo extraño en el saco conjuntival
+T158;Cuerpo extraño en otras y en multiples partes de la parte externa del ojo
+T159;Cuerpo extraño en parte externa del ojo, sitio no especificado
 T16;Cuerpo extrano en el oido
 T17;Cuerpo extrano en las vias respiratorias
-T170;Cuerpo extra�o en seno paranasal
-T171;Cuerpo extra�o en el orificio nasal
-T172;Cuerpo extra�o en la faringe
-T173;Cuerpo extra�o en la laringe
-T174;Cuerpo extra�o en la traquea
-T175;Cuerpo extra�o en bronquios
-T178;Cuerpo extra�o en otras y en multiples partes de las vias respiratorias
-T179;Cuerpo extra�o en las vias respiratorias, parte no especificada
+T170;Cuerpo extraño en seno paranasal
+T171;Cuerpo extraño en el orificio nasal
+T172;Cuerpo extraño en la faringe
+T173;Cuerpo extraño en la laringe
+T174;Cuerpo extraño en la traquea
+T175;Cuerpo extraño en bronquios
+T178;Cuerpo extraño en otras y en multiples partes de las vias respiratorias
+T179;Cuerpo extraño en las vias respiratorias, parte no especificada
 T18;Cuerpo extrano en el tubo digestivo
-T180;Cuerpo extra�o en la boca
-T181;Cuerpo extra�o en el esofago
-T182;Cuerpo extra�o en el estomago
-T183;Cuerpo extra�o en el intestino delgado
-T184;Cuerpo extra�o en el colon
-T185;Cuerpo extra�o en el ano y en el recto
-T188;Cuerpo extra�o en otras y en multiples partes del tubo digestivo
-T189;Cuerpo extra�o en el tubo digestivo, parte no especificada
+T180;Cuerpo extraño en la boca
+T181;Cuerpo extraño en el esofago
+T182;Cuerpo extraño en el estomago
+T183;Cuerpo extraño en el intestino delgado
+T184;Cuerpo extraño en el colon
+T185;Cuerpo extraño en el ano y en el recto
+T188;Cuerpo extraño en otras y en multiples partes del tubo digestivo
+T189;Cuerpo extraño en el tubo digestivo, parte no especificada
 T19;Cuerpo extrano en las vias genitourinarias
-T190;Cuerpo extra�o en la uretra
-T191;Cuerpo extra�o en la vejiga
-T192;Cuerpo extra�o en la vulva y en la vagina
-T193;Cuerpo extra�o en el utero [cualquier parte]
-T198;Cuerpo extra�o en otras y en multiples partes de las vias genitourinarias
-T199;Cuerpo extra�o en las vias genitourinarias, parte no especificada
+T190;Cuerpo extraño en la uretra
+T191;Cuerpo extraño en la vejiga
+T192;Cuerpo extraño en la vulva y en la vagina
+T193;Cuerpo extraño en el utero [cualquier parte]
+T198;Cuerpo extraño en otras y en multiples partes de las vias genitourinarias
+T199;Cuerpo extraño en las vias genitourinarias, parte no especificada
 T20;Quemadura y corrosion de la cabeza y cuello
 T200;Quemadura de la cabeza y del cuello, grado no especificado
 T201;Quemadura de la cabeza y del cuello, de primer grado
@@ -9201,24 +9201,24 @@ T214;Corrosion del tronco, grado no especificado
 T215;Corrosion del tronco, de primer grado
 T216;Corrosion del tronco, de segundo grado
 T217;Corrosion del tronco, de tercer grado
-T22;Quemadura y corrosion del hombro y del miembro superior, excepto de la mu�eca y de la mano
-T220;Quemadura del hombro y miembro superior, grado no especificado, excepto de la mu�eca y de la mano
-T221;Quemadura del hombro y miembro superior, de primer grado, excepto de la mu�eca y de la mano
-T222;Quemadura del hombro y miembro superior, de segundo grado, excepto de la mu�eca y de la mano
-T223;Quemadura del hombro y miembro superior, de tercer grado, excepto de la mu�eca y de la mano
-T224;Corrosion del hombro y miembro superior, grado no especificado, excepto de la mu�eca y de la mano
-T225;Corrosion del hombro y miembro superior, de primer grado, excepto de la mu�eca y de la mano
-T226;Corrosion del hombro y miembro superior, de segundo grado, excepto de la mu�eca y de la mano
-T227;Corrosion del hombro y miembro superior, de tercer grado, excepto de la mu�eca y de la mano
+T22;Quemadura y corrosion del hombro y del miembro superior, excepto de la muñeca y de la mano
+T220;Quemadura del hombro y miembro superior, grado no especificado, excepto de la muñeca y de la mano
+T221;Quemadura del hombro y miembro superior, de primer grado, excepto de la muñeca y de la mano
+T222;Quemadura del hombro y miembro superior, de segundo grado, excepto de la muñeca y de la mano
+T223;Quemadura del hombro y miembro superior, de tercer grado, excepto de la muñeca y de la mano
+T224;Corrosion del hombro y miembro superior, grado no especificado, excepto de la muñeca y de la mano
+T225;Corrosion del hombro y miembro superior, de primer grado, excepto de la muñeca y de la mano
+T226;Corrosion del hombro y miembro superior, de segundo grado, excepto de la muñeca y de la mano
+T227;Corrosion del hombro y miembro superior, de tercer grado, excepto de la muñeca y de la mano
 T23;Quemadura y corrosion de la muneca y de la mano
-T230;Quemadura de la mu�eca y de la mano, grado no especificado
-T231;Quemadura de la mu�eca y de la mano, de primer grado
-T232;Quemadura de la mu�eca y de la mano, de segundo grado
-T233;Quemadura de la mu�eca y de la mano, de tercer grado
-T234;Corrosion de la mu�eca y de la mano, grado no especificado
-T235;Corrosion de la mu�eca y de la mano, de primer grado
-T236;Corrosion de la mu�eca y de la mano, de segundo grado
-T237;Corrosion de la mu�eca y de la mano, de tercer grado
+T230;Quemadura de la muñeca y de la mano, grado no especificado
+T231;Quemadura de la muñeca y de la mano, de primer grado
+T232;Quemadura de la muñeca y de la mano, de segundo grado
+T233;Quemadura de la muñeca y de la mano, de tercer grado
+T234;Corrosion de la muñeca y de la mano, grado no especificado
+T235;Corrosion de la muñeca y de la mano, de primer grado
+T236;Corrosion de la muñeca y de la mano, de segundo grado
+T237;Corrosion de la muñeca y de la mano, de tercer grado
 T24;Quemadura y corrosion de la cadera y miembro inferior, excepto tobillo y pie
 T240;Quemadura de la cadera y del miembro inferior, grado no especificado, excepto tobillo y pie
 T241;Quemadura de la cadera y del miembro inferior, de primer grado, excepto tobillo y pie
@@ -9314,7 +9314,7 @@ T331;Congelamiento superficial del cuello
 T332;Congelamiento superficial del torax
 T333;Congelamiento superficial de la pared abdominal, region lumbosacra y pelvis
 T334;Congelamiento superficial del brazo
-T335;Congelamiento superficial de la mu�eca y de la mano
+T335;Congelamiento superficial de la muñeca y de la mano
 T336;Congelamiento superficial de la cadera y del muslo
 T337;Congelamiento superficial de la rodilla y de la pierna
 T338;Congelamiento superficial del tobillo y del pie
@@ -9325,7 +9325,7 @@ T341;Congelamiento con necrosis tisular del cuello
 T342;Congelamiento con necrosis tisular del torax
 T343;Congelamiento con necrosis tisular de la pared abdominal, region lumbosacra y pelvis
 T344;Congelamiento con necrosis tisular del brazo
-T345;Congelamiento con necrosis tisular de la mu�eca y de la mano
+T345;Congelamiento con necrosis tisular de la muñeca y de la mano
 T346;Congelamiento con necrosis tisular de la cadera y del muslo
 T347;Congelamiento con necrosis tisular de la rodilla y de la pierna
 T348;Congelamiento con necrosis tisular del tobillo y del pie
@@ -9530,7 +9530,7 @@ T562;Efecto toxico de metales: cromo y sus compuestos
 T563;Efecto toxico de metales: cadmio y sus compuestos
 T564;Efecto toxico de metales: cobre y sus compuestos
 T565;Efecto toxico de metales: zinc y sus compuestos
-T566;Efecto toxico de metales: esta�o y sus compuestos
+T566;Efecto toxico de metales: estaño y sus compuestos
 T567;Efecto toxico de metales: berilio y sus compuestos
 T568;Efecto toxico de metales: otros metales
 T569;Efecto toxico de metales: metal, no especificado
@@ -9577,7 +9577,7 @@ T63;Efecto toxico del contacto con animales venenosos
 T630;Efecto toxico del contacto con animales venenosos: veneno de serpiente
 T631;Efecto toxico del contacto con animales venenosos: veneno de otros reptiles
 T632;Efecto toxico del contacto con animales venenosos: veneno de escorpion
-T633;Efecto toxico del contacto con animales venenosos: veneno de ara�as
+T633;Efecto toxico del contacto con animales venenosos: veneno de arañas
 T634;Efecto toxico del contacto con animales venenosos: veneno de otros artropodos
 T635;Efecto toxico del contacto con animales venenosos: efecto toxico del contacto con peces
 T636;Efecto toxico del contacto con animales venenosos: efecto toxico del contacto con otros animales marinos
@@ -9609,7 +9609,7 @@ T679;Efecto del calor y de la luz, no especificado
 T68;Hipotermia
 T69;Otros efectos de la reduccion de la temperatura
 T690;Mano y pie de inmersion
-T691;Saba�on(es)
+T691;Sabañon(es)
 T698;Otros efectos especificados de la reduccion de la temperatura
 T699;Efecto de la reduccion de la temperatura, no especificado
 T70;Efectos de la presion del aire y del agua
@@ -9677,8 +9677,8 @@ T811;Choque durante o resultante de un procedimiento, no clasificado en otra par
 T812;Puncion o laceracion accidental durante un procedimiento, no clasificadas en otra parte
 T813;Desgarro de herida operatoria, no clasificado en otra parte
 T814;Infeccion consecutiva a procedimiento, no clasificada en otra parte
-T815;Cuerpo extra�o dejado accidentalmente en cavidad corporal o en herida operatoria consecutiva a procedimiento
-T816;Reaccion aguda a sustancia extra�a dejada accidentalmente durante un procedimiento
+T815;Cuerpo extraño dejado accidentalmente en cavidad corporal o en herida operatoria consecutiva a procedimiento
+T816;Reaccion aguda a sustancia extraña dejada accidentalmente durante un procedimiento
 T817;Complicaciones vasculares consecutivas a procedimientos, no clasificadas en otra parte
 T818;Otras complicaciones de procedimientos, no clasificadas en otra parte
 T819;Complicaciones de procedimientos, no especificada
@@ -9727,7 +9727,7 @@ T858;Otras complicaciones de otros dispositivos protesicos, implantes e injertos
 T859;Complicacion no especificada de dispositivo protesico, implante e injerto interno
 T86;Falla y rechazo del trasplante de organos y tejidos
 T860;Rechazo de trasplante de medula osea
-T861;Falla y rechazo de trasplante de ri�on
+T861;Falla y rechazo de trasplante de riñon
 T862;Falla y rechazo de trasplante de corazon
 T863;Falla y rechazo de trasplante de pulmon
 T864;Falla y rechazo de trasplante de higado
@@ -9737,10 +9737,10 @@ T87;Complicaciones peculiares de la reinsersion y amputacion
 T870;Complicaciones de la reinsercion (de parte) de extremidad superior
 T871;Complicaciones de la reinsercion (de parte) de extremidad inferior
 T872;Complicaciones de otras partes del cuerpo reinsertadas
-T873;Neuroma de mu�on de amputacion
-T874;Infeccion de mu�on de amputacion
-T875;Necrosis de mu�on de amputacion
-T876;Otras complicaciones y las no especificadas de mu�on de amputacion
+T873;Neuroma de muñon de amputacion
+T874;Infeccion de muñon de amputacion
+T875;Necrosis de muñon de amputacion
+T876;Otras complicaciones y las no especificadas de muñon de amputacion
 T88;Otras complicaciones de la atencion medica y quirurgica, no clasificadas en otra parte
 T880;Infeccion consecutiva a inmunizacion
 T881;Otras complicaciones consecutivas a inmunizacion, no clasificadas en otra parte
@@ -9773,7 +9773,7 @@ T919;Secuelas de traumatismo no especificados del cuello y del tronco
 T92;Secuelas de traumatismos de miembro superior
 T920;Secuelas de herida de miembro superior
 T921;Secuelas de fractura del brazo
-T922;Secuelas de fractura de la mu�eca y de la mano
+T922;Secuelas de fractura de la muñeca y de la mano
 T923;Secuelas de luxacion, torcedura y esguince de miembro superior
 T924;Secuelas de traumatismo de nervio de miembro superior
 T925;Secuelas de traumatismo de tendon y musculo de miembro superior
@@ -9804,7 +9804,7 @@ T959;Secuelas de quemadura, corrosion y congelamiento no especificados
 T96;Secuelas de envenenamientos por drogas, medicamentos y sustancias biologicas
 T97;Secuelas de efectos toxicos de sustancias de procedencia no medicinal
 T98;Secuelas de otros efectos y los no especificados de causas externas
-T980;Secuelas de efectos de cuerpos extra�os que penetran en orificios naturales
+T980;Secuelas de efectos de cuerpos extraños que penetran en orificios naturales
 T981;Secuelas de otros efectos y los no especificados de causas externas
 T982;Secuelas de ciertas complicaciones precoces de los traumatismos
 T983;Secuelas de complicaciones de la atencion medica y quirurgica, no clasificadas en otra parte
@@ -10859,17 +10859,17 @@ W146;Caida desde un arbol: area industrial y de la construccion
 W147;Caida desde un arbol: granja
 W148;Caida desde un arbol: otro lugar especificado
 W149;Caida desde un arbol: lugar no especificado
-W15;Caida desde pe�asco
-W150;Caida desde pe�asco: vivienda
-W151;Caida desde pe�asco: institucion residencial
-W152;Caida desde pe�asco: escuelas, otras instituciones y areas administrativas publicas
-W153;Caida desde pe�asco: areas de deporte y atletismo
-W154;Caida desde pe�asco: calles y carreteras
-W155;Caida desde pe�asco: comercio y area de servicios
-W156;Caida desde pe�asco: area industrial y de la construccion
-W157;Caida desde pe�asco: granja
-W158;Caida desde pe�asco: otro lugar especificado
-W159;Caida desde pe�asco: lugar no especificado
+W15;Caida desde peñasco
+W150;Caida desde peñasco: vivienda
+W151;Caida desde peñasco: institucion residencial
+W152;Caida desde peñasco: escuelas, otras instituciones y areas administrativas publicas
+W153;Caida desde peñasco: areas de deporte y atletismo
+W154;Caida desde peñasco: calles y carreteras
+W155;Caida desde peñasco: comercio y area de servicios
+W156;Caida desde peñasco: area industrial y de la construccion
+W157;Caida desde peñasco: granja
+W158;Caida desde peñasco: otro lugar especificado
+W159;Caida desde peñasco: lugar no especificado
 W16;Salto o zambullida dentro del agua que causa otro traumatismo sin sumersion o ahogamiento
 W160;Salto o zambullida dentro del agua que causa otro traumatismo sin sumersion o ahogamiento: vivienda
 W161;Salto o zambullida dentro del agua que causa otro traumatismo sin sumersion o ahogamiento: institucion residencial
@@ -10980,17 +10980,17 @@ W256;Contacto traumatico con vidrio cortante: area industrial y de la construcci
 W257;Contacto traumatico con vidrio cortante: granja
 W258;Contacto traumatico con vidrio cortante: otro lugar especificado
 W259;Contacto traumatico con vidrio cortante: lugar no especificado
-W26;Contacto traumatico con cuchillo, espada, daga o pu�al
-W260;Contacto traumatico con cuchillo, espada, daga o pu�al: vivienda
-W261;Contacto traumatico con cuchillo, espada, daga o pu�al: institucion residencial
-W262;Contacto traumatico con cuchillo, espada, daga o pu�al: escuelas, otras instituciones y areas administrativas publicas
-W263;Contacto traumatico con cuchillo, espada, daga o pu�al: areas de deporte y atletismo
-W264;Contacto traumatico con cuchillo, espada, daga o pu�al: calles y carreteras
-W265;Contacto traumatico con cuchillo, espada, daga o pu�al: comercio y area de servicios
-W266;Contacto traumatico con cuchillo, espada, daga o pu�al: area industrial y de la construccion
-W267;Contacto traumatico con cuchillo, espada, daga o pu�al: granja
-W268;Contacto traumatico con cuchillo, espada, daga o pu�al: otro lugar especificado
-W269;Contacto traumatico con cuchillo, espada, daga o pu�al: lugar no especificado
+W26;Contacto traumatico con cuchillo, espada, daga o puñal
+W260;Contacto traumatico con cuchillo, espada, daga o puñal: vivienda
+W261;Contacto traumatico con cuchillo, espada, daga o puñal: institucion residencial
+W262;Contacto traumatico con cuchillo, espada, daga o puñal: escuelas, otras instituciones y areas administrativas publicas
+W263;Contacto traumatico con cuchillo, espada, daga o puñal: areas de deporte y atletismo
+W264;Contacto traumatico con cuchillo, espada, daga o puñal: calles y carreteras
+W265;Contacto traumatico con cuchillo, espada, daga o puñal: comercio y area de servicios
+W266;Contacto traumatico con cuchillo, espada, daga o puñal: area industrial y de la construccion
+W267;Contacto traumatico con cuchillo, espada, daga o puñal: granja
+W268;Contacto traumatico con cuchillo, espada, daga o puñal: otro lugar especificado
+W269;Contacto traumatico con cuchillo, espada, daga o puñal: lugar no especificado
 W27;Contacto traumatico con herramientas manuales sin motor
 W270;Contacto traumatico con herramientas manuales sin motor: vivienda
 W271;Contacto traumatico con herramientas manuales sin motor: institucion residencial
@@ -11178,28 +11178,28 @@ W436;Exposicion a vibraciones: area industrial y de la construccion
 W437;Exposicion a vibraciones: granja
 W438;Exposicion a vibraciones: otro lugar especificado
 W439;Exposicion a vibraciones: lugar no especificado
-W44;Cuerpo extra�o que penetra por el ojo u orificio natural
-W440;Cuerpo extra�o que penetra por el ojo u orificio natural: vivienda
-W441;Cuerpo extra�o que penetra por el ojo u orificio natural: institucion residencial
-W442;Cuerpo extra�o que penetra por el ojo u orificio natural: escuelas, otras instituciones y areas administrativas publicas
-W443;Cuerpo extra�o que penetra por el ojo u orificio natural: areas de deporte y atletismo
-W444;Cuerpo extra�o que penetra por el ojo u orificio natural: calles y carreteras
-W445;Cuerpo extra�o que penetra por el ojo u orificio natural: comercio y areas de servicio
-W446;Cuerpo extra�o que penetra por el ojo u orificio natural: area industrial y de la construccion
-W447;Cuerpo extra�o que penetra por el ojo u orificio natural: granja
-W448;Cuerpo extra�o que penetra por el ojo u orificio natural: otro lugar especificado
-W449;Cuerpo extra�o que penetra por el ojo u orificio natural: lugar no especificado
-W45;Cuerpo extra�o que penetra a traves de la piel
-W450;Cuerpo extra�o que penetra a traves de la piel: vivienda
-W451;Cuerpo extra�o que penetra a traves de la piel: institucion residencial
-W452;Cuerpo extra�o que penetra a traves de la piel: escuelas, otras instituciones y areas administrativas publicas
-W453;Cuerpo extra�o que penetra a traves de la piel: areas de deporte y atletismo
-W454;Cuerpo extra�o que penetra a traves de la piel: calles y carreteras
-W455;Cuerpo extra�o que penetra a traves de la piel: comercio y areas de servicio
-W456;Cuerpo extra�o que penetra a traves de la piel: area industrial y de la construccion
-W457;Cuerpo extra�o que penetra a traves de la piel: granja
-W458;Cuerpo extra�o que penetra a traves de la piel: otro lugar especificado
-W459;Cuerpo extra�o que penetra a traves de la piel: lugar no especificado
+W44;Cuerpo extraño que penetra por el ojo u orificio natural
+W440;Cuerpo extraño que penetra por el ojo u orificio natural: vivienda
+W441;Cuerpo extraño que penetra por el ojo u orificio natural: institucion residencial
+W442;Cuerpo extraño que penetra por el ojo u orificio natural: escuelas, otras instituciones y areas administrativas publicas
+W443;Cuerpo extraño que penetra por el ojo u orificio natural: areas de deporte y atletismo
+W444;Cuerpo extraño que penetra por el ojo u orificio natural: calles y carreteras
+W445;Cuerpo extraño que penetra por el ojo u orificio natural: comercio y areas de servicio
+W446;Cuerpo extraño que penetra por el ojo u orificio natural: area industrial y de la construccion
+W447;Cuerpo extraño que penetra por el ojo u orificio natural: granja
+W448;Cuerpo extraño que penetra por el ojo u orificio natural: otro lugar especificado
+W449;Cuerpo extraño que penetra por el ojo u orificio natural: lugar no especificado
+W45;Cuerpo extraño que penetra a traves de la piel
+W450;Cuerpo extraño que penetra a traves de la piel: vivienda
+W451;Cuerpo extraño que penetra a traves de la piel: institucion residencial
+W452;Cuerpo extraño que penetra a traves de la piel: escuelas, otras instituciones y areas administrativas publicas
+W453;Cuerpo extraño que penetra a traves de la piel: areas de deporte y atletismo
+W454;Cuerpo extraño que penetra a traves de la piel: calles y carreteras
+W455;Cuerpo extraño que penetra a traves de la piel: comercio y areas de servicio
+W456;Cuerpo extraño que penetra a traves de la piel: area industrial y de la construccion
+W457;Cuerpo extraño que penetra a traves de la piel: granja
+W458;Cuerpo extraño que penetra a traves de la piel: otro lugar especificado
+W459;Cuerpo extraño que penetra a traves de la piel: lugar no especificado
 W49;Exposicion a otras fuerzas mecanicas inanimadas y las no especificadas
 W490;Exposicion a otras fuerzas mecanicas inanimadas, y las no especificadas: vivienda
 W491;Exposicion a otras fuerzas mecanicas inanimadas, y las no especificadas: institucion residencial
@@ -11211,17 +11211,17 @@ W496;Exposicion a otras fuerzas mecanicas inanimadas, y las no especificadas: ar
 W497;Exposicion a otras fuerzas mecanicas inanimadas, y las no especificadas: granja
 W498;Exposicion a otras fuerzas mecanicas inanimadas, y las no especificadas: otro lugar especificado
 W499;Exposicion a otras fuerzas mecanicas inanimadas, y las no especificadas: lugar no especificado
-W50;Aporreo, golpe, mordedura, patada, rasgu�o o torcedura infligidos por otras personas
-W500;Aporreo, golpe, mordedura, patada, rasgu�o o torcedura infligidos por otra persona: vivienda
-W501;Aporreo, golpe, mordedura, patada, rasgu�o o torcedura infligidos por otra persona: institucion residencial
-W502;Aporreo, golpe, mordedura, patada, rasgu�o o torcedura infligidos por otra persona: escuelas, otras instituciones y areas administrativas publicas
-W503;Aporreo, golpe, mordedura, patada, rasgu�o o torcedura infligidos por otra persona: areas de deporte y atletismo
-W504;Aporreo, golpe, mordedura, patada, rasgu�o o torcedura infligidos por otra persona: calles y carreteras
-W505;Aporreo, golpe, mordedura, patada, rasgu�o o torcedura infligidos por otra persona: comercio y areas de servicio
-W506;Aporreo, golpe, mordedura, patada, rasgu�o o torcedura infligidos por otra persona: area industrial y de la construccion
-W507;Aporreo, golpe, mordedura, patada, rasgu�o o torcedura infligidos por otra persona: granja
-W508;Aporreo, golpe, mordedura, patada, rasgu�o o torcedura infligidos por otra persona: otro lugar especificado
-W509;Aporreo, golpe, mordedura, patada, rasgu�o o torcedura infligidos por otra persona: lugar no especificado
+W50;Aporreo, golpe, mordedura, patada, rasguño o torcedura infligidos por otras personas
+W500;Aporreo, golpe, mordedura, patada, rasguño o torcedura infligidos por otra persona: vivienda
+W501;Aporreo, golpe, mordedura, patada, rasguño o torcedura infligidos por otra persona: institucion residencial
+W502;Aporreo, golpe, mordedura, patada, rasguño o torcedura infligidos por otra persona: escuelas, otras instituciones y areas administrativas publicas
+W503;Aporreo, golpe, mordedura, patada, rasguño o torcedura infligidos por otra persona: areas de deporte y atletismo
+W504;Aporreo, golpe, mordedura, patada, rasguño o torcedura infligidos por otra persona: calles y carreteras
+W505;Aporreo, golpe, mordedura, patada, rasguño o torcedura infligidos por otra persona: comercio y areas de servicio
+W506;Aporreo, golpe, mordedura, patada, rasguño o torcedura infligidos por otra persona: area industrial y de la construccion
+W507;Aporreo, golpe, mordedura, patada, rasguño o torcedura infligidos por otra persona: granja
+W508;Aporreo, golpe, mordedura, patada, rasguño o torcedura infligidos por otra persona: otro lugar especificado
+W509;Aporreo, golpe, mordedura, patada, rasguño o torcedura infligidos por otra persona: lugar no especificado
 W51;Choque o empellon contra otra persona
 W510;Choque o empellon contra otra persona: vivienda
 W511;Choque o empellon contra otra persona: institucion residencial
@@ -11344,27 +11344,27 @@ W647;Exposicion a otras fuerzas mecanicas animadas, y las no especificadas: gran
 W648;Exposicion a otras fuerzas mecanicas animadas, y las no especificadas: otro lugar especificado
 W649;Exposicion a otras fuerzas mecanicas animadas, y las no especificadas: lugar no especificado
 W65;Ahogamiento y sumersion mientras se esta en la banera
-W650;Ahogamiento y sumersion mientras se esta en la ba�era: vivienda
-W651;Ahogamiento y sumersion mientras se esta en la ba�era: institucion residencial
-W652;Ahogamiento y sumersion mientras se esta en la ba�era: escuelas, otras instituciones y areas administrativas publicas
-W653;Ahogamiento y sumersion mientras se esta en la ba�era: areas de deporte y atletismo
-W654;Ahogamiento y sumersion mientras se esta en la ba�era: calles y carreteras
-W655;Ahogamiento y sumersion mientras se esta en la ba�era: comercio y areas de servicio
-W656;Ahogamiento y sumersion mientras se esta en la ba�era: area industrial y de la construccion
-W657;Ahogamiento y sumersion mientras se esta en la ba�era: granja
-W658;Ahogamiento y sumersion mientras se esta en la ba�era: otro lugar especificado
-W659;Ahogamiento y sumersion mientras se esta en la ba�era: lugar no especificado
+W650;Ahogamiento y sumersion mientras se esta en la bañera: vivienda
+W651;Ahogamiento y sumersion mientras se esta en la bañera: institucion residencial
+W652;Ahogamiento y sumersion mientras se esta en la bañera: escuelas, otras instituciones y areas administrativas publicas
+W653;Ahogamiento y sumersion mientras se esta en la bañera: areas de deporte y atletismo
+W654;Ahogamiento y sumersion mientras se esta en la bañera: calles y carreteras
+W655;Ahogamiento y sumersion mientras se esta en la bañera: comercio y areas de servicio
+W656;Ahogamiento y sumersion mientras se esta en la bañera: area industrial y de la construccion
+W657;Ahogamiento y sumersion mientras se esta en la bañera: granja
+W658;Ahogamiento y sumersion mientras se esta en la bañera: otro lugar especificado
+W659;Ahogamiento y sumersion mientras se esta en la bañera: lugar no especificado
 W66;Ahogamiento y sumersion consecutivos a caida en la banera
-W660;Ahogamiento y sumersion consecutivos a caida en la ba�era: vivienda
-W661;Ahogamiento y sumersion consecutivos a caida en la ba�era: institucion residencial
-W662;Ahogamiento y sumersion consecutivos a caida en la ba�era: escuelas, otras instituciones y areas administrativas publicas
-W663;Ahogamiento y sumersion consecutivos a caida en la ba�era: areas de deporte y atletismo
-W664;Ahogamiento y sumersion consecutivos a caida en la ba�era: calles y carreteras
-W665;Ahogamiento y sumersion consecutivos a caida en la ba�era: comercio y areas de servicio
-W666;Ahogamiento y sumersion consecutivos a caida en la ba�era: area industrial y de la construccion
-W667;Ahogamiento y sumersion consecutivos a caida en la ba�era: granja
-W668;Ahogamiento y sumersion consecutivos a caida en la ba�era: otro lugar especificado
-W669;Ahogamiento y sumersion consecutivos a caida en la ba�era: lugar no especificado
+W660;Ahogamiento y sumersion consecutivos a caida en la bañera: vivienda
+W661;Ahogamiento y sumersion consecutivos a caida en la bañera: institucion residencial
+W662;Ahogamiento y sumersion consecutivos a caida en la bañera: escuelas, otras instituciones y areas administrativas publicas
+W663;Ahogamiento y sumersion consecutivos a caida en la bañera: areas de deporte y atletismo
+W664;Ahogamiento y sumersion consecutivos a caida en la bañera: calles y carreteras
+W665;Ahogamiento y sumersion consecutivos a caida en la bañera: comercio y areas de servicio
+W666;Ahogamiento y sumersion consecutivos a caida en la bañera: area industrial y de la construccion
+W667;Ahogamiento y sumersion consecutivos a caida en la bañera: granja
+W668;Ahogamiento y sumersion consecutivos a caida en la bañera: otro lugar especificado
+W669;Ahogamiento y sumersion consecutivos a caida en la bañera: lugar no especificado
 W67;Ahogamiento y sumersion mientras se esta en una piscina
 W670;Ahogamiento y sumersion mientras se esta en una piscina: vivienda
 W671;Ahogamiento y sumersion mientras se esta en una piscina: institucion residencial
@@ -11817,17 +11817,17 @@ X156;Contacto con utensilios domesticos calientes: area industrial y de la const
 X157;Contacto con utensilios domesticos calientes: granja
 X158;Contacto con utensilios domesticos calientes otro lugar especificado:
 X159;Contacto con utensilios domesticos calientes: lugar no especificado
-X16;Contacto con radiadores, ca�erias y artefactos para calefaccion, calientes
-X160;Contacto con radiadores, ca�erias y artefactos para calefaccion, calientes: vivienda
-X161;Contacto con radiadores, ca�erias y artefactos para calefaccion, calientes: institucion residencial
-X162;Contacto con radiadores, ca�erias y artefactos para calefaccion, calientes: escuelas, otras instituciones y areas administrativas publicas
-X163;Contacto con radiadores, ca�erias y artefactos para calefaccion, calientes: areas de deporte y atletismo
-X164;Contacto con radiadores, ca�erias y artefactos para calefaccion, calientes: calles y carreteras
-X165;Contacto con radiadores, ca�erias y artefactos para calefaccion, calientes: comercio y areas de servicio
-X166;Contacto con radiadores, ca�erias y artefactos para calefaccion, calientes: area industrial y de la construccion
-X167;Contacto con radiadores, ca�erias y artefactos para calefaccion, calientes: granja
-X168;Contacto con radiadores, ca�erias y artefactos para calefaccion, calientes: otro lugar especificado
-X169;Contacto con radiadores, ca�erias y artefactos para calefaccion, calientes: lugar no especificado
+X16;Contacto con radiadores, cañerias y artefactos para calefaccion, calientes
+X160;Contacto con radiadores, cañerias y artefactos para calefaccion, calientes: vivienda
+X161;Contacto con radiadores, cañerias y artefactos para calefaccion, calientes: institucion residencial
+X162;Contacto con radiadores, cañerias y artefactos para calefaccion, calientes: escuelas, otras instituciones y areas administrativas publicas
+X163;Contacto con radiadores, cañerias y artefactos para calefaccion, calientes: areas de deporte y atletismo
+X164;Contacto con radiadores, cañerias y artefactos para calefaccion, calientes: calles y carreteras
+X165;Contacto con radiadores, cañerias y artefactos para calefaccion, calientes: comercio y areas de servicio
+X166;Contacto con radiadores, cañerias y artefactos para calefaccion, calientes: area industrial y de la construccion
+X167;Contacto con radiadores, cañerias y artefactos para calefaccion, calientes: granja
+X168;Contacto con radiadores, cañerias y artefactos para calefaccion, calientes: otro lugar especificado
+X169;Contacto con radiadores, cañerias y artefactos para calefaccion, calientes: lugar no especificado
 X17;Contacto con maquinas, motores y herramientas calientes
 X170;Contacto con maquinas, motores y herramientas calientes: vivienda
 X171;Contacto con maquinas, motores y herramientas calientes: institucion residencial
@@ -11872,17 +11872,17 @@ X206;Contacto traumatico con serpientes y lagartos venenosos: area industrial y 
 X207;Contacto traumatico con serpientes y lagartos venenosos: granja
 X208;Contacto traumatico con serpientes y lagartos venenosos: otro lugar especificado
 X209;Contacto traumatico con serpientes y lagartos venenosos: lugar no especificado
-X21;Contacto traumatico con ara�as venenosas
-X210;Contacto traumatico con ara�as venenosas: vivienda
-X211;Contacto traumatico con ara�as venenosas: institucion residencial
-X212;Contacto traumatico con ara�as venenosas: escuelas, otras instituciones y areas administrativas publicas
-X213;Contacto traumatico con ara�as venenosas: areas de deporte y atletismo
-X214;Contacto traumatico con ara�as venenosas: calles y carreteras
-X215;Contacto traumatico con ara�as venenosas: comercio y areas de servicio
-X216;Contacto traumatico con ara�as venenosas: area industrial y de la construccion
-X217;Contacto traumatico con ara�as venenosas: granja
-X218;Contacto traumatico con ara�as venenosas: otro lugar especificado
-X219;Contacto traumatico con ara�as venenosas: lugar no especificado
+X21;Contacto traumatico con arañas venenosas
+X210;Contacto traumatico con arañas venenosas: vivienda
+X211;Contacto traumatico con arañas venenosas: institucion residencial
+X212;Contacto traumatico con arañas venenosas: escuelas, otras instituciones y areas administrativas publicas
+X213;Contacto traumatico con arañas venenosas: areas de deporte y atletismo
+X214;Contacto traumatico con arañas venenosas: calles y carreteras
+X215;Contacto traumatico con arañas venenosas: comercio y areas de servicio
+X216;Contacto traumatico con arañas venenosas: area industrial y de la construccion
+X217;Contacto traumatico con arañas venenosas: granja
+X218;Contacto traumatico con arañas venenosas: otro lugar especificado
+X219;Contacto traumatico con arañas venenosas: lugar no especificado
 X22;Contacto traumatico con escorpion
 X220;Contacto traumatico con escorpion: vivienda
 X221;Contacto traumatico con escorpion: institucion residencial
@@ -13333,17 +13333,17 @@ Y606;Incidente durante aspiracion, puncion y otra cateterizacion
 Y607;Incidente durante administracion de enema
 Y608;Incidente durante otras atenciones medicas y quirurgicas
 Y609;Incidente durante atencion medica y quirurgica no especificada
-Y61;Objeto extra�o dejado accidentalmente en el cuerpo durante la atencion medica y quirurgica
-Y610;Objeto extra�o dejado accidentalmente en el cuerpo durante operacion quirurgica
-Y611;Objeto extra�o dejado accidentalmente en el cuerpo durante infusion o transfusion
-Y612;Objeto extra�o dejado accidentalmente en el cuerpo durante dialisis renal u otra perfusion
-Y613;Objeto extra�o dejado accidentalmente en el cuerpo durante inyeccion o inmunizacion
-Y614;Objeto extra�o dejado accidentalmente en el cuerpo durante examen endoscopico
-Y615;Objeto extra�o dejado accidentalmente en el cuerpo durante cateterizacion cardiaca
-Y616;Objeto extra�o dejado accidentalmente en el cuerpo durante aspiracion, puncion y otra cateterizacion
-Y617;Objeto extra�o dejado accidentalmente en el cuerpo durante remocion de cateter o taponamiento
-Y618;Objeto extra�o dejado accidentalmente en el cuerpo durante otras atenciones medicas y quirurgicas
-Y619;Objeto extra�o dejado accidentalmente en el cuerpo durante atencion medica y quirurgica no especificada
+Y61;Objeto extraño dejado accidentalmente en el cuerpo durante la atencion medica y quirurgica
+Y610;Objeto extraño dejado accidentalmente en el cuerpo durante operacion quirurgica
+Y611;Objeto extraño dejado accidentalmente en el cuerpo durante infusion o transfusion
+Y612;Objeto extraño dejado accidentalmente en el cuerpo durante dialisis renal u otra perfusion
+Y613;Objeto extraño dejado accidentalmente en el cuerpo durante inyeccion o inmunizacion
+Y614;Objeto extraño dejado accidentalmente en el cuerpo durante examen endoscopico
+Y615;Objeto extraño dejado accidentalmente en el cuerpo durante cateterizacion cardiaca
+Y616;Objeto extraño dejado accidentalmente en el cuerpo durante aspiracion, puncion y otra cateterizacion
+Y617;Objeto extraño dejado accidentalmente en el cuerpo durante remocion de cateter o taponamiento
+Y618;Objeto extraño dejado accidentalmente en el cuerpo durante otras atenciones medicas y quirurgicas
+Y619;Objeto extraño dejado accidentalmente en el cuerpo durante atencion medica y quirurgica no especificada
 Y62;Fallas en la esterilizacion durante la atencion medica y quirurgica
 Y620;Fallas en la esterilizacion durante operacion quirurgica
 Y621;Fallas en la esterilizacion durante infusion o transfusion
@@ -13518,7 +13518,7 @@ Y97;Afeccion relacionada con la contaminacion ambiental
 Y98;Afeccion relacionada con el estilo de vida
 Z00;Examen general e investigacion de personas sin quejas o sin diagnostico informado
 Z000;Examen medico general
-Z001;Control de salud de rutina del ni�o
+Z001;Control de salud de rutina del niño
 Z002;Examen durante el periodo de crecimiento rapido en la infancia
 Z003;Examen del estado de desarrollo del adolescente
 Z004;Examen psiquiatrico general, no clasificado en otra parte
@@ -13614,7 +13614,7 @@ Z130;Examen de pesquisa especial para enfermedades de la sangre y organos hemato
 Z131;Examen de pesquisa especial para diabetes mellitus
 Z132;Examen de pesquisa especial para trastornos de la nutricion
 Z133;Examen de pesquisa especial para trastornos mentales y del comportamiento
-Z134;Examen de pesquisa especial para ciertos trastornos del desarrollo en el ni�o
+Z134;Examen de pesquisa especial para ciertos trastornos del desarrollo en el niño
 Z135;Examen de pesquisa especial para trastornos del ojo y del oido
 Z136;Examen de pesquisa especial para trastornos cardiovasculares
 Z137;Examen de pesquisa especial para malformaciones congenitas, deformidades y anomalias cromosomicas
@@ -13721,7 +13721,7 @@ Z351;Supervision de embarazo con historia de aborto
 Z352;Supervision de embarazo con otro riesgo en la historia obstetrica o reproductiva
 Z353;Supervision de embarazo con historia de insuficiente atencion prenatal
 Z354;Supervision de embarazo con gran multiparidad
-Z355;Supervision de primigesta a�osa
+Z355;Supervision de primigesta añosa
 Z356;Supervision de primigesta muy joven
 Z357;Supervision de embarazo de alto riesgo debido a problemas sociales
 Z358;Supervision de otros embarazos de alto riesgo
@@ -13852,7 +13852,7 @@ Z520;Donante de sangre
 Z521;Donante de piel
 Z522;Donante de hueso
 Z523;Donante de medula osea
-Z524;Donante de ri�on
+Z524;Donante de riñon
 Z525;Donante de cornea
 Z526;Donante de higado
 Z527;Donante de corazon
@@ -13878,7 +13878,7 @@ Z550;Problemas relacionados con el analfabetismo o bajo nivel de instruccion
 Z551;Problemas relacionados con la educacion no disponible o inaccesible
 Z552;Problemas relacionados con la falla en los examenes
 Z553;Problemas relacionados con el bajo rendimiento escolar
-Z554;Problemas relacionados con la inadaptacion educacional y desavenencias con maestros y compa�eros
+Z554;Problemas relacionados con la inadaptacion educacional y desavenencias con maestros y compañeros
 Z558;Otros problemas relacionados con la educacion y la alfabetizacion
 Z559;Problema no especificado relacionado con la educacion y la alfabetizacion
 Z56;Problemas relacionados con el empleo y el desempleo
@@ -13886,7 +13886,7 @@ Z560;Problemas relacionados con el desempleo, no especificados
 Z561;Problemas relacionados con el cambio de empleo
 Z562;Problemas relacionados con amenaza de perdida del empleo
 Z563;Problemas relacionados con horario estresante de trabajo
-Z564;Problemas relacionados con desavenencias con el jefe y los compa�eros de trabajo
+Z564;Problemas relacionados con desavenencias con el jefe y los compañeros de trabajo
 Z565;Problemas relacionados con el trabajo incompatible
 Z566;Otros problemas de tension fisica o mental relacionadas con el trabajo
 Z567;Otros problemas y los no especificados relacionados con el empleo
@@ -13936,9 +13936,9 @@ Z610;Problemas relacionados con la perdida de relacion afectiva en la infancia
 Z611;Problemas relacionados con el alejamiento del hogar en la infancia
 Z612;Problemas relacionados con alteracion en el patron de la relacion familiar en la infancia
 Z613;Problemas relacionados con eventos que llevaron a la perdida de la autoestima en la infancia
-Z614;Problemas relacionados con el abuso sexual del ni�o por persona dentro del grupo de apoyo primario
-Z615;Problemas relacionados con el abuso sexual del ni�o por persona ajena al grupo de apoyo primario
-Z616;Problemas relacionados con abuso fisico del ni�o
+Z614;Problemas relacionados con el abuso sexual del niño por persona dentro del grupo de apoyo primario
+Z615;Problemas relacionados con el abuso sexual del niño por persona ajena al grupo de apoyo primario
+Z616;Problemas relacionados con abuso fisico del niño
 Z617;Problemas relacionados con experiencias personales atemorizantes en la infancia
 Z618;Problemas relacionados con otras experiencias negativas en la infancia
 Z619;Problemas relacionados con experiencia negativa no especificada en la infancia
@@ -13946,12 +13946,12 @@ Z62;Otros problemas relacionados con la crianza del nino
 Z620;Problemas relacionados con la supervision o el control inadecuados de los padres
 Z621;Problemas relacionados con la sobreproteccion de los padres
 Z622;Problemas relacionados con la crianza en institucion
-Z623;Problemas relacionados con hostilidad y reprobacion al ni�o
-Z624;Problemas relacionados con el abandono emocional del ni�o
-Z625;Otros problemas relacionados con negligencia en la crianza del ni�o
+Z623;Problemas relacionados con hostilidad y reprobacion al niño
+Z624;Problemas relacionados con el abandono emocional del niño
+Z625;Otros problemas relacionados con negligencia en la crianza del niño
 Z626;Problemas relacionados con presiones inapropiadas de los padres y otras anormalidades en la calidad de la crianza
-Z628;Otros problemas especificados y relacionados con la crianza del ni�o
-Z629;Problema no especificado relacionado con la crianza del ni�o
+Z628;Otros problemas especificados y relacionados con la crianza del niño
+Z629;Problema no especificado relacionado con la crianza del niño
 Z63;Problemas relacionados con el grupo primario de apoyo, inclusive circunstancias familiares
 Z630;Problemas en la relacion entre esposos o pareja
 Z631;Problemas en la relacion con los padres y los familiares politicos
@@ -14034,9 +14034,9 @@ Z758;Otros problemas relacionados con servicios medicos y de salud
 Z759;Problema no especificado relacionado con servicios medicos y de salud
 Z76;Persona en contacto con los servicios de salud por otras circunstancias
 Z760;Consulta para repeticion de receta
-Z761;Consulta para atencion y supervision de la salud del ni�o
-Z762;Consulta para atencion y supervision de la salud de otros ni�os o lactantes sanos
-Z763;Persona sana que acompa�a al enfermo
+Z761;Consulta para atencion y supervision de la salud del niño
+Z762;Consulta para atencion y supervision de la salud de otros niños o lactantes sanos
+Z763;Persona sana que acompaña al enfermo
 Z764;Otro huesped en servicios de salud
 Z765;Persona que consulta con simulacion consciente [simulador]
 Z768;Persona en contacto con los servicios de salud en otras circunstancias especificadas
@@ -14080,7 +14080,7 @@ Z836;Historia familiar de enfermedades del sistema respiratorio
 Z837;Historia familiar de enfermedades del sistema digestivo
 Z84;Historia familiar de otras afecciones
 Z840;Historia familiar de enfermedades de la piel y del tejido subcutaneo
-Z841;Historia familiar de trastornos del ri�on y del ureter
+Z841;Historia familiar de trastornos del riñon y del ureter
 Z842;Historia familiar de otras enfermedades del sistema genitourinario
 Z843;Historia familiar de consanguinidad
 Z848;Historia familiar de otras afecciones especificadas
@@ -14127,8 +14127,8 @@ Z888;Historia personal de alergia a otras drogas, medicamentos y sustancias biol
 Z889;Historia personal de alergia a otras drogas, medicamentos y sustancias biologicas no especificadas
 Z89;Ausencia adquirida de miembros
 Z890;Ausencia adquirida de dedo(s), [incluido el pulgar], unilateral
-Z891;Ausencia adquirida de mano y mu�eca
-Z892;Ausencia adquirida de miembro superior por arriba de la mu�eca
+Z891;Ausencia adquirida de mano y muñeca
+Z892;Ausencia adquirida de miembro superior por arriba de la muñeca
 Z893;Ausencia adquirida de ambos miembros superiores [cualquier nivel]
 Z894;Ausencia adquirida de pie y tobillo
 Z895;Ausencia adquirida de pierna a nivel de o debajo de la rodilla
@@ -14142,7 +14142,7 @@ Z901;Ausencia adquirida de mama(s)
 Z902;Ausencia adquirida (de parte) del pulmon
 Z903;Ausencia adquirida de parte del estomago
 Z904;Ausencia adquirida de otras partes del tubo digestivo
-Z905;Ausencia adquirida de ri�on
+Z905;Ausencia adquirida de riñon
 Z906;Ausencia adquirida de otras partes de las vias urinarias
 Z907;Ausencia adquirida de organo(s) genital(es)
 Z908;Ausencia adquirida de otros organos
@@ -14150,7 +14150,7 @@ Z91;Historia personal de factores de riesgo no clasificadas en otra parte
 Z910;Historia personal de alergia, no debida a drogas ni a sustancias biologicas
 Z911;Historia personal de incumplimiento del regimen o tratamiento medico
 Z912;Historia personal de higiene personal deficiente
-Z913;Historia personal del ciclo sue�o
+Z913;Historia personal del ciclo sueño
 Z914;Historia personal de trauma psicologico, no clasificado en otra parte
 Z915;Historia personal de lesion autoinfligida intencionalmente
 Z916;Historia personal de otro trauma fisico
@@ -14175,7 +14175,7 @@ Z936;Otros orificios artificiales de las vias urinarias
 Z938;Otras aberturas artificiales
 Z939;Abertura artificial, no especificada
 Z94;Organos y tejidos trasplantados
-Z940;Trasplante de ri�on
+Z940;Trasplante de riñon
 Z941;Trasplante de corazon
 Z942;Trasplante de pulmon
 Z943;Trasplante de corazon y pulmones
@@ -14226,7 +14226,7 @@ Z993;Dependencia de silla de ruedas
 Z998;Dependencia de otras maquinas y dispositivos capacitantes
 Z999;Dependencia de maquina y dispositivo capacitante, no especificada
 |I1;Enfermedades infecciosas intestinales
-|I10;Fiebres virales trasmitidas por artr�podos y fiebres virales hemorr�gicas
+|I10;Fiebres virales trasmitidas por artropodos y fiebres virales hemorragicas
 |I11;Infecciones virales caracterizadas por lesiones de la piel y de las membranas mucosas
 |I12;Hepatitis viral
 |I13;Enfermedad por virus de la inmunodeficiencia humana (HIV)
@@ -14241,245 +14241,246 @@ Z999;Dependencia de maquina y dispositivo capacitante, no especificada
 |I21;Otras enfermedades infecciosas
 |I3;Ciertas zoonosis bacterianas
 |I4;Otras enfermedades bacterianas
-|I5;Infecciones con modo de transmisi�n predominantemente sexual
+|I5;Infecciones con modo de transmision predominantemente sexual
 |I6;Otras enfermedades debidas a espiroquetas
 |I7;Otras enfermedades causadas por clamidias
 |I8;Rickettsiosis
 |I9;Infecciones virales del sistema nervioso central
 |II1;Tumores malignos de labio de la cavidad bucal y de la faringe
-|II10;Tumores malignos de las v�as urinarias
-|II11;Tumores malignos del ojo del enc�falo y de otras partes del sistema nervioso
-|II12;Tumores malignos de la gl�ndula tiroides y de otras gl�ndulas endocrinas
+|II10;Tumores malignos de las vias urinarias
+|II11;Tumores malignos del ojo del encefalo y de otras partes del sistema nervioso
+|II12;Tumores malignos de la glandula tiroides y de otras glandulas endocrinas
 |II13;Tumores malignos de sitios mal definidos secundarios y de sitios no especificados
-|II14;Tumores malignos del tejido linf�tico, de los �rganos hematopoy�ticos y de tejidos afines
-|II15;Tumores malignos(primarios) de sitios m�ltiples independientes
+|II14;Tumores malignos del tejido linfatico, de los organos hematopoyeticos y de tejidos afines
+|II15;Tumores malignos(primarios) de sitios multiples independientes
 |II16;Tumores (neoplasias) in situ
 |II17;Tumores (neoplasias) benignos
 |II18;Tumores (neoplasias) de comportamiento incierto o desconocido
-|II2;Tumores malignos de los �rganos digestivos
-|II3;Tumores malignos de los �rganos respiratorios e intrator�cicos
-|II4;Tumores malignos de los huesos y de los cart�lagos articulares
+|II2;Tumores malignos de los organos digestivos
+|II3;Tumores malignos de los organos respiratorios e intratoracicos
+|II4;Tumores malignos de los huesos y de los cartilagos articulares
 |II5;Melanoma y otros tumores malignos de la piel
 |II6;Tumores malignos de los tejidos mesoteliales y de los tejidos blandos
 |II7;Tumor maligno de mama
-|II8;Tumores malignos de los �rganos genitales femeninos
-|II9;Tumores malignos de los �rganos genitales masculinos
+|II8;Tumores malignos de los organos genitales femeninos
+|II9;Tumores malignos de los organos genitales masculinos
 |III1;Anemias nutricionales
-|III2;Anemias hemol�ticas
-|III3;Anemias apl�sticas y otras anemias
-|III4;Defectos de la coagulaci�n, p�rpura y otras afecciones hemorr�gicas
-|III5;Otras enfermedades de la sangre y de los �rganos hematopoyeticos
+|III2;Anemias hemoliticas
+|III3;Anemias aplasticas y otras anemias
+|III4;Defectos de la coagulacion, purpura y otras afecciones hemorragicas
+|III5;Otras enfermedades de la sangre y de los organos hematopoyeticos
 |III6;Ciertos trastornos que afectan el mecanismo de la inmunidad
-|IV1;Trastornos de la gl�ndula tiroides
+|IV1;Trastornos de la glandula tiroides
 |IV2;Diabetes mellitus
-|IV3;Otros trastornos de la regulaci�n de la glucosa y de la secreci�n interna del p�ncreas
-|IV4;Trastornos de otras gl�ndulas endocrinas.
-|IV5;Desnutrici�n
+|IV3;Otros trastornos de la regulacion de la glucosa y de la secrecion interna del pancreas
+|IV4;Trastornos de otras glandulas endocrinas.
+|IV5;Desnutricion
 |IV6;Otras deficiencias nutricionales
-|IV7;Obesidad y otros tipo de hiperalimentaci�n
-|IV8;Trastornos metab�licos
-|IX1;Fiebre reum�tica aguda
+|IV7;Obesidad y otros tipo de hiperalimentacion
+|IV8;Trastornos metabolicos
+|IX1;Fiebre reumatica aguda
 |IX10;Otros trastornos y los no especificados del sistema circulatorio
-|IX2;Enfermedades card�acas reum�ticas cr�nicas
+|IX2;Enfermedades cardiacas reumaticas cronicas
 |IX3;Enfermedades hipertensivas
-|IX4;Enfermedades isqu�micas del coraz�n
-|IX5;Enfermedad cardiopulmonar y enfermedades de la circulaci�n pulmonar
-|IX6;Otras formas de enfermedad del coraz�n
+|IX4;Enfermedades isquemicas del corazon
+|IX5;Enfermedad cardiopulmonar y enfermedades de la circulacion pulmonar
+|IX6;Otras formas de enfermedad del corazon
 |IX7;Enfermedades cerebrovasculares
 |IX8;Enfermedades de las arterias, de las arteriales y de los vasos capilares
-|IX9;Enfermedades de las venas y de los vasos y ganglios linf�ticos, no clasificados en otra parte
-|V1;Trastornos mentales org�nicos, incluidos los trastornos sintom�ticos
+|IX9;Enfermedades de las venas y de los vasos y ganglios linfaticos, no clasificados en otra parte
+|V1;Trastornos mentales organicos, incluidos los trastornos sintomaticos
 |V10;Trastorno mental no especificado
-|v2;Esquizofrenia,trastornos esquizot�picos y trastornos delirantes
+|v2;Esquizofrenia,trastornos esquizotipicos y trastornos delirantes
 |V3;Trastornos del humor (afectivos)
-|V4;Trastornos neur�ticos, trastornos relacionados con el stress y trastornos somatomorfos
-|V5;S�ndromes del comportamiento asociados con alteraciones fisiol�gicas y factores f�sicos
+|V4;Trastornos neuroticos, trastornos relacionados con el stress y trastornos somatomorfos
+|V5;Sindromes del comportamiento asociados con alteraciones fisiologicas y factores fisicos
 |V6;Trastornos de la personalidad y del comportamiento en adultos
 |V7;Retraso mental
-|V8;Trastornos del desarrollo psicol�gico
-|V9;Trastornos emocionales y del comportamiento que aparecen habitualmente en la ni�ez u en la adolescencia
+|V8;Trastornos del desarrollo psicologico
+|V9;Trastornos emocionales y del comportamiento que aparecen habitualmente en la niñez u en la adolescencia
 |VI1;Enfermedades inflamatorias del sistema nervioso central
-|VI10;Par�lisis cerebral y otros s�ndromes paral�ticos
+|VI10;Paralisis cerebral y otros sindromes paraliticos
 |VI11;Otros trastornos del sistema nervioso
-|VI2;Atrofias sist�micas que afectan principalmente el sistema nervioso central
+|VI2;Atrofias sistemicas que afectan principalmente el sistema nervioso central
 |VI3;Trastornos extrapiramidales y del movimiento
 |VI4;Otras enfermedades degenerativas del sistema nervioso
 |VI5;Enfermedades desmielinizantes del sistema nervioso central
-|VI6;Trastornos epis�dicos y parox�stico
-|VI7;Trastorno de los nervios,de las ra�ces y de los plexos nerviosos
-|VI8;Polineuropat�as y otros trastornos del sistema nervioso perif�rico
-|VI9;Enfermedades musculares y de la uni�n neuromuscular
-|VII1;Trastornos del p�rpado, aparato lagrimal y �rbita
-|VII10;Alteraci�n de la visi�n y ceguera
+|VI6;Trastornos episodicos y paroxistico
+|VI7;Trastorno de los nervios,de las raices y de los plexos nerviosos
+|VI8;Polineuropatias y otros trastornos del sistema nervioso periferico
+|VI9;Enfermedades musculares y de la union neuromuscular
+|VII1;Trastornos del parpado, aparato lagrimal y orbita
+|VII10;Alteracion de la vision y ceguera
 |VII11;Otros trastornos del ojo y sus anexos
 |VII2;Trastornos de la conjuntiva
-|VII3;Trastornos de la escler�tica, c�rnea, iris y cuerpo ciliar
+|VII3;Trastornos de la esclerotica, cornea, iris y cuerpo ciliar
 |VII4;Trastornos del cristalino
 |VII5;Trastornos de la coroides y retina
 |VII6;Glaucoma
 |VII7;Trastornos del cuerpo vitreo y del globo ocular
-|VII8;Trastornos del nervio �ptico y de las v�as �pticas
-|VII9;Trastornos de los m�sculos oculares del movimiento binocular de la acomodaci�n y de la refracci�n
-|VIII1;Enfermedades del o�do externo
-|VIII2;Enfermedades del o�do medio y de la mastoides
-|VIII3;Enfermedades del o�do interno
-|VIII4;Otros trastornos del o�do
-|X1;Infecciones agudas de las v�as respiratorias superiores
+|VII8;Trastornos del nervio optico y de las vias opticas
+|VII9;Trastornos de los musculos oculares del movimiento binocular de la acomodacion y de la refraccion
+|VIII1;Enfermedades del oido externo
+|VIII2;Enfermedades del oido medio y de la mastoides
+|VIII3;Enfermedades del oido interno
+|VIII4;Otros trastornos del oido
+|X1;Infecciones agudas de las vias respiratorias superiores
 |X10;Otras enfermedades del sistema respiratorio
-|X2;Influenza (gripe) y neumon�a
-|X3;Otras infecciones agudas de las v�as respiratorias inferiores
-|X4;Otras enfermedades de las v�as respiratorias superiores
-|X5;Enfermedades cr�nicas de las v�as respiratorias inferiores
-|X6;Enfermedades del pulm�n debida a agentes externos
+|X2;Influenza (gripe) y neumonia
+|X3;Otras infecciones agudas de las vias respiratorias inferiores
+|X4;Otras enfermedades de las vias respiratorias superiores
+|X5;Enfermedades cronicas de las vias respiratorias inferiores
+|X6;Enfermedades del pulmon debida a agentes externos
 |X7;Otras enfermedades respiratorias que afectan principalmente al intersticio
-|X8;Afecciones supurativas y necr�ticas de las v�as respiratorias inferiores
+|X8;Afecciones supurativas y necroticas de las vias respiratorias inferiores
 |X9;Otras enfermedades de la pleura
-|XI1;Enfermedades de la cavidad bucal de las gl�ndulas salivales y de los maxilares
+|XI1;Enfermedades de la cavidad bucal de las glandulas salivales y de los maxilares
 |XI10;Otras enfermedades del sistema digestivo
-|XI2;Enfermedades del es�fago, del est�mago y del duodeno
-|XI3;Enfermedades del ap�ndice
+|XI2;Enfermedades del esofago, del estomago y del duodeno
+|XI3;Enfermedades del apendice
 |XI4;Hernia
 |XI5;Enteritis y colitis no infecciosa
 |XI6;Otras enfermedades de los intestinos
 |XI7;Enfermedades del peritoneo
-|XI8;Enfermedades del h�gado
-|XI9;Trastornos de la ves�cula biliar, de las v�as biliares del p�ncreas
-|XII1;Infecciones de la piel y del tejido subcut�neo
+|XI8;Enfermedades del higado
+|XI9;Trastornos de la vesicula biliar, de las vias biliares del pancreas
+|XII1;Infecciones de la piel y del tejido subcutaneo
 |XII2;Dermatitis y eczema
 |XII3;Trastornos papuloescamosos
 |XII4;Urticaria y eritema
-|XII5;Trastornos de la piel y del tejido subcut�neo relacionados con radiaci�n
+|XII5;Trastornos de la piel y del tejido subcutaneo relacionados con radiacion
 |XII6;Trastornos de las faneras
-|XII7;Otros trastornos de la piel y del tejido subcut�neo
-|XIII1;Artropat�as infecciosas
+|XII7;Otros trastornos de la piel y del tejido subcutaneo
+|XIII1;Artropatias infecciosas
 |XIII10;Otros trastornos de los tejidos blandos
-|XIII11;Trastornos de la densidad y de la estructura �seas
-|XIII12;Otras osteopat�as
-|XIII13;Condropat�as
+|XIII11;Trastornos de la densidad y de la estructura oseas
+|XIII12;Otras osteopatias
+|XIII13;Condropatias
 |XIII14;Otros trastornos del sistema osteomuscular y del tejido conjuntivo
 |XIII2;Artrosis
 |XIII3;Otros trastornos articulares
-|XIII4;Trastornos sist�micos del tejido conjuntivo
-|XIII5;Dorsopat�as deformantes
-|XIII6;Espondilopat�as
+|XIII4;Trastornos sistemicos del tejido conjuntivo
+|XIII5;Dorsopatias deformantes
+|XIII6;Espondilopatias
 |XIII7;Otras dorsopatias
-|XIII8;Trastornos de los m�sculos
+|XIII8;Trastornos de los musculos
 |XIII9;Trastornos de los tendones y de la sinovial
 |XIV1;Enfermedades glomerulares
-|XIV10;Trastornos no inflamatorios de los �rganos p�lvicos femeninos
+|XIV10;Trastornos no inflamatorios de los organos pelvicos femeninos
 |XIV11;Otros trastornos del sistema genitourinario
 |XIV2;Enfermedad renal tubulointersticial
 |XIV3;Insuficiencia renal
 |XIV4;Litiasis urinaria
-|XIV5;Otros trastornos del ri�on y del ur�ter
+|XIV5;Otros trastornos del riñon y del ureter
 |XIV6;Otras enfermedades del sistema urinario
-|XIV7;Enfermedades de los �rganos genitales masculinos
+|XIV7;Enfermedades de los organos genitales masculinos
 |XIV8;Trastornos de la mama
-|XIV9;Enfermedades inflamatorias de los �rganos p�lvicos femeninos
+|XIV9;Enfermedades inflamatorias de los organos pelvicos femeninos
 |XIX1;Traumatismo de la cabeza
 |XIX10;Traumatismos del tobillo y del pie
-|XIX11;Traumatismos que afectan m�ltiples regiones del cuerpo
-|XIX12;Traumatismos de parte no especificada del tronco, miembro o regi�n del cuerpo
-|XIX13;Efectos de cuerpos extra�os que penetran por orificios naturales
+|XIX11;Traumatismos que afectan multiples regiones del cuerpo
+|XIX12;Traumatismos de parte no especificada del tronco, miembro o region del cuerpo
+|XIX13;Efectos de cuerpos extraños que penetran por orificios naturales
 |XIX14;Quemaduras y corrosiones de la superficie externa del cuerpo, especificadas por sitio
-|XIX15;Quemaduras y corrosiones limitadas al ojo y �rganos internos
-|XIX16;Quemaduras y corrosiones de m�ltiples regiones del cuerpo y las no especificadas
+|XIX15;Quemaduras y corrosiones limitadas al ojo y organos internos
+|XIX16;Quemaduras y corrosiones de multiples regiones del cuerpo y las no especificadas
 |XIX17;Congelamiento
-|XIX18;Envenenamiento por drogas, medicamentos y sustancias biol�gicas
-|XIX19;Efectos t�xicos de sustancias de procedencia principalmente no medicinal
+|XIX18;Envenenamiento por drogas, medicamentos y sustancias biologicas
+|XIX19;Efectos toxicos de sustancias de procedencia principalmente no medicinal
 |XIX2;Traumatismos del cuello
 |XIX20;Otros efectos y los no especificados de causas externas
 |XIX21;Algunas complicaciones precoces de traumatismos
-|XIX22;Complicaciones de la atenci�n m�dica y quir�rgica, no clasificadas en otra parte
+|XIX22;Complicaciones de la atencion medica y quirurgica, no clasificadas en otra parte
 |XIX23;Secuela de traumatismos, de envenenamientos y de otras consecuencia de causa externa
-|XIX3;Traumatismos del t�rax
-|XIX4;Traumatismos del abdomen, de la regi�n lumbosacra de la columna lumbar y de la pelvis
+|XIX3;Traumatismos del torax
+|XIX4;Traumatismos del abdomen, de la region lumbosacra de la columna lumbar y de la pelvis
 |XIX5;Traumatismos del hombro y del brazo
 |XIX6;Traumatismos del antebrazo y del codo
-|XIX7;Traumatismos de la mu�eca y de la mano
+|XIX7;Traumatismos de la muñeca y de la mano
 |XIX8;Traumatismos de la cadera y del muslo
 |XIX9;Traumatismos de la rodilla y de la pierna
 |XV1;Embarazo terminado en aborto
 |XV2;Edema, proteinuria y trastornos hipertensivos en el embarazo, el parto y el puerperio
 |XV3;Otros trastornos maternos relacionados principalmente con el embarazo
-|XV4;Atenci�n materna relacionada con el feto y la cavidad amni�tica y con posibles problemas del parto
+|XV4;Atencion materna relacionada con el feto y la cavidad amniotica y con posibles problemas del parto
 |XV5;Complicaciones del trabajo de parto y del parto
 |XV6;Parto
 |XV7;Complicaciones principalmente relacionadas con el puerperio
-|XV8;Otras afecciones obst�tricas no clasificadas en otra parte
-|XVI1;Feto y reci�n nacido afectados por factores maternos y por complicaciones del embarazo trabajo de parto y del parto
-|XVI10;Otros trastornos originados en el per�odo perinatal
-|XVI2;Trastornos relacionados con la duraci�n de la gestaci�n y el crecimiento fetal
+|XV8;Otras afecciones obstetricas no clasificadas en otra parte
+|XVI1;Feto y recien nacido afectados por factores maternos y por complicaciones del embarazo trabajo de parto y del parto
+|XVI10;Otros trastornos originados en el periodo perinatal
+|XVI2;Trastornos relacionados con la duracion de la gestacion y el crecimiento fetal
 |XVI3;Traumatismo del nacimiento
-|XVI4;Trastornos respiratorios y cardiovasculares espec�ficos del per�odo perinatal
-|XVI5;Infecciones espec�ficas del per�odo perinatral
-|XVI6;Trastornos hemorr�gicos y hematol�gicos del feto y del reci�n nacido
-|XVI7;Trastornos endocrinos y metab�licos transitorios espec�ficos del feto y del reci�n nacido
-|XVI8;Trastornos del sistema digestivo del feto y del reci�n nacido
-|XVI9;Afecciones asociadas con la regulaci�n tegumentaria y la temperatura del feto y del reci�n nacido
-|XVII1;Malfomaciones cong�nitas del sistema nervioso
-|XVII10;Otras malformaciones cong�nitas
-|XVII11;Anomal�as cromos�micas no clasificadas en otra parte
-|XVII2;Malformaciones cong�nitas del ojo, del o�do de la cara y del cuello
-|XVII3;Malformaciones cong�nitas del sistema circulatorio
-|XVII4;Malformaciones cong�nitas del sistema respiratorio
+|XVI4;Trastornos respiratorios y cardiovasculares especificos del periodo perinatal
+|XVI5;Infecciones especificas del periodo perinatral
+|XVI6;Trastornos hemorragicos y hematologicos del feto y del recien nacido
+|XVI7;Trastornos endocrinos y metabolicos transitorios especificos del feto y del recien nacido
+|XVI8;Trastornos del sistema digestivo del feto y del recien nacido
+|XVI9;Afecciones asociadas con la regulacion tegumentaria y la temperatura del feto y del recien nacido
+|XVII1;Malfomaciones congenitas del sistema nervioso
+|XVII10;Otras malformaciones congenitas
+|XVII11;Anomalias cromosomicas no clasificadas en otra parte
+|XVII2;Malformaciones congenitas del ojo, del oido de la cara y del cuello
+|XVII3;Malformaciones congenitas del sistema circulatorio
+|XVII4;Malformaciones congenitas del sistema respiratorio
 |XVII5;Fisura del paladar y labio leporino
-|XVII6;Otras malformaciones cong�nitas del sistema digestivo
-|XVII7;Malformaciones cong�nitas de los �rganos genitales
-|XVII8;Malformaciones cong�nitas del sistema urinario
-|XVII9;Malformaciones y deformidades cong�nitas del sistema osteomuscular
-|XVIII1;S�ntomas y signos que involucran los sistemas circulatorios y respiratorios
-|XVIII10;Hallazgos anormales en el examen de orina sin diagn�stico
-|XVIII11;Hallazgos anormales en el examen de otros l�quidos sustancias y tejidos corporales sin diagn�stico
-|XVIII12;Hallazgos anormales en diagn�stico por im�genes y en estudios funcionales, sin diagn�stico
-|XVIII2;S�ntomas y signos que involucran el sistema digestivo y el abdomen
-|XVIII3;S�ntomas y signos que involucran la piel y el tejido subcut�neo
-|XVIII4;S�ntomas y signos que involucran los sistemas nervioso y osteomuscular
-|XVIII5;S�ntomas y signos que involucran el sistema urinario
-|XVIII6;S�ntomas y signos que involucran el conocimiento la percepci�n, el estado emocional y la conducta
-|XVIII7;S�ntomas y signos que involucran el habla y la voz
-|XVIII8;S�ntomas y signos generales
-|XVIII9;Hallazgos anormales en el examen de sangre sin diagn�stico
-|XX1;Peat�n lesionado en accidente de transporte
+|XVII6;Otras malformaciones congenitas del sistema digestivo
+|XVII7;Malformaciones congenitas de los organos genitales
+|XVII8;Malformaciones congenitas del sistema urinario
+|XVII9;Malformaciones y deformidades congenitas del sistema osteomuscular
+|XVIII1;Sintomas y signos que involucran los sistemas circulatorios y respiratorios
+|XVIII10;Hallazgos anormales en el examen de orina sin diagnostico
+|XVIII11;Hallazgos anormales en el examen de otros liquidos sustancias y tejidos corporales sin diagnostico
+|XVIII12;Hallazgos anormales en diagnostico por imagenes y en estudios funcionales, sin diagnostico
+|XVIII2;Sintomas y signos que involucran el sistema digestivo y el abdomen
+|XVIII3;Sintomas y signos que involucran la piel y el tejido subcutaneo
+|XVIII4;Sintomas y signos que involucran los sistemas nervioso y osteomuscular
+|XVIII5;Sintomas y signos que involucran el sistema urinario
+|XVIII6;Sintomas y signos que involucran el conocimiento la percepcion, el estado emocional y la conducta
+|XVIII7;Sintomas y signos que involucran el habla y la voz
+|XVIII8;Sintomas y signos generales
+|XVIII9;Hallazgos anormales en el examen de sangre sin diagnostico
+|XX1;Peaton lesionado en accidente de transporte
 |XX10;Accidentes de transporte por agua
-|XX11;Accidentes de transporte a�reo y espacial
+|XX11;Accidentes de transporte aereo y espacial
 |XX12;Otros accidentes de transporte y los no especificados
-|XX13;Otras causas externas de traumatismos accidentales Ca�das
-|XX14;Exposici�n a fuerzas mec�nicas inanimadas
-|XX15;Exposici�n a fuerzas mec�nicas animadas
-|XX16;Ahogamiento y sumersi�n accidentales
-|XX17;Otros accidentes que obstruyen la respiraci�n
-|XX18;Exposici�n a la corriente el�ctrica radiaci�n y temperatura y presi�n del aire ambientales extremas
-|XX19;Exposici�n al fuego humo y llamas
+|XX13;Otras causas externas de traumatismos accidentales Caidas
+|XX14;Exposicion a fuerzas mecanicas inanimadas
+|XX15;Exposicion a fuerzas mecanicas animadas
+|XX16;Ahogamiento y sumersion accidentales
+|XX17;Otros accidentes que obstruyen la respiracion
+|XX18;Exposicion a la corriente electrica radiacion y temperatura y presion del aire ambientales extremas
+|XX19;Exposicion al fuego humo y llamas
 |XX2;Ciclista lesionado en accidente de transporte
 |XX20;Contacto con calor y sustancias calientes
-|XX21;Contacto traum�tico con animales y plantas venenosas
-|XX22;Exposici�n a fuerzas de la naturaleza
-|XX23;Envenenamiento accidental por, y exposici�n a sustancias nocivas
-|XX24;Exceso de esfuerzo, viajes y privaci�n
-|XX25;Exposici�n accidental a otros factores y a los no especificados
+|XX21;Contacto traumatico con animales y plantas venenosas
+|XX22;Exposicion a fuerzas de la naturaleza
+|XX23;Envenenamiento accidental por, y exposicion a sustancias nocivas
+|XX24;Exceso de esfuerzo, viajes y privacion
+|XX25;Exposicion accidental a otros factores y a los no especificados
 |XX26;Lesiones autoinfligidas intencionalmente
 |XX27;Agresiones
-|XX28;Eventos de intenci�n no determinada
-|XX29;Intervenci�n legal y operaciones de guerra
+|XX28;Eventos de intencion no determinada
+|XX29;Intervencion legal y operaciones de guerra
 |XX3;Motociclista lesionado en accidente de transporte
-|XX30;Drogas medicamentos y sustancias biol�gicas causantes de efectos adversos en su uso terap�utico
-|XX31;Incidentes ocurridos al paciente durante la atenci�n m�dica y quir�rgica
-|XX32;Dispositivos m�dicos de diagn�stico y de uso terap�utico asociados con incidentes adversos
-|XX33;Procedimientos quir�rgicos y otros procedimientos m�dicos como causa de reacci�n anormal del paciente o complicaci�n posterior, sin menci�n de incidente en el momento de efectuar el procedimiento
+|XX30;Drogas medicamentos y sustancias biologicas causantes de efectos adversos en su uso terapeutico
+|XX31;Incidentes ocurridos al paciente durante la atencion medica y quirurgica
+|XX32;Dispositivos medicos de diagnostico y de uso terapeutico asociados con incidentes adversos
+|XX33;Procedimientos quirurgicos y otros procedimientos medicos como causa de reaccion anormal del paciente o complicacion posterior, sin mencion de incidente en el momento de efectuar el procedimiento
 |XX34;Secuelas de causas externas de morbilidad y mortalidad
 |XX35;Factores suplementarios relacionados con causas de morbilidad y de mortalidad clasificadas en otra parte
-|XX4;Ocupante de veh�culo de motor de tres ruedas lesionado en accidente de transporte
-|XX5;Ocupante de autom�vil lesionado en accidente de transporte
+|XX4;Ocupante de vehiculo de motor de tres ruedas lesionado en accidente de transporte
+|XX5;Ocupante de automovil lesionado en accidente de transporte
 |XX6;Ocupante de camioneta o furgoneta lesionado en accidente de transporte
-|XX7;Ocupante de veh�culo de transporte pesado lesionado en accidente de transporte
-|XX8;Ocupante de autob�s lesionado en accidente de transporte
+|XX7;Ocupante de vehiculo de transporte pesado lesionado en accidente de transporte
+|XX8;Ocupante de autobus lesionado en accidente de transporte
 |XX9;Otros accidentes de transporte terrestre
-|XXI1;Personas en contacto con los servicios de salud para investigaci�n o ex�menes
+|XXI1;Personas en contacto con los servicios de salud para investigacion o examenes
 |XXI2;Personas con riesgos potenciales para su salud, relacionados con enfermedades transmisibles
-|XXI3;Personas en contacto con los servicios de salud en circunstancias relacionadas con la reproducci�n
-|XXI4;Personas en contacto con los servicios de salud para procedimientos espec�ficos y cuidados de salud
-|XXI5;Personas con riesgos potenciales para su salud, relacionados con circunstancias econ�micas y psicosociales
+|XXI3;Personas en contacto con los servicios de salud en circunstancias relacionadas con la reproduccion
+|XXI4;Personas en contacto con los servicios de salud para procedimientos especificos y cuidados de salud
+|XXI5;Personas con riesgos potenciales para su salud, relacionados con circunstancias economicas y psicosociales
 |XXI6;Personas en contacto con los servicios de salud por otras circunstancias
 |XXI7;Personas con riesgos potenciales para su salud relacionados con su historia familiar y personal y algunas condiciones que influyen en su estado de salud
 |XXII;Codigos para situaciones especiales
+;
