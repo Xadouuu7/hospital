@@ -200,9 +200,3 @@ def fake_visita(conn, cursor, lista_descripciones, max_diagnostico):
         id_consulta, num_planta = cursor.fetchone()
         consulta = f"INSERT INTO visita (id_medico,tarjeta_sanitaria,id_diagnostico,id_consulta,num_planta,fecha_hora,motivo_visita) VALUES (%s, %s, %s, %s, %s, %s, %s)"
         cursor.execute(consulta,(id_medico,tsi,max_diagnostico,id_consulta,num_planta,fake.date_time(),motivo))
-
-
-def main():
-    conn, cursor = conectarBaseDatos()
-    fake_patologia(conn, cursor)
-main()
