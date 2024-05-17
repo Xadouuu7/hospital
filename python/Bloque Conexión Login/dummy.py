@@ -17,6 +17,14 @@ def fake_ciudad(conn,cursor):
     conn.commit()
     conn.close()
 
+def fake_patologia(conn,cursor):
+    fichero = leer_patologia()
+    datos_patologia = [(patologia['Id_patologia'], patologia['Nombre']) for patologia in fichero]
+    post_records = ", ".join(["%s"] * len(datos_patologia[0]))
+    insert_query = f"INSERT INTO patologia (id_patologia, nombre) VALUES ({post_records})"
+    cursor.executemany(insert_query, datos_patologia)
+    conn.commit()
+    conn.close()
     
 def fake_direccion(conn,cursor, num_registros):
     fake = Faker('es_ES')

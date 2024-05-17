@@ -34,3 +34,11 @@ def leer_ciudad():
         for row in reader:
             fichero.append(row)
     return fichero
+
+def leer_patologia():
+    fichero = []
+    with open("patologias.csv", 'r',encoding="UTF-8") as f:
+        reader = csv.DictReader(f, delimiter=';')
+        for row in reader:
+            fichero.append(row)
+    return fichero
