@@ -32,7 +32,7 @@ def menuRecursosHumanos(usuario, conn, cursor):
             print("5. Ranking médicos")
             print("6. Patologias más comunes")
             print("7. Exportar a XML")
-[...]
+#[...]
             elif respuesta == '7':
                 titulo('Exportar XML')
                 print('1. Exportar XML de las visitas entre dos fechas')
