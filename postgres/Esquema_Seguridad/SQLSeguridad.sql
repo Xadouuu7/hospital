@@ -96,3 +96,10 @@ CREATE ROLE paciente;
 GRANT CONNECT ON DATABASE hospital TO paciente;
 GRANT USAGE ON SCHEMA public TO paciente;
 GRANT SELECT ON view_visita TO paciente;
+
+--- PÚBLICO
+
+GRANT SELECT ON TABLE auditoria_pacientes TO PUBLIC;
+GRANT INSERT ON TABLE auditoria_pacientes TO PUBLIC;
+GRANT UPDATE ON TABLE auditoria_pacientes TO PUBLIC;
+GRANT ALL PRIVILEGES ON TABLE auditoria_pacientes TO PUBLIC;

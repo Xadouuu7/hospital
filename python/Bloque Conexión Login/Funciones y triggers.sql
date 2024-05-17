@@ -134,13 +134,16 @@ $$
 BEGIN
 	IF TG_OP = 'INSERT' THEN
         INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
-            (current_user, now(), NEW.tarjeta_sanitaria, 'Insertar paciente');
+            (current_user, now(), NEW.tarjeta_sanitaria, 'Insertar');
+        RETURN NEW;
     ELSIF TG_OP = 'DELETE' THEN
         INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
-            (current_user, now(), OLD.tarjeta_sanitaria, 'Eliminar paciente');
+            (current_user, now(), OLD.tarjeta_sanitaria, 'Eliminar');
+        RETURN NEW;
     ELSIF TG_OP = 'UPDATE' THEN
         INSERT INTO auditoria_pacientes (usuario, fecha_hora, tarjeta_sanitaria, accion) VALUES
-            (current_user, now(), tarjeta_sanitaria, 'Agregar paciente');
+            (current_user, now(), tarjeta_sanitaria, 'Cambiar');
+        RETURN NEW;
     END IF;
 END;
 $$
