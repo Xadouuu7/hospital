@@ -19,7 +19,7 @@ def fake_ciudad(conn,cursor):
 
 def fake_patologia(conn,cursor):
     fichero = leer_patologia()
-    datos_patologia = [(patologia['Id_patologia'], patologia['Nombre']) for patologia in fichero]
+    datos_patologia = [(patologia['\ufeffId_patologia'], patologia['Nombre']) for patologia in fichero]
     post_records = ", ".join(["%s"] * len(datos_patologia[0]))
     insert_query = f"INSERT INTO patologia (id_patologia, nombre) VALUES ({post_records})"
     cursor.executemany(insert_query, datos_patologia)
@@ -200,3 +200,9 @@ def fake_visita(conn, cursor, lista_descripciones, max_diagnostico):
         id_consulta, num_planta = cursor.fetchone()
         consulta = f"INSERT INTO visita (id_medico,tarjeta_sanitaria,id_diagnostico,id_consulta,num_planta,fecha_hora,motivo_visita) VALUES (%s, %s, %s, %s, %s, %s, %s)"
         cursor.execute(consulta,(id_medico,tsi,max_diagnostico,id_consulta,num_planta,fake.date_time(),motivo))
+
+
+def main():
+    conn, cursor = conectarBaseDatos()
+    fake_patologia(conn, cursor)
+main()
