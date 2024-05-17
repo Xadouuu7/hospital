@@ -157,4 +157,4 @@ Amb el PowerBI hem generat dos informes: Patologies més comuns i especialitats 
 
 Es pot veure el PDF generat a partir de PowerBI aquí:
 
-[Informe en PDF](postgres/PowerBI/Informes.pdf)
+[Informe en PDF](https://github.com/Xadouuu7/hospital/blob/main/postgres/PowerBI/Informes.pdf)
