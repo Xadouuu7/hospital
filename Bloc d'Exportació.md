@@ -157,7 +157,11 @@ Hem utilitzat el WireShark per comprovar que efectivament les dades estan encrip
 
 Els usuaris que utilitzin el PowerBI hauràn de escriure la ruta de la carpeta compartida en la xarxa.
 
-Amb el PowerBI hem generat dos informes: Patologies més comuns i especialitats més visitades.
+Amb el PowerBI hem generat tres informes: quantes visites hi ha durant el mes de gener i febrer de 2020, patologies més comuns i especialitats més visitades.
+
+### Visites durant el mes de gener i febrer 2020
+
+![](imagenes/postgres/power_bi/informe3.png)
 
 ### Patologies més comuns
 

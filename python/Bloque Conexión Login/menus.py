@@ -3,6 +3,7 @@ from funciones import *
 from sys import exit
 from tabulate import tabulate
 from dummy import *
+
 def menuPrincipal():
     os.system('clear')
     print('-' * 40)
@@ -63,6 +64,7 @@ def menuPaciente(usuario, conn, cursor):
             input("Enter per continuar")
 
 ### MEDICO
+
 def menuMedico(usuario, conn, cursor):
     bucle = True
     while bucle:
@@ -137,6 +139,7 @@ def menuAdministrativo(usuario, conn, cursor):
         except Exception as error:
             print(f"Error: {error}")
             input("Enter per continuar: ")
+
 ### RRHH
 
 def menuRecursosHumanos(usuario, conn, cursor):
