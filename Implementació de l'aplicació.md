@@ -1,7 +1,7 @@
 ---
 title: Implementació de l'aplicació
 layout: home
-nav_order: 7
+nav_order: 9
 ---
 
 # Implementació de l'aplicació 
