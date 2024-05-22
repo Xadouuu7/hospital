@@ -5,13 +5,13 @@ import random
 import string
 import os
 from tabulate import tabulate
-
+import datetime
 def titulo(string):
     os.system('clear')
     print('-' * 40)
     print(string)
     print('-' * 40, end='\n\n\n')
-
+    
 def conectarBaseDatos(usuario = 'postgres', contraseña = 'postgres'):
     try:
         db_config = {
@@ -228,12 +228,24 @@ def verOperacionesAdministrativo(usuario, conn, cursor):
     input("Enter per continuar: ")
 
 def verVisitasAdministrativo(usuario, conn, cursor):
+    contador = 0
     titulo("Visitas")
     consulta = "SELECT tarjeta_sanitaria, paciente, fecha_hora, motivo_visita, medico FROM public.view_visita ORDER BY fecha_hora DESC;"
-    cursor.execute(consulta, (usuario,))
+    cursor.execute(consulta)
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico'], tablefmt="simple_grid"), end='\n\n\n')
-    input("Enter per continuar: ")
+    while True:
+        bloque_rows = rows[contador:contador+100]
+        filas_formateadas = [list(row) for row in bloque_rows]
+        if contador == 0:
+            print(tabulate(filas_formateadas, headers=['Tarjeta Sanitaria', 'Paciente', 'Fecha y hora', 'Motivo de visita', 'Médico'], tablefmt="simple_grid"), end='\n\n\n')
+        else:
+            print(tabulate(filas_formateadas, tablefmt="simple_grid"), end='\n\n\n')
+        respuesta = input("1 Para ver 100 más / 2 Para salir: ")
+        if respuesta == '1':
+            contador += 100
+        elif respuesta == '2':
+            return
+    input("Enter para continuar: ")
 
 def verOperacionesAdministrativoFecha(usuario,conn,cursor):
     os.system("clear")
@@ -411,12 +423,23 @@ def informePersonal(usuario, conn, cursor):
         input("Enter per continuar: ")
 
 def informeVisitas(usuario, conn, cursor):
-    consulta = f"SELECT * FROM view_contador_visitas"
+    contador = 0
+    titulo("Contador visitas por dia")
+    consulta = "SELECT * FROM view_contador_visitas"
     cursor.execute(consulta)
-    titulo(f"Contador visitas por dia")
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Fecha','Total Visitas'], tablefmt="simple_grid"), end='\n\n\n')
-    input("Enter per continuar: ")
+    while True:
+        bloque_rows = rows[contador:contador+100]
+        filas_formateadas = [list(row) for row in bloque_rows]
+        if contador == 0:
+            print(tabulate(filas_formateadas, headers=['Fecha','Total Visitas'], tablefmt="simple_grid"), end='\n\n\n')
+        else:
+            print(tabulate(filas_formateadas, tablefmt="simple_grid"), end='\n\n\n')
+        respuesta = input("1 Para ver 100 más / 2 Para salir: ")
+        if respuesta == '1':
+            contador += 100
+        elif respuesta == '2':
+            return
 
 def rankingMedicos(usuario, conn, cursor):
     consulta = f"SELECT * FROM view_ranking_medicos"
@@ -427,19 +450,39 @@ def rankingMedicos(usuario, conn, cursor):
     input("Enter per continuar: ")
     
 def patologiasMasComunes(usuario, conn, cursor):
-    consulta = f"SELECT * FROM view_malalties_comuns"
+    contador = 0
+    titulo("Patologias mas comunes")
+    consulta = "SELECT * FROM view_malalties_comuns"
     cursor.execute(consulta)
-    titulo(f"Patologias mas comunes")
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Patologia','Total'], tablefmt="simple_grid"), end='\n\n\n')
-    input("Enter per continuar: ")
+    while True:
+        bloque_rows = rows[contador:contador+100]
+        filas_formateadas = [list(row) for row in bloque_rows]
+        if contador == 0:
+            print(tabulate(filas_formateadas, headers=['Patologia','Total'], tablefmt="simple_grid"), end='\n\n\n')
+        else:
+            print(tabulate(filas_formateadas, tablefmt="simple_grid"), end='\n\n\n')
+        respuesta = input("1 Para ver 100 más / 2 Para salir: ")
+        if respuesta == '1':
+            contador += 100
+        elif respuesta == '2':
+            return
 
 def exportXML_visitas(usuario, conn, cursor):
     titulo('Exportacion de visitas')
-    #fecha_inicial = input('Introduce la fecha inicial(YYYY-MM-DD):')
-    #fecha_final = input('Introduce la fecha final(YYYY-MM-DD):')
-    fecha_inicial = '1994-10-20'
-    fecha_final = '2000-10-20'
+    fecha_inicial = input('Introduce la fecha inicial(YYYY-MM-DD):')
+    fecha_final = input('Introduce la fecha final(YYYY-MM-DD):')
+    try:
+        fecha_inicial_dt = datetime.datetime.strptime(fecha_inicial, '%Y-%m-%d')
+        fecha_final_dt = datetime.datetime.strptime(fecha_final, '%Y-%m-%d')
+        if fecha_inicial_dt >= fecha_final_dt:
+            print("Error: La fecha inicial debe ser menor que la fecha final.")
+            input("Enter para continuar")
+            return 
+    except ValueError:
+        print("Error: Formato de fecha incorrecto. Use el formato YYYY-MM-DD.")
+        input("Enter para continuar")
+        return
     consulta = """
     WITH xml_output AS (
         SELECT query_to_xml('SELECT * FROM view_visita2 WHERE TO_CHAR(fecha_hora, ''YYYY-MM-DD'') BETWEEN '%s' AND '%s'', true, false, '') AS xml_result
@@ -447,9 +490,9 @@ def exportXML_visitas(usuario, conn, cursor):
     SELECT REPLACE(xml_result::text, '<table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">', '<table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="visitas.xsd">
     ') AS modified_xml_result
     FROM xml_output;
-"""
+    """
     
-    cursor.execute(consulta, (fecha_inicial, fecha_final))
+    cursor.execute(consulta, (str(fecha_inicial_dt)[0:11], str(fecha_final_dt)[0:11]))
     xml_result = cursor.fetchone()[0]
 
     nombre_archivo = '/home/program_user/XML/visitas.xml'
