@@ -397,6 +397,22 @@ Pels materials tant general, com de quiròfan i de laboratori simplement hem fet
 - [Material Quiròfan](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/material_quiròfan.sql)
 - [Material Laboratori](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/material_laboratori.sql)
 
+## Patologies
+
+A l'hora d'afegir les patologies, hem utilitzat el CSV de [CIE-10](https://github.com/Xadouuu7/hospital/blob/main/python/Bloque%20Conexión%20Login/patologias.csv) que és la Classificació Internacional d'Enfermetats 10ª revisió. D'aquesta manera ens assegurem que la base de dades coneix totes les enfermetats possibles que pot tenir un pacient. Utilitzem una funció anomenada `fake_patologia()` on pasem per paràmetres la connexió a la base de dades i el cursor.
+Aquesta funció, de la mateixa manera que fem a les ciutats, llegueix d'un CSV i ho inserta dins de la base de dades.
+
+```python
+def fake_patologia(conn,cursor):
+    fichero = leer_patologia()
+    datos_patologia = [(patologia['\ufeffId_patologia'], patologia['Nombre']) for patologia in fichero]
+    post_records = ", ".join(["%s"] * len(datos_patologia[0]))
+    insert_query = f"INSERT INTO patologia (id_patologia, nombre) VALUES ({post_records})"
+    cursor.executemany(insert_query, datos_patologia)
+    conn.commit()
+    conn.close()
+```
+
 ## Generar i eliminar dades des del menú de l'aplicació
 
 Dins del menú de l'informàtic/a hem afegit una opció per poder esborrar les dades que es vulguin:

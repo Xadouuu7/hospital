@@ -7,7 +7,7 @@ nav_order: 2
 # Documentació de l'esquema de la Base de Dades
 
 ## MENU
-- [Model Entitat Relacio](https://github.com/Xadouuu7/hospital/blob/main/postgres/Bloc%20Esquema%20ER%20-%20Relacional%20-%20SQL/Esquema%20Entitad%20Relaci%C3%B3n.png)
+- [Model Entitat Relacio](https://github.com/Xadouuu7/hospital/blob/main/postgres/Bloc%20Esquema%20ER%20-%20Relacional%20-%20SQL/Esquema%20Entidad%20Relación.png)
 
 - [Model Relacional - Imatge](https://github.com/Xadouuu7/hospital/blob/main/postgres/Bloc%20Esquema%20ER%20-%20Relacional%20-%20SQL/Esquema%20Relacional.svg)
 

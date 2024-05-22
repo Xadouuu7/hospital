@@ -44,13 +44,12 @@ program_user:x:1002:1002::/home/program_user:/home/program_user/script.sh
 
 Aqui mostrem com ara connectant-se des d'SSH i utilitzant aquest usuari s'inicia de manera automàtica el programa de python. Hem fet la prova amb el PuTTy.
 
-![](/imagenes/postgres/Implementació%20aplicació/putty.png)
+![](imagenes/postgres/Implementació%20aplicació/putty.png)
 
 Iniciem l'usuari que hem creat i amb el qual s'inicia el programa:
 
-![](/imagenes/postgres/Implementació%20aplicació/connexio.png)
+![](imagenes/postgres/Implementació%20aplicació/connexio.png)
 
 I per últim, tenim com s'inicialitza el programa:
 
-![](/imagenes/postgres/Implementació%20aplicació/sesion.png)
-
+![](imagenes/postgres/Implementació%20aplicació/sesion.png)
