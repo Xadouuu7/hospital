@@ -254,10 +254,14 @@ def verVisitasAdministrativo(usuario, conn, cursor):
             print(tabulate(filas_formateadas, headers=['Tarjeta Sanitaria', 'Paciente', 'Fecha y hora', 'Motivo de visita', 'Médico'], tablefmt="simple_grid"), end='\n\n\n')
         else:
             print(tabulate(filas_formateadas, tablefmt="simple_grid"), end='\n\n\n')
-        respuesta = input("1 Para ver 100 más / 2 Para salir: ")
-        if respuesta == '1':
-            contador += 100
-        elif respuesta == '2':
+        if len(filas_formateadas) == 100:
+            respuesta = input("1 Para ver 100 más / 2 Para salir: ")
+            if respuesta == '1':
+                contador += 100
+            elif respuesta == '2':
+                return
+        else:
+            input("Enter para continuar: ")
             return
     input("Enter para continuar: ")
 
@@ -447,10 +451,14 @@ def informeVisitas(usuario, conn, cursor):
             print(tabulate(filas_formateadas, headers=['Fecha','Total Visitas'], tablefmt="simple_grid"), end='\n\n\n')
         else:
             print(tabulate(filas_formateadas, tablefmt="simple_grid"), end='\n\n\n')
-        respuesta = input("1 Para ver 100 más / 2 Para salir: ")
-        if respuesta == '1':
-            contador += 100
-        elif respuesta == '2':
+        if len(filas_formateadas) == 100:
+            respuesta = input("1 Para ver 100 más / 2 Para salir: ")
+            if respuesta == '1':
+                contador += 100
+            elif respuesta == '2':
+                return
+        else:
+            input("Enter per continuar: ")
             return
 
 def rankingMedicos(usuario, conn, cursor):
@@ -474,10 +482,14 @@ def patologiasMasComunes(usuario, conn, cursor):
             print(tabulate(filas_formateadas, headers=['Patologia','Total'], tablefmt="simple_grid"), end='\n\n\n')
         else:
             print(tabulate(filas_formateadas, tablefmt="simple_grid"), end='\n\n\n')
-        respuesta = input("1 Para ver 100 más / 2 Para salir: ")
-        if respuesta == '1':
-            contador += 100
-        elif respuesta == '2':
+        if len(filas_formateadas) == 100:
+            respuesta = input("1 Para ver 100 más / 2 Para salir: ")
+            if respuesta == '1':
+                contador += 100
+            elif respuesta == '2':
+                return
+        else:
+            input("Enter per continuar: ")
             return
 
 def exportXML_visitas(usuario, conn, cursor):
