@@ -3,6 +3,7 @@ from funciones import *
 from sys import exit
 from tabulate import tabulate
 from dummy import *
+import getpass
 
 def menuPrincipal():
     os.system('clear')
@@ -21,8 +22,7 @@ def menuLogin():
     print('-' * 40, end='\n\n\n')
     print('Nombre de Usuario: ',end='')
     usuario = input()
-    print('Contraseña: ', end='')
-    contraseña = input()
+    contraseña = getpass.getpass('Contraseña: ')
     return usuario,contraseña
 
 def menuRegistrarse():
@@ -33,11 +33,10 @@ def menuRegistrarse():
     print('CIP: ',end='')
     cip = input()
     print('Contraseña: ', end='')
-    contraseña = input()
+    contraseña = getpass.getpass('Contraseña: ')
     return cip,contraseña
 
 ### PACIENTE
-
 def menuPaciente(usuario, conn, cursor):
     bucle = True
     while bucle:
@@ -49,7 +48,9 @@ def menuPaciente(usuario, conn, cursor):
             print("1. Ver visitas")
             print("2. Ver historial")
             print("3. Ver diagnósticos y receta")
-            print("4. Salir", end='\n\n\n')
+            print("4. Ver operaciones")
+            print("5. Ver expediente")
+            print("6. Salir", end='\n\n\n')
             respuesta = input("Escoger una opcion: ")
             if respuesta == '1':
                 verVisitaPaciente(usuario, conn, cursor)
@@ -58,10 +59,14 @@ def menuPaciente(usuario, conn, cursor):
             elif respuesta == '3':
                 verDiagnosticoReceta(usuario, conn, cursor)
             elif respuesta == '4':
+                verOperacionesPaciente(usuario, conn, cursor)
+            elif respuesta == '5':
+                verExpediente(usuario, conn, cursor)
+            elif respuesta == '6':
                 bucle = False
         except Exception as error:
             print(f"Error: {error}")
-            input("Enter per continuar")
+            input("Enter per continuar: ")
 
 ### MEDICO
 
@@ -256,6 +261,7 @@ def menuInformatico(usuario, conn, cursor):
                     cursor.execute("SELECT setval('diagnostico_id_diagnostico_seq', 1, true);")
                     cursor.execute("SELECT setval('empleado_id_empleado_seq', 1, true);")
                     cursor.execute("SELECT setval('visita_id_visita_seq', 1, true);")
+                    cursor.execute("CALL eliminar_usuario()")
             elif respuesta == '8':
                 bucle = False
         except Exception as error:

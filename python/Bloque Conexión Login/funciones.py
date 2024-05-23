@@ -87,18 +87,18 @@ def comprobarRol(usuario):
 ## PACIENTE
 def verVisitaPaciente(usuario, conn, cursor):
     titulo("Visitas del dia")
-    consulta = "SELECT * FROM view_visita WHERE tarjeta_sanitaria = %s AND TO_CHAR(fecha_hora,'YYYY-MM-DD') = CURRENT_DATE::text"
+    consulta = "SELECT tarjeta_sanitaria, paciente, fecha_hora, motivo_visita, medico FROM view_visita WHERE tarjeta_sanitaria = %s AND TO_CHAR(fecha_hora,'YYYY-MM-DD') = CURRENT_DATE::text"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
     
 def verHistorial(usuario,conn,cursor):
     titulo("Visitas pasadas")
-    consulta = "SELECT * FROM view_visita WHERE tarjeta_sanitaria = %s AND TO_CHAR(fecha_hora,'YYYY-MM-DD') != CURRENT_DATE::text"
+    consulta = "SELECT tarjeta_sanitaria,paciente,fecha_hora,motivo_visita,medico FROM view_visita WHERE tarjeta_sanitaria = %s AND TO_CHAR(fecha_hora,'YYYY-MM-DD') != CURRENT_DATE::text ORDER BY fecha_hora DESC"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Fecha y hora','Motivo de visita','Médico'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 def verDiagnosticoReceta(usuario, conn, cursor):
@@ -106,9 +106,22 @@ def verDiagnosticoReceta(usuario, conn, cursor):
     consulta = "SELECT tarjeta_sanitaria, paciente, descripcion, medicamento, dosis, fecha_hora, medico FROM public.view_receta  WHERE tarjeta_sanitaria = %s ORDER BY fecha_hora DESC;"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Diagnostico','medicamento','Dosis','fecha y hora','Médico'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Tarjeta Sanitaria','Paciente','Diagnostico','medicamento','Dosis','fecha y hora','Médico'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
+def verOperacionesPaciente(usuario, conn, cursor):
+    titulo("Operaciones")
+    consulta = "SELECT paciente, tarjeta_sanitaria, num_quirofano, num_planta, medico, enfermero, fecha_hora_entrada FROM view_reserva_quirofano WHERE tarjeta_sanitaria = %s ORDER BY fecha_hora_entrada DESC"
+    cursor.execute(consulta, (usuario,))
+    rows = cursor.fetchall()
+    print(tabulate(rows, headers=['Paciente','Tarjeta sanitaria','Quirofano' ,' Planta', 'Medico' ,'Enfermeros/as','Fecha entrada'], tablefmt="simple_grid"), end='\n\n\n')
+    input("Enter per continuar: ")
+
+def verExpediente(usuario, conn, cursor):
+    verHistorial(usuario,conn,cursor)
+    verDiagnosticoReceta(usuario, conn, cursor)
+    verOperacionesPaciente(usuario, conn, cursor)
+    
 ## MEDICO 
 def personalCargo(usuario, conn, cursor):
     titulo("Personal a cargo")
@@ -123,7 +136,7 @@ def verOperaciones(usuario, conn, cursor):
     consulta = "SELECT * FROM view_reserva_quirofano WHERE num_ss = %s ORDER BY fecha_hora_entrada ASC"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Paciente', 'Quirofano' ,' Planta', 'Medico' ,'Enfermeros','Seguridad Social', 'Fecha entrada','Administrativo'], tablefmt="simple_grid"), end='\n\n\n')
+    print(tabulate(rows, headers=['Paciente','Tarjeta Sanitaria','Quirofano' ,' Planta', 'Medico' ,'Enfermeros','Seguridad Social', 'Fecha entrada','Administrativo'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 def verVisitasMedico(usuario, conn, cursor):
@@ -179,7 +192,7 @@ def darAltaPersona(usuario,conn,cursor,id_direccion):
     while True:
         try:
             titulo("Introduzca los datos de la persona")
-            dni_nie = input("Introduzca el DNI/NIE: ")
+            dni_nie = input("Introduzca el DNI/NIE: ").upper()
             nombre = input("Introduzca el nombre: ").capitalize()
             apellido1 = input("Introduzca el primer apellido: ").capitalize()
             apellido2 = input("Introduzca el segundo apellido: ").capitalize()
@@ -202,13 +215,14 @@ def darAltaPaciente(usuario,conn,cursor, dni):
             tarjeta_sanitaria = input("Introduzca la tarjeta sanitaria: ")
             altura = input("Introduzca tu altura en centimetros: ")
             peso = input("Introduzca tu peso (kg): ")
-            grupo_sanguineo = input("Introduzca tu grupo sanguineo (A,AB,B,0): ")
+            grupo_sanguineo = input("Introduzca tu grupo sanguineo (A,AB,B,0): ").upper()
             rh = input("Introduzca tu rh (+, -): ")
             consulta = f"INSERT INTO paciente VALUES (%s, %s, %s, %s, %s, %s)"
             cursor.execute(consulta, (tarjeta_sanitaria,altura,peso,grupo_sanguineo,rh,dni))
             bucle = False
         except Exception as error:
             print(f"Error: {error}")
+            input('Enter para continuar')
 
 def verPersonalEnfermeria(usuario, conn, cursor):
     titulo("Personal de enfermeria")
@@ -224,7 +238,7 @@ def verOperacionesAdministrativo(usuario, conn, cursor):
     consulta = "SELECT * FROM view_reserva_quirofano ORDER BY fecha_hora_entrada DESC"
     cursor.execute(consulta, (usuario,))
     rows = cursor.fetchall()
-    print(tabulate(rows, headers=['Paciente', 'Quirofano' ,' Planta', 'Medico' ,'Enfermeros/as', 'Seguridad Social', 'Fecha entrada', 'Administrativo/a'], tablefmt="simple_grid"), end='\n\n\n')
+    print(tabulate(rows, headers=['Paciente','Tarjeta Sanitaria', 'Quirofano' ,' Planta', 'Medico' ,'Enfermeros/as', 'Seguridad Social', 'Fecha entrada', 'Administrativo/a'], tablefmt="simple_grid"), end='\n\n\n')
     input("Enter per continuar: ")
 
 def verVisitasAdministrativo(usuario, conn, cursor):
@@ -254,7 +268,7 @@ def verOperacionesAdministrativoFecha(usuario,conn,cursor):
     cursor.execute(consulta,(fecha,))
     rows = cursor.fetchall()
     titulo(f"Operaciones previstas | {fecha}")
-    print(tabulate(rows, headers=['Paciente','Quirófano','Planta','Médico','Enfermeros','Tarjeta Sanitaria','Fecha y hora de entrada','Administrativo'], tablefmt="simple_grid"))
+    print(tabulate(rows, headers=['Paciente','Tarjeta sanitaria','Quirófano','Planta','Médico','Enfermeros','Tarjeta Sanitaria','Fecha y hora de entrada','Administrativo'], tablefmt="simple_grid"))
     input("Enter per continuar: ")
     
 def verReservaHabitacion(usuario, conn, cursor):
@@ -294,7 +308,7 @@ def darAltaEmpleado(usuario, conn, cursor, dni_nie):
     while True:
         try:
             titulo("Introduzca los datos del empleado")
-            horario_trabajo = input("Introduce su horario de trabajo (HH:MM,HH:MM): ")
+            horario_trabajo = input("Introduce su horario de trabajo (HH.MM,HH.MM): ")
             dias_vacaciones = input("Introduce los días de vacaciones: ")
             salario = input("Introduce su salario: ")
             num_ss = input("Introduce su número de la seguridad social: ")
@@ -321,7 +335,6 @@ def darAltaProfesion(usuario,conn,cursor,id_empleado):
             print("5. RRHH")
             print("6. Farmacéutico")
             print("7. Informático")
-            print("8. Salir", end='\n\n\n')
             respuesta = input("Escoger una opcion: ")
             if respuesta == '1':
                 os.system("clear")
@@ -386,8 +399,7 @@ def darAltaProfesion(usuario,conn,cursor,id_empleado):
                 experiencia = input("Introduce su experiéncia previa: ")
                 consulta = "INSERT INTO informatico VALUES (%s,%s,%s)"
                 cursor.execute(consulta,(id_empleado,estudios,experiencia))
-            elif respuesta == '8':
-                bucle = False
+            bucle = False
         except Exception as error:
             print(f"Error: {error}")
             input("Enter per continuar: ")
