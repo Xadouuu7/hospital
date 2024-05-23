@@ -291,24 +291,6 @@ CREATE TABLE IF NOT EXISTS reserva_habitacion (
     FOREIGN KEY (id_administrativo) REFERENCES administrativo(id_empleado)
 );
 
-CREATE TABLE IF NOT EXISTS agenda (
-    id_agenda SERIAL PRIMARY KEY,
-    id_medico  INTEGER,
-    fecha DATE,
-    hora TIME,
-    FOREIGN KEY (id_medico) REFERENCES medico(id_empleado)
-);
-
-CREATE TABLE IF NOT EXISTS reserva_visita (
-    id_reserva_visita SERIAL PRIMARY KEY,
-    id_medico INTEGER,
-    tarjeta_sanitaria VARCHAR(14),
-    fecha DATE,
-    hora TIME,
-    FOREIGN KEY (id_medico) REFERENCES medico(id_empleado),
-    FOREIGN KEY (tarjeta_sanitaria) REFERENCES paciente(tarjeta_sanitaria)
-);
-
 CREATE TABLE IF NOT EXISTS informatico (
     id_empleado INTEGER PRIMARY KEY,
     estudio TEXT,

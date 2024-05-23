@@ -57,12 +57,13 @@ CREATE OR REPLACE VIEW public.view_reserva_habitacion AS
     INNER JOIN persona pepa ON pepa.dni_nie = pa.dni_nie;
 
 CREATE OR REPLACE VIEW view_reserva_quirofano AS
-    SELECT
+SELECT
         CONCAT(pepa.nombre, ' ', pepa.apellido1, ' ', pepa.apellido2) AS Paciente,
+		paci.tarjeta_sanitaria,
         reservquiro.num_quirofano,
         reservquiro.num_planta,
         CONCAT(peme.nombre, ' ', peme.apellido1) AS Medico,
-        ARRAY_AGG (perenf.nombre || ' ' || perenf.apellido1 || ' ' || perenf.apellido2) AS Enfermero,
+        CONCAT(perenf.nombre || ' ' || perenf.apellido1 || ' ' || perenf.apellido2) AS Enfermero,
         empl.num_ss,
         reservquiro.fecha_hora_entrada,
 	    CONCAT(peradm.nombre, ' ', peradm.apellido1, ' ', peradm.apellido2) AS Administrativo
@@ -83,17 +84,9 @@ CREATE OR REPLACE VIEW view_reserva_quirofano AS
         CONCAT(peme.nombre, ' ', peme.apellido1), 
         empl.num_ss,
         reservquiro.fecha_hora_entrada,
-        CONCAT(peradm.nombre, ' ', peradm.apellido1, ' ', peradm.apellido2);
-
-CREATE OR REPLACE  VIEW view_agenda AS
-    SELECT 
-        CONCAT(peme.nombre, peme.apellido1),
-        agen.id_medico,
-        agen.fecha
-    FROM agenda agen
-    INNER JOIN medico medi ON agen.id_medico = medi.id_empleado
-    INNER JOIN empleado empl ON empl.id_empleado = medi.id_empleado
-    INNER JOIN persona peme ON peme.dni_nie = empl.dni_nie;
+        CONCAT(peradm.nombre, ' ', peradm.apellido1, ' ', peradm.apellido2),
+		CONCAT(perenf.nombre || ' ' || perenf.apellido1 || ' ' || perenf.apellido2),
+		paci.tarjeta_sanitaria;
 
 CREATE OR REPLACE VIEW view_prueba AS
 	SELECT
@@ -248,3 +241,7 @@ SELECT
      JOIN persona pepa ON pepa.dni_nie = pa.dni_nie
      JOIN empleado em ON em.id_empleado = me.id_empleado
      JOIN persona peme ON peme.dni_nie = em.dni_nie;
+
+--- AMPLIACIÓN 1: EXPEDIENTE DEL PACIENTE
+
+CREATE OR REPLACE VIEW expediente_paciente AS
