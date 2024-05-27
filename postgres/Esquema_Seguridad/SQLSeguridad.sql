@@ -104,3 +104,6 @@ GRANT SELECT ON TABLE auditoria_pacientes TO PUBLIC;
 GRANT INSERT ON TABLE auditoria_pacientes TO PUBLIC;
 GRANT UPDATE ON TABLE auditoria_pacientes TO PUBLIC;
 GRANT ALL PRIVILEGES ON TABLE auditoria_pacientes TO PUBLIC;
+
+
+

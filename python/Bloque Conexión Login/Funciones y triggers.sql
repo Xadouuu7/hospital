@@ -266,3 +266,59 @@ $$
 CREATE TRIGGER trigger_info_pacientes
     AFTER INSERT OR DELETE OR UPDATE ON paciente
     FOR EACH ROW EXECUTE FUNCTION log_informacion_pacientes();
+
+
+---                        ---
+--- AMPLIACIÓN 2: TELEGRAM ---
+---                        ---
+
+CREATE OR REPLACE FUNCTION send_message_function()
+    RETURNS TRIGGER
+    LANGUAGE PLPGSQL
+AS $$
+DECLARE
+    chat_id TEXT;
+    nombre_paciente TEXT;
+    motivo_visitat TEXT;
+BEGIN
+    -- Se consigue el token del medico
+    SELECT token FROM medico INTO chat_id WHERE id_empleado = NEW.id_medico;
+
+    -- Se consigue el nombre del paciente
+    SELECT concat(pers.nombre, ' ', pers.apellido1, ' ', pers.apellido2)
+    INTO nombre_paciente
+    FROM paciente pac
+    INNER JOIN persona pers ON pac.dni_nie = pers.dni_nie
+    WHERE pac.tarjeta_sanitaria = NEW.tarjeta_sanitaria;
+
+    -- Se consigue el motivo de la visita
+    SELECT motivo_visita 
+    INTO motivo_visitat 
+    FROM visita
+    WHERE motivo_visita = NEW.motivo_visita;
+    CALL telegram_send_message(chat_id, nombre_paciente, motivo_visitat);
+RETURN NEW;
+END;
+$$;
+
+--- Trigger que se ejecuta cada vez que la columna "paciente_esperando" se actualiza.
+
+CREATE OR REPLACE TRIGGER send_message_trigger
+    AFTER UPDATE OF paciente_esperando
+    ON public.visita
+    FOR EACH ROW
+    EXECUTE FUNCTION public.send_message_function();
+
+-- Este es el procedimiento que llama al archivo de python y le introduce por parámetros el chat_id,
+-- el nombre completo del paciente y el motivo de la visita.
+
+CREATE OR REPLACE PROCEDURE public.telegram_send_message(
+IN chat_id text,
+IN paciente text,
+IN motivo_visita text)
+LANGUAGE 'plpython3u'
+AS $$
+    import subprocess
+    subprocess.run(['python3', '/hospital/send_message.py', chat_id, paciente, motivo_visita])
+END;
+$$;
