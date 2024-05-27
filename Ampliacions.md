@@ -36,7 +36,7 @@ ADD token TEXT;
 
 Hem creat una funció que retorna un trigger. Aquesta funció selecciona l'id de telegram del metge, el nom del pacient i el motiu de la visita i acciona un procediment.
 
-```SQL
+```sql
 CREATE OR REPLACE FUNCTION send_message_function()
     RETURNS TRIGGER
     LANGUAGE PLPGSQL
@@ -79,7 +79,7 @@ CREATE OR REPLACE TRIGGER send_message_trigger
 
 Al procediment li arriba com a paràmetres el chat_id del metge, el nom del pacient i el motiu de la visita. El procediment truca a un arxiu de python amb els paràmetres que hem aconseguit en la anterior funció per poder enviar el messatge per Telegram amb les variables que necessitem.
 
-```SQL
+```sql
 CREATE OR REPLACE PROCEDURE public.telegram_send_message(
 IN chat_id text,
 IN paciente text,
@@ -94,7 +94,7 @@ $$;
 
 El codi de Python "send_message.py" és el que agafa el chat_id del metge, el nom del pacient i el motiu de la visita, escriu un missatge amb aquest paràmetres i ho envia amb el [bot](https://t.me/Hospita_Blanes_Bot) de Telegram segons el chat_id del metge que tingui la visita.
 
-```PYTHON
+```python
 import requests
 import sys
 # Enviar notificación a través de Telegram
