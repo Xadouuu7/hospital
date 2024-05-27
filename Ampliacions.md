@@ -16,6 +16,21 @@ Per fer això hem utilitzat diverses funcions de Python i l'hem adjuntat en una 
 
 ![](imagenes/ampliacion/ampliacion.png) 
 
+La informació de l'expedient mèdic d'un pacient es veu de manera que primer apareix una taula de les visites, després una taula amb els diagnòstics, una altra amb les intervencions i al final el pla de medicació que té.
+
+Primer es veuen totes les visites del pacient.
+
+![](imagenes/ampliacion/expediente3.png)
+
+Després es veu els diagnòstics i la medicació.
+
+![](imagenes/ampliacion/expediente1.png)
+
+Finalment les operacions:
+
+![](imagenes/ampliacion/expediente2.png)
+
+
 ## Ampliació 2: Telegram per notificacions
 
 La segona ampliació és que quan un pacient arribi a l'Hospital per la seva visita, al metge li arribi un missatge per Telegram de que ja ha arribat.
