@@ -8,7 +8,7 @@ nav_order: 4
 
 # Infraestructura de hardware
 ## Servidor
-2x [Dell EMC PowerEdge R7515 Rack Servidor Premium](https://www.dell.com/es-es/shop/servidores-almacenamiento-y-redes/poweredge-r7515-servidor-rack-premium/spd/poweredge-r7515/per751509a): 6.934,72 €
+2x [Dell EMC PowerEdge R7515 Rack Servidor Premium](https://www.dell.com/es-es/shop/servidores-almacenamiento-y-redes/poweredge-r7515-servidor-rack-premium/spd/poweredge-r7515/per751509a): 6.934,73 €
 
 ![](imagenes/postgres/Bloc%20d'alta%20disponibilitat/Servidor.png)
 
