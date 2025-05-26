@@ -28,10 +28,6 @@ El sistema utiliza **PostgreSQL** como motor de base de datos, aprovechando proc
    source venv/bin/activate  # En Linux/macOS
    .\venv\Scripts\activate   # En Windows
    ```
-3. Instala las dependencias necesarias:
-   ```bash
-   pip install -r requirements.txt
-   ```
 4. Asegúrate de tener un servidor PostgreSQL en funcionamiento y configura la base de datos según las instrucciones en el directorio `db/`.
 
 ## Uso
